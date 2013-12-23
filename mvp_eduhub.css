@@ -1,1 +1,48 @@
 /* CSS declarations go here */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #565656;
+    font-size: 160%;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #565656;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color:  #565656;
+    background-color: #E7E7E7;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color:  #565656;
+    background-color: #D5D5D5;
+} color: #565656;
+}
+
+.body {
+	background-color: #F3F3F3;
+}
+
+.signing {
+	margin: 41px 60px;
+	font-size: 30px;
+}
+
+.list-group-2nd {
+	padding-right: 15px;
+  	padding-left: 15px;
+  	margin-bottom: 0;
+}
+
+#curriculumtitle {
+	margin-top: -25px;
+	margin-bottom: -10px;
+}
+
