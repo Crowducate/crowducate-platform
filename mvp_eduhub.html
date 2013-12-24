@@ -6,78 +6,7 @@
   
 </body>
 
-<template name="home">
-	<div class="navbar navbar-fixed-top navbar-default"role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img class="img-responsive" src="/logo_nobg_v3.png"></a>
-        </div>
-        <div class="collapse navbar-collapse ">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Sign Up</a></li>
-            <li><a href="#about">Log In</a></li>
-            <!-- <li><a href="#contact">Contact</a></li> -->
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6">
-				<h1 class="page-header">Learn and Create courses together</h1> 
-
-				<p class="lead"> We believe that YOU - with the power of the crowd - can
-			    build the best courses possible. Democratize education. 
-			    It's completely FREE. Learn and teach what you want. 
-			    </p>
-	    	</div>
-	        <div class="col-sm-6">
-	          <h3>Please Log In, or <a href="#">Sign Up</a></h3>
-	          <div class="row">
-	            <div class="col-xs-6 col-sm-6 col-md-6">
-	              <a href="#" class="btn btn-lg btn-primary btn-block">Facebook</a>
-	            </div>
-	            <div class="col-xs-6 col-sm-6 col-md-6">
-	              <a href="#" class="btn btn-lg btn-info btn-block">Google</a>
-	            </div>
-	          </div>
-	          <div class="login-or">
-	            <hr class="hr-or">
-	            <span class="span-or">or</span>
-	          </div>
-
-	          <form role="form">
-	            <div class="form-group">
-	              <label for="inputUsernameEmail">Username or email</label>
-	              <input type="text" class="form-control" id="inputUsernameEmail">
-	            </div>
-	            <div class="form-group">
-	              <a class="pull-right" href="#">Forgot password?</a>
-	              <label for="inputPassword">Password</label>
-	              <input type="password" class="form-control" id="inputPassword">
-	            </div>
-	            <div class="checkbox pull-right">
-	              <label>
-	                <input type="checkbox">
-	                Remember me </label>
-	            </div>
-	            <button type="submit" class="btn btn btn-primary">
-	              Log In
-	            </button>
-	          </form>
-	        </div>
-	      </div>
-	 	 </div>
-	{{>content}}
-	{{accountButtons}}
-</template>
 
 <template name="content">
   <div class="container">
@@ -102,75 +31,7 @@
   </div> 
 </template>
 
-<template name="contentsignedin">
-  <div class="container">
-  	<div class="row">
-        <div class="col-lg-12">
-          <h2>Popular Courses</h2>
-          <hr>
-        </div>
-  	</div>
-      
-	
-  	<div class="row">
-	  {{#each courses}}
-	  	{{> course}}
-	  {{/each}}
-  	</div>
 
-	{{#if currentUser}}
- 	{{> newcourseform}}
- 	{{/if}}
-	  
-  </div> 
-</template>
-
-<template name="signedin">
-
-	<div class="navbar navbar-fixed-top navbar-default"role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img class="img-responsive" src="/logo_nobg_v3.png"></a>
-        </div>
-        <div class="collapse navbar-collapse ">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Sign Up</a></li>
-            <li><a href="#about">Log In</a></li>
-            <!-- <li><a href="#contact">Contact</a></li> -->
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
-
-	<div class="container">
-
-		<div class="row">
-            <div class="col-md-3">
-                <nav class="nav-sidebar">
-                    <ul class="nav">
-                        <button type="button" class="btn btn-primary">Create a Course</button><a href="{{pathFor 'basicinfo'}}">Create a Course</a>
-                        <h4 >Categories</h4>
-                        <li class="nav-divider"></li>
-                        <li class="active"><a href="javascript:;">Business</a></li>
-                        <li><a href="javascript:;">Humanities</a></li>
-                        <li><a href="javascript:;">Science</a></li>
-                        <li><a href="javascript:;">Programming</a></li>
-                        <li class="nav-divider"></li>
-                        <button type="button" class="btn btn-primary">Create a Course</button><a href="{{pathFor 'basicinfo'}}">Create a Course</a>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>   
-	{{>contentsignedin}}
-
-</template>
 
 <template name="basicinfo">
 

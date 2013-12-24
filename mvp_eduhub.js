@@ -1,33 +1,5 @@
-Courses = new Meteor.Collection('courses'); 
 
 
-Router.configure({
-  layout: 'layout',
-  loadingTemplate: 'loading',
-  notFoundtemplate: 'notFound', 
-});
-
-Router.map( function () {
-  this.route('home', {
-    template: 'home',
-    path: '/'
-  });
-
-  this.route('signedin', {
-    template: 'signedin',
-    path: '/signedin'
-  });
-
-  this.route('basicinfo', {
-    template: 'basicinfo',
-    path: '/basicinfo'
-  });
-
-  this.route('curriculum', {
-    template: 'curriculum',
-    path: '/curriculum'
-  });
-});
 
 if (Meteor.isClient) {
   //Render out the list of courses using the template
@@ -61,26 +33,3 @@ if (Meteor.isClient) {
           }
         });  
       }
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    //Generate some placeholders if the database is empty
-    if (Courses.find().count() === 0) {
-        Courses.insert({
-          course: "Analysis",
-          subject: "Math",
-          age: "Age: 15-16"
-        });
-        Courses.insert({
-          course: "Anorganic Chemistry",
-          subject: "Chemistry",
-          age: "Age: 18+"
-        });
-        Courses.insert({
-          course: "Entrepreneurship 101",
-          subject: "Business Management",
-          age: "Age: 18+"
-        });
-      }
-  });
-}
