@@ -1,0 +1,10 @@
+@media (min-width: 768px){
+  .navbar-nav > li > a {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.span-or{
+  background-color: #F3F3F3!important;
+}

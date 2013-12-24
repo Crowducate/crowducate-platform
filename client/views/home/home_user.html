@@ -1,0 +1,36 @@
+<template name="signedin">
+  <div class="row">
+    <div class="col-md-3">
+      <nav class="nav-sidebar">
+        <ul class="nav">
+            <button type="button" class="btn btn-primary">Create a Course</button><a href="{{pathFor 'basicinfo'}}">Create a Course</a>
+            <h4 >Categories</h4>
+            <li class="nav-divider"></li>
+            <li class="active"><a href="javascript:;">Business</a></li>
+            <li><a href="javascript:;">Humanities</a></li>
+            <li><a href="javascript:;">Science</a></li>
+            <li><a href="javascript:;">Programming</a></li>
+            <li class="nav-divider"></li>
+            <button type="button" class="btn btn-primary">Create a Course</button><a href="{{pathFor 'basicinfo'}}">Create a Course</a>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Popular Courses</h2>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+      {{#each courses}}
+        {{> course}}
+      {{/each}}
+      </div>
+      {{#if currentUser}}
+      {{> newcourseform}}
+      {{/if}}
+    </div>
+  </div>
+</template>
