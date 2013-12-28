@@ -2,19 +2,25 @@ Meteor.startup(function () {
   //Generate some placeholders if the database is empty
   if (Courses.find().count() === 0) {
     Courses.insert({
-      course: "Analysis",
-      subject: "Math",
-      age: "Age: 15-16"
+      courseTitle: "Analysis",
+      subtitle: "A gentle introduction to analysis.",
+      category: "Math/Science",
+      keywords: ["Analysis", "High School", "Beginner"],
+      age: "15+"
     });
     Courses.insert({
-      course: "Anorganic Chemistry",
-      subject: "Chemistry",
-      age: "Age: 18+"
+      courseTitle: "Inorganic Chemistry",
+      subtitle: "A gentle introduction to inorganic chemistry.",
+      category: "Math/Science",
+      keywords: ["Chemistry", "University", "Beginner"],
+      age: "18+"
     });
     Courses.insert({
-      course: "Entrepreneurship 101",
-      subject: "Business Management",
-      age: "Age: 18+"
+      courseTitle: "Entrepreneurship 101",
+      subtitle: "A gentle introduction to the theory and practice of entrepreneurship.",
+      category: "Business Management",
+      keywords: ["Analysis", "University", "Beginner"],
+      age: "18+"
     });
   }
 });
