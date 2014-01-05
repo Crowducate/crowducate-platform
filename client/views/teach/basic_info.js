@@ -11,6 +11,6 @@ Template.basicinfo.events({
 		}
 
 		course._id = Courses.insert(course);
-		Router.go['curriculum'];
+		Router.routes['curriculum'];
 	}
 });

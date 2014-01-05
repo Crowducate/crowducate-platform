@@ -36,8 +36,7 @@
 }
 
 .list-group-2nd {
-	padding-right: 15px;
-  	padding-left: 15px;
+	padding: 2px 18px;
   	margin-bottom: 0;
 }
 
@@ -46,3 +45,11 @@
 	margin-bottom: -10px;
 }
 
+#editbutton {
+    padding: 1px 18px;
+}
+
+.nav-second {
+    padding: 2px 18px;
+    margin-bottom: 0;
+}

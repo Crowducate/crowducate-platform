@@ -1,6 +1,3 @@
-
-
-
 if (Meteor.isClient) {
   //Render out the list of courses using the template
   Template.content.courses = function () {
@@ -8,7 +5,7 @@ if (Meteor.isClient) {
    };  
 
    //Events for the form
-   Template.newcourseform.events({
+   /*Template.newcourseform.events({
       'click submit': function() {
           //TODO add validation!
 
@@ -31,5 +28,5 @@ if (Meteor.isClient) {
               }
             });
           }
-        });  
+        }); */ 
       }
