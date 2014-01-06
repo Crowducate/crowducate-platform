@@ -2,8 +2,6 @@
   "packages": {
     "iron-router": {},
     "bootstrap-3": {},
-    "accounts-entry": {
-      "git": "https://github.com/BeDifferential/accounts-entry.git"
-    }
+    "accounts-entry": {}
   }
 }
