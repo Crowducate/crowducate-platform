@@ -29,6 +29,16 @@ Router.map( function () {
     path: '/curriculum'
   });
 
+  this.route('lectureedit', {
+    template: 'lectureedit',
+    path: '/lectureedit'
+  });
+
+  this.route('currently-learning', {
+    template: 'currently-learning',
+    path: '/currently-learning'
+  });
+
   this.route('logout', {
     before: function() {
       Meteor.logout();

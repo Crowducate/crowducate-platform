@@ -2,11 +2,8 @@
   <title>EduHub - Democratize Education</title>
 </head>
 
-<body>
-  
+<body>  
 </body>
-
-
 
 <template name="content">
   <div class="container">
@@ -17,189 +14,21 @@
         </div>
   	</div>
       
-	
   	<div class="row">
 	  {{#each courses}}
 	  	{{> course}}
 	  {{/each}}
   	</div>
-
-	{{#if currentUser}}
- 	{{> newcourseform}}
- 	{{/if}}
 	  
-  </div> 
-</template>
-
-
-
-<template name="basicinfo">
-
-	<div class="navbar navbar-fixed-top navbar-default"role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img class="img-responsive" src="/logo_nobg_v3.png"></a>
-        </div>
-        <div class="collapse navbar-collapse ">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">User Name</a></li>
-            <!-- <li><a href="#contact">Contact</a></li> -->
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
-
-	<div class="container">
-		<div class="row">
-            <div class="col-sm-3">
-                <nav class="nav-sidebar">
-                    <ul class="nav">
-                        <h4 >Coursetitle (with handlebars)</h4>
-                        <li class="nav-divider"></li>
-                        <li class="active"><a href="javascript:;">Basic Info</a></li>
-                        <li><a href="javascript:;">Curriculum</a></li>
-                        <li class="nav-divider"></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="col-sm-9 well">
-	            <form role="form">
-				  <div class="form-group">
-				    <label for="InputCourse">Title of the Course:</label>
-				    <input type="test" class="form-control" id="InputCourse" placeholder="Enter the name of the course">
-				  </div>
-				  <div class="form-group">
-				    <label for="InputSubtitle">Subtitle:</label>
-				    <input type="text" class="form-control" id="InputSubtitle" placeholder="Write a sentence or two about the content">
-				  </div>
-				  <div class="form-group">
-				    <label for="InputKW">Keywords (Tags):</label>
-				    <input type="text" class="form-control" id="InputKW" placeholder="Choose some tags (e.g. JavaScript; Math)">
-				  </div>
-
-				  	<div class="row">
-					  <div class="col-xs-6 form-group">
-					    <label for="InputCat">Category:</label>
-					   		<select class="form-control">
-					   			<option value="business">Business</option>
-					   			<option value="humanities">Humanities</option>
-					   			<option value="science">Science</option>
-					   			<option value="programming">Programming</option>
-					   		</select>
-					  </div>
-						<div class="col-xs-6 form-group">
-							<label for="InputCat">Age Group:</label>
-						   		<select class="form-control">
-						   			<option value="7+">7+</option>
-						   			<option value="10+">10+</option>
-						   			<option value="12+">12+</option>
-						   			<option value="15+">15+</option>
-						   			<option value="18+">18+</option>
-						   		</select>
-						</div>
-					</div>
-				  	<button type="submit" class="btn btn-primary center-block">Save</button>
-				</form>
-			</div> <!-- col-md-9 -->
-        </div> <!-- row -->
-    </div><!-- /.container -->
-</template>
-
-<template name="curriculum">
-
-	<div class="container">
-		<div class="row">
-            <div class="col-sm-3">
-                <nav class="nav-sidebar">
-                    <ul class="nav">
-                        <h4 >Coursetitle (with handlebars)</h4>
-                        <li class="nav-divider"></li>
-                        <li class="active"><a href="javascript:;">Basic Info</a></li>
-                        <li><a href="javascript:;">Curriculum</a></li>
-                        <li class="nav-divider"></li>
-                    </ul>
-                </nav>
-            </div>
-		<div class="col-sm-9 well">
-			<h3 id="curriculumtitle"> Curriculum of "Course Titlexxx"</h3>		
-
-			<div class="list-group">
-				<a href="#" class="list-group-item">
-					<h4 class="list-group-item-heading">Section 1: What is Meteor.JS about?</h4>
-					<h5 class="list-group-2nd">Lecture 1.1: Framework - fullstack ...?</h5>
-					<h5 class="list-group-2nd">Lecture 1.2: What is Meteor.JS about?</h5>
-					<h5 class="list-group-2nd">Lecture 1.3: What is Meteor.JS about?</h5>
-					<h5 class="list-group-2nd">Lecture 1.4: What is Meteor.JS about?</h5>
-					<h5 class="list-group-2nd">Lecture 1.5: What is Meteor.JS about?</h5>
-					<h5 class="list-group-2nd btn btn-primary">+ Add Lecture to Section 1</h5>
-				</a>
-
-				<a href="#" class="list-group-item">
-					<h4 class="list-group-item-heading">Section 2: Templates</h4>
-					<h5 class="list-group-2nd">xxx</h5>
-					<h5 class="list-group-2nd">xxx</h5>
-					<h5 class="list-group-2nd">xxx</h5>
-					<h5 class="list-group-2nd">xxx</h5>
-					<h5 class="list-group-2nd">xxx</h5>
-					<h5 class="list-group-2nd">xxx</h5>
-					<h5 class="list-group-2nd">xxx</h5>
-					<h5 class="list-group-2nd">xxx</h5>
-					<h5 class="list-group-2nd btn btn-primary">+ Add Lecture to Section 2</h5>
-				</a>
-
-				<a href="#" class="list-group-item">
-					<h4 class="list-group-item-heading">Section 3: Adding Users</h4>
-					<h5 class="list-group-2nd">xxx</h5>
-					<h5 class="list-group-2nd">xxx</h5>
-					<h5 class="list-group-2nd btn btn-primary">+ Add Lecture to Section 3</h5>
-				</a>
-
-				<a href="#" class="list-group-item">
-					<h4 class="list-group-item-heading">Add New Section</h4>
-					<h4 class="list-group-2nd btn btn-primary"> + Add New Section to this Course</h4>
-				</a>
-
-			</div><!-- list-group -->
-		</div><!-- end col-sm-9 -->
-	 </div> <!-- row -->
-    </div><!-- /.container -->
+  </div> <!-- container -->
 </template>
 
 <template name="course">
 	<div class="col-xs-12 col-lg-3 col-md-4">
 		<div class="well">
-			<div class="course">{{course}}</div>
-			<div class="name">{{subject}}</div>
-			<div class="age	">{{age}}</div>
+			<div class="course"><h4>{{courseTitle}}</h4></div>
+			<div class="name"><h5>{{{category}}<h5></div>
+			<div class="age	"><h5>Age: {{age}}<h5></div>
 		</div>
 	</div>
-</template>
-
-<template name="newcourseform">
-   <div class="row">
-   		<div class="col-lg-12">
-			<div class="well">
-				<form class="form-inline" role="search" id="course">
-		        	<div class="form-group">
-					    <input name="course" class="form-control" placeholder="Subject" />
-				  	</div>
-		            <div class="form-group">
-						<input name="name" class="form-control" placeholder="Topic" />
-		            </div>
-		            <div class="form-group">
-		            	<input name="age" class="form-control" placeholder="Age Group" type="number"/>
-		            </div>
-		            
-		            <submit class="btn btn-primary"><span class="icon-plus-sign"></span> Add Course</button></submit>
-		        </form>
-			</div>
-   		</div>
-	</div> 
 </template>
