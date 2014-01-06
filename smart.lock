@@ -4,7 +4,10 @@
     "basePackages": {
       "iron-router": {},
       "bootstrap-3": {},
-      "accounts-entry": {}
+      "accounts-entry": {
+        "git": "https://github.com/BeDifferential/accounts-entry.git",
+        "branch": "master"
+      }
     },
     "packages": {
       "iron-router": {
@@ -19,8 +22,8 @@
       },
       "accounts-entry": {
         "git": "https://github.com/BeDifferential/accounts-entry.git",
-        "tag": "v0.4.4",
-        "commit": "56cee1ff5afe2ce5be7b749cd74fc939fc9ce781"
+        "branch": "master",
+        "commit": "a2d7d4f21da6e837ddbfeec404085946bb4951c2"
       }
     }
   }
