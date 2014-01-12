@@ -2,9 +2,12 @@ Template.curriculum.events({
 	'submit form': function (e) {
 		e.preventDefault();
 
-		var lecture = {
-		  lectureTitle: $(e.target).find('[name=lectureTitle]').val()
-    };
+		var $lectureTitle = $(e.target).find('[name=lectureTitle]');
+
+    	var lecture = {
+    		lectureTitle: $lectureTitle.val(),
+    		courseId: basicinfo.data._id
+    	};
 
     console.log('add lecture', lecture);
 

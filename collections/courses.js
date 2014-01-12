@@ -13,14 +13,5 @@ Meteor.methods({
 		var courseId = Courses.insert(course);
 
 		return courseId;
-	},
-
-	addLecture: function (lectureAttributes) {
-		console.log('Method.addLecture', lectureAttributes);
-		var lecture = _.extend(_.pick(lectureAttributes, 'lectureTitle'));
-		console.log('lecture', lecture);
-		var lectureId = Courses.insert(lecture);
-
-		return lectureId;
 	}
 });
