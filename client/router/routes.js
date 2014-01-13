@@ -28,7 +28,6 @@ Router.map( function () {
 
   this.route('curriculum', {
     template: 'curriculum',
-    //path: '/basicinfo'
     path: '/courses/:_id',
     data: function() {
       // we inject object course and array lectures as the data-context into
