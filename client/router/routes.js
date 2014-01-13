@@ -30,7 +30,14 @@ Router.map( function () {
     template: 'curriculum',
     //path: '/basicinfo'
     path: '/courses/:_id',
-    data: function() { return Courses.findOne({_id: this.params._id}); }
+    data: function() {
+      // we inject object course and array lectures as the data-context into
+      // the template 'curriculum' and we can access those from within our template
+      return {
+        course: Courses.findOne({_id: this.params._id}),
+        lectures: Lectures.find({courseId: this.params._id})
+      };
+    }
   });
 
   //  this.route('curriculum', {

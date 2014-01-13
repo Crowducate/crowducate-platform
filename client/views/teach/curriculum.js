@@ -1,19 +1,17 @@
 Template.curriculum.events({
-	'submit form': function (e) {
+	'submit form': function (e, template) {
 		e.preventDefault();
 
-		var $lectureTitle = $(e.target).find('[name=lectureTitle]');
-
-    	var lecture = {
-    		lectureTitle: $lectureTitle.val(),
-    		courseId: basicinfo.data._id
-    	};
-
-    console.log('add lecture', lecture);
+  	var lecture = {
+  		lectureTitle: $(e.target).find('[name=lectureTitle]').val(),
+  		courseId: template.data.course._id
+  	};
 
 		Meteor.call('addLecture', lecture, function(error, id) { 
 			if (error)
 				return alert(error.reason);
+      // on success hide the modal
+      $('.modal').modal('hide');
 		});
 
     return false;
