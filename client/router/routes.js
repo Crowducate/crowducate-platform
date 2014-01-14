@@ -34,7 +34,8 @@ Router.map( function () {
       // the template 'curriculum' and we can access those from within our template
       return {
         course: Courses.findOne({_id: this.params._id}),
-        lectures: Lectures.find({courseId: this.params._id})
+        lectures: Lectures.find({courseId: this.params._id}),
+        sections: Sections.find({courseId: this.params._id})
       };
     }
   });
@@ -53,7 +54,14 @@ Router.map( function () {
 
   this.route('lectureedit', {
     template: 'lectureedit',
-    path: '/lectureedit'
+    path: '/lectures/:_id/edit',
+    data: function(){
+      lecture = Lectures.findOne({_id: this.params._id});
+      return {
+        course: Courses.findOne({_id: lecture.courseId}),
+        lecture: lecture
+      };
+    }
   });
 
   this.route('currently-learning', {
