@@ -1,9 +1,9 @@
 <template name="section">
-  <h4 class="list-group-item-heading">Section: {{sectionTitle}}</h4>
+  <h4 class="list-group-item">Section: {{sectionTitle}}</h4>
   {{#each sectionLectures}}
     {{>lecture}}
   {{/each}}
-  <button class="list-group-2nd btn btn-primary" data-toggle="modal" data-target="#modal-{{_id}}">
+  <button class="btn btn-primary" id="lectureButton" data-toggle="modal" data-target="#modal-{{_id}}">
     + Add Lecture to this Section
   </button>  
   {{>addLectureModal}}

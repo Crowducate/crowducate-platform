@@ -36,8 +36,14 @@
 }
 
 .list-group-2nd {
-	padding: 2px 18px;
-  	margin-bottom: 0;
+	padding: 8px 18px;
+  	margin-bottom: 12px;
+}
+
+
+.btn-2nd {
+    padding: 8px 18px;
+    margin-bottom: 10px;
 }
 
 #curriculumtitle {
@@ -52,4 +58,12 @@
 .nav-second {
     padding: 2px 18px;
     margin-bottom: 0;
+}
+
+#lectureButton {
+    margin-left: 18px;
+}
+
+#nav-side-teach{
+    margin-top: 22px;
 }
