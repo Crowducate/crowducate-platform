@@ -46,6 +46,13 @@
     margin-bottom: 10px;
 }
 
+.sectionBackground {
+    background-color: #FFF;
+    border: black 1px;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
 #curriculumtitle {
 	margin-top: -25px;
 	margin-bottom: -10px;
@@ -61,6 +68,7 @@
 }
 
 #lectureButton {
+    margin-top: 18px;
     margin-left: 18px;
 }
 

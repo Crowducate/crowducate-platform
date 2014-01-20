@@ -1,4 +1,5 @@
 <template name="section">
+<div class="sectionBackground">
   <h4 class="list-group-item">Section: {{sectionTitle}}</h4>
   {{#each sectionLectures}}
     {{>lecture}}
@@ -7,6 +8,7 @@
     + Add Lecture to this Section
   </button>  
   {{>addLectureModal}}
+</div>  
 </template>
 
 <template name="addLectureModal">

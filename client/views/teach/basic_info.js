@@ -7,7 +7,8 @@ Template.basicinfo.events({
 		subtitle: $(e.target).find('[name=subtitle]').val(), 
 		keywords: $(e.target).find('[name=keywords]').val(),
 		category: $(e.target).find('[name=category]').val(),
-		age: $(e.target).find('[name=age]').val()
+		age: $(e.target).find('[name=age]').val(),
+		'owner': Meteor.userId()
 		}
 
 		//course._id = Courses.insert(course);
