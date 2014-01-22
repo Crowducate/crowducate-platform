@@ -8,7 +8,7 @@ Meteor.methods({
 
 		//course._id = Courses.insert(course);
 
-		var course = _.extend(_.pick(courseAttributes, 'courseTitle', 'subtitle', 'keywords','category','age'));
+		var course = _.extend(_.pick(courseAttributes, 'courseTitle', 'subtitle', 'keywords','category','age', 'owner'));
 
 		var courseId = Courses.insert(course);
 

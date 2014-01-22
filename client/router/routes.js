@@ -75,4 +75,13 @@ Router.map( function () {
       this.go('home');
     }
   });
+
+  // Beispiel um die Courses des eingeloggten users anzuzeigen
+  /*
+  this.route('myCourses', {
+    data: function(){
+      return {courses: Courses.find(owner: Meteor.userId())}
+    }
+  });
+  */
 });
