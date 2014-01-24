@@ -4,29 +4,19 @@ if (Meteor.isClient) {
        return Courses.find({}); 
    };  
 
-   //Events for the form
-   /*Template.newcourseform.events({
-      'click submit': function() {
-          //TODO add validation!
+   Template.content.ownCourses = function () {
+      return Courses.find({owner: Meteor.userId()});
+   };
 
-          var formcontents = {};
-          //Serialize the input values from the form
-          //This works because the input names match the
-          //database field names.
-          $.each($('#addcourse').serializeArray(), function() {
-              formcontents[this.name] = this.value;
-          });
- 
-          //Pass the serialized values into a new database record
-          Courses.insert(formcontents, function(err) {
-              if(!err) {
-                  console.log("Successfully added new course to database.");
-                  //$('#addcourse')[0].reset(); //Reset the form with blank inputs
-              } else {
-                  alert("Failed to add course to database.");
-                  console.log(err);
-              }
-            });
-          }
-        }); */ 
-      }
+   Template.lecture.myCourse = function () {
+      return Courses.find({owner: Meteor.userId()});
+   };
+
+   Template.curriculum.myCourse = function () {
+      return Courses.find({owner: Meteor.userId()});
+   };
+
+   Template.sections.myCourse = function () {
+      return Courses.find({owner: Meteor.userId()});
+   };
+ }

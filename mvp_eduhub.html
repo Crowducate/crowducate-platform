@@ -8,15 +8,13 @@
 <template name="content">
   	<div class="row">
       <div class="col-lg-12">
-        <h2>Your Courses</h2>
+        {{#if currentUser}}
+			{{#each ownCourses}}
+				{{> ownCourse}}
+			{{/each}}
         <hr>
+	  	{{/if}}
       </div>
-
-      <div class="row">
-      {{#if currentUser}}
-	  <!-- hier kommen werden nur die eig. Kurse angezeit-->
-	  {{/if}}
-  	</div>
 
   	</div>
   	<div class="row">
@@ -41,4 +39,20 @@
 			<div class="age	"><h5>Age: {{age}}<h5></div>
 		</div>
 	</div>
+</template>
+
+<template name="ownCourse">
+	<div class="row">
+		<div class="col-lg-12">
+		  <h2>Own Courses</h2>
+		  <hr>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-4">
+		<div class="well">
+			<div class="course"><h4><a href="{{pathFor 'curriculum'}}">{{courseTitle}}</a></h4></div>
+			<div class="name"><h5>{{{category}}<h5></div>
+			<div class="age	"><h5>Age: {{age}}<h5></div>
+		</div>
+	</div>	
 </template>

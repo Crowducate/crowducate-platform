@@ -4,9 +4,9 @@
   {{#each sectionLectures}}
     {{>lecture}}
   {{/each}}
-  <button class="btn btn-primary" id="lectureButton" data-toggle="modal" data-target="#modal-{{_id}}">
+  {{#if myCourse}}<button class="btn btn-primary" id="lectureButton" data-toggle="modal" data-target="#modal-{{_id}}">
     + Add Lecture to this Section
-  </button>  
+  </button>{{/if}}  
   {{>addLectureModal}}
 </div>  
 </template>

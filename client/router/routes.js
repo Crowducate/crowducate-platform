@@ -40,18 +40,6 @@ Router.map( function () {
     }
   });
 
-  //  this.route('curriculum', {
-  //   template: 'curriculum',
-  //   //path: '/basicinfo'
-  //   path: '/courses/:slug',
-  //   data: function() { return Courses.findOne({slug: this.params.slug}); }
-  // });
-
-  //this.route('curriculum', {
-   // template: 'curriculum',
-    //path: '/curriculum'
-  //});
-
   this.route('lectureedit', {
     template: 'lectureedit',
     path: '/lectures/:_id/edit',
@@ -60,6 +48,15 @@ Router.map( function () {
       return {
         course: Courses.findOne({_id: lecture.courseId}),
         lecture: lecture
+      };
+    }
+  });
+
+  // Beispiel um die Courses des eingeloggten users anzuzeigen
+  this.route('myCourses', {
+    data: function(){
+      return {
+        ownCourses: Courses.find({owner: Meteor.userId()})
       };
     }
   });
@@ -75,13 +72,4 @@ Router.map( function () {
       this.go('home');
     }
   });
-
-  // Beispiel um die Courses des eingeloggten users anzuzeigen
-  /*
-  this.route('myCourses', {
-    data: function(){
-      return {courses: Courses.find(owner: Meteor.userId())}
-    }
-  });
-  */
-});
+});  
