@@ -51,6 +51,6 @@ Template.addSectionModal.events({
 
 Template.curriculum.helpers({ 
   myCourse: function() {
-    return this.userId == Meteor.userId(); 
+    return this.course.owner == Meteor.userId(); 
   }
 });  
