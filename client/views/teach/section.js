@@ -1,4 +1,3 @@
-
 Template.section.helpers({
   'sectionLectures': function(){
     console.log('sectionLectures', this);
@@ -25,5 +24,11 @@ Template.addLectureModal.events({
       $('.modal').modal('hide');
     });
 
+  }
+});
+
+Template.section.helpers({ 
+  myCourse: function() {
+    return this.course.owner == Meteor.userId(); 
   }
 });

@@ -22,10 +22,12 @@
 				{{/each}}
 
 				<div href="#" class="list-group section">
+					{{#if myCourse}}
 					<h4 class="list-group-item-heading">Add New Section</h4>
-					{{#if myCourse}}<button class="list-group-2nd btn btn-primary" data-toggle="modal" data-target="#mySectionModal">
+					<button class="list-group-2nd btn btn-primary" data-toggle="modal" data-target="#mySectionModal">
 					  + Add New Section to this Course
-					</button>{{/if}}
+					</button>
+					{{/if}}
 				</div>
 			</div>			
 	 	</div> <!-- row -->

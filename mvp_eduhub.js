@@ -7,16 +7,4 @@ if (Meteor.isClient) {
    Template.content.ownCourses = function () {
       return Courses.find({owner: Meteor.userId()});
    };
-
-   Template.lecture.myCourse = function () {
-      return Courses.find({owner: Meteor.userId()});
-   };
-
-   Template.curriculum.myCourse = function () {
-      return Courses.find({owner: Meteor.userId()});
-   };
-
-   Template.sections.myCourse = function () {
-      return Courses.find({owner: Meteor.userId()});
-   };
  }
