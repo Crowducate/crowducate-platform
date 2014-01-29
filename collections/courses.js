@@ -8,8 +8,8 @@ Meteor.methods({
 
 		//course._id = Courses.insert(course);
 
-		var course = _.extend(_.pick(courseAttributes, 'courseTitle', 'subtitle', 'keywords','category','age', 'owner'));
-
+		var course = _.extend(_.pick(courseAttributes, 'courseTitle', 'subtitle', 'keywords','category','age'));
+    course.owner = Meteor.userId();
 		var courseId = Courses.insert(course);
 
 		return courseId;

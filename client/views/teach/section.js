@@ -29,6 +29,6 @@ Template.addLectureModal.events({
 
 Template.section.helpers({ 
   myCourse: function() {
-    return this.course.owner == Meteor.userId(); 
+    return this.course.owner == Meteor.userId();
   }
 });

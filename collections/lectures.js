@@ -5,6 +5,7 @@ Meteor.methods({
 		console.log('Method.addLecture', lectureAttributes);
 		var course = Courses.findOne(lectureAttributes.postId);
 		var lecture = _.extend(_.pick(lectureAttributes, 'lectureTitle', 'courseId', 'sectionId'));
+    lecture.owner = Meteor.userId();
 		console.log('lecture', lecture);
 		var lectureId = Lectures.insert(lecture);
 
