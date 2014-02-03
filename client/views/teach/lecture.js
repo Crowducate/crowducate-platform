@@ -1,5 +1,6 @@
 Template.lecture.helpers({ 
   myLecture: function() {
-    return this.course.owner == Meteor.userId(); 
+    console.log('myLecture', this);
+    return this.owner == Meteor.userId(); 
   }
 });  
