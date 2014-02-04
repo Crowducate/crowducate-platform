@@ -32,3 +32,10 @@ Template.section.helpers({
     return this.course.owner == Meteor.userId();
   }
 });
+
+Template.section.helpers({ 
+  myLecture: function() {
+    console.log('myLecture', this);
+    return this.owner == Meteor.userId(); 
+  }
+});  
