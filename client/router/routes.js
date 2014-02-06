@@ -61,10 +61,30 @@ Router.map( function () {
     }
   });
 
+  // this.route('currently-learning', {
+  //   template: 'currently-learning',
+  //   path: '/currently-learning',
+  //   data: function(){ 
+  //     return {
+  //       course: Courses.findOne({_id: this.params._id}),
+  //       lectures: Lectures.find({courseId: this.params._id}),
+  //       sections: Sections.find({courseId: this.params._id})
+  //     };    
+  //   }
+  // });
+
   this.route('currently-learning', {
-    template: 'currently-learning',
-    path: '/currently-learning'
-  });
+  template: 'currently-learning',  
+  path: '/currently-learning/:_id',
+  data: function() {
+    lecture = Lectures.findOne({_id: this.params._id});
+    return {
+      course: Courses.findOne({_id: this.params._id}),
+      lectures: Lectures.find({courseId: this.params._id}),
+      sections: Sections.find({courseId: this.params._id})
+    };
+  }
+});
 
   this.route('logout', {
     before: function() {

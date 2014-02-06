@@ -4,13 +4,14 @@
             <div class="col-sm-3">
                 <nav class="nav-sidebar">
                     <ul class="nav">
-                        <h4>Coursetitle (with handlebars)</h4>
+                        <h4>{{course.courseTitle}}</h4>
                         <li class="nav-divider"></li>
-                        <li class="active"><a href="{{pathFor 'basicinfo'}}">Section 1</a></li>
-                        <li class="nav-second"><a href="{{pathFor 'curriculum'}}">Lecture 1.1</a></li>
+                        <!-- <li class="active"><a href="{{pathFor 'basicinfo'}}">Section 1</a></li>
+                        <li class="nav-second"><a href="{{pathFor 'curriculum'}}">{{lectures.lectureTitle}}</a></li>
                         <li class="nav-second"><a href="{{pathFor 'curriculum'}}">Lecture 1.2</a></li>
                         <li><a href="{{pathFor 'curriculum'}}">Section 2</a></li>
-                        <li class="nav-second"><a href="{{pathFor 'curriculum'}}">Lecture 2.1</a></li>
+                        <li class="nav-second"><a href="{{pathFor 'curriculum'}}">Lecture 2.1</a></li> -->
+                        {{>currentCurriculum}}
                         <li class="nav-divider"></li>
                     </ul>
                 </nav>
@@ -26,10 +27,12 @@
             		
             		<div class="tab-content">
             			<div class="tab-pane active" id="tab1">
-            	        	<h4>Introduction</h4>
-            	        	<p>Introduction Text</p>
-							<h4>Instructions</h4>
-							<p>Instruction Text</p>
+                  	        	<h4>Introduction</h4>
+                                    <!-- populate lecture -->                                         
+                                    {{lecture.intro}}
+            				<h4>Instructions</h4>
+                                    {{lecture.instructions}}
+            				<p>Instruction Text</p>
             			</div><!-- Tab panes -->
 
             			<div class="tab-pane active" id="tab2">
@@ -81,7 +84,15 @@
             			</div> <!--tab pane-->
             		</div> <!--tab content-->
             	</div>	<!--col 9-->    
-
 		</div>
     </div>
+</template>
+
+<template name="currentCurriculum">
+      {{#each sections}}
+        <li class="active"><a href="{{pathFor 'basicinfo'}}">{{sectionTitle}}</a></li>
+      {{/each}}     
+      {{#each lectures}}
+        <li class="nav-second"><a href="{{pathFor 'curriculum'}}">{{lectureTitle}}</a></li>           
+      {{/each}}       
 </template>

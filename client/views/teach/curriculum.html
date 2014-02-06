@@ -5,7 +5,7 @@
             <div class="col-sm-3">
                 <nav class="nav-sidebar">
                     <ul class="nav">
-                        <h4 >Coursetitle <strong>{{course.courseTitle}}</strong></h4>
+                        <h4> <strong>{{course.courseTitle}}</strong></h4>
                         <li class="nav-divider"></li>
                         <li class="active"><a href="{{pathFor 'basicinfo'}}">Basic Info</a></li>
                         <li><a href="{{pathFor 'curriculum'}}">Curriculum</a></li>
@@ -59,77 +59,3 @@
 	  </div>
 	</div>
 </template>
-
-<!--
-<div class="list-group">
-				<a class="list-group-item">
-					<h4 class="list-group-item-heading">Section 1: What is Meteor.JS about?</h4>
-					<h5 class="list-group-2nd">Lecture 1.1: Framework - fullstack ...?<span id="editbutton" class="btn btn-danger pull-right">Edit</span></h5>
-					<h5 class="list-group-2nd">Lecture 1.2: What is Meteor.JS about?<span id="editbutton" class="btn btn-danger pull-right">Edit</span></h5>
-					<h5 class="list-group-2nd">Lecture 1.3: What is Meteor.JS about?</h5>
-					<h5 class="list-group-2nd">Lecture 1.4: What is Meteor.JS about?</h5>
-					<h5 class="list-group-2nd">Lecture 1.5: What is Meteor.JS about?</h5>
-					{{#each lectures}}						
-  					<h5 class="list-group-2nd">Lecture: {{lectureTitle}}</h5>
-					{{/each}}	
-					<br>
-					<button class="list-group-2nd btn btn-primary" data-toggle="modal" data-target="#myModal">
-					  + Add Lecture to this Section
-					</button>
-				</a>
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				        <h4 class="modal-title" id="myModalLabel">Choose the Name of the Lecture</h4>
-				      </div>
-			        <form role="form">
-				      	<div class="modal-body">
-				          <div class="form-group">
-				            <input type="text" class="form-control" name="lectureTitle" id="lectureTitle" placeholder="type the name of the lecture here">
-				          </div>
-				        
-					      </div>
-					      <div class="modal-footer">
-					        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-					        <button type="submit" class="btn btn-primary">Save</button>
-					      </div>
-			        </form>
-				    </div>
-				  </div>
-				</div>
-
-				<a href="#" class="list-group-item">
-					<h4 class="list-group-item-heading">Add New Section</h4>
-					<button class="list-group-2nd btn btn-primary" data-toggle="modal" data-target="#mySectionModal">
-					  + Add New Section to this Course
-					</button>
-					<div class="modal fade" id="mySectionModal" tabindex="-1" role="dialog" aria-labelledby="mySectionModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				        <h4 class="modal-title" id="mySectionModalLabel">Choose the Name of the Section</h4>
-				      </div>
-			        <form role="form">
-				      	<div class="modal-body">
-				          <div class="form-group">
-				            <input type="text" class="form-control" name="sectionTitle" id="sectionTitle" placeholder="type the name of the section here">
-				          </div>
-				        
-					      </div>
-					      <div class="modal-footer">
-					        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-					        <button type="submit" class="btn btn-primary">Save</button>
-					      </div>
-			        </form>
-				    </div>
-				  </div>
-				</div>
-				</a>
-
-			</div>
-		</div>
-
--->
