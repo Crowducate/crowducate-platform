@@ -91,8 +91,9 @@
 <template name="currentCurriculum">
       {{#each sections}}
         <li class="active"><a href="{{pathFor 'basicinfo'}}">{{sectionTitle}}</a></li>
-      {{/each}}     
-      {{#each lectures}}
-        <li class="nav-second"><a href="{{pathFor 'curriculum'}}">{{lectureTitle}}</a></li>           
-      {{/each}}       
+        {{#each sectionsLectures}}
+            {{test}}
+            <li class="nav-second"><a href="{{pathFor 'curriculum'}}">{{lectureTitle}}</a></li>           
+        {{/each}}  
+      {{/each}}      
 </template>
