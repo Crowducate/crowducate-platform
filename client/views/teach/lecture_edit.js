@@ -16,6 +16,7 @@ Template.lectureedit.helpers({
   curriculumPath: function(){
     return Router.path('curriculum', {_id: this.course._id});
   },
+  //tab === z.B. 'excercise' aus dem Template
   isCurrentTab: function(tab){
     console.log( 'isCurrentTab', Tabnav.getCurrentTab() );
     return (Tabnav.getCurrentTab() === tab);
