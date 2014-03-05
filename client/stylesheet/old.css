@@ -1,0 +1,117 @@
+/*
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #565656;
+    font-size: 160%;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #565656;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color:  #565656;
+    background-color: #E7E7E7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color:  #565656;
+    background-color: #D5D5D5;
+} color: #565656;
+}
+
+.body {
+  background-color: #F3F3F3;
+}
+*/
+.signing {
+  margin: 41px 60px;
+  font-size: 30px;
+}
+
+.list-group-2nd {
+  padding: 8px 18px;
+    margin-bottom: 12px;
+}
+
+
+.btn-2nd {
+    padding: 8px 18px;
+    margin-bottom: 10px;
+}
+
+.sectionBackground {
+    background-color: #FFF;
+    border: black 1px;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+#curriculumtitle {
+  margin-top: -25px;
+  margin-bottom: -10px;
+}
+
+#editbutton {
+    padding: 1px 18px;
+}
+
+/*.nav-second {
+    padding: 2px 18px;
+    margin-bottom: 0;
+}*/
+
+#lectureButton {
+    margin-top: 18px;
+    margin-left: 18px;
+}
+
+/*#nav-side-teach{
+    margin-top: 22px;
+}*/
+
+
+
+.main {
+  max-width: 320px;
+  margin: 0 auto;
+}
+.login-or {
+  position: relative;
+  font-size: 18px;
+  color: #aaa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.span-or {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  margin-left: -25px;
+  background-color: #fff;
+  width: 50px;
+  text-align: center;
+}
+.hr-or {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.span-or{
+  background-color: #F3F3F3!important;
+}
+/*h3 {
+  text-align: center;
+  line-height: 300%;
+}*/

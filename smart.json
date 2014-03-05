@@ -1,8 +1,48 @@
 {
   "packages": {
-    "iron-router": {},
-    "bootstrap-3": {},
-    "accounts-entry": {},
-    "spin": {}
+    "iron-router": {
+      "git": "https://github.com/EventedMind/iron-router.git",
+      "branch": "blaze-integration"
+    },
+    "blaze-layout": {},
+    "ms-seo": {
+      "path": "../../../../priv/meteor_packages/ms-seo"
+    },
+    "mambo-authenticate": {
+      "path": "../../../../priv/meteor_packages/mambo-authenticate"
+    },
+    "ms-seo": {
+      "path": "../../../../priv/meteor_packages/ms-seo"
+    },
+    "ms-validator": {
+      "path": "../../../../priv/meteor_packages/ms-validator"
+    },
+    "basic-auth": {
+      "path": "../../../../priv/meteor_packages/basic-auth"
+    },
+    "mambo-forms": {
+      "path": "../../../../priv/meteor_packages/mambo-forms"
+    },
+    "ms-google-analytics": {
+      "path": "../../../../priv/meteor_packages/ms-google-analytics"
+    },
+    "minimongoid": {},
+    "mambo-authenticate": {
+      "path": "../../../../priv/meteor_packages/mambo-authenticate"
+    },
+    "bootstrap-tabs": {
+      "path": "../../../../priv/meteor_packages/bootstrap-tabs"
+    },
+    "ms-markdown-editor": {
+      "path": "../../../../priv/meteor_packages/ms-markdown-editor"
+    },
+    "common-helpers": {
+      "git": "ssh://root@78.47.57.101/var/git/meteor_packages/common-helpers",
+      "branch": "shark"
+    },
+    "notify": {
+      "git": "ssh://root@78.47.57.101/var/git/meteor_packages/notify",
+      "branch": "shark"
+    }
   }
 }

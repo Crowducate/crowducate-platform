@@ -1,0 +1,13 @@
+<template name="myCourseLeftNav">
+  <div class="course-left-nav">
+    <a href="{{pathForCourseUpdate}}"><h3 class="left-nav-headline">{{course.courseTitle}}</h3></a>
+
+    {{#each sections}}
+      {{>mySectionMenuItem}}
+    {{/each}}
+
+    <div class="panel panel-default">
+      <div class="panel-heading"><a class="list-group-item add-section"><i class="fa fa-plus"></i> Add Section</a></div>
+    </div>
+  </div>
+</template>

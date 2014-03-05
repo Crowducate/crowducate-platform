@@ -1,0 +1,3 @@
+.course-list-item{
+  height: 200px;
+}

@@ -1,0 +1,9 @@
+.course-left-nav{
+  a{
+    color: @text-color;
+  }
+
+  .active{
+    font-weight: bold;
+  }
+}

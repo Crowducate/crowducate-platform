@@ -1,0 +1,15 @@
+<!-- COMMENT -->
+<!-- The iron router renders the current template into {{yield}} -->
+<!-- I set the baseLayout in the router config.js layoutTemplate property -->
+<!-- COMMENT -->
+<template name="baseLayout">
+  {{>topNavigation}}
+
+  {{#if errorMessageTop}}
+    {{>notificationTop}}
+  {{/if}}
+
+  <div class="container">
+    {{>yield}}
+  </div>
+</template>

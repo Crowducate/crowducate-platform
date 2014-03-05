@@ -3,15 +3,30 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
+# Packages by Meteor
 standard-app-packages
-autopublish
-insecure
 preserve-inputs
-iron-router
-bootstrap-3
+audit-argument-checks
+spiderable
+less
+coffeescript
 accounts-password
 accounts-facebook
 accounts-ui
-accounts-entry
-coffeescript
-spin
+
+# Packages by community
+minimongoid
+blaze-layout
+iron-router
+
+# Packages by Manuel Schoebel
+mambo-authenticate
+ms-seo
+ms-validator
+basic-auth
+mambo-forms
+ms-google-analytics
+common-helpers
+notify
+bootstrap-tabs
+ms-markdown-editor

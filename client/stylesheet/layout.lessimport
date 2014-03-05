@@ -1,0 +1,16 @@
+body{
+  background-color: #F3F3F3;
+  padding-top: 90px;
+}
+
+a{
+  cursor: pointer;
+}
+
+.left-nav-headline{
+  margin-top: 0;
+}
+
+.teach-content-area{
+  margin-top: 36px;
+}

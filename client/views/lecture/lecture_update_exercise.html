@@ -1,0 +1,19 @@
+<template name="lectureUpdateExercise">
+
+
+
+  <form id="form-lecture-update">
+    {{#each formFields}}
+      {{> renderFormField}}
+    {{/each}}
+
+    {{>markdownEditor markdown=markdown}}
+
+    <div class="form-actions">
+      <div class="pull-right">
+        <button class="btn btn-default" type="submit">Update</button>
+      </div>
+    </div>
+
+  </form>
+</template>

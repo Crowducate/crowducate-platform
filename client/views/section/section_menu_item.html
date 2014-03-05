@@ -1,0 +1,12 @@
+<template name="sectionMenuItem">
+  <div class="panel panel-default">
+    <div class="panel-heading"><strong>{{sectionTitle}}</strong></div>
+    <div class="panel-body">
+      <ul class="nav nav-pills nav-stacked">
+        {{#each lectures}}
+          {{>lectureMenuItem}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</template>

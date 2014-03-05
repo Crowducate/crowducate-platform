@@ -2,31 +2,107 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {},
-      "bootstrap-3": {},
-      "accounts-entry": {},
-      "spin": {}
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "branch": "blaze-integration"
+      },
+      "blaze-layout": {},
+      "ms-seo": {
+        "path": "../../../../priv/meteor_packages/ms-seo"
+      },
+      "mambo-authenticate": {
+        "path": "../../../../priv/meteor_packages/mambo-authenticate"
+      },
+      "ms-validator": {
+        "path": "../../../../priv/meteor_packages/ms-validator"
+      },
+      "basic-auth": {
+        "path": "../../../../priv/meteor_packages/basic-auth"
+      },
+      "mambo-forms": {
+        "path": "../../../../priv/meteor_packages/mambo-forms"
+      },
+      "ms-google-analytics": {
+        "path": "../../../../priv/meteor_packages/ms-google-analytics"
+      },
+      "minimongoid": {},
+      "bootstrap-tabs": {
+        "path": "../../../../priv/meteor_packages/bootstrap-tabs"
+      },
+      "ms-markdown-editor": {
+        "path": "../../../../priv/meteor_packages/ms-markdown-editor"
+      },
+      "common-helpers": {
+        "git": "ssh://root@78.47.57.101/var/git/meteor_packages/common-helpers",
+        "branch": "shark"
+      },
+      "notify": {
+        "git": "ssh://root@78.47.57.101/var/git/meteor_packages/notify",
+        "branch": "shark"
+      }
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.6.1",
-        "commit": "4e1ee0581d68bff422a915dacb0bd30eae10fe08"
+        "branch": "blaze-integration",
+        "commit": "6fd133401bb6de65a30ba148f7d61ea1b4dc9b43"
       },
-      "bootstrap-3": {
-        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
-        "tag": "v0.3.7",
-        "commit": "5dd0d142c870647b910be80bc777b96f0dd45e5e"
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.0.1",
+        "commit": "fa631b7b192618e8690d43f0033a3f4c7f77fa1d"
       },
-      "accounts-entry": {
-        "git": "https://github.com/BeDifferential/accounts-entry.git",
-        "tag": "v0.4.4",
-        "commit": "56cee1ff5afe2ce5be7b749cd74fc939fc9ce781"
+      "ms-seo": {
+        "path": "../../../../priv/meteor_packages/ms-seo"
       },
-      "spin": {
-        "git": "https://github.com/SachaG/meteor-spin.git",
-        "tag": "v0.2.0",
-        "commit": "fd3a2871a69442848b4b4e74f5e1ae28fa4a95a4"
+      "mambo-authenticate": {
+        "path": "../../../../priv/meteor_packages/mambo-authenticate"
+      },
+      "ms-validator": {
+        "path": "../../../../priv/meteor_packages/ms-validator"
+      },
+      "basic-auth": {
+        "path": "../../../../priv/meteor_packages/basic-auth"
+      },
+      "mambo-forms": {
+        "path": "../../../../priv/meteor_packages/mambo-forms"
+      },
+      "ms-google-analytics": {
+        "path": "../../../../priv/meteor_packages/ms-google-analytics"
+      },
+      "minimongoid": {
+        "git": "https://github.com/Exygy/minimongoid.git",
+        "tag": "v0.8.3",
+        "commit": "8a4849426f1775f9886f303067e50877696fae43"
+      },
+      "bootstrap-tabs": {
+        "path": "../../../../priv/meteor_packages/bootstrap-tabs"
+      },
+      "ms-markdown-editor": {
+        "path": "../../../../priv/meteor_packages/ms-markdown-editor"
+      },
+      "common-helpers": {
+        "git": "ssh://root@78.47.57.101/var/git/meteor_packages/common-helpers",
+        "branch": "shark",
+        "commit": "515c60582c6eef751816d673bdbaffc97f6a486c"
+      },
+      "notify": {
+        "git": "ssh://root@78.47.57.101/var/git/meteor_packages/notify",
+        "branch": "shark",
+        "commit": "911a6fd116514e4e8c0baff52444599c164cfb94"
+      },
+      "underscore-string-latest": {
+        "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
+        "tag": "v2.3.3",
+        "commit": "4a5d70eee48fbd90a6e6fc78747250d704a0b3bb"
+      },
+      "ace-embed": {
+        "git": "https://github.com/stuartfenton/meteor-ace-embed.git",
+        "tag": "v0.0.4",
+        "commit": "027b0e1b0d06111b51a713f04a8b8750fdcbd289"
+      },
+      "marked": {
+        "path": "../../../../priv/meteor_packages/marked"
       }
     }
   }

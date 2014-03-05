@@ -1,0 +1,61 @@
+<template name="curriculum">
+
+	<div class="container">
+		<div class="row">
+            <div class="col-sm-3">
+                <nav class="nav-sidebar">
+                    <ul class="nav">
+                        <h4> <strong>{{course.courseTitle}}</strong></h4>
+                        <li class="nav-divider"></li>
+                        <li class="active"><a href="{{pathFor 'basicinfo'}}">Basic Info</a></li>
+                        <li><a href="{{pathFor 'curriculum'}}">Curriculum</a></li>
+                        <li class="nav-divider"></li>
+                    </ul>
+                </nav>
+            </div>
+		<div class="col-sm-9 well">
+			<h3 id="curriculumtitle"> Curriculum of <strong>{{course.courseTitle}}</strong></h3>
+			
+			<div class="list-group">
+				{{#each sections}}
+					{{>section}}
+				{{/each}}
+
+				<div href="#" class="list-group section">
+					{{#if myCourse}}
+					<h4 class="list-group-item-heading">Add New Section</h4>
+					<button class="list-group-2nd btn btn-primary" data-toggle="modal" data-target="#mySectionModal">
+					  + Add New Section to this Course
+					</button>
+					{{/if}}
+				</div>
+			</div>			
+	 	</div> <!-- row -->
+  </div><!-- /.container -->
+</div>
+  {{>addSectionModal}}
+</template>
+
+<template name="addSectionModal">
+	<div class="modal fade" id="mySectionModal" tabindex="-1" role="dialog" aria-labelledby="mySectionModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="mySectionModalLabel">Choose the Name of the Section</h4>
+	      </div>
+        <form role="form">
+	      	<div class="modal-body">
+	          <div class="form-group">
+	            <input type="text" class="form-control" name="sectionTitle" id="sectionTitle" placeholder="type the name of the section here">
+	          </div>	        
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		        <button type="submit" class="btn btn-primary">Save</button>
+		      </div>
+        </form>
+	    </div>
+	  </div>
+	</div>
+</template>

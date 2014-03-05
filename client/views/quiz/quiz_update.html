@@ -1,0 +1,13 @@
+<template name="quizUpdate">
+  <form id="quiz-form" role="form">
+    
+    {{>renderFormField quizIntro}}
+    
+    <h5>Type 4 possible answers. Check the correct answer. Currently, there can be only ONE correct answer.</h5>
+    {{#each answers}}
+    {{>renderFormField this}}
+    {{/each}}
+
+    <button type="submit" class="btn btn-default pull-right">Update</button>
+    </form><!-- end form -->
+</template>

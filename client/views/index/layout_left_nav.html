@@ -1,0 +1,20 @@
+<!-- COMMENT -->
+<!-- The iron router renders the current template into {{yield}} -->
+<!-- I set the baseLayout in the router config.js layoutTemplate property -->
+<!-- COMMENT -->
+<template name="leftNavLayout">
+  {{>topNavigation}}
+
+  {{#if errorMessageTop}}
+    {{>notificationTop}}
+  {{/if}}
+
+  <div class="container">
+    <div class="col-sm-3">
+      {{>yield region="leftNav"}}
+    </div>
+    <div class="col-sm-9">
+      {{>yield}}
+    </div>
+  </div><!-- container -->
+</template>

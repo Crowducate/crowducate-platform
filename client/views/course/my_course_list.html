@@ -1,0 +1,11 @@
+<template name="myCourseList">
+  <button class="btn btn-primary new-course"><i class="fa fa-plus"></i> Create a Course</button>
+  <hr>
+  <div class="row">
+    {{#each ownCourses}}
+    <div class="col-xs-12 col-md-4">
+      {{> myCourseListItem}}
+    </div>
+    {{/each}}
+  </div>
+</template>
