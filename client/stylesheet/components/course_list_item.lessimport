@@ -1,3 +1,27 @@
 .course-list-item{
-  height: 200px;
+  height: 390px;
+  cursor: pointer;
+  a {
+    color: @text-color;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  .course-img{
+    height: 200px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid @gray-lighter;
+    border-bottom: none;
+    img{
+      display: inline-block;
+    }
+  }
+  .well{
+    border-top: none;
+    padding: 10px;
+  }
+  .course-list-item-preview-text{
+    height: 70px;
+  }
 }
