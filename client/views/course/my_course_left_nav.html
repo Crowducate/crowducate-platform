@@ -1,6 +1,6 @@
 <template name="myCourseLeftNav">
   <div class="course-left-nav">
-    <a href="{{pathForCourseUpdate}}"><h3 class="left-nav-headline">{{course.courseTitle}}</h3></a>
+    <p><a href="{{pathForCourseUpdate}}"><strong class="left-nav-headline">{{course.courseTitle}}</strong></a></p>
 
     {{#each sections}}
       {{>mySectionMenuItem}}

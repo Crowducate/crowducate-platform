@@ -32,7 +32,6 @@ Template.quizShow.events({
   'submit form': (evt, tpl) ->
     Etc.prevent(evt)
     data = $(evt.target).serializeObject()
-    console.log 'data', data
     answer = data.selectedAnswer
 
     lecture = tpl.data

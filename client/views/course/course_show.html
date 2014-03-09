@@ -1,4 +1,18 @@
 <template name="courseShow">
-  <h1>{{course.courseTitle}}</h1>
+
+  <div class="row">
+    <div class="col-xs-10">
+      <h1 class="no-margin-top">{{course.courseTitle}}</h1>
+    </div>
+    <div class="col-xs-2">
+      {{#if userIsntOwner}}
+      <div class="pull-right">
+        <a href="{{courseChangeRequestPath}}" class="btn btn-default btn-sm change-request" title="Change Request"><i class="fa fa-edit"></i></a>
+        <a class="btn btn-default btn-sm copy" title="Copy Course"><i class="fa fa-copy"></i></a>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+
   <p>{{course.subtitle}}</p>
 </template>

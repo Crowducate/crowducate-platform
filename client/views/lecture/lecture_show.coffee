@@ -14,7 +14,8 @@ Template.lectureShow.helpers({
         data: @lecture
       ]
     }
-  lectureChangeRequestPath: -> Router.path 'lectureChangeRequest', {courseSlug: @course.slug, slug: @lecture.slug}
+  lectureChangeRequestPath: ->
+    Router.path 'lectureChangeRequest', {courseSlug: @course.slug, slug: @lecture.slug}
   userIsntOwner: ->
     return Meteor.userId() and Meteor.userId() isnt @lecture.owner
 })

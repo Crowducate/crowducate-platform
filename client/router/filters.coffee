@@ -1,19 +1,19 @@
 Layouts = [
-  layoutTemplate: 'leftNavLayout'
-  yieldTemplates: {'courseLeftNav': to: 'leftNav'}
-  routes: [
-    'lectureShow'
-    'courseShow'
-    'lectureChangeRequest'
-  ]
-,
-  layoutTemplate: 'leftNavLayout'
-  yieldTemplates: 'myCourseLeftNav': to: 'leftNav'
-  routes: [
-    'lectureUpdate'
-    'sectionUpdate'
-    'courseUpdate'
-  ]
+#   layoutTemplate: 'leftNavLayout'
+#   yieldTemplates: {'courseLeftNav': to: 'leftNav'}
+#   routes: [
+#     'lectureShow'
+#     'courseShow'
+#     'lectureChangeRequest'
+#   ]
+# ,
+#   layoutTemplate: 'leftNavLayout'
+#   yieldTemplates: 'myCourseLeftNav': to: 'leftNav'
+#   routes: [
+#     'lectureUpdate'
+#     'sectionUpdate'
+#     'courseUpdate'
+# ]
 ]
 
 IR_BeforeHooks =
@@ -36,7 +36,8 @@ IR_BeforeHooks =
   waitForData: (pause) ->
     if _.isFunction @data
       pause() unless @ready()
-
+  clearFormErrors: ->
+    Form.removeFormError()
   login: (pause) ->
     #TODO only for loged in users
 

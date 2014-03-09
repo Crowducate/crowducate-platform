@@ -1,6 +1,3 @@
-Template.sectionUpdate.rendered = ->
-  console.log 'Template.sectionUpdate.rendered'
-
 Template.sectionUpdate.helpers({
   form: ->
     section = Section.first({_id: Session.get('currentSection')})

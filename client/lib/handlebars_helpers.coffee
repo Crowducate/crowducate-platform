@@ -6,9 +6,11 @@ Helpers =
   courseOwner: ->
     return Meteor.userId() is @owner
   userPointsTotal: ->
-    # TODO calculate user points
     return '0' unless Meteor.userId()
     return User.current().getPointsTotal()
+  userOpenChangeRequests: ->
+    return '0' unless Meteor.userId()
+    return User.current().getOpenChangeRequestsTotal()
 
 for name, func of Helpers
   Handlebars.registerHelper name, func

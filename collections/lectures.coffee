@@ -30,7 +30,6 @@ class @Lecture extends Minimongoid
   getCorrectAnswerIndex: ->
     return @quiz.correctAnswer if @quiz and @quiz.correctAnswer > -1
   isCorrect: (answer) ->
-    console.log 'isCorrect', answer, @quiz.correctAnswer
     return @quiz.correctAnswer is parseInt(answer)
   getNextLecture: ->
     section = Section.first({_id: @sectionId})
@@ -70,7 +69,6 @@ Meteor.methods({
     check lectureId, String
 
     check data, {
-      intro: String
       markdown: String
       lectureTitle: String
     }
@@ -99,7 +97,7 @@ Meteor.methods({
 
     if isChangeRequest
       data.owner = lecture.owner
-      ChangeRequest.create({data: data, type: 'lecture', docId: lecture._id, owner: userId})
+      ChangeRequest.create({data: data, type: 'lecture', docId: lecture._id, owner: userId, state: ChangeRequest.STATE_OPEN})
     else
       data.updatedAt = new Date().valueOf()
       lecture.save(data)
@@ -107,12 +105,8 @@ Meteor.methods({
     return lecture._id
 
   updateQuiz: (lectureId, data) ->
-    console.log 'Meteor.methods.updateQuiz', lectureId, data
-
     data.correctAnswer = parseInt(data.correctAnswer) if data.correctAnswer
-
     errors = Lecture.validate data
-    console.log 'errors', errors
     throw new Meteor.Error 400, JSON.stringify errors unless _.isEmpty errors
 
     check lectureId, String

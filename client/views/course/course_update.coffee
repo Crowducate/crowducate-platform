@@ -1,9 +1,3 @@
-Template.courseUpdate.created = ->
-  console.log 'Template.courseUpdate.created', @
-
-Template.courseUpdate.rendered = ->
-  console.log 'Template.courseUpdate.rendered'
-
 Template.courseUpdate.helpers({
   title: ->
     template: 'controlGroupWithInput'
@@ -63,15 +57,12 @@ Template.courseUpdate.helpers({
 
 Template.courseUpdate.events({
   'submit form': (evt, tpl) ->
-    console.log 'submit form'
     Etc.prevent(evt)
 
     Form.removeFormError()
 
     data = $(evt.target).serializeObject()
-
     Meteor.call('updateCourse', tpl.data.course._id, data, (err, response) ->
-      console.log 'updatedCourse', err, response
       return handleFormError(err) if err
       Notify.setSuccess('Course updated')
     )

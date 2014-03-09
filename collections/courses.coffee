@@ -15,11 +15,25 @@ class @Course extends Minimongoid
       {key: 'Programming', label: 'Programming'}
   ]
 
+  getDiff: (field, value) ->
+    if field is 'keywords'
+      return getPrettyDiff(@getKeywords(), value.join(', ')) if _.isArray value
+      return getPrettyDiff(@getKeywords(), value) if _.isString value
+    return getPrettyDiff(@[field], value) if @[field]
+    return "Error: Field unknown (#{field})"
+
   getKeywords: ->
     return @keywords.join(', ') if @keywords and _.isArray(@keywords)
 
+  getText: (chars) ->
+    return @subtitle.substr 0, chars if chars
+    @subtitle
+
   isPublished: ->
     return @published is 1 if @published
+
+  isMyCourse: ->
+    @owner is Meteor.userId()
 
   @validate: (data) ->
     errors = MsValidator.validateModel(data, @validations)
@@ -63,7 +77,6 @@ Meteor.methods({
 
     course = Course.first {_id: courseId}
     throw new Meteor.Error 404, 'Course not found' unless course
-    throw new Meteor.Error 403, 'You are not allowed to update this course' unless course.owner is userId
 
     errors = Course.validate data
     throw new Meteor.Error 400, JSON.stringify errors unless _.isEmpty errors
@@ -76,7 +89,14 @@ Meteor.methods({
     data.keywords = data.keywords.split(',').map (kw) -> _.trim(kw)
     data.updatedAt = new Date().valueOf()
 
-    course.save(data)
+    isChangeRequest = userId isnt course.owner
+
+    if isChangeRequest
+      data.published = 1
+      data.owner = course.owner
+      ChangeRequest.create({data: data, type: 'course', docId: course._id, owner: userId, state: ChangeRequest.STATE_OPEN})
+    else
+      course.save(data)
     course._id
 
   deleteCourse: (courseId) ->
@@ -97,21 +117,66 @@ Meteor.methods({
 
     course.destroy()
     true
+
+  copyCourse: (courseId) ->
+    check courseId, String
+
+    userId = Meteor.userId()
+    throw new Meteor.Error 403, 'You have to log in in order to copy a course' unless userId
+
+    course = Course.first {_id: courseId}
+    throw new Meteor.Error 404, 'Course not found' unless course
+    throw new Meteor.Error 403, 'You cannot copy your own course' if course.owner is userId
+
+    sections = Section.where {_id: {$in: course.sections}}
+
+    lectureArr = []
+    for s in sections
+      Etc.pushArray lectureArr, s.lectures
+    lectures = Lecture.where {_id: {$in: lectureArr}}
+
+    copyCount = if course.copyCount then course.copyCount + 1 else 1
+    course.save {copyCount: copyCount}
+
+    # Create and double check new course slug
+    newCourseSlug = course.slug + '-' + copyCount
+    noFreeSlugFound = true
+    while noFreeSlugFound
+      if Course.find({slug: newCourseSlug}).count() is 0
+        noFreeSlugFound = false
+      else
+        copyCount++
+        newCourseSlug = course.slug + '-' + copyCount
+
+    newCourseData = _.pick(course, ['age', 'category', 'courseTitle', 'keywords', 'subtitle'])
+    newCourseData.slug = newCourseSlug
+    newCourseData.original = course._id
+    newCourseData.owner = userId
+    newCourseData.published = 0
+    newCourse = Course.create newCourseData
+
+    # Copy sections
+    newSectionArr = []
+    for s in sections
+      newLectureArr = []
+      lectures = Lecture.where {_id: {$in: s.lectures}}
+
+      newSectionData = _.pick(s, ['index', 'sectionTitle'])
+      newSectionData.owner = userId
+      newSectionData.courseId = newCourse._id
+      newSection = Section.create newSectionData
+      newSectionArr.push newSection._id
+
+      # Copy section lectures
+      for l in lectures
+        newLectureData = _.pick l, ['lectureTitle', 'markdown', 'quiz', 'slug']
+        newLectureData.owner = userId
+        newLectureData.sectionId = newSection._id
+        newLecture = Lecture.create newLectureData
+        newLectureArr.push newLecture._id
+
+      newSection.save {lectures: newLectureArr}
+
+    newCourse.save {sections: newSectionArr}
+    newCourse._id
 })
-
-
-# // Meteor.methods({
-# //  createCourse: function (courseAttributes) {
-# //    // ensure the post has a title
-# //    /*if (!courseAttributes.Coursetitle)
-# //    throw new Meteor.Error(422, 'Please fill in a headline');*/
-
-# //    //course._id = Courses.insert(course);
-
-# //    var course = _.extend(_.pick(courseAttributes, 'courseTitle', 'subtitle', 'keywords','category','age'));
-# //     course.owner = Meteor.userId();
-# //    var courseId = Courses.insert(course);
-
-# //    return courseId;
-# //  }
-# // });

@@ -6,6 +6,8 @@ Template.mySectionMenuItem.helpers({
     return lectures
   active: ->
     return 'active' if @_id is Session.get 'currentSection'
+  sectionIndex: ->
+    return @index + 1 + '.' if _.isNumber(@index)
 })
 
 Template.mySectionMenuItem.events({
