@@ -1,18 +1,20 @@
 <template name="courseChangeRequestApproval">
-  <h3>Title</h3>
-  {{{titleDiff}}}
 
-  <h3>Subtitle</h3>
-  {{{subTitleDiff}}}
+  <h1>{{{titleDiff}}}</h1>
 
-  <h3>Keywords</h3>
-  {{{keywordsDiff}}}
+  <p class="meta-information">
+    <span><i class="fa fa-folder" title="Category"></i> {{{categoryDiff}}}</span>
+    <span><i class="fa fa-group" title="Age Group"></i> {{{ageGroupDiff}}}</span>
+    <span><i class="fa fa-tags" title="Tags"></i> {{{keywordsDiff}}}</span>
+  </p>
 
-  <h3>Category</h3>
-  {{{categoryDiff}}}
-
-  <h3>Age Group</h3>
-  {{{ageGroupDiff}}}
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="well">
+        {{{markdownDiff}}}
+      </div>
+    </div>
+  </div>
 
   <hr>
   <div>

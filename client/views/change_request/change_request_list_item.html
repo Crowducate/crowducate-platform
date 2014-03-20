@@ -1,9 +1,8 @@
 <template name="changeRequestListItem">
-  <p>
-    {{#if isOpen}}
-    <a href="{{pathFor 'changeRequestShow'}}">A change request</a>
-    {{else}}
-    Old change request
-    {{/if}}
-  </p>
+  <tr>
+    <td>{{moment createdAt 'MM/DD/YYYY - hh:mm a'}}</td>
+    <td>{{capitalize type}}</td>
+    <td>{{>renderState}}</td>
+    <td>{{#if isOpen}}<a href="{{pathFor 'changeRequestShow'}}" class="btn btn-default"><i class="fa fa-search"></i></a>{{else}}---{{/if}}</td>
+  </tr>
 </template>

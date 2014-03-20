@@ -43,9 +43,19 @@ class @Lecture extends Minimongoid
       throw new Meteor.Error 403, 'The next section has no lectures' unless nextSection.lectures.length > 0
       return Lecture.first({_id: nextSection.lectures[0]})
     return null
-
+  getDiff: (field, value) ->
+    return getPrettyDiff(@[field], value) if @[field]
+    return "Error: Field unknown (#{field})"
+  getQuizDiff: (field, value) ->
+    return getPrettyDiff(@quiz[field], value) if @quiz and @quiz[field]
+    return "Error: Field unknown (#{field})"
   solveQuiz: (answer, cb) ->
     Meteor.call 'lectureSolveQuiz', @_id, answer, cb
+  getText: (chars) ->
+    return $(marked( @markdown.substr(0, chars) )).text() if chars and @markdown
+    return $(marked(@markdown)).text() if @markdown
+    return ''
+
 
 Meteor.methods({
   createLecture: (sectionId) ->
@@ -122,11 +132,16 @@ Meteor.methods({
     lecture = Lecture.first({_id: lectureId})
     throw new Meteor.Error 404, 'Lecture not found' unless lecture
     userId = Meteor.userId()
-    throw new Meteor.Error 403, 'You are not allowed to update this lecture' unless lecture.owner is userId
 
-    data.updatedAt = new Date().valueOf()
+    isChangeRequest = userId isnt lecture.owner
 
-    lecture.save({quiz: data})
+    if isChangeRequest
+      data.owner = lecture.owner
+      ChangeRequest.create({data: data, type: 'quiz', docId: lecture._id, owner: userId, state: ChangeRequest.STATE_OPEN})
+    else
+      data.updatedAt = new Date().valueOf()
+      lecture.save({quiz: data})
+
     lecture._id
 
   deleteLecture: (lectureId) ->

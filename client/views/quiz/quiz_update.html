@@ -1,13 +1,20 @@
 <template name="quizUpdate">
-  <form id="quiz-form" role="form">
-    
-    {{>renderFormField quizIntro}}
-    
-    <h5>Type 4 possible answers. Check the correct answer. Currently, there can be only ONE correct answer.</h5>
-    {{#each answers}}
-    {{>renderFormField this}}
-    {{/each}}
+  <div class="well well-tabnav">
+    <form id="quiz-form" role="form">
 
-    <button type="submit" class="btn btn-default pull-right">Update</button>
+      {{>renderFormField quizIntro}}
+
+      <h5>Type 4 possible answers. Check the correct answer. Currently, there can be only ONE correct answer.</h5>
+      {{#each answers}}
+      {{>renderFormField this}}
+      {{/each}}
+
+      <div class="form-actions">
+        <div class="pull-right">
+          <button type="submit" class="btn btn-default">Update</button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
     </form><!-- end form -->
+  </div>
 </template>

@@ -1,5 +1,4 @@
 Meteor.publish 'lectureByCourse', (courseId, lectureId) ->
-  console.log 'publish.myCourse', courseId
   check courseId, String
   check lectureId, String
   return getLectureData {_id: courseId, owner: @userId}
@@ -11,7 +10,6 @@ Meteor.publish 'lectureByCourseSlug', (courseSlug, lectureSlug) ->
 
 
 getLectureData = (lectureQry) ->
-  console.log 'getLectureData', lectureQry
   sectionsCursor = []
   lecturesCursor = []
 

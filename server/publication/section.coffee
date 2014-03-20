@@ -1,10 +1,8 @@
 Meteor.publish 'mySectionByCourse', (courseId, lectureId) ->
-  console.log 'publish.mySectionByCourse', courseId
   check courseId, String
   check lectureId, String
   sectionsCursor = []
   lecturesCursor = []
-
 
   coursesCursor = Course.find({_id: courseId, owner: @userId})
   coursesArr = coursesCursor.fetch()
@@ -18,7 +16,7 @@ Meteor.publish 'mySectionByCourse', (courseId, lectureId) ->
   sections = sectionsCursor.fetch()
   lecturesIdArr = []
   for s in sections
-    Etc.pushArray(lecturesIdArr, s.lectures) if _.isArray(s.lectures)  
+    Etc.pushArray(lecturesIdArr, s.lectures) if _.isArray(s.lectures)
 
   lecturesCursor = Lecture.find({_id: {$in: lecturesIdArr}})
   return [coursesCursor, sectionsCursor, lecturesCursor]

@@ -1,6 +1,17 @@
 <template name="changeRequestList">
-  All change requests:<br>
-  {{#each changeRequests}}
-    {{>changeRequestListItem}}
-  {{/each}}
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>State</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each changeRequests}}
+      {{>changeRequestListItem}}
+    {{/each}}
+    </tbody>
+  </table>
 </template>

@@ -1,8 +1,13 @@
 Template.courseShow.helpers({
   userIsntOwner: ->
+    return true unless @course
     Meteor.userId() and Meteor.userId() isnt @course.owner
   courseChangeRequestPath: ->
     Router.path 'courseChangeRequest', {slug: @course.slug}
+  firstLecturePath: ->
+    firstSection = Section.first({courseId: Course.first()._id, index: 0})
+    firstLecture = Lecture.first({sectionId: firstSection._id, index: 0})
+    Router.path 'lectureShow', {courseSlug: Course.first().slug, slug: firstLecture.slug }
 })
 
 Template.courseShow.events({

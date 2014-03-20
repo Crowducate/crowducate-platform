@@ -19,7 +19,7 @@ Template.courseUpdate.helpers({
     placeholder: 'Choose some tags (e.g. JavaScript, Math)'
     value: @course.getKeywords() if @course
   category: ->
-    options = []
+    options = [{key: 'select', label: '-- select --'}]
     for c in Course.CATEGORIES
       o = {key: c.key, label: c.label}
       o.attributes = 'selected' if @course and c.key is @course.category
@@ -53,6 +53,7 @@ Template.courseUpdate.helpers({
       key: 1
       attributes: 'selected' if @course and @course.isPublished()
     ]
+  markdown: -> @course.markdown
 })
 
 Template.courseUpdate.events({
@@ -62,6 +63,7 @@ Template.courseUpdate.events({
     Form.removeFormError()
 
     data = $(evt.target).serializeObject()
+    data.markdown = Template.markdownEditor.getValue()
     Meteor.call('updateCourse', tpl.data.course._id, data, (err, response) ->
       return handleFormError(err) if err
       Notify.setSuccess('Course updated')

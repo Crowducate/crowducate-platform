@@ -42,7 +42,7 @@ Template.quizUpdate.events({
     data.correctAnswer = -1 unless data.correctAnswer
     lecture = Lecture.first({_id: Session.get('currentLecture')})
 
-    Meteor.call 'updateQuiz', lecture._id, data, (err) ->
+    Meteor.call 'updateQuiz', tpl.data._id, data, (err) ->
       return handleFormError(err) if err
       Notify.setSuccess 'Quiz updated'
 })

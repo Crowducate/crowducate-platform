@@ -1,0 +1,5 @@
+.meta-information{
+  span{
+    margin-right: 10px;
+  }
+}

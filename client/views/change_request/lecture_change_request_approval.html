@@ -1,9 +1,12 @@
 <template name="lectureChangeRequestApproval">
-  <h3>Title</h3>
-  {{{lectureTitleDiff}}}
-
-  <h3>Content</h3>
-  {{{markdownDiff}}}
+  <h1>{{{lectureTitleDiff}}}</h1>
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="well">
+        {{{markdownDiff}}}
+      </div>
+    </div>
+  </div>
 
   <hr>
   <div>

@@ -11,6 +11,12 @@ Helpers =
   userOpenChangeRequests: ->
     return '0' unless Meteor.userId()
     return User.current().getOpenChangeRequestsTotal()
+  moment: (date, format) ->
+    moment(date).format(format)
+  capitalize: (str) -> _.capitalize str
+  pathFor: (name) ->
+    Router.path(name, @)
+
 
 for name, func of Helpers
   Handlebars.registerHelper name, func

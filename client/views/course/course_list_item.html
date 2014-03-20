@@ -1,7 +1,15 @@
 <template name="courseListItem">
   <div class="course-list-item">
-    <a href="{{pathFor 'courseShow'}}">
-      <div class="course-img"><img class="img-resonsive" src="{{courseThumb}}"></div>
+    <a href="{{#if isMyCoursesPath}}{{pathFor 'courseUpdate'}}{{else}}{{pathFor 'courseShow'}}{{/if}}">
+      <div class="course-img">
+        {{#if courseOwner}}
+        <div class="owner-options">
+          <a href="{{pathFor 'courseUpdate'}}" class="btn btn-default" title="Edit Course"><i class="fa fa-edit"></i></a>
+          <button class="btn btn-danger delete" title="Delete Course"><i class="fa fa-trash-o"></i></button>
+        </div>
+        {{/if}}
+        <img class="img-resonsive" src="{{courseThumb}}">
+      </div>
       <div class="well">
         <div class="course"><h4>{{courseTitle}}</h4></div>
         <p class="course-list-item-preview-text">{{getText 50}}</p>

@@ -65,6 +65,8 @@ Router.map ->
     path: "/teach/:_id"
     layoutTemplate: 'leftNavLayout'
     yieldTemplates: 'myCourseLeftNav': to: 'leftNav'
+    before: (pause) ->
+      Session.set 'markdownValue', @data().course.markdown if @ready()
     waitOn: ->
       [Meteor.subscribe('myCourse', @params._id)]
     data: ->
@@ -78,7 +80,8 @@ Router.map ->
     path: "/teach/:courseId/sections/:_id"
     layoutTemplate: 'leftNavLayout'
     yieldTemplates: 'myCourseLeftNav': to: 'leftNav'
-    before: -> Session.set('currentSection', @params._id)
+    before: ->
+      Session.set('currentSection', @params._id) if @ready()
     waitOn: -> [Meteor.subscribe('mySectionByCourse', @params.courseId, @params._id)]
     data: -> {
       course: Course.first({_id: @params.courseId})
@@ -93,7 +96,8 @@ Router.map ->
     yieldTemplates: 'myCourseLeftNav': to: 'leftNav'
     before: (pause) ->
       Session.set 'currentLecture', @params._id
-      Session.set 'markdownValue', @data().lecture.markdown
+      Session.set 'markdownValue', @data().lecture.markdown if @ready() and @data().lecture
+      BootstrapTabs.setCurrentTab 'exercise' if BootstrapTabs
     waitOn: -> [
       Meteor.subscribe('lectureByCourse', @params.courseId, @params._id)
     ]
@@ -112,7 +116,7 @@ Router.map ->
     template: 'changeRequestList'
     path: '/change-requests'
     waitOn: -> [Meteor.subscribe 'myChangeRequests']
-    data: -> {changeRequests: ChangeRequest.where({})}
+    data: -> {changeRequests: ChangeRequest.where({}, {sort: {createdAt: -1}})}
   @route 'changeRequestShow',
     path: '/change-request/:_id'
     waitOn: -> [Meteor.subscribe 'myChangeRequest', @params._id]
@@ -124,7 +128,6 @@ Router.map ->
   # PROFILE
   @route 'profile'
 
-
   # CHANGE REQUESTS
   # CHANGE REQUESTS
   # CHANGE REQUESTS
@@ -132,8 +135,9 @@ Router.map ->
     path: ':slug/change'
     layoutTemplate: 'leftNavLayout'
     yieldTemplates: {'courseLeftNav': to: 'leftNav'}
-    before: ->
-      Session.set 'markdownValue', @data().course.markdown
+    before: (pause) ->
+      pause() unless @ready()
+      Session.set 'markdownValue', @data().course.markdown if @ready()
     waitOn: -> [Meteor.subscribe 'course', @params.slug]
     data: -> {
       course: Course.first({slug: @params.slug})
@@ -144,9 +148,10 @@ Router.map ->
     path: ':courseSlug/:slug/change'
     layoutTemplate: 'leftNavLayout'
     yieldTemplates: {'courseLeftNav': to: 'leftNav'}
-    before: ->
+    before: (pause) ->
+      pause() unless @ready()
       Session.set 'currentLecture', @params.slug
-      Session.set 'markdownValue', @data().lecture.markdown
+      Session.set 'markdownValue', @data().lecture.markdown if @ready()
     waitOn: -> [Meteor.subscribe 'lectureByCourseSlug', @params.courseSlug, @params.slug]
     data: -> {
       course: Course.first({slug: @params.courseSlug})
@@ -160,31 +165,50 @@ Router.map ->
     # STUDENT
     @route 'courseList',
       path: '/courses'
+      before: (pause) -> pause() unless @ready()
       waitOn: -> [Meteor.subscribe 'popularCourses']
-      data: -> popularCourses: Course.where({published: 1}, {sort: {createdAt: -1}})
+      data: -> courses: Course.where({published: 1}, {sort: {createdAt: -1}})
 
     @route 'courseShow',
       path: ':slug'
       layoutTemplate: 'leftNavLayout'
       yieldTemplates: {'courseLeftNav': to: 'leftNav'}
       waitOn: -> [Meteor.subscribe 'course', @params.slug]
+      before: (pause) ->
+        pause() unless @ready()
       data: -> {
         course: Course.first({slug: @params.slug})
-        sections: Section.where({})
-        lectures: Lecture.where({})
+        sections: Section.where({}, {sort: {index: 1}})
+        lectures: Lecture.where({}, {sort: {index: 1}})
       }
+      after: ->
+        course = @data().course
+        SEO.set({
+          title: course.courseTitle
+          meta:
+            description: course.getText(160)
+        })
 
     @route 'lectureShow',
       path: ':courseSlug/:slug'
       layoutTemplate: 'leftNavLayout'
       yieldTemplates: {'courseLeftNav': to: 'leftNav'}
-      before: (pause) -> Session.set 'currentLecture', @params.slug
+      before: (pause) ->
+        pause() unless @ready()
+        Session.set 'currentLecture', @params.slug if @ready()
       waitOn: -> [Meteor.subscribe('lectureByCourseSlug', @params.courseSlug, @params.slug)]
       data: -> {
         course: Course.first({slug: @params.courseSlug})
-        sections: Section.where({})
-        lectures: Lecture.where({})
+        sections: Section.where({}, {sort: {index: 1}})
+        lectures: Lecture.where({}, {sort: {index: 1}})
         lecture: Lecture.first({slug: @params.slug})
       }
+      after: ->
+        lecture = @data().lecture
+        SEO.set({
+          title: lecture.lectureTitle
+          meta:
+            description: lecture.getText(160)
+        })
 
   return

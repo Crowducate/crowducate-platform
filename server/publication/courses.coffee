@@ -2,7 +2,6 @@ Meteor.publish 'myCourses', ->
   return Course.find({owner: @userId})
 
 Meteor.publish 'myCourse', (courseId) ->
-  console.log 'publish.myCourse', courseId
   check courseId, String
   sectionsCursor = []
   lecturesCursor = []
@@ -20,7 +19,7 @@ Meteor.publish 'myCourse', (courseId) ->
   sections = sectionsCursor.fetch()
   lecturesIdArr = []
   for s in sections
-    Etc.pushArray(lecturesIdArr, s.lectures) if _.isArray(s.lectures)  
+    Etc.pushArray(lecturesIdArr, s.lectures) if _.isArray(s.lectures)
 
   lecturesCursor = Lecture.find({_id: {$in: lecturesIdArr}})
   return [coursesCursor, sectionsCursor, lecturesCursor]
@@ -29,7 +28,6 @@ Meteor.publish 'popularCourses', ->
   return Course.find({}, {sort: {createdAt: -1}})
 
 Meteor.publish 'course', (slug) ->
-  console.log 'publish.course', slug
   check slug, String
   sectionsCursor = []
   lecturesCursor = []
@@ -47,7 +45,7 @@ Meteor.publish 'course', (slug) ->
   sections = sectionsCursor.fetch()
   lecturesIdArr = []
   for s in sections
-    Etc.pushArray(lecturesIdArr, s.lectures) if _.isArray(s.lectures)  
+    Etc.pushArray(lecturesIdArr, s.lectures) if _.isArray(s.lectures)
 
   lecturesCursor = Lecture.find({_id: {$in: lecturesIdArr}})
   return [coursesCursor, sectionsCursor, lecturesCursor]

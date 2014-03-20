@@ -17,7 +17,6 @@ Template.quizShow.helpers({
       })
       count++
 
-
     formOptions =
       template: 'baseForm'
       formFields: answers

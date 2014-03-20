@@ -32,6 +32,9 @@
       "ms-markdown-editor": {
         "path": "../../../../priv/meteor_packages/ms-markdown-editor"
       },
+      "moment": {
+        "path": "../../../../priv/meteor_packages/moment"
+      },
       "common-helpers": {
         "git": "ssh://root@78.47.57.101/var/git/meteor_packages/common-helpers",
         "branch": "shark"
@@ -45,12 +48,12 @@
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
         "branch": "blaze-integration",
-        "commit": "6fd133401bb6de65a30ba148f7d61ea1b4dc9b43"
+        "commit": "35ea9b93fff61af9f3a4c01d1c48ede00f176391"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.0.1",
-        "commit": "fa631b7b192618e8690d43f0033a3f4c7f77fa1d"
+        "tag": "v0.2.1",
+        "commit": "f52f416d6277f27b11832355298553e46b8cc6fd"
       },
       "ms-seo": {
         "path": "../../../../priv/meteor_packages/ms-seo"
@@ -80,6 +83,9 @@
       },
       "ms-markdown-editor": {
         "path": "../../../../priv/meteor_packages/ms-markdown-editor"
+      },
+      "moment": {
+        "path": "../../../../priv/meteor_packages/moment"
       },
       "common-helpers": {
         "git": "ssh://root@78.47.57.101/var/git/meteor_packages/common-helpers",

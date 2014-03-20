@@ -36,6 +36,9 @@
     "ms-markdown-editor": {
       "path": "../../../../priv/meteor_packages/ms-markdown-editor"
     },
+    "moment": {
+      "path": "../../../../priv/meteor_packages/moment"
+    },
     "common-helpers": {
       "git": "ssh://root@78.47.57.101/var/git/meteor_packages/common-helpers",
       "branch": "shark"

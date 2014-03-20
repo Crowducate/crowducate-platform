@@ -1,5 +1,7 @@
 <template name="courseShow">
 
+
+
   <div class="row">
     <div class="col-xs-10">
       <h1 class="no-margin-top">{{course.courseTitle}}</h1>
@@ -14,5 +16,20 @@
     </div>
   </div>
 
-  <p>{{course.subtitle}}</p>
+  <p class="meta-information">
+    <span><i class="fa fa-folder" title="Category"></i> {{course.getCategory}}</span>
+    <span><i class="fa fa-group" title="Age Group"></i> {{course.getAge}}</span>
+    <span><i class="fa fa-tags" title="Tags"></i> {{course.getKeywords}}</span>
+  </p>
+
+  <div class="well">
+    {{#with course}}
+    {{{renderMarkdown}}}
+    {{/with}}
+  </div>
+
+  <div class="text-center">
+    <a class="btn btn-primary btn-lg" href="{{firstLecturePath}}">Start Course</a>
+  </div>
+
 </template>

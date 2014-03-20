@@ -18,6 +18,10 @@ Template.courseChangeRequestApproval.helpers({
   ageGroupDiff: ->
     course = Course.first({_id: @docId})
     course.getDiff('age', @data.age) if course
+
+  markdownDiff: ->
+    course = Course.first({_id: @docId})
+    course.getDiff('markdown', @data.markdown) if course
 })
 
 Template.courseChangeRequestApproval.events({
@@ -25,6 +29,14 @@ Template.courseChangeRequestApproval.events({
     Etc.prevent evt
 
     Meteor.call 'acceptChangeRequest', tpl.data._id, (err) ->
+      return Notify.setError err.reason if err
+      Notify.setSuccess 'Change Request accepted'
+      Router.go 'changeRequests'
+
+  'click .decline': (evt, tpl) ->
+    Etc.prevent evt
+
+    Meteor.call 'declineChangeRequest', tpl.data._id, (err) ->
       return Notify.setError err.reason if err
       Notify.setSuccess 'Change Request accepted'
       Router.go 'changeRequests'

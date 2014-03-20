@@ -1,19 +1,18 @@
 <template name="lectureUpdateExercise">
+  <div class="well well-tabnav">
+    <form id="form-lecture-update">
+      {{#each formFields}}
+        {{> renderFormField}}
+      {{/each}}
 
+      {{>markdownEditor}}
 
-
-  <form id="form-lecture-update">
-    {{#each formFields}}
-      {{> renderFormField}}
-    {{/each}}
-
-    {{>markdownEditor markdown=markdown}}
-
-    <div class="form-actions">
-      <div class="pull-right">
-        <button class="btn btn-default" type="submit">Update</button>
+      <div class="form-actions">
+        <div class="pull-right">
+          <button class="btn btn-default" type="submit">Update</button>
+        </div>
+        <div class="clearfix"></div>
       </div>
-    </div>
-
-  </form>
+    </form>
+  </div>
 </template>

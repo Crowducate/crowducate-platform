@@ -15,7 +15,9 @@ Template.lectureShow.helpers({
       ]
     }
   lectureChangeRequestPath: ->
+    return '' unless @lecture and @course
     Router.path 'lectureChangeRequest', {courseSlug: @course.slug, slug: @lecture.slug}
   userIsntOwner: ->
+    return true unless @lecture
     return Meteor.userId() and Meteor.userId() isnt @lecture.owner
 })

@@ -9,10 +9,10 @@ class @Course extends Minimongoid
     {key: '18+', label: '18+'}
   ]
   @CATEGORIES: [
-      {key: 'Business', label: 'Business'},
-      {key: 'Humanities', label: 'Humanities'},
-      {key: 'Science', label: 'Math/Science'},
-      {key: 'Programming', label: 'Programming'}
+    {key: 'Business', label: 'Business'},
+    {key: 'Humanities', label: 'Humanities'},
+    {key: 'Science', label: 'Math/Science'},
+    {key: 'Programming', label: 'Programming'}
   ]
 
   getDiff: (field, value) ->
@@ -26,8 +26,13 @@ class @Course extends Minimongoid
     return @keywords.join(', ') if @keywords and _.isArray(@keywords)
 
   getText: (chars) ->
-    return @subtitle.substr 0, chars if chars
-    @subtitle
+    return $(marked( @markdown.substr(0, chars) )).text() if chars and @markdown
+    return $(marked(@markdown)).text() if @markdown
+    return ''
+
+  getCategory: -> @category
+
+  getAge: -> @age
 
   isPublished: ->
     return @published is 1 if @published
@@ -41,15 +46,17 @@ class @Course extends Minimongoid
 
   @validations:
     courseTitle: (value) ->
-      throw new Error('Please enter a course title.') unless validator.isLength(value, 1)
-    subtitle: (value) ->
-      throw new Error('Please enter a subtitle.') unless validator.isLength(value, 1)
+      throw new Error('Please enter a course title.') unless validator.isLength(value, 1) #and not validator.equals(value, 'New ')
+    # subtitle: (value) ->
+    #   throw new Error('Please enter a subtitle.') unless validator.isLength(value, 1)
     keywords: (value) ->
       throw new Error('Please enter some keywords') unless validator.isLength(value, 1)
     category: (value) ->
       throw new Error('Please select a category') unless validator.isIn(value, _.pluck(Course.CATEGORIES, 'key'))
     age: (value) ->
       throw new Error('Please select an age group') unless validator.isIn(value, _.pluck(Course.AGE_GROUPS, 'key'))
+    markdown: (value) ->
+      throw new Error('Please enter a course description') unless validator.isLength(value, 1)
 
 Meteor.methods({
   createCourse: ->
@@ -65,7 +72,7 @@ Meteor.methods({
 
     check data, {
       courseTitle: String
-      subtitle: String
+      markdown: String
       keywords: String
       category: String
       age: String
@@ -107,8 +114,14 @@ Meteor.methods({
     throw new Meteor.Error 404, 'Course not found' unless course
     throw new Meteor.Error 403, 'You are not allowed to delete this course' unless userId is course.owner
 
+    unless course.sections
+      # has no sections
+      course.destroy()
+      return true
+
     sections = Section.where {_id: {$in: course.sections}}
     lectureArr = []
+
     for s in sections
       Etc.pushArray lectureArr, s.lectures
       s.destroy()

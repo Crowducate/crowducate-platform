@@ -13,7 +13,7 @@
 @gray-dark:              lighten(#000, 20%);   // #333
 @gray:                   lighten(#000, 33.5%); // #555
 @gray-light:             lighten(#000, 60%);   // #999
-@gray-lighter:           lighten(#000, 93.5%); // #eee
+@gray-lighter:           #ddd; // lighten(#000, 93.5%); // #eee
 
 // Brand colors
 // -------------------------
@@ -312,15 +312,15 @@
 @nav-open-caret-border-color:               #fff;
 
 // Tabs
-@nav-tabs-border-color:                     #ddd;
+@nav-tabs-border-color:                     @gray-lighter;
 
 @nav-tabs-link-hover-border-color:          @gray-lighter;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
 @nav-tabs-active-link-hover-color:          @gray;
-@nav-tabs-active-link-hover-border-color:   #ddd;
+@nav-tabs-active-link-hover-border-color:   @gray-lighter;
 
-@nav-tabs-justified-link-border-color:            #ddd;
+@nav-tabs-justified-link-border-color:            @gray-lighter;
 @nav-tabs-justified-active-link-border-color:     @body-bg;
 
 // Pills
