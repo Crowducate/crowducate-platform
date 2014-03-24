@@ -6,72 +6,74 @@
         "git": "https://github.com/EventedMind/iron-router.git",
         "branch": "blaze-integration"
       },
-      "blaze-layout": {},
-      "ms-seo": {
-        "path": "../../../../priv/meteor_packages/ms-seo"
-      },
+      "ms-seo": {},
       "mambo-authenticate": {
-        "path": "../../../../priv/meteor_packages/mambo-authenticate"
+        "git": "https://github.com/DerMambo/mambo-authenticate.git",
+        "branch": "master"
       },
       "ms-validator": {
-        "path": "../../../../priv/meteor_packages/ms-validator"
+        "git": "https://github.com/DerMambo/ms-validator.git",
+        "branch": "master"
       },
       "basic-auth": {
-        "path": "../../../../priv/meteor_packages/basic-auth"
+        "git": "https://github.com/DerMambo/basic-auth.git",
+        "branch": "master"
       },
       "mambo-forms": {
-        "path": "../../../../priv/meteor_packages/mambo-forms"
-      },
-      "ms-google-analytics": {
-        "path": "../../../../priv/meteor_packages/ms-google-analytics"
+        "git": "https://github.com/DerMambo/mambo-forms.git",
+        "branch": "master"
       },
       "minimongoid": {},
       "bootstrap-tabs": {
-        "path": "../../../../priv/meteor_packages/bootstrap-tabs"
-      },
-      "ms-markdown-editor": {
-        "path": "../../../../priv/meteor_packages/ms-markdown-editor"
+        "git": "https://github.com/DerMambo/bootstrap-tabs.git",
+        "branch": "master"
       },
       "moment": {
-        "path": "../../../../priv/meteor_packages/moment"
+        "git": "https://github.com/DerMambo/moment.git",
+        "branch": "master"
       },
       "common-helpers": {
-        "git": "ssh://root@78.47.57.101/var/git/meteor_packages/common-helpers",
-        "branch": "shark"
+        "git": "https://github.com/DerMambo/common-helpers.git",
+        "branch": "master"
       },
       "notify": {
-        "git": "ssh://root@78.47.57.101/var/git/meteor_packages/notify",
-        "branch": "shark"
+        "git": "https://github.com/DerMambo/notify.git",
+        "branch": "master"
+      },
+      "ms-google-analytics": {
+        "git": "https://github.com/DerMambo/ms-google-analytics.git",
+        "branch": "master"
+      },
+      "ms-markdown-editor": {
+        "git": "https://github.com/DerMambo/ms-markdown-editor.git",
+        "branch": "master"
       }
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
         "branch": "blaze-integration",
-        "commit": "35ea9b93fff61af9f3a4c01d1c48ede00f176391"
-      },
-      "blaze-layout": {
-        "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.1",
-        "commit": "f52f416d6277f27b11832355298553e46b8cc6fd"
+        "commit": "947991731df164e56b53cfdae8ef23802d989142"
       },
       "ms-seo": {
-        "path": "../../../../priv/meteor_packages/ms-seo"
-      },
-      "mambo-authenticate": {
-        "path": "../../../../priv/meteor_packages/mambo-authenticate"
+        "git": "https://github.com/DerMambo/ms-seo",
+        "tag": "v0.2.5",
+        "commit": "ee04a070b353690260d8df1866d2798846dba55e"
       },
       "ms-validator": {
-        "path": "../../../../priv/meteor_packages/ms-validator"
+        "git": "https://github.com/DerMambo/ms-validator.git",
+        "branch": "master",
+        "commit": "ec15e737bb8231d2145a835f7dbdc1959c948082"
       },
       "basic-auth": {
-        "path": "../../../../priv/meteor_packages/basic-auth"
+        "git": "https://github.com/DerMambo/basic-auth.git",
+        "branch": "master",
+        "commit": "b8ac550d8e3d58b3f432c5870a553779a1338c6c"
       },
       "mambo-forms": {
-        "path": "../../../../priv/meteor_packages/mambo-forms"
-      },
-      "ms-google-analytics": {
-        "path": "../../../../priv/meteor_packages/ms-google-analytics"
+        "git": "https://github.com/DerMambo/mambo-forms.git",
+        "branch": "master",
+        "commit": "1e7aa77b0ae4325c6c722ad5f2e31e59d6e655b4"
       },
       "minimongoid": {
         "git": "https://github.com/Exygy/minimongoid.git",
@@ -79,23 +81,39 @@
         "commit": "8a4849426f1775f9886f303067e50877696fae43"
       },
       "bootstrap-tabs": {
-        "path": "../../../../priv/meteor_packages/bootstrap-tabs"
-      },
-      "ms-markdown-editor": {
-        "path": "../../../../priv/meteor_packages/ms-markdown-editor"
+        "git": "https://github.com/DerMambo/bootstrap-tabs.git",
+        "branch": "master",
+        "commit": "bd307185586ebfaffb9c9b12f61b95dfb0ae6a49"
       },
       "moment": {
-        "path": "../../../../priv/meteor_packages/moment"
+        "git": "https://github.com/DerMambo/moment.git",
+        "branch": "master",
+        "commit": "4ebebe13d031bebf9d43e4581059aa62df754f92"
       },
       "common-helpers": {
-        "git": "ssh://root@78.47.57.101/var/git/meteor_packages/common-helpers",
-        "branch": "shark",
-        "commit": "515c60582c6eef751816d673bdbaffc97f6a486c"
+        "git": "https://github.com/DerMambo/common-helpers.git",
+        "branch": "master",
+        "commit": "bbdec2337aaf4a1cc7cff314f514c3e8fb825e3c"
       },
       "notify": {
-        "git": "ssh://root@78.47.57.101/var/git/meteor_packages/notify",
-        "branch": "shark",
+        "git": "https://github.com/DerMambo/notify.git",
+        "branch": "master",
         "commit": "911a6fd116514e4e8c0baff52444599c164cfb94"
+      },
+      "ms-google-analytics": {
+        "git": "https://github.com/DerMambo/ms-google-analytics.git",
+        "branch": "master",
+        "commit": "9eff44f2d5a51e5f21d81a8e7c2b0c69ba8a520e"
+      },
+      "ms-markdown-editor": {
+        "git": "https://github.com/DerMambo/ms-markdown-editor.git",
+        "branch": "master",
+        "commit": "b574d46d3016f1e86f2db3e1cf9d0fda15bce679"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "branch": "master",
+        "commit": "2664f817844fba0fab0455a79bc62782c9091ad0"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
@@ -108,7 +126,9 @@
         "commit": "027b0e1b0d06111b51a713f04a8b8750fdcbd289"
       },
       "marked": {
-        "path": "../../../../priv/meteor_packages/marked"
+        "git": "https://github.com/DerMambo/marked.git",
+        "branch": "master",
+        "commit": "c7314747b56d56690dcfa678334bf4af9b522b10"
       }
     }
   }

@@ -4,48 +4,37 @@
       "git": "https://github.com/EventedMind/iron-router.git",
       "branch": "blaze-integration"
     },
-    "blaze-layout": {},
-    "ms-seo": {
-      "path": "../../../../priv/meteor_packages/ms-seo"
-    },
+    "ms-seo": {},
     "mambo-authenticate": {
-      "path": "../../../../priv/meteor_packages/mambo-authenticate"
-    },
-    "ms-seo": {
-      "path": "../../../../priv/meteor_packages/ms-seo"
+      "git": "https://github.com/DerMambo/mambo-authenticate.git"
     },
     "ms-validator": {
-      "path": "../../../../priv/meteor_packages/ms-validator"
+      "git": "https://github.com/DerMambo/ms-validator.git"
     },
     "basic-auth": {
-      "path": "../../../../priv/meteor_packages/basic-auth"
+      "git": "https://github.com/DerMambo/basic-auth.git"
     },
     "mambo-forms": {
-      "path": "../../../../priv/meteor_packages/mambo-forms"
-    },
-    "ms-google-analytics": {
-      "path": "../../../../priv/meteor_packages/ms-google-analytics"
+      "git": "https://github.com/DerMambo/mambo-forms.git"
     },
     "minimongoid": {},
-    "mambo-authenticate": {
-      "path": "../../../../priv/meteor_packages/mambo-authenticate"
-    },
     "bootstrap-tabs": {
-      "path": "../../../../priv/meteor_packages/bootstrap-tabs"
-    },
-    "ms-markdown-editor": {
-      "path": "../../../../priv/meteor_packages/ms-markdown-editor"
+      "git": "https://github.com/DerMambo/bootstrap-tabs.git"
     },
     "moment": {
-      "path": "../../../../priv/meteor_packages/moment"
+      "git": "https://github.com/DerMambo/moment.git"
     },
     "common-helpers": {
-      "git": "ssh://root@78.47.57.101/var/git/meteor_packages/common-helpers",
-      "branch": "shark"
+      "git": "https://github.com/DerMambo/common-helpers.git"
     },
     "notify": {
-      "git": "ssh://root@78.47.57.101/var/git/meteor_packages/notify",
-      "branch": "shark"
+      "git": "https://github.com/DerMambo/notify.git"
+    },
+    "ms-google-analytics":{
+      "git": "https://github.com/DerMambo/ms-google-analytics.git"
+    },
+    "ms-markdown-editor": {
+      "git": "https://github.com/DerMambo/ms-markdown-editor.git"
     }
   }
 }
