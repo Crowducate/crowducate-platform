@@ -1,5 +1,6 @@
 Helpers =
   navActive: (route) ->
+    return false unless Router.current()
     if arguments.length > 1
       return _.indexOf(arguments, Router.current().route.name) > -1
     return route is Router.current().route.name

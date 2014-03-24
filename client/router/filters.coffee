@@ -1,29 +1,4 @@
-Layouts = [
-#   layoutTemplate: 'leftNavLayout'
-#   yieldTemplates: {'courseLeftNav': to: 'leftNav'}
-#   routes: [
-#     'lectureShow'
-#     'courseShow'
-#     'lectureChangeRequest'
-#   ]
-# ,
-#   layoutTemplate: 'leftNavLayout'
-#   yieldTemplates: 'myCourseLeftNav': to: 'leftNav'
-#   routes: [
-#     'lectureUpdate'
-#     'sectionUpdate'
-#     'courseUpdate'
-# ]
-]
-
 IR_BeforeHooks =
-  setLayout: ->
-    for l in Layouts
-      if _.indexOf(l.routes, @route.name) > -1
-        @yieldTemplates = l.yieldTemplates
-        @layout l.layoutTemplate
-        return
-
   baseSubscriptions: ->
     @subscribe('userData').wait()
 
@@ -42,13 +17,13 @@ IR_BeforeHooks =
     #TODO only for loged in users
 
 # always
-Router.before IR_BeforeHooks.baseSubscriptions
-Router.before IR_BeforeHooks.waitForData
-Router.before IR_BeforeHooks.setLayout
+Router.onBeforeAction IR_BeforeHooks.baseSubscriptions
+Router.onBeforeAction IR_BeforeHooks.waitForData
+Router.onBeforeAction IR_BeforeHooks.setLayout
 
 # only
-Router.before IR_BeforeHooks.clearViewContentSessionVars, only: ['courseShow', 'lectureShow']
-Router.before IR_BeforeHooks.login, only: ['lectureChangeRequest']
+Router.onBeforeAction IR_BeforeHooks.clearViewContentSessionVars, only: ['courseShow', 'lectureShow']
+Router.onBeforeAction IR_BeforeHooks.login, only: ['lectureChangeRequest']
 
 # last
-Router.after IR_BeforeHooks.pageview
+Router.onAfterAction IR_BeforeHooks.pageview

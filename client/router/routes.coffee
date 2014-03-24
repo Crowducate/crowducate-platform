@@ -22,7 +22,7 @@ Router.map ->
 
   @route 'entrySignOut',
     path: '/sign-out'
-    before: ->
+    onBeforeAction: ->
       if AccountsEntry.settings.homeRoute
         Meteor.logout()
         Router.go AccountsEntry.settings.homeRoute
@@ -32,7 +32,7 @@ Router.map ->
   @route 'accountSettings'
 
   @route "dashboard",
-    before: ->
+    onBeforeAction: ->
       @redirect 'home'
       @stop()
 
@@ -52,7 +52,7 @@ Router.map ->
   # TEACHER
   @route "teach",
     path: "/teach"
-    before: ->
+    onBeforeAction: ->
       if Meteor.userId()
         @template = 'myCourseList'
       else
@@ -65,7 +65,7 @@ Router.map ->
     path: "/teach/:_id"
     layoutTemplate: 'leftNavLayout'
     yieldTemplates: 'myCourseLeftNav': to: 'leftNav'
-    before: (pause) ->
+    onBeforeAction: (pause) ->
       Session.set 'markdownValue', @data().course.markdown if @ready()
     waitOn: ->
       [Meteor.subscribe('myCourse', @params._id)]
@@ -80,7 +80,7 @@ Router.map ->
     path: "/teach/:courseId/sections/:_id"
     layoutTemplate: 'leftNavLayout'
     yieldTemplates: 'myCourseLeftNav': to: 'leftNav'
-    before: ->
+    onBeforeAction: ->
       Session.set('currentSection', @params._id) if @ready()
     waitOn: -> [Meteor.subscribe('mySectionByCourse', @params.courseId, @params._id)]
     data: -> {
@@ -94,7 +94,7 @@ Router.map ->
     path: "/teach/:courseId/lectures/:_id"
     layoutTemplate: 'leftNavLayout'
     yieldTemplates: 'myCourseLeftNav': to: 'leftNav'
-    before: (pause) ->
+    onBeforeAction: (pause) ->
       Session.set 'currentLecture', @params._id
       Session.set 'markdownValue', @data().lecture.markdown if @ready() and @data().lecture
       BootstrapTabs.setCurrentTab 'exercise' if BootstrapTabs
@@ -135,7 +135,7 @@ Router.map ->
     path: ':slug/change'
     layoutTemplate: 'leftNavLayout'
     yieldTemplates: {'courseLeftNav': to: 'leftNav'}
-    before: (pause) ->
+    onBeforeAction: (pause) ->
       pause() unless @ready()
       Session.set 'markdownValue', @data().course.markdown if @ready()
     waitOn: -> [Meteor.subscribe 'course', @params.slug]
@@ -148,7 +148,7 @@ Router.map ->
     path: ':courseSlug/:slug/change'
     layoutTemplate: 'leftNavLayout'
     yieldTemplates: {'courseLeftNav': to: 'leftNav'}
-    before: (pause) ->
+    onBeforeAction: (pause) ->
       pause() unless @ready()
       Session.set 'currentLecture', @params.slug
       Session.set 'markdownValue', @data().lecture.markdown if @ready()
@@ -165,7 +165,7 @@ Router.map ->
     # STUDENT
     @route 'courseList',
       path: '/courses'
-      before: (pause) -> pause() unless @ready()
+      onBeforeAction: (pause) -> pause() unless @ready()
       waitOn: -> [Meteor.subscribe 'popularCourses']
       data: -> courses: Course.where({published: 1}, {sort: {createdAt: -1}})
 
@@ -174,7 +174,7 @@ Router.map ->
       layoutTemplate: 'leftNavLayout'
       yieldTemplates: {'courseLeftNav': to: 'leftNav'}
       waitOn: -> [Meteor.subscribe 'course', @params.slug]
-      before: (pause) ->
+      onBeforeAction: (pause) ->
         pause() unless @ready()
       data: -> {
         course: Course.first({slug: @params.slug})
@@ -193,7 +193,7 @@ Router.map ->
       path: ':courseSlug/:slug'
       layoutTemplate: 'leftNavLayout'
       yieldTemplates: {'courseLeftNav': to: 'leftNav'}
-      before: (pause) ->
+      onBeforeAction: (pause) ->
         pause() unless @ready()
         Session.set 'currentLecture', @params.slug if @ready()
       waitOn: -> [Meteor.subscribe('lectureByCourseSlug', @params.courseSlug, @params.slug)]

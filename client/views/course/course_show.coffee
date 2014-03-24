@@ -3,6 +3,7 @@ Template.courseShow.helpers({
     return true unless @course
     Meteor.userId() and Meteor.userId() isnt @course.owner
   courseChangeRequestPath: ->
+    return unless @course
     Router.path 'courseChangeRequest', {slug: @course.slug}
   firstLecturePath: ->
     firstSection = Section.first({courseId: Course.first()._id, index: 0})
