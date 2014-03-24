@@ -16,7 +16,6 @@ accounts-ui
 
 # Packages by community
 minimongoid
-blaze-layout
 iron-router
 
 # Packages by Manuel Schoebel
@@ -29,5 +28,5 @@ ms-google-analytics
 common-helpers
 notify
 bootstrap-tabs
-ms-markdown-editor
 moment
+ms-markdown-editor
