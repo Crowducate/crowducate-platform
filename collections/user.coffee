@@ -18,3 +18,5 @@ class @User extends Minimongoid
   getOpenChangeRequestsTotal: ->
     return @openChangeRequests if @openChangeRequests
     return 0
+  getEmail: ->
+    return @emails[0].address if @emails and @emails[0]

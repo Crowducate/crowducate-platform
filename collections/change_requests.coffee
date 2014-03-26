@@ -12,6 +12,7 @@ class @ChangeRequest extends Minimongoid
 
   isOpen: -> return @state is ChangeRequest.STATE_OPEN
   renderState: ->
+    console.log 'ChangeRequest.renderState', @state
     switch @state
       when ChangeRequest.STATE_ACCEPTED then return Template.changeRequestStateAccepted
       when ChangeRequest.STATE_DECLINED then return Template.changeRequestStateDeclined

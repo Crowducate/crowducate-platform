@@ -12,5 +12,6 @@ Template.courseListItem.events({
     if confirm 'Delete this course?'
       Meteor.call 'deleteCourse', tpl.data._id, (err) ->
         return Notify.setError err.reason if err
+        Notify.setSuccess 'Deleted successfully'
         Router.go Router.path 'teach'
 })

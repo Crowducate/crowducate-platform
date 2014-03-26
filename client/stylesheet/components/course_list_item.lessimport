@@ -1,13 +1,19 @@
 .course-list-item{
   height: 390px;
+  overflow: hidden;
   cursor: pointer;
+  margin-bottom: 25px;
+  h4 {
+    max-height: 40px;
+    overflow: hidden;
+  }
   a {
     color: @text-color;
   }
-  a:hover{
+  a:hover {
     text-decoration: none;
   }
-  .course-img{
+  .course-img {
     height: 200px;
     overflow: hidden;
     text-align: center;
@@ -19,15 +25,22 @@
       right: 0;
       top: 0;
     }
-    img{
+    img {
       display: inline-block;
     }
   }
-  .well{
+  .well {
+    height: 190px;
     border-top: none;
     padding: 10px;
+    position: relative;
+    .bottom{
+      position: absolute;
+      bottom: 0px;
+    }
   }
-  .course-list-item-preview-text{
-    height: 70px;
+  .course-list-item-preview-text {
+    max-height: 41px;
+    overflow: hidden;
   }
 }

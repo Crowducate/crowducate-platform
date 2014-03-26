@@ -10,11 +10,13 @@
         {{/if}}
         <img class="img-resonsive" src="{{courseThumb}}">
       </div>
-      <div class="well">
-        <div class="course"><h4>{{courseTitle}}</h4></div>
-        <p class="course-list-item-preview-text">{{getText 50}}</p>
-        <p><i class="fa fa-tags" title="Tags"></i> {{getKeywords}}</p>
-        <p><i class="fa fa-group" title="Age Group"></i> {{age}}</p>
+      <div class="well relative">
+        <div class="course"><h4>{{maxChars courseTitle 40}}</h4></div>
+        <p class="course-list-item-preview-text">{{maxChars getText 65}}</p>
+        <div class="bottom">
+          <p><i class="fa fa-tags" title="Tags"></i> {{maxChars getKeywords 28}}</p>
+          <p><i class="fa fa-group" title="Age Group"></i> {{age}}</p>
+        </div>
       </div>
     </a>
   </div>

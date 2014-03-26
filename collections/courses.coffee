@@ -141,6 +141,8 @@ Meteor.methods({
     throw new Meteor.Error 404, 'Course not found' unless course
     throw new Meteor.Error 403, 'You cannot copy your own course' if course.owner is userId
 
+    courseSections = course.sections or []
+    
     sections = Section.where {_id: {$in: course.sections}}
 
     lectureArr = []
@@ -161,7 +163,14 @@ Meteor.methods({
         copyCount++
         newCourseSlug = course.slug + '-' + copyCount
 
-    newCourseData = _.pick(course, ['age', 'category', 'courseTitle', 'keywords', 'subtitle'])
+    newCourseData = _.pick(course, [
+      'age'
+      'category'
+      'courseTitle'
+      'keywords'
+      'subtitle'
+      'markdown'
+    ])
     newCourseData.slug = newCourseSlug
     newCourseData.original = course._id
     newCourseData.owner = userId
@@ -172,20 +181,29 @@ Meteor.methods({
     newSectionArr = []
     for s in sections
       newLectureArr = []
-      lectures = Lecture.where {_id: {$in: s.lectures}}
-
-      newSectionData = _.pick(s, ['index', 'sectionTitle'])
+      sectionLectureArr = s.lectures or []
+      lectures = Lecture.where {_id: {$in: sectionLectureArr}}
+      newSectionData = _.pick(s, [
+        'index'
+        'sectionTitle'
+      ])
       newSectionData.owner = userId
       newSectionData.courseId = newCourse._id
       newSection = Section.create newSectionData
       newSectionArr.push newSection._id
-
       # Copy section lectures
       for l in lectures
-        newLectureData = _.pick l, ['lectureTitle', 'markdown', 'quiz', 'slug']
+        newLectureData = _.pick l, [
+          'lectureTitle',
+          'markdown',
+          'quiz',
+          'slug'
+          'index'
+        ]
         newLectureData.owner = userId
         newLectureData.sectionId = newSection._id
         newLecture = Lecture.create newLectureData
+
         newLectureArr.push newLecture._id
 
       newSection.save {lectures: newLectureArr}

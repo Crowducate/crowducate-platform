@@ -5,7 +5,7 @@ Router.map ->
   # AUTHENTICATION
   @route "entrySignIn",
     path: "/sign-in"
-    onBeforeRun: ->
+    onBeforeAction: ->
       Session.set('entryError', undefined)
       Session.set('buttonText', 'in')
 
@@ -17,7 +17,7 @@ Router.map ->
 
   @route "entryForgotPassword",
     path: "/forgot-password"
-    onBeforeRun: ->
+    onBeforeAction: ->
       Session.set('entryError', undefined)
 
   @route 'entrySignOut',
@@ -52,7 +52,8 @@ Router.map ->
   # TEACHER
   @route "teach",
     path: "/teach"
-    onBeforeAction: ->
+    onBeforeAction: (pause) ->
+      return pause() unless @ready()
       if Meteor.userId()
         @template = 'myCourseList'
       else
@@ -66,6 +67,7 @@ Router.map ->
     layoutTemplate: 'leftNavLayout'
     yieldTemplates: 'myCourseLeftNav': to: 'leftNav'
     onBeforeAction: (pause) ->
+      return pause() unless @ready()
       Session.set 'markdownValue', @data().course.markdown if @ready()
     waitOn: ->
       [Meteor.subscribe('myCourse', @params._id)]
