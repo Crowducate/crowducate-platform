@@ -42,7 +42,7 @@ class @Lecture extends Minimongoid
     if nextSectionIndex < course.sections.length - 1
       nextSection = Section.first({index: nextSectionIndex})
       throw new Meteor.Error 403, 'The next section has no lectures' unless nextSection.lectures.length > 0
-      return Lecture.first({_id: nextSection.lectures[0]})
+      return Lecture.first({index: 0})
     return null
   getDiff: (field, value) ->
     return getPrettyDiff(@[field], value) if @[field]
