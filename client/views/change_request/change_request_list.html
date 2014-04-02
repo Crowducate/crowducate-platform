@@ -1,17 +1,36 @@
 <template name="changeRequestList">
+  <h3>Change Requests for Me</h3>
   <table class="table">
     <thead>
       <tr>
-        <th>Date</th>
-        <th>Type</th>
-        <th>State</th>
-        <th>Options</th>
+        <th width="40%">Date</th>
+        <th width="15%">Type</th>
+        <th width="15%">State</th>
+        <th width="20%">Options</th>
       </tr>
     </thead>
     <tbody>
-    {{#each changeRequests}}
+    {{#each changeRequestsForUser}}
       {{>changeRequestListItem}}
     {{/each}}
     </tbody>
   </table>
+
+  <h3>My Sent Change Requests</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th width="40%">Date</th>
+        <th width="15%">Type</th>
+        <th width="15%">State</th>
+        <th width="20%">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each changeRequestsByUser}}
+      {{>changeRequestListItem}}
+    {{/each}}
+    </tbody>
+  </table>
+
 </template>

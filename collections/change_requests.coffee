@@ -35,7 +35,7 @@ Meteor.methods({
     if cr.type is 'quiz'
       object.save {quiz: cr.data}
     else
-      object.save {quiz: cr.data}
+      object.save cr.data
     cr.save {state: ChangeRequest.STATE_ACCEPTED}
 
   declineChangeRequest: (changeRequestId) ->

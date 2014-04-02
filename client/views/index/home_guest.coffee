@@ -18,4 +18,19 @@ Template.homeGuest.events({
       else
         Router.go AccountsEntry.settings.dashboardRoute
     )
+
+  'click .login-fb': (evt, tpl) ->
+    Etc.prevent evt
+
+    Meteor.loginWithFacebook({}, (err) ->
+      return Notify.setError(err.reason) if err
+      Router.go('courseList')
+    )
+  'click .login-g': (evt, tpl) ->
+    Etc.prevent evt
+
+    Meteor.loginWithGoogle({}, (err) ->
+      return Notify.setError(err.reason) if err
+      Router.go('courseList')
+    )
 })

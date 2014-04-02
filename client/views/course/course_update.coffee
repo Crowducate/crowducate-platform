@@ -64,9 +64,14 @@ Template.courseUpdate.events({
 
     data = $(evt.target).serializeObject()
     data.markdown = Template.markdownEditor.getValue()
+    console.log 'Before', tpl
     Meteor.call('updateCourse', tpl.data.course._id, data, (err, response) ->
       return handleFormError(err) if err
-      Notify.setSuccess('Course updated')
+      console.log 'Done', tpl
+      if tpl.data.course.owner is User.current()._id
+        Notify.setSuccess('Course updated')
+      else
+        Notify.setSuccess('Your change request was send to the author of the course.')
     )
   'click .delete': (evt, tpl) ->
     Etc.prevent(evt)

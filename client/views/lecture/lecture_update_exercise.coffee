@@ -23,7 +23,10 @@ Template.lectureUpdateExercise.events({
 
     Meteor.call 'updateLectureExercise', tpl.data._id, data, (err) ->
       return handleFormError(err) if err
-      Notify.setSuccess 'Updated'
+      if tpl.data.owner is User.current()._id
+        Notify.setSuccess('Excercise updated')
+      else
+        Notify.setSuccess('Your change request was send to the author of the course.')
 
     return false
 })

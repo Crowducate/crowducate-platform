@@ -5,4 +5,6 @@ Template.changeRequestListItem.created = ->
 Template.changeRequestListItem.helpers({
   renderState: ->
     @renderState()
+  showOptions: ->
+    Meteor.userId() isnt @owner
 })

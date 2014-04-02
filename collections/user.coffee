@@ -20,3 +20,11 @@ class @User extends Minimongoid
     return 0
   getEmail: ->
     return @emails[0].address if @emails and @emails[0]
+  getDisplayName: ->
+    mail = @getEmail()
+    return mail if mail
+    return @getName()
+  getName: ->
+    return '' unless @profile
+    return @profile.name if @profile.name
+    return @profile.username if @profile.username

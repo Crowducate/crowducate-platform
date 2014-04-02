@@ -9,7 +9,7 @@ Helpers =
   userPointsTotal: ->
     return '0 Points' unless Meteor.userId()
     points = User.current().getPointsTotal()
-    return points + ' Points' if points > 1
+    return points + ' Points' if points is 0 or points > 1
     return points + ' Point'
   userOpenChangeRequests: ->
     return '0' unless Meteor.userId()

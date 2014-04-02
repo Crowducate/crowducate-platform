@@ -38,8 +38,9 @@ class @Lecture extends Minimongoid
     return Lecture.first({_id: section.lectures[i+1]}) if i < section.lectures.length - 1
     course = Course.first({_id: section.courseId})
     i = _.indexOf course.sections, section._id
-    if i < course.sections.length - 1
-      nextSection = Section.first({_id: course.sections[i+1]})
+    nextSectionIndex = section.index + 1
+    if nextSectionIndex < course.sections.length - 1
+      nextSection = Section.first({index: nextSectionIndex})
       throw new Meteor.Error 403, 'The next section has no lectures' unless nextSection.lectures.length > 0
       return Lecture.first({_id: nextSection.lectures[0]})
     return null
@@ -176,12 +177,14 @@ Meteor.methods({
     return correct unless userId
     return correct if userId is lecture.owner
 
-    answer = Answer.create {owner: userId, lectureId: lectureId, answer: answer }
+    answer = Answer.create {owner: userId, lectureId: lecture._id, answer: answer }
     if correct
       # you do not get points multiple times from the same source
-      return true if Point.find({'for.lectureId': lecture.id, owner: userId}).count() > 0
+      return true if Point.find({'for.lectureId': lectureId, owner: userId}).count() > 0
+      
       forStudent = Point.STUDENT_SOLVED_QUIZ
       forTeacher = Point.STUDENT_SOLVED_QUIZ_OF_TEACHER
+
       Point.create {owner: userId, amount: Point.STUDENT_SOLVED_QUIZ, for: { object: 'Answer', lectureId: lecture._id, action: 'STUDENT_SOLVED_QUIZ', id: answer._id }}
       Point.create {owner: lecture.owner, amount: Point.STUDENT_SOLVED_QUIZ_OF_TEACHER, for: { object: 'Answer', lectureId: lecture._id, action: 'STUDENT_SOLVED_QUIZ_OF_TEACHER', id: answer._id }}
 

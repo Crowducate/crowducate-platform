@@ -14,6 +14,11 @@ Template.quizChangeRequestApproval.helpers({
   anwerFourDiff: ->
     lecture = Lecture.first {_id: @docId}
     lecture.getQuizDiff('answer_3', @data.answer_3) if lecture
+  renderCorrectHint: (answer) ->
+    console.log 'renderCorrectHint', answer, @data.correctAnswer
+    if answer is @data.correctAnswer
+      return '<i class="fa fa-check-circle brand-success"></i>'
+    return ''
 })
 
 Template.quizChangeRequestApproval.events({

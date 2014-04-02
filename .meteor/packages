@@ -12,6 +12,7 @@ less
 coffeescript
 accounts-password
 accounts-facebook
+accounts-google
 accounts-ui
 
 # Packages by community

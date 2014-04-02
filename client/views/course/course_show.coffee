@@ -7,7 +7,9 @@ Template.courseShow.helpers({
     Router.path 'courseChangeRequest', {slug: @course.slug}
   firstLecturePath: ->
     firstSection = Section.first({courseId: Course.first()._id, index: 0})
+    return unless firstSection
     firstLecture = Lecture.first({sectionId: firstSection._id, index: 0})
+    return unless firstLecture
     Router.path 'lectureShow', {courseSlug: Course.first().slug, slug: firstLecture.slug }
 })
 

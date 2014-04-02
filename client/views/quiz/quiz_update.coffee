@@ -44,5 +44,8 @@ Template.quizUpdate.events({
 
     Meteor.call 'updateQuiz', tpl.data._id, data, (err) ->
       return handleFormError(err) if err
-      Notify.setSuccess 'Quiz updated'
+      if tpl.data.owner is User.current()._id
+        Notify.setSuccess('Quiz updated')
+      else
+        Notify.setSuccess('Your change request was send to the author of the course.')
 })

@@ -60,6 +60,11 @@
         "tag": "v0.2.5",
         "commit": "ee04a070b353690260d8df1866d2798846dba55e"
       },
+      "mambo-authenticate": {
+        "git": "https://github.com/DerMambo/mambo-authenticate.git",
+        "branch": "master",
+        "commit": "da619792b811e79eaceb47f70ef24dea53ed1629"
+      },
       "ms-validator": {
         "git": "https://github.com/DerMambo/ms-validator.git",
         "branch": "master",
@@ -98,7 +103,7 @@
       "notify": {
         "git": "https://github.com/DerMambo/notify.git",
         "branch": "master",
-        "commit": "911a6fd116514e4e8c0baff52444599c164cfb94"
+        "commit": "f97e72c1a367fd936bf639f45e273425c1a54c5a"
       },
       "ms-google-analytics": {
         "git": "https://github.com/DerMambo/ms-google-analytics.git",
@@ -108,7 +113,7 @@
       "ms-markdown-editor": {
         "git": "https://github.com/DerMambo/ms-markdown-editor.git",
         "branch": "master",
-        "commit": "b574d46d3016f1e86f2db3e1cf9d0fda15bce679"
+        "commit": "6791764b9e231a6ab2d2c68c21c9fab195551557"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

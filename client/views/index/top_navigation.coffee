@@ -1,4 +1,4 @@
 Template.topNavigation.helpers({
   userEmail: ->
-    User.current().getEmail()
+    User.current().getDisplayName()
 })

@@ -1,5 +1,10 @@
 Meteor.publish 'myChangeRequests', ->
-  ChangeRequest.find({$or: [{'data.owner': @userId}]})
+  qry =
+    $or: [
+      {'data.owner': @userId},
+      {owner: @userId}
+    ]
+  ChangeRequest.find(qry)
 
 Meteor.publish 'myChangeRequest', (id) ->
   check id, String
