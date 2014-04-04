@@ -22,4 +22,4 @@ We chose the [GPL3 license](https://github.com/Crowducate/crowducate.me/blob/mas
 Great, so please contribute! Current roadmap:
 1.	Improving the creation of the multiple choice quiz (creator should choose how many possible answers to post + how many are the correct answers)
 2.	Commenting function for change requests (why did I send this change request; why did declined the change request, etc.)
-3.	Add names to profiles
+3.	Add names to profiles/registration
