@@ -94,7 +94,7 @@ Router.map ->
       sections: Section.where({}, {sort: {index: 1}})
       lectures: Lecture.where({}, {sort: {index: 1}})
     }
-    unload: -> Session.set 'currentSection', null
+    onStop: -> Session.set 'currentSection', null
 
   @route "lectureUpdate",
     path: "/teach/:courseId/lectures/:_id"
@@ -114,7 +114,7 @@ Router.map ->
       lectures: Lecture.where({}, {sort: {index: 1}})
       lecture: Lecture.first({_id: @params._id})
     }
-    unload: -> Session.set 'currentLecture', null
+    onStop: -> Session.set 'currentLecture', null
 
   # CHANGE REQUESTS
   # CHANGE REQUESTS
