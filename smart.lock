@@ -2,10 +2,7 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {
-        "git": "https://github.com/EventedMind/iron-router.git",
-        "branch": "blaze-integration"
-      },
+      "iron-router": {},
       "ms-seo": {},
       "mambo-authenticate": {
         "git": "https://github.com/DerMambo/mambo-authenticate.git",
@@ -52,13 +49,13 @@
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "branch": "blaze-integration",
-        "commit": "947991731df164e56b53cfdae8ef23802d989142"
+        "tag": "v0.7.0",
+        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
       },
       "ms-seo": {
         "git": "https://github.com/DerMambo/ms-seo",
-        "tag": "v0.2.5",
-        "commit": "ee04a070b353690260d8df1866d2798846dba55e"
+        "tag": "v0.2.6",
+        "commit": "1a4ba31a1f6f29009d3941e9dd883829ff4e4b8b"
       },
       "mambo-authenticate": {
         "git": "https://github.com/DerMambo/mambo-authenticate.git",
@@ -117,8 +114,8 @@
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "branch": "master",
-        "commit": "2664f817844fba0fab0455a79bc62782c9091ad0"
+        "tag": "v0.2.2",
+        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",

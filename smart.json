@@ -1,9 +1,6 @@
 {
   "packages": {
-    "iron-router": {
-      "git": "https://github.com/EventedMind/iron-router.git",
-      "branch": "blaze-integration"
-    },
+    "iron-router": {},
     "ms-seo": {},
     "mambo-authenticate": {
       "git": "https://github.com/DerMambo/mambo-authenticate.git"
