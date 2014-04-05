@@ -8,9 +8,9 @@ For more info read this [blog post](http://blog.crowducate.me/welcome-to-crowduc
 The Crowducate platform is based on [MeteorJS](https://www.meteor.com/ "MeteorJS"). So, if you want to run it locally: 
 
 1.	[Install MeteorJS](https://github.com/meteor/meteor "Install Meteor Guide GitHub")
+2.	Clone this repo: git clone https://github.com/Crowducate/crowducate.me.git
 2.	Open your terminal and navigate to the folder where Crowducate is installed. 
-3.	Run “mtr”.
-4.	Run “meteor”.
+3.	Run “mrt”
 
 That’s it!
 
