@@ -35,14 +35,16 @@ class @Lecture extends Minimongoid
     section = Section.first({_id: @sectionId})
     throw new Meteor.Error 404, 'Section not found' unless section
     i = _.indexOf section.lectures, @_id
-    return Lecture.first({_id: section.lectures[i+1]}) if i < section.lectures.length - 1
+    nextLectureIndex = @index + 1
+    nextLecture = Lecture.first({_id: {$in: section.lectures}, index: nextLectureIndex})
+    return nextLecture if nextLecture
+    #return Lecture.first({_id: {$in: section.lectures}, state: @state + 1}) if i < section.lectures.length - 1
     course = Course.first({_id: section.courseId})
-    i = _.indexOf course.sections, section._id
     nextSectionIndex = section.index + 1
-    if nextSectionIndex < course.sections.length - 1
-      nextSection = Section.first({index: nextSectionIndex})
+    nextSection = Section.first({_id: {$in: course.sections}, index: nextSectionIndex})
+    if nextSection
       throw new Meteor.Error 403, 'The next section has no lectures' unless nextSection.lectures.length > 0
-      return Lecture.first({index: 0})
+      return Lecture.first({sectionId: nextSection._id, index: 0})
     return null
   getDiff: (field, value) ->
     return getPrettyDiff(@[field], value) if @[field]
@@ -181,7 +183,7 @@ Meteor.methods({
     if correct
       # you do not get points multiple times from the same source
       return true if Point.find({'for.lectureId': lectureId, owner: userId}).count() > 0
-      
+
       forStudent = Point.STUDENT_SOLVED_QUIZ
       forTeacher = Point.STUDENT_SOLVED_QUIZ_OF_TEACHER
 
