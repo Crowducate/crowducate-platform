@@ -22,6 +22,9 @@ Template.courseChangeRequestApproval.helpers({
   markdownDiff: ->
     course = Course.first({_id: @docId})
     course.getDiff('markdown', @data.markdown) if course
+
+  ownChangeRequest: ->
+    return Meteor.userId() is @owner
 })
 
 Template.courseChangeRequestApproval.events({
