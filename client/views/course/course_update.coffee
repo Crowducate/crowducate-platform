@@ -43,6 +43,7 @@ Template.courseUpdate.helpers({
     options: options
   published: ->
     template: 'controlGroupWithSelect'
+    label: "Change to 'Published' when course should be viewable to others"
     inputName: 'published'
     options: [
       label: 'Unpublished'
