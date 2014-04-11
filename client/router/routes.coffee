@@ -40,6 +40,10 @@ Router.map ->
   # STATIC
   # STATIC
   # STATIC
+  @route 'terms'
+
+  @route 'imprint'
+
   @route "home",
     path: "/"
     template: "homeGuest"
@@ -47,6 +51,28 @@ Router.map ->
       if Meteor.userId() then return null else return [Meteor.subscribe('popularCourses')]
     data: ->
       if Meteor.userId() then return {} else return { popularCourses: Course.where({published: 1}, {sort: {createdAt: -1}}) }
+  @route "intro",
+    path: "/intro"
+    template: "courseShow"
+    layoutTemplate: 'leftNavLayout'
+    yieldTemplates: {'courseLeftNav': to: 'leftNav'}
+    waitOn: -> [Meteor.subscribe 'course', 'a-small-testing-course']
+    onBeforeAction: (pause) ->
+      pause() unless @ready()
+      Session.set 'currentLecture', null
+    data: -> {
+      course: Course.first({slug: 'a-small-testing-course'})
+      sections: Section.where({}, {sort: {index: 1}})
+      lectures: Lecture.where({}, {sort: {index: 1}})
+    }
+    onAfterAction: ->
+      course = @data().course
+      SEO.set({
+        title: course.courseTitle
+        meta:
+          description: course.getText(160)
+      })
+
 
   # TEACHER
   # TEACHER

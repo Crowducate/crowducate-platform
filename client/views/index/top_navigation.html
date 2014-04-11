@@ -12,11 +12,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'home'}}"><img class="img-responsive" src="/logo_nobg_v3.png"></a>
+        <a class="navbar-brand" href="{{pathFor 'home'}}"><img class="img-responsive" src="/logo_nobg_v4.png"></a>
       </div>
       <div class="collapse navbar-collapse ">
         <ul class="nav navbar-nav">
-          <li class="{{#if navActive 'courseList' 'courseShow' 'lectureShow' 'courseChangeRequest' 'lectureChangeRequest'}}active{{/if}}"><a href="{{pathFor 'courseList'}}">Courses</a></li>
+          <li class="{{#if navActive 'intro'}}active{{/if}}"><a href="{{pathFor 'intro'}}">Intro</a></li>
+          <li class="{{#if navActive 'courseList' 'courseShow' 'lectureShow' 'courseChangeRequest' 'lectureChangeRequest'}}active{{/if}}"><a href="{{pathFor 'courseList'}}">Learn</a></li>
           <li class="{{#if navActive 'teach' 'myCourses' 'courseUpdate' 'sectionUpdate' 'lectureUpdate'}}active{{/if}}"><a href="{{pathFor 'teach'}}">Teach</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
