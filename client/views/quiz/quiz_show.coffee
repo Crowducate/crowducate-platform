@@ -40,7 +40,7 @@ Template.quizShow.events({
         Notify.setSuccess 'This is correct'
         nextLecture = tpl.data.getNextLecture()
         if nextLecture
-          BootstrapTabs.setCurrentTab Lecture.TAB_EXERCISE
+          BootstrapTabs.setCurrentTab Lecture.TAB_LESSON
           Router.go 'lectureShow', {courseSlug: Router.current().params.courseSlug, slug: nextLecture.slug}
         else
           Notify.setSuccess 'Congratulations: You completed this course!'
@@ -52,7 +52,7 @@ Template.quizShow.events({
     #   Notify.setSuccess 'This is correct'
     #   nextLecture = tpl.data.getNextLecture()
     #   if nextLecture
-    #     BootstrapTabs.setCurrentTab Lecture.TAB_EXERCISE
+    #     BootstrapTabs.setCurrentTab Lecture.TAB_LESSON
     #     Router.go 'lectureShow', {courseSlug: Router.current().params.courseSlug, slug: nextLecture.slug}
     #   else
     #     Notify.setSuccess 'Congratulations: You completed this course!'

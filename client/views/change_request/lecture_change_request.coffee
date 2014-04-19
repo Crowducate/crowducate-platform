@@ -2,11 +2,11 @@ Template.lectureChangeRequest.helpers({
   lecturePath: -> Router.path 'lectureShow', {courseSlug: @course.slug, slug: @lecture.slug}
   options: ->
     {
-      default: 'exercise'
+      default: 'lesson'
       tabItems: [
-        key: 'exercise'
-        label: 'Exercise'
-        template: 'lectureUpdateExercise'
+        key: 'lesson'
+        label: 'Lesson'
+        template: 'lectureUpdateLesson'
         data: @lecture
       ,
         key: 'quiz'

@@ -1,4 +1,4 @@
-Template.lectureUpdateExercise.helpers({
+Template.lectureUpdateLesson.helpers({
   formFields: ->
     [
       template: 'controlGroupWithInput'
@@ -11,7 +11,7 @@ Template.lectureUpdateExercise.helpers({
 })
 
 
-Template.lectureUpdateExercise.events({
+Template.lectureUpdateLesson.events({
   'submit #form-lecture-update': (evt, tpl) ->
     Etc.prevent(evt)
 
@@ -21,10 +21,10 @@ Template.lectureUpdateExercise.events({
 
     data.markdown = Template.markdownEditor.getValue()
 
-    Meteor.call 'updateLectureExercise', tpl.data._id, data, (err) ->
+    Meteor.call 'updateLectureLesson', tpl.data._id, data, (err) ->
       return handleFormError(err) if err
       if tpl.data.owner is User.current()._id
-        Notify.setSuccess('Excercise updated')
+        Notify.setSuccess('Lesson updated')
       else
         Notify.setSuccess('Your change request was send to the author of the course.')
 

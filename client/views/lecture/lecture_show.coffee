@@ -1,11 +1,11 @@
 Template.lectureShow.helpers({
   options: ->
     {
-      default: Lecture.TAB_EXERCISE
+      default: Lecture.TAB_LESSON
       tabItems: [
-        key: Lecture.TAB_EXERCISE
-        label: 'Exercise'
-        template: 'lectureShowExercise'
+        key: Lecture.TAB_LESSON
+        label: 'Lesson'
+        template: 'lectureShowLesson'
         data: @lecture
       ,
         key: Lecture.TAB_QUIZ

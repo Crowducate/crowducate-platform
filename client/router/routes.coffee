@@ -130,7 +130,7 @@ Router.map ->
       Session.set 'currentSection', null
       Session.set 'currentLecture', @params._id
       Session.set 'markdownValue', @data().lecture.markdown if @ready() and @data().lecture
-      BootstrapTabs.setCurrentTab 'exercise' if BootstrapTabs
+      BootstrapTabs.setCurrentTab 'lesson' if BootstrapTabs
     waitOn: -> [
       Meteor.subscribe('lectureByCourse', @params.courseId, @params._id)
     ]
@@ -242,7 +242,7 @@ Router.map ->
       lecture: Lecture.first({slug: @params.slug})
     }
     onAfterAction: ->
-      BootstrapTabs.setCurrentTab 'exercise' if BootstrapTabs
+      BootstrapTabs.setCurrentTab 'lesson' if BootstrapTabs
       lecture = @data().lecture
       SEO.set({
         title: lecture.lectureTitle

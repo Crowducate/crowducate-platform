@@ -23,6 +23,6 @@ Great, so please contribute! The roadmap for the beginning:
 
 1. Improving the creation of the multiple choice quiz (creator should choose how many possible answers to post + how many are the correct answers)
 
-2. Commenting function for change requests (why did I send this change request; why did declined the change request, etc.)
+2. Commenting function for change requests (why did I send this change request; why did I decline your change request, etc.)
 
 3. Add names to profiles/registration
