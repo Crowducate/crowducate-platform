@@ -6,7 +6,6 @@ Meteor.publish 'myCourse', (courseId) ->
   sectionsCursor = []
   lecturesCursor = []
 
-
   coursesCursor = Course.find({_id: courseId, owner: @userId})
   coursesArr = coursesCursor.fetch()
   return [] unless coursesArr.length > 0
@@ -31,7 +30,6 @@ Meteor.publish 'course', (slug) ->
   check slug, String
   sectionsCursor = []
   lecturesCursor = []
-
 
   coursesCursor = Course.find({slug: slug})
   coursesArr = coursesCursor.fetch()

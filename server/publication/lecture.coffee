@@ -8,11 +8,9 @@ Meteor.publish 'lectureByCourseSlug', (courseSlug, lectureSlug) ->
   check lectureSlug, String
   return getLectureData {slug: courseSlug}
 
-
 getLectureData = (lectureQry) ->
   sectionsCursor = []
   lecturesCursor = []
-
 
   coursesCursor = Course.find(lectureQry)
   coursesArr = coursesCursor.fetch()
