@@ -35,6 +35,8 @@ Template.quizShow.events({
 
     lecture = tpl.data
     lecture.solveQuiz answer, (err, correct) ->
+      $('[name=selectedAnswer]:not([value='+lecture.getCorrectAnswerIndex()+'])').parent().addClass('wrong')
+      $('[value='+lecture.getCorrectAnswerIndex()+']').parent().addClass('correct')
       return Notify.setError err.reason if err
       if correct
         Notify.setSuccess 'This is correct'
