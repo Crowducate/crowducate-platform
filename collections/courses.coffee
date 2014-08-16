@@ -64,8 +64,22 @@ Meteor.methods({
     userId = Meteor.userId()
     throw new Meteor.Error 403, 'Please login to create a course' unless userId
     title = 'New Course'
-    course = Course.create {owner: userId, courseTitle: title, published: 0, slug: slugify(title)}
+    course = Course.create {
+      owner: userId, courseTitle: title, published: 0, upvoters: [], votes: 0, slug: slugify(title)
+    }
     return course._id
+
+ upvote: (courseId) ->
+  
+  # userId = Meteor.user()
+  Course.update {
+    _id: courseId,
+    # upvoters: {$ne: user._id}
+    # }, {
+    # $addToSet: {upvoters: user._id}
+    $inc: {votes: 1}
+  }  
+
   updateCourse: (courseId, data) ->
     check courseId, String
 

@@ -14,4 +14,8 @@ Template.courseListItem.events({
         return Notify.setError err.reason if err
         Notify.setSuccess 'Deleted successfully'
         Router.go Router.path 'teach'
+
+  'click .upvote': (evt) ->
+    Etc.prevent(evt)
+    Meteor.call 'upvote', this._id
 })
