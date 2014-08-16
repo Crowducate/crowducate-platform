@@ -2,7 +2,7 @@ Template.quizUpdate.helpers({
   quizIntro: ->
     template: 'controlGroupWithTextarea'
     inputName: 'quizIntro'
-    placeholder: 'The question must be based on the exercise of the current lecture.'
+    placeholder: 'The question must be based on the lesson of the current lecture.'
     label: 'Enter the question for this specific lecture.'
     value: @getQuizIntro() if @getQuizIntro
   answers: ->

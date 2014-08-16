@@ -19,10 +19,13 @@ That’s it!
 We chose the [GPL3 license](https://github.com/Crowducate/crowducate.me/blob/master/LICENSE.txt "License for Crowducate"), as this fosters an open ecosystem. Which is essential for an open education project.
 
 # I want to be part of a bigger vision
-Great, so please contribute! The roadmap for the beginning:
+Great, so please contribute! The [roadmap for the beginning](http://blog.crowducate.me/roadmap-crowducate):
 
-1. Improving the creation of the multiple choice quiz (creator should choose how many possible answers to post + how many are the correct answers)
-
-2. Commenting function for change requests (why did I send this change request; why did declined the change request, etc.)
-
-3. Add names to profiles/registration
+1. Adding names to profiles. 
+  * Adding Textfield ‘user name’ in the Registration process (if signed up with email instead of Facebook/g+)
+  * Adding “by ‘user name’(or FB/g+-name)” to the Course title (e.g. MeteorJs for Beginner by derMambo)
+2. Adding Upvote to courses (example: [Microscope/Telescope](http://demo.telesc.pe/)). A project from the people of the great book Discover Meteor. Source code is [here](https://github.com/DiscoverMeteor/Microscope).
+3. Improving the creation of the multiple choice quiz 
+  + Creator should choose how many possible answers to post
+   - How many of them are the correct answers
+4. Commenting function for change requests (i.e., why did I send this change request/why did I decline your change request, etc.)

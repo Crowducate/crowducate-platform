@@ -52,16 +52,16 @@ Router.map ->
     data: ->
       if Meteor.userId() then return {} else return { popularCourses: Course.where({published: 1}, {sort: {createdAt: -1}}) }
   @route "intro",
-    path: "/intro"
+    path: "intro"
     template: "courseShow"
     layoutTemplate: 'leftNavLayout'
     yieldTemplates: {'courseLeftNav': to: 'leftNav'}
-    waitOn: -> [Meteor.subscribe 'course', 'a-small-testing-course']
+    waitOn: -> [Meteor.subscribe 'course', 'crowducate-introduction-course']
     onBeforeAction: (pause) ->
       pause() unless @ready()
       Session.set 'currentLecture', null
     data: -> {
-      course: Course.first({slug: 'a-small-testing-course'})
+      course: Course.first({slug: 'crowducate-introduction-course'})
       sections: Section.where({}, {sort: {index: 1}})
       lectures: Lecture.where({}, {sort: {index: 1}})
     }
@@ -130,7 +130,7 @@ Router.map ->
       Session.set 'currentSection', null
       Session.set 'currentLecture', @params._id
       Session.set 'markdownValue', @data().lecture.markdown if @ready() and @data().lecture
-      BootstrapTabs.setCurrentTab 'exercise' if BootstrapTabs
+      BootstrapTabs.setCurrentTab 'lesson' if BootstrapTabs
     waitOn: -> [
       Meteor.subscribe('lectureByCourse', @params.courseId, @params._id)
     ]
@@ -242,7 +242,7 @@ Router.map ->
       lecture: Lecture.first({slug: @params.slug})
     }
     onAfterAction: ->
-      BootstrapTabs.setCurrentTab 'exercise' if BootstrapTabs
+      BootstrapTabs.setCurrentTab 'lesson' if BootstrapTabs
       lecture = @data().lecture
       SEO.set({
         title: lecture.lectureTitle

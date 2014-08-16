@@ -1,6 +1,6 @@
 class @Lecture extends Minimongoid
   @_collection: new Meteor.Collection('lectures')
-  @TAB_EXERCISE: 'exercise'
+  @TAB_LESSON: 'lesson'
   @TAB_QUIZ: 'quiz'
 
   @validate: (data) ->
@@ -75,7 +75,7 @@ Meteor.methods({
     section.push({lectures: lecture._id})
     return lecture._id
 
-  updateLectureExercise: (lectureId, data) ->
+  updateLectureLesson: (lectureId, data) ->
     errors = Lecture.validate data
     throw new Meteor.Error 400, JSON.stringify errors unless _.isEmpty errors
 

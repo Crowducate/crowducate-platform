@@ -12,7 +12,8 @@ class @Course extends Minimongoid
     {key: 'Business', label: 'Business'},
     {key: 'Humanities', label: 'Humanities'},
     {key: 'Science', label: 'Math/Science'},
-    {key: 'Programming', label: 'Programming'}
+    {key: 'Programming', label: 'Programming'},
+    {key: 'Other', label: 'Other'}
   ]
 
   getDiff: (field, value) ->

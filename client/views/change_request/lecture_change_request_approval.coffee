@@ -30,6 +30,6 @@ Template.lectureChangeRequestApproval.events({
 
     Meteor.call 'declineChangeRequest', tpl.data._id, (err) ->
       return Notify.setError err.reason if err
-      Notify.setSuccess 'Change Request accepted'
+      Notify.setSuccess 'Change Request declined'
       Router.go 'changeRequests'
 })

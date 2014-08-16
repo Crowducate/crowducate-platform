@@ -2,11 +2,11 @@ Template.lectureUpdate.helpers({
   options: ->
     lecture = Lecture.first({_id: Session.get('currentLecture')})
     {
-      default: 'exercise'
+      default: 'lesson'
       tabItems: [
-        key: 'exercise'
-        label: 'Exercise'
-        template: 'lectureUpdateExercise'
+        key: 'lesson'
+        label: 'Lesson'
+        template: 'lectureUpdateLesson'
         data: lecture
       ,
         key: 'quiz'
