@@ -70,15 +70,17 @@ Meteor.methods({
     return course._id
 
  upvote: (courseId) ->
-  
-  # userId = Meteor.user()
-  Course.update {
-    _id: courseId,
-    # upvoters: {$ne: user._id}
-    # }, {
-    # $addToSet: {upvoters: user._id}
-    $inc: {votes: 1}
-  }  
+    course = Course.first({_id: courseId})
+    console.log course
+
+    #userId = Meteor.user()
+    Course.update {
+      # _id: courseId,
+      # upvoters: {$ne: user._id}
+      # }, {
+      # $addToSet: {upvoters: user._id}
+      $inc: {votes: 1}
+    }  
 
   updateCourse: (courseId, data) ->
     check courseId, String
