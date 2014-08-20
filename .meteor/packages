@@ -5,7 +5,6 @@
 
 # Packages by Meteor
 standard-app-packages
-preserve-inputs
 audit-argument-checks
 spiderable
 less
