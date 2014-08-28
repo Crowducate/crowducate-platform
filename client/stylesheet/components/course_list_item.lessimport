@@ -36,15 +36,11 @@
     position: relative;
     .bottom{
       position: absolute;
-      bottom: -10px;
+      bottom: 0px;
     }
   }
   .course-list-item-preview-text {
     max-height: 41px;
     overflow: hidden;
-  }
-
-  .course-list-item-preview-text-votes {
-    margin: 0px;
   }
 }

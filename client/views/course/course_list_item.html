@@ -13,11 +13,14 @@
       <div class="well relative">
         <div class="course"><h4>{{maxChars courseTitle 40}} by {{owner}}</h4></div>
         <p class="course-list-item-preview-text">{{maxChars getText 65}}</p>
-        <p class="course-list-item-preview-text-votes"><a href="#"><i class="upvote fa fa-thumbs-up"></i></a><strong> {{votes}}</strong> Votes</p>
+<<<<<<< HEAD
+=======
+        <p class="course-list-item-preview-text-votes"><a href="#" class="btn btn-default btn-xs"><i class="upvote fa fa-thumbs-up"></i></a> <strong>{{votes}}</strong> Votes</p>
+>>>>>>> FETCH_HEAD
         <!-- <p class="course-list-item-preview-text">12 Votes</p> -->
         <div class="bottom">
+          <p><a href="#" class="btn btn-default btn-xs upvote"><i class="fa fa-thumbs-up"></i></a> <strong>{{votes}}</strong> Vote(s)</p>
           <p><i class="fa fa-tags" title="Tags"></i> {{maxChars getKeywords 28}}</p>
-          <p><i class="fa fa-group" title="Age Group"></i> {{age}}</p>
         </div>
       </div>
     </a>
