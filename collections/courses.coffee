@@ -1,6 +1,9 @@
 class @Course extends Minimongoid
   @_collection: new Meteor.Collection('courses')
 
+  # currently not using 'age' because of user feedback
+  # currently not using 'age' because of user feedback   
+  # currently not using 'age' because of user feedback 
   @AGE_GROUPS: [
     {key: '7+', label: '7+'},
     {key: '10+', label: '10+'},
@@ -54,8 +57,8 @@ class @Course extends Minimongoid
       throw new Error('Please enter some keywords') unless validator.isLength(value, 1)
     category: (value) ->
       throw new Error('Please select a category') unless validator.isIn(value, _.pluck(Course.CATEGORIES, 'key'))
-    age: (value) ->
-      throw new Error('Please select an age group') unless validator.isIn(value, _.pluck(Course.AGE_GROUPS, 'key'))
+    # age: (value) ->
+    #   throw new Error('Please select an age group') unless validator.isIn(value, _.pluck(Course.AGE_GROUPS, 'key'))
     markdown: (value) ->
       throw new Error('Please enter a course description') unless validator.isLength(value, 1)
 
@@ -64,8 +67,22 @@ Meteor.methods({
     userId = Meteor.userId()
     throw new Meteor.Error 403, 'Please login to create a course' unless userId
     title = 'New Course'
-    course = Course.create {owner: userId, courseTitle: title, published: 0, slug: slugify(title)}
+    course = Course.create {
+      owner: userId, courseTitle: title, published: 0, upvoters: [], votes: 0, slug: slugify(title)
+    }
     return course._id
+
+ upvote: (courseId) ->
+
+    user = Meteor.user()
+
+    Course._collection.update({
+      _id: courseId,
+      upvoters: { $ne: user._id }}, {
+      $addToSet: {upvoters: user._id},
+      $inc: {votes: 1}
+    });
+    
   updateCourse: (courseId, data) ->
     check courseId, String
 
@@ -76,7 +93,7 @@ Meteor.methods({
       markdown: String
       keywords: String
       category: String
-      age: String
+      #age: String
       published: Number
     }
 
@@ -165,7 +182,7 @@ Meteor.methods({
         newCourseSlug = course.slug + '-' + copyCount
 
     newCourseData = _.pick(course, [
-      'age'
+      #'age'
       'category'
       'courseTitle'
       'keywords'

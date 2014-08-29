@@ -30,6 +30,9 @@ Template.courseUpdate.helpers({
       inputName: 'category'
       options: options
     }
+  # currently not using 'age' because of user feedback
+  # currently not using 'age' because of user feedback   
+  # currently not using 'age' because of user feedback   
   age: ->
     options = []
     for ag in Course.AGE_GROUPS
