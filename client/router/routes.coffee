@@ -50,7 +50,7 @@ Router.map ->
     waitOn: ->
       if Meteor.userId() then return null else return [Meteor.subscribe('popularCourses')]
     data: ->
-      if Meteor.userId() then return {} else return { popularCourses: Course.where({published: 1}, {sort: {createdAt: -1}}) }
+      if Meteor.userId() then return {} else return { popularCourses: Course.where({published: 1}, {sort: {votes: -1}}) }
   @route "intro",
     path: "intro"
     template: "courseShow"
@@ -204,7 +204,7 @@ Router.map ->
     path: '/courses'
     onBeforeAction: (pause) -> pause() unless @ready()
     waitOn: -> [Meteor.subscribe 'popularCourses']
-    data: -> courses: Course.where({published: 1}, {sort: {createdAt: -1}})
+    data: -> courses: Course.where({published: 1}, {sort: {votes: -1}})
 
   @route 'courseShow',
     path: ':slug'

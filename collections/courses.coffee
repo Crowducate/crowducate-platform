@@ -38,6 +38,8 @@ class @Course extends Minimongoid
 
   getAge: -> @age
 
+  getVotes: -> @votes
+
   isPublished: ->
     return @published is 1 if @published
 
