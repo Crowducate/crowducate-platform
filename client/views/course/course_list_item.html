@@ -2,12 +2,14 @@
   <div class="course-list-item">
     <a href="{{#if isMyCoursesPath}}{{pathFor 'courseUpdate'}}{{else}}{{pathFor 'courseShow'}}{{/if}}">
       <div class="course-img">
-        {{#if courseOwner}}
         <div class="owner-options">
+					<a href="#" class="btn btn-default upvote"><i class="fa fa-thumbs-up"></i></a>
+					{{#if courseOwner}}
           <a href="{{pathFor 'courseUpdate'}}" class="btn btn-default" title="Edit Course"><i class="fa fa-edit"></i></a>
           <button class="btn btn-danger delete" title="Delete Course"><i class="fa fa-trash-o"></i></button>
+					{{/if}}
         </div>
-        {{/if}}
+
         <img class="img-resonsive" src="{{courseThumb}}">
       </div>
       <div class="well relative">
@@ -15,7 +17,7 @@
 				<p><b>by {{owner.username}} {{owner.profile.name}}</b></p>
         <p class="course-list-item-preview-text">{{maxChars getText 65}}</p>
         <div class="bottom">
-          <p><a href="#" class="btn btn-default btn-xs upvote"><i class="fa fa-thumbs-up"></i></a> <strong>{{votes}}</strong> Vote(s)</p>
+          <p><strong>{{pluralize votes "Vote"}}</strong></p>
           <p><i class="fa fa-tags" title="Tags"></i> {{maxChars getKeywords 28}}</p>
         </div>
       </div>
