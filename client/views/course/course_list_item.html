@@ -17,7 +17,7 @@
 				<p><b>by {{owner.username}} {{owner.profile.name}}</b></p>
         <p class="course-list-item-preview-text">{{maxChars getText 65}}</p>
         <div class="bottom">
-          <p><strong>{{votes}}</strong> Vote(s)</p>
+          <p><strong>{{pluralize votes "Vote"}}</strong></p>
           <p><i class="fa fa-tags" title="Tags"></i> {{maxChars getKeywords 28}}</p>
         </div>
       </div>
