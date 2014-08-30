@@ -19,5 +19,5 @@ Template.courseListItem.events({
 
   'click .upvote': (evt) ->
     Etc.prevent(evt)
-    Meteor.call 'upvote', this._id
+    Meteor.call 'upvote', @_id
 })
