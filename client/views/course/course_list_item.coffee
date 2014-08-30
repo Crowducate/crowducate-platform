@@ -4,6 +4,8 @@ Template.courseListItem.helpers({
     return '/images/course-thumb.png'
   isMyCoursesPath: ->
     Router.current().route.name is 'teach'
+	owner: -> 
+		Meteor.users.findOne(@owner)
 })
 
 Template.courseListItem.events({

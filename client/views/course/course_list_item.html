@@ -11,7 +11,8 @@
         <img class="img-resonsive" src="{{courseThumb}}">
       </div>
       <div class="well relative">
-        <div class="course"><h4>{{maxChars courseTitle 40}} by {{owner}}</h4></div>
+        <div class="course"><h4>{{maxChars courseTitle 40}}</h4></div>
+				<p><b>by {{owner.username}} {{owner.profile.name}}</b></p>
         <p class="course-list-item-preview-text">{{maxChars getText 65}}</p>
         <div class="bottom">
           <p><a href="#" class="btn btn-default btn-xs upvote"><i class="fa fa-thumbs-up"></i></a> <strong>{{votes}}</strong> Vote(s)</p>
