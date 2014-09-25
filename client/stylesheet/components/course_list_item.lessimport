@@ -43,4 +43,12 @@
     max-height: 41px;
     overflow: hidden;
   }
+
+  #main-thumb {
+    color: #fff;
+  }
+
+  #thumb-button {
+    background-color: #ed6100;
+  }
 }

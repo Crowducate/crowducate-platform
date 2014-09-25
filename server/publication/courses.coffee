@@ -24,7 +24,10 @@ Meteor.publish 'myCourse', (courseId) ->
   return [coursesCursor, sectionsCursor, lecturesCursor]
 
 Meteor.publish 'popularCourses', ->
-  return Course.find({}, {sort: {createdAt: -1}})
+  courseCursor = Course.find()
+  userIds = courseCursor.map (c) -> c.owner
+  userCursor = Meteor.users.find {_id: $in: userIds}, {fields: username: 1}
+  [courseCursor, userCursor]
 
 Meteor.publish 'course', (slug) ->
   check slug, String

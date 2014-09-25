@@ -1,6 +1,7 @@
 Meteor.publish('userData', () ->
   fields =
     profile: 1
+    username: 1
     email: 1
     points: 1
     openChangeRequests: 1
