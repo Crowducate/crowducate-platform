@@ -3,7 +3,7 @@
     <a href="{{#if isMyCoursesPath}}{{pathFor 'courseUpdate'}}{{else}}{{pathFor 'courseShow'}}{{/if}}">
       <div class="course-img">
         <div class="owner-options">
-					<a href="#" class="btn btn-default upvote" id="thumb-button"><i class="fa fa-thumbs-up" id="main-thumb"></i></a>
+					<a href="#" class="btn btn-default upvote" id="{{upvotedClass}}"><i class="fa fa-thumbs-up" id="main-thumb"></i></a>
 					{{#if courseOwner}}
           <a href="{{pathFor 'courseUpdate'}}" class="btn btn-default" title="Edit Course"><i class="fa fa-edit"></i></a>
           <button class="btn btn-danger delete" title="Delete Course"><i class="fa fa-trash-o"></i></button>

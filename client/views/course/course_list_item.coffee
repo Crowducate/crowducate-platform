@@ -4,6 +4,12 @@ Template.courseListItem.helpers({
     return '/images/course-thumb.png'
   isMyCoursesPath: ->
     Router.current().route.name is 'teach'
+  upvotedClass: ->
+    userId = Meteor.userId()
+    if userId && !_.include this.upvoters, userId
+      'thumb-button'
+    else
+      'thumb-button-inactive'
 	owner: -> 
 		Meteor.users.findOne(@owner)
 })

@@ -49,6 +49,10 @@
   }
 
   #thumb-button {
-    background-color: #ed6100;
+    background-color: #ed6100; 
+  }
+
+  #thumb-button-inactive {
+    background-color: #eee; 
   }
 }
