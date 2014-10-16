@@ -14,10 +14,10 @@
       </div>
       <div class="well relative">
         <div class="course"><h4>{{maxChars courseTitle 40}}</h4></div>
-				<p><b>by {{owner.username}} {{owner.profile.name}}</b></p>
+				<p><b>by {{owner.username}} {{owner.services.google.given_name}} {{owner.services.facebook.first_name}}</b></p>
         <p class="course-list-item-preview-text">{{maxChars getText 65}}</p>
         <div class="bottom">
-          <p><strong>{{pluralize votes "Vote"}}</strong></p>
+          <p class="no-margin"><strong>{{pluralize votes "Vote"}}</strong></p>
           <p><i class="fa fa-tags" title="Tags"></i> {{maxChars getKeywords 28}}</p>
         </div>
       </div>

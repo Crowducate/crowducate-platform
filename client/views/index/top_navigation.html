@@ -24,7 +24,7 @@
         <ul class="nav navbar-nav navbar-right">
           {{#if currentUser}}
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{maxChars user.username 15}} {{maxChars user.profile.name 18}}<b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{maxChars user.username 15}} {{user.services.google.given_name}} {{user.services.facebook.first_name}} <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li class="{{#if navActive 'changeRequests'}}active{{/if}}"><a href="{{pathFor 'changeRequests'}}">Change Requests <span class="badge">{{userOpenChangeRequests}}</span></a></li>
               <li class="{{#if navActive 'profile'}}active{{/if}}"><a href="{{pathFor 'profile'}}">My Profile <span class="badge">{{userPointsTotal}}</span></a></li>

@@ -26,7 +26,7 @@ Meteor.publish 'myCourse', (courseId) ->
 Meteor.publish 'popularCourses', ->
   courseCursor = Course.find()
   userIds = courseCursor.map (c) -> c.owner
-  userCursor = Meteor.users.find {_id: $in: userIds}, {fields: username: 1}
+  userCursor = Meteor.users.find {_id: $in: userIds}, {fields: username:1, "services.google.given_name": 1, "facebook.first_name": 1}
   [courseCursor, userCursor]
 
 Meteor.publish 'course', (slug) ->
