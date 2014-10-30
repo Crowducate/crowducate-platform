@@ -1,9 +1,10 @@
 # About 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Crowducate/crowducate.me?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [Crowducate](http://www.crowducate.me/ "Crowducate Webapp") is an open education platform. 
 The crowd creates courses (any subject is welcome) together which are interactive and fun. 
 Democratize education. Enjoy education.  Bear in mind, we are in early alpha. 
 For more info read this [blog post](http://blog.crowducate.me/welcome-to-crowducate/ "Welcome to Crowducate").
+
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Crowducate/crowducate.me?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # Installation
 The Crowducate platform is based on [MeteorJS](https://www.meteor.com/ "MeteorJS"). So, if you want to run it locally: 
