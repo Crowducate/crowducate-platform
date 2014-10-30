@@ -27,7 +27,8 @@ Great, so please contribute! The [roadmap for the beginning](http://blog.crowduc
 ~~1. Adding names to profiles.~~ 
   ~~* Adding Textfield ‘user name’ in the Registration process (if signed up with email instead of Facebook/g+)~~
   ~~* Adding “by ‘user name’(or FB/g+-name)” to the Course title (e.g. MeteorJs for Beginner by derMambo)~~
-~~2. Adding Upvote to courses (example: [Microscope/Telescope](http://demo.telesc.pe/)). A project from the people of the great~~ ~~book Discover Meteor. Source code is [here](https://github.com/DiscoverMeteor/Microscope).~~ D-O-N-E!
+~~2. Adding Upvote to courses (example: [Microscope/Telescope](http://demo.telesc.pe/)). A project from the people of the great~~ ~~book Discover Meteor. Source code is [here](https://github.com/DiscoverMeteor/Microscope).~~ D-O-N-E !
+
 3. Improving the creation of the multiple choice quiz 
   + Creator should choose how many possible answers to post
    - How many of them are the correct answers
