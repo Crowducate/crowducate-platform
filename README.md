@@ -1,4 +1,5 @@
 # About 
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Crowducate/crowducate.me?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [Crowducate](http://www.crowducate.me/ "Crowducate Webapp") is an open education platform. 
 The crowd creates courses (any subject is welcome) together which are interactive and fun. 
 Democratize education. Enjoy education.  Bear in mind, we are in early alpha. 
