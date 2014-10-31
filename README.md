@@ -33,3 +33,7 @@ Great, so please contribute! The [roadmap for the beginning](http://blog.crowduc
   + Creator should choose how many possible answers to post
    - How many of them are the correct answers
 4. Commenting function for change requests (i.e., why did I send this change request/why did I decline your change request, etc.)
+
+# Roadmap discussion
+We're having an open Hackpad discussion on the future of Crowducate. Come and add your opinion on the key points!
+https://hackpad.com/Crowducate-Roadmap-Ideas-ATAX9ZTodoe
