@@ -49,8 +49,8 @@
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.7.0",
-        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
+        "tag": "v0.8.2",
+        "commit": "05415a8891ea87a00fb1e2388585f2ca5a38e0da"
       },
       "ms-seo": {
         "git": "https://github.com/DerMambo/ms-seo",
@@ -60,7 +60,7 @@
       "mambo-authenticate": {
         "git": "https://github.com/DerMambo/mambo-authenticate.git",
         "branch": "master",
-        "commit": "da619792b811e79eaceb47f70ef24dea53ed1629"
+        "commit": "04ca6f6f1fb6ad5c64cae60beceeebff1a54909f"
       },
       "ms-validator": {
         "git": "https://github.com/DerMambo/ms-validator.git",
@@ -75,12 +75,12 @@
       "mambo-forms": {
         "git": "https://github.com/DerMambo/mambo-forms.git",
         "branch": "master",
-        "commit": "1e7aa77b0ae4325c6c722ad5f2e31e59d6e655b4"
+        "commit": "1073f4a3c5e11bf1719a62899a0ab80f485fbf6a"
       },
       "minimongoid": {
         "git": "https://github.com/Exygy/minimongoid.git",
-        "tag": "v0.8.3",
-        "commit": "8a4849426f1775f9886f303067e50877696fae43"
+        "tag": "v0.8.8",
+        "commit": "cf8d0bec44934d617544965977f270f2a8cdca02"
       },
       "bootstrap-tabs": {
         "git": "https://github.com/DerMambo/bootstrap-tabs.git",
@@ -112,10 +112,10 @@
         "branch": "master",
         "commit": "6791764b9e231a6ab2d2c68c21c9fab195551557"
       },
-      "blaze-layout": {
-        "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.2",
-        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+      "iron-layout": {
+        "git": "https://github.com/EventedMind/iron-layout.git",
+        "tag": "v0.2.0",
+        "commit": "4a2d53e35ba036b0c189c7ceca34be494d4c6c97"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
@@ -131,6 +131,21 @@
         "git": "https://github.com/DerMambo/marked.git",
         "branch": "master",
         "commit": "c7314747b56d56690dcfa678334bf4af9b522b10"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.5",
+        "commit": "273e3ab7d005d91a1a59c71bd224533b4dae2fbd"
+      },
+      "iron-core": {
+        "git": "https://github.com/EventedMind/iron-core.git",
+        "tag": "v0.2.0",
+        "commit": "0e48b5dc50d03f01025b7b900fb5ce2f13d52cad"
+      },
+      "iron-dynamic-template": {
+        "git": "https://github.com/EventedMind/iron-dynamic-template.git",
+        "tag": "v0.2.1",
+        "commit": "4dd1185c4d9d616c9abdb3f33e4a7d5a88db7e18"
       }
     }
   }

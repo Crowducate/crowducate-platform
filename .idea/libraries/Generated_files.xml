@@ -1,0 +1,83 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/packages/bootstrap-tabs/bootstrap_tabs.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/example/lib/models.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/.build/tests.browser/packages/minimongoid/tests/model_tests.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/.build/tests.browser/packages/minimongoid/tests/models.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/.build/tests.os/packages/minimongoid/tests/server_tests.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/.build/tests.os/packages/minimongoid/tests/model_tests.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/.build/tests.os/packages/minimongoid/tests/models.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/tests/server_tests.js" />
+        <item url="file://$PROJECT_DIR$/packages/common-helpers/etc_server.js" />
+        <item url="file://$PROJECT_DIR$/packages/common-helpers/etc_common.js" />
+        <item url="file://$PROJECT_DIR$/packages/ms-validator/ms_validator.js" />
+        <item url="file://$PROJECT_DIR$/packages/ms-google-analytics/ganalytics.js" />
+        <item url="file://$PROJECT_DIR$/packages/mambo-forms/handlebars_helpers.js" />
+        <item url="file://$PROJECT_DIR$/packages/ms-seo/seo_publications.js" />
+        <item url="file://$PROJECT_DIR$/packages/mambo-forms/form.js" />
+        <item url="file://$PROJECT_DIR$/packages/ms-seo/seo_collection.js" />
+        <item url="file://$PROJECT_DIR$/packages/ms-markdown-editor/client/handlebars_helper.js" />
+        <item url="file://$PROJECT_DIR$/packages/ms-seo/seo.js" />
+        <item url="file://$PROJECT_DIR$/packages/ms-markdown-editor/client/markdown_editor.js" />
+        <item url="file://$PROJECT_DIR$/packages/bootstrap-tabs/handlebars_helpers.js" />
+        <item url="file://$PROJECT_DIR$/packages/mambo-authenticate/entry.js" />
+        <item url="file://$PROJECT_DIR$/packages/mambo-authenticate/sign-in/signIn.js" />
+        <item url="file://$PROJECT_DIR$/packages/mambo-authenticate/sign-up/signUp.js" />
+        <item url="file://$PROJECT_DIR$/packages/mambo-authenticate/shared/social.js" />
+        <item url="file://$PROJECT_DIR$/packages/common-helpers/handlebars_helpers.js" />
+        <item url="file://$PROJECT_DIR$/packages/mambo-authenticate/shared/accountButtons.js" />
+        <item url="file://$PROJECT_DIR$/packages/mambo-authenticate/shared/error.js" />
+        <item url="file://$PROJECT_DIR$/packages/mambo-authenticate/shared/start.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/tests/models.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/tests/model_tests.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/lib/has_many_relation.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/lib/has_and_belongs_to_many_relation.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/lib/relation.js" />
+        <item url="file://$PROJECT_DIR$/packages/minimongoid/lib/minimongoid.js" />
+        <item url="file://$PROJECT_DIR$/packages/mambo-authenticate/router.js" />
+        <item url="file://$PROJECT_DIR$/packages/mambo-authenticate/forgot-password/forgotPassword.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/packages/bootstrap-tabs/bootstrap_tabs.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/example/lib/models.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/.build/tests.browser/packages/minimongoid/tests/model_tests.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/.build/tests.browser/packages/minimongoid/tests/models.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/.build/tests.os/packages/minimongoid/tests/server_tests.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/.build/tests.os/packages/minimongoid/tests/model_tests.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/.build/tests.os/packages/minimongoid/tests/models.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/tests/server_tests.js" />
+      <root url="file://$PROJECT_DIR$/packages/common-helpers/etc_server.js" />
+      <root url="file://$PROJECT_DIR$/packages/common-helpers/etc_common.js" />
+      <root url="file://$PROJECT_DIR$/packages/ms-validator/ms_validator.js" />
+      <root url="file://$PROJECT_DIR$/packages/ms-google-analytics/ganalytics.js" />
+      <root url="file://$PROJECT_DIR$/packages/mambo-forms/handlebars_helpers.js" />
+      <root url="file://$PROJECT_DIR$/packages/ms-seo/seo_publications.js" />
+      <root url="file://$PROJECT_DIR$/packages/mambo-forms/form.js" />
+      <root url="file://$PROJECT_DIR$/packages/ms-seo/seo_collection.js" />
+      <root url="file://$PROJECT_DIR$/packages/ms-markdown-editor/client/handlebars_helper.js" />
+      <root url="file://$PROJECT_DIR$/packages/ms-seo/seo.js" />
+      <root url="file://$PROJECT_DIR$/packages/ms-markdown-editor/client/markdown_editor.js" />
+      <root url="file://$PROJECT_DIR$/packages/bootstrap-tabs/handlebars_helpers.js" />
+      <root url="file://$PROJECT_DIR$/packages/mambo-authenticate/entry.js" />
+      <root url="file://$PROJECT_DIR$/packages/mambo-authenticate/sign-in/signIn.js" />
+      <root url="file://$PROJECT_DIR$/packages/mambo-authenticate/sign-up/signUp.js" />
+      <root url="file://$PROJECT_DIR$/packages/common-helpers/handlebars_helpers.js" />
+      <root url="file://$PROJECT_DIR$/packages/mambo-authenticate/shared/social.js" />
+      <root url="file://$PROJECT_DIR$/packages/mambo-authenticate/shared/accountButtons.js" />
+      <root url="file://$PROJECT_DIR$/packages/mambo-authenticate/shared/error.js" />
+      <root url="file://$PROJECT_DIR$/packages/mambo-authenticate/shared/start.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/tests/models.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/tests/model_tests.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/lib/has_many_relation.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/lib/has_and_belongs_to_many_relation.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/lib/relation.js" />
+      <root url="file://$PROJECT_DIR$/packages/minimongoid/lib/minimongoid.js" />
+      <root url="file://$PROJECT_DIR$/packages/mambo-authenticate/router.js" />
+      <root url="file://$PROJECT_DIR$/packages/mambo-authenticate/forgot-password/forgotPassword.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
