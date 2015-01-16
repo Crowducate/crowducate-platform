@@ -19,7 +19,7 @@ That’s it!
 
 # License
 
-We chose the [GPL3 license](https://github.com/Crowducate/crowducate.me/blob/master/LICENSE.txt "License for Crowducate"), as this fosters an open ecosystem. Which is essential for an open education project.
+We changed the License from GPL3 license to GNU Affero General Public License [AGPL](https://github.com/Crowducate/crowducate.me/blob/master/LICENSE.txt "License for Crowducate"), as this fosters an open ecosystem even more, which is essential for an open education project. You can follow the discussion on the [blog](http://blog.crowducate.me/chose-gpl-license-open-source-project/).
 
 # I want to be part of a bigger vision
 Great, so please contribute! The [roadmap for the beginning](http://blog.crowducate.me/roadmap-crowducate):
