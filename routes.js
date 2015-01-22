@@ -23,15 +23,31 @@ Router.map(function() {
     this.route('teach', {
         path: '/teach',
         loginRequired: 'entrySignIn',
-//        waitOn: function() {
-//            return this.subscribe("items");
-//        },
-//        data: {
-//            items: Items.find({})
-//        },
+        //        waitOn: function() {
+        //            return this.subscribe("items");
+        //        },
+        //        data: {
+        //            items: Items.find({})
+        //        },
         onAfterAction: function() {
             SEO.set({
                 title: 'Teach | ' + SEO.settings.title
+            });
+        }
+    });
+
+    this.route('learn', {
+        path: '/learn',
+        loginRequired: 'entrySignIn',
+        //        waitOn: function() {
+        //            return this.subscribe("items");
+        //        },
+        //        data: {
+        //            items: Items.find({})
+        //        },
+        onAfterAction: function() {
+            SEO.set({
+                title: 'Learn | ' + SEO.settings.title
             });
         }
     });
