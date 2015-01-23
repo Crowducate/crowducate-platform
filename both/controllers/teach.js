@@ -1,0 +1,5 @@
+TeachController = AppController.extend({
+  data: {
+
+  }
+});
