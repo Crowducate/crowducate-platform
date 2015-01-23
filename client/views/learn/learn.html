@@ -1,3 +1,33 @@
 <template name="learn">
-    <h1>Hello, students</h1>
+    <div class="row">
+        {{#each resources}}
+        <ul class="thumbnails list-unstyled" style="margin-bottom: 0px;">
+            <li class="col-md-3">
+                <div class="thumbnail" style="padding: 0">
+                    <div style="padding:4px">
+                        <img alt="300x200" style="width: 100%" src="http://placehold.it/200x150">
+                    </div>
+                    <div class="caption">
+                        <h2>{{title}}</h2>
+                        <p>{{description}}</p>
+                        <p><i class="fa fa-user"></i> <a href="#">{{author}}</a></p>
+                    </div>
+                    <div class="modal-footer" style="text-align: left">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}};">
+                                <span class="sr-only">{{progress}} Complete</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"><b>{{progress}}</b><br/><small>COMPLETED</small></div>
+                            <div class="col-md-6"><b>{{editors}}</b><br/><small>EDITORS</small></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+        {{/each}}
+    </div>
 </template>
+
