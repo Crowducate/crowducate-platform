@@ -8,7 +8,7 @@ Template.teach.events({
         var description = template.find('#descriptionText').value;
 
         //adding resource to collection
-        Resources.insert({title: title, author: author, description: description, keywords: keywords});
+        Resources.insert({title: title, authoredBy: author, description: description, keywords: keywords});
 
         // Redirect to the learn page, for now
         Router.go('learn');
