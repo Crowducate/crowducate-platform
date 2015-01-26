@@ -1,3 +1,42 @@
 <template name="teach">
     <h1>Hello, teachers</h1>
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="list-group-item add-section"><i class="fa fa-plus"></i> Add Section</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-9">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Title</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="New Course">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Keywords</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Choose some tags (e.g. JavaScript, Math)">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Category</label>
+                    <select class="form-control">
+                        <option>Default</option>
+                        <option>Another</option>
+                        <option>Nothing</option>
+                        <option>Special</option>
+                        <option>Boom!</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Change to 'Published' when course should be viewable to others</label>
+                    <select class="form-control">
+                        <option>Unpublished</option>
+                        <option>Published</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
 </template>
