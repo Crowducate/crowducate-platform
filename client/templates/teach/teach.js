@@ -9,5 +9,8 @@ Template.teach.events({
 
         //adding resource to collection
         Resources.insert({title: title, author: author, description: description, keywords: keywords});
+
+        // Redirect to the learn page, for now
+        Router.go('learn');
     }
 })
