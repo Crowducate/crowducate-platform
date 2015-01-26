@@ -5,5 +5,13 @@ Resources.attachSchema(new SimpleSchema({
         type: String,
         label: "Title",
         max: 200
+    },
+    keywords: {
+        type: [String],
+        label: "Keywords"
+    },
+    published: {
+        type: Boolean,
+        label: "Published"
     }
 });
