@@ -1,7 +1,7 @@
 <template name="learn">
     <div class="row">
-        {{#each resources}}
         <ul class="thumbnails list-unstyled" style="margin-bottom: 0px;">
+            {{#each resources}}
             <li class="col-md-3">
                 <div class="thumbnail" style="padding: 0">
                     <div style="padding:4px">
@@ -11,7 +11,10 @@
                         <h3>{{title}}</h3>
                         <p>by <a href="#">{{author}}</a></p>
                         <p>{{description}}</p>
-                        <p><i class="fa fa-tag"></i> <a href="#">{{keywords}}</a></p>
+                        <p>
+                            <i class="fa fa-tag"></i> &nbsp;
+                            {{# each keywords }} <span class="label label-primary">{{ this }}</span> {{/each}}
+                        </p>
 
                     </div>
 <!--
@@ -29,9 +32,9 @@
 -->
                 </div>
             </li>
-
-        </ul>
         {{/each}}
+        </ul>
+
     </div>
 </template>
 
