@@ -13,8 +13,8 @@ Template.teach.events({
         resource.author = template.find('#authorName').value; // string
         resource.keywords = template.find('#resourceKeywords').value.split(','); // split keywords to array
         resource.published = template.find('#resourcePublished').value; // string
-        resource.description = template.find('#descriptionText').value; // string
-
+        //resource.description = template.find('#descriptionText').value; // string
+        resource.description = $('#descriptionText').code(); // Get the HTML code from the Summernote editor
         //adding resource to collection
         Resources.insert(resource);
 
@@ -26,7 +26,15 @@ Template.teach.events({
 Template.teach.rendered = function() {
     // Attach the summernote editor to the description field
     $('#descriptionText').summernote({
-        'height': 150
+        'height': 150,
+        toolbar: [
+            //[groupname, [button list]]
+            ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['font', ['strikethrough']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+        ]
     });
 
     // Get an array of the existing tags
