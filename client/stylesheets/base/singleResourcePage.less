@@ -31,6 +31,11 @@ h1.resource-title {
     color: #2A3744;
 }
 
+span.resource-author, span.resource-added-date {
+    color: #687984;
+    font-weight: 500;
+}
+
 .resource-page-content {
     margin-top: 3em;
 }
@@ -39,9 +44,15 @@ h1.resource-title {
     font-size: 1.6rem;
 }
 
-span.resource-author, span.resource-added-date {
-    color: #687984;
-    font-weight: 500;
+p.resource-page-content::first-letter {
+    text-transform: uppercase;
+    font-size: 5em;
+    vertical-align: bottom;
+    float: left;
+    line-height: 0.9;
+    margin-right: 0.1em;
+    margin-left: -0.05em;
 }
+
 
 // body content END
