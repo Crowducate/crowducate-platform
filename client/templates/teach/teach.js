@@ -24,6 +24,11 @@ Template.teach.events({
 });
 
 Template.teach.rendered = function() {
+    // Attach the summernote editor to the description field
+    $('#descriptionText').summernote({
+        'height': 150
+    });
+
     // Get an array of the existing tags
     var tagOptions = Tags.find().fetch();
 
