@@ -22,3 +22,4 @@ iron:router@1.0.0
 yasinuslu:blaze-meta
 insecure
 jeremy:selectize
+summernote:standalone

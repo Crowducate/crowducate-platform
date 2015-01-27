@@ -24,13 +24,35 @@ Template.teach.events({
 });
 
 Template.teach.rendered = function() {
+    // Attach the summernote editor to the description field
+    $('#descriptionText').summernote({
+        'height': 150
+    });
+
+    // Get an array of the existing tags
+    var tagOptions = Tags.find().fetch();
+
     $('#resourceKeywords').selectize({
         delimiter: ',',
         persist: false,
-        create: function(input) {
-            return {
-                value: input,
-                text: input
+        valueField: 'name',
+        labelField: 'name',
+        searchField: 'name',
+        create: true, // TODO: Add entries to Tags collection.
+        highlight: true,
+        maxOptions: 5,
+        options: tagOptions,
+        onItemAdd: function (item) {
+            // Check to see if tag exists in Tags collection
+            // by querying the database for the tag name
+            // and checking the length of the result
+            var existingTag = Tags.find({"name": item}).fetch().length;
+            if (!existingTag ) {
+                // Add the tag to the Tags collection
+                // TODO: figure out how to limit duplicate tags
+                // e.g. 'Beans' and 'beans'
+                // unless this is not an issue
+                Tags.insert({"name": item});
             }
         }
     });
