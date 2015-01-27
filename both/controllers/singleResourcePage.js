@@ -1,0 +1,5 @@
+SingleresourcepageController = AppController.extend({
+  data: {
+
+  }
+});

@@ -11,3 +11,5 @@ Router.route('/learn');
 Router.route('tag/:tag',  {
     name: 'taggedResources'
 });
+
+Router.route('/singleresourcepage');
