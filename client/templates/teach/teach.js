@@ -46,6 +46,7 @@ Template.teach.rendered = function() {
                 // Add the tag to the Tags collection
                 // TODO: figure out how to limit duplicate tags
                 // e.g. 'Beans' and 'beans'
+                // unless this is not an issue
                 Tags.insert({"name": item});
             }
         }
