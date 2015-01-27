@@ -24,14 +24,17 @@ Template.teach.events({
 });
 
 Template.teach.rendered = function() {
+    // Get an array of the existing tags
+    var tagOptions = Tags.find().fetch();
+
     $('#resourceKeywords').selectize({
         delimiter: ',',
         persist: false,
-        create: function(input) {
-            return {
-                value: input,
-                text: input
-            }
-        }
+        valueField: 'name',
+        labelField: 'name',
+        searchField: 'name',
+        create: true, // TODO: Add entries to Tags collection.
+        highlight: true,
+        options: tagOptions
     });
 };
