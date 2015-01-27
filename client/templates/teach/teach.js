@@ -35,6 +35,19 @@ Template.teach.rendered = function() {
         searchField: 'name',
         create: true, // TODO: Add entries to Tags collection.
         highlight: true,
-        options: tagOptions
+        maxOptions: 5,
+        options: tagOptions,
+        onItemAdd: function (item) {
+            // Check to see if tag exists in Tags collection
+            // by querying the database for the tag name
+            // and checking the length of the result
+            var existingTag = Tags.find({"name": item}).fetch().length;
+            if (!existingTag ) {
+                // Add the tag to the Tags collection
+                // TODO: figure out how to limit duplicate tags
+                // e.g. 'Beans' and 'beans'
+                Tags.insert({"name": item});
+            }
+        }
     });
 };
