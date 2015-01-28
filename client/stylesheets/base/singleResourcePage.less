@@ -2,8 +2,23 @@ body {
     background-color: #f2f2f2;
 }
 
-.resource-toolbar {
-    margin-bottom: 1.4em;
+.resource-toolbar nav {
+    background-color: inherit;
+    padding-right: .4em;
+    border: none;
+}
+
+ul.editors-toolbar > li > a {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    color: #333;
+}
+
+ul.editors-toolbar > li > a:hover {
+    background-color: #d6d6d6;
+    color: #353535;
 }
 
 ul.toolbar-pages-list > li > a {
@@ -20,18 +35,18 @@ ul.toolbar-pages-list > li > a:hover {
     color: #555;
 }
 
-ul.toolbar-pages-list > li > a:active {
-    background: #DC681D;
-    color: #fff;
-    text-shadow: none;
-}
-
-//.resource-whole-page {
-//    border-radius: 3px;
-//    border: 1px solid #ccc;
-//    background: none repeat scroll 0% 0% #fff;
-//    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+//ul.toolbar-pages-list > li > a:active {
+//    background: #DC681D;
+//    color: #fff;
+//    text-shadow: none;
 //}
+
+.resource-whole-page {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background: none repeat scroll 0% 0% #fff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
 
 
 // left sidebar content START
@@ -69,7 +84,7 @@ h1.resource-title {
 }
 
 span.resource-author, span.resource-added-date {
-    color: #687984;
+    color: #4c5860;
     font-weight: 500;
 }
 
