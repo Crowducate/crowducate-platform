@@ -1,8 +1,11 @@
 <template name="taggedResources">
+
     <h1>Resources tagged <span class="label label-primary">{{ tag }}</span></h1>
-    <ul>
-        {{# each resources }}
-        {{> singleResource }}
-        {{/ each }}
-    </ul>
+    <div class="row">
+        <ul class="thumbnails list-unstyled tag-search-result">
+            {{# each resources }}
+            {{> singleResource }}
+            {{/ each }}
+        </ul>
+    </div>
 </template>
