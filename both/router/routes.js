@@ -12,4 +12,6 @@ Router.route('tag/:tag',  {
     name: 'taggedResources'
 });
 
-Router.route('/singleresourcepage');
+Router.route('/singleresourcepage', {
+    name: 'singleResourcePage'
+});
