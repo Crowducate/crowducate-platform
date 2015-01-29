@@ -1,28 +1,10 @@
 <template name="resourceSidebar">
     <div class="resource-left-nav">
         <div class="col-xs-12 col-md-3">
-            <div class="resource-img">
-                <img src="images/resource-img.png" />
-            </div>
-            {{> singleResource }}
-            <div class="panel panel-default">
-                <div class="panel-heading">2. Title</div>
-                <div class="panel-body single-content-table-block">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li><a href="#"><i class="fa fa-play-circle"></i> 2.1. Learning outcomes</a></li>
-                        <li><a href="#"><i class="fa fa-play-circle"></i> 2.2. Importantce of social marketing</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">3. Title</div>
-                <div class="panel-body single-content-table-block">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li><a href="#"><i class="fa fa-play-circle"></i> 3.1. Learning outcomes</a></li>
-                        <li><a href="#"><i class="fa fa-play-circle"></i> 3.2. Importantce of social marketing</a></li>
-                    </ul>
-                </div>
-            </div>
+            {{> sidebarIntro }}
+            {{# each sections }}
+            {{> sidebarSection }}
+            {{/ each }}
         </div>
     </div>
 </template>
