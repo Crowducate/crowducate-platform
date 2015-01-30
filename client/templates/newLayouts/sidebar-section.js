@@ -1,3 +1,9 @@
+Template.sidebarSection.helpers({
+    'editMode': function () {
+        return Session.get('editMode');
+    }
+});
+
 Template.sidebarSection.events({
     'click .add-page': function (event, template) {
         // get the value of the input field
