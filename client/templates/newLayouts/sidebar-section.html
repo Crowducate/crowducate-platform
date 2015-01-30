@@ -1,7 +1,9 @@
 <template name="sidebarSection">
     <div class="panel panel-default ">
         <div class="panel-heading">{{ title }}</div>
-        <button class="btn btn-success add-page">Add</button>
+        {{# if editMode }}
+        {{> sidebarSectionAddPage }}
+        {{/ if }}
         <div class="panel-body single-content-table-block">
             <ul class="nav nav-pills nav-stacked">
                 {{> sidebarSectionItem }}
