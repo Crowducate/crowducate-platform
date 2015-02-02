@@ -6,10 +6,10 @@
                 {{> sidebarSectionItem }}
             </ul>
         </div>
+        {{# if editMode }}
         <div class="panel-footer">
-            {{# if editMode }}
             {{> sidebarSectionAddPage }}
-            {{/ if }}
         </div>
+        {{/ if }}
     </div>
 </template>
