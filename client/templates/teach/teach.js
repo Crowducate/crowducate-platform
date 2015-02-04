@@ -1,22 +1,22 @@
 Template.teach.events({
-    'click #addResource': function(event, template){
+    'click #addCourse': function(event, template){
         // prevent default button submit
         event.preventDefault();
 
-        // create an empty resource container
-        var resource = {}
+        // create an empty course container
+        var course = {}
 
         // Getting form field values
         // Converting keywords to array
         // all other values are strings
-        resource.title = template.find('#resourceTitle').value; // string
-        resource.author = template.find('#authorName').value; // string
-        resource.keywords = template.find('#resourceKeywords').value.split(','); // split keywords to array
-        resource.published = template.find('#resourcePublished').value; // string
-        //resource.description = template.find('#descriptionText').value; // string
-        resource.description = $('#descriptionText').code(); // Get the HTML code from the Summernote editor
-        //adding resource to collection
-        Resources.insert(resource);
+        course.title = template.find('#courseTitle').value; // string
+        course.author = template.find('#authorName').value; // string
+        course.keywords = template.find('#courseKeywords').value.split(','); // split keywords to array
+        course.published = template.find('#coursePublished').value; // string
+        //course.description = template.find('#descriptionText').value; // string
+        course.description = $('#descriptionText').code(); // Get the HTML code from the Summernote editor
+        //adding course to collection
+        Courses.insert(course);
 
         // Redirect to the learn page, for now
         Router.go('learn');
@@ -40,7 +40,7 @@ Template.teach.rendered = function() {
     // Get an array of the existing tags
     var tagOptions = Tags.find().fetch();
 
-    $('#resourceKeywords').selectize({
+    $('#courseKeywords').selectize({
         delimiter: ',',
         persist: false,
         valueField: 'name',
