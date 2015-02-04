@@ -1,0 +1,10 @@
+<template name="taggedCourses">
+    <h1>Courses tagged <span class="label label-primary">{{ tag }}</span></h1>
+    <div class="row">
+        <ul class="thumbnails list-unstyled tag-search-result">
+            {{# each courses }}
+            {{> singleCourse }}
+            {{/ each }}
+        </ul>
+    </div>
+</template>
