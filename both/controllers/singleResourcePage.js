@@ -27,7 +27,7 @@ SingleResourcePageController = AppController.extend({
                     },
                     {
                         "title": "Brood"
-                    },
+                    }
                 ]
             }
         ]
