@@ -1,0 +1,10 @@
+<template name="resourceSidebar">
+    <div class="resource-left-nav">
+        <div class="col-xs-12 col-md-3">
+            {{> sidebarIntro }}
+            {{# each sections }}
+            {{> sidebarSection }}
+            {{/ each }}
+        </div>
+    </div>
+</template>

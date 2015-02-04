@@ -1,0 +1,5 @@
+CourseController = AppController.extend({
+  data: {
+
+  }
+});
