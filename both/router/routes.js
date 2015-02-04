@@ -9,7 +9,7 @@ Router.route('/teach');
 Router.route('/learn');
 
 Router.route('tag/:tag',  {
-    name: 'taggedResources'
+    name: 'taggedCourses'
 });
 
 Router.route('/singleresourcepage', {
