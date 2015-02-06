@@ -1,11 +1,11 @@
-<template name="resourceToolbar">
-    <div class="row resource-toolbar">
+<template name="courseToolbar">
+    <div class="row course-toolbar">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <nav class="navbar navbar-default">
                 {{#if editMode}}
-                {{>cancelEditResource}}
+                {{> editCancel }}
                 {{else}}
-                {{>resourceToolbarContent}}
+                {{> courseToolbarContent }}
                 {{/if}}
             </nav>
         </div>

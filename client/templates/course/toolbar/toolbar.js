@@ -1,5 +1,5 @@
-Template.resourceToolbar.events({
-    'click #edit-resource':function(event, template){
+Template.courseToolbar.events({
+    'click #edit-course':function(event, template){
         Session.set('editMode', true);
     },
     'click #cancel-edit-resource':function(){
@@ -7,7 +7,7 @@ Template.resourceToolbar.events({
     }
 });
 
-Template.resourceToolbar.helpers({
+Template.courseToolbar.helpers({
     'editMode':function(){
         return Session.get('editMode');
     }
