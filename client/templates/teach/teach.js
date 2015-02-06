@@ -14,7 +14,7 @@ Template.teach.events({
         course.keywords = template.find('#courseKeywords').value.split(','); // split keywords to array
         course.published = template.find('#coursePublished').value; // string
         //course.description = template.find('#descriptionText').value; // string
-        course.description = $('#descriptionText').code(); // Get the HTML code from the Summernote editor
+        course.about = $('#aboutText').code(); // Get the HTML code from the Summernote editor
         //adding course to collection
         Courses.insert(course);
 
@@ -25,7 +25,7 @@ Template.teach.events({
 
 Template.teach.rendered = function() {
     // Attach the summernote editor to the description field
-    $('#descriptionText').summernote({
+    $('#aboutText').summernote({
         'height': 150,
         toolbar: [
             //[groupname, [button list]]
