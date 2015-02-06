@@ -1,14 +1,16 @@
-<template name="courseDetails">
+<template name="lesson">
     <div class="col-xs-12 col-sm-7 col-md-9">
-        <div class="resource-page-title">
-            <h1 class="resource-title {{editClass}}">{{ title }}</h1>
-            <span class="resource-author">originally by <a href="#">{{ author }}</a></span>
-            <span class="resource-added-date">{{ date }}</span>
+        <div class="course-page-title">
+            <h1 class="course-title {{editClass}}">{{ title }}</h1>
+            <span class="course-author">originally by <a href="#">{{ author }}</a></span>
+            <span class="course-added-date">{{ date }}</span>
         </div>
-        <div class="resource-page-content {{editClass}}">
+        <div class="course-page-content {{editClass}}">
             {{ content }}
+<!--
             {{> componentImage}}
             {{> referencesBlock}}
+-->
         </div>
     </div>
 </template>
