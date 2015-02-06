@@ -12,6 +12,10 @@ Router.route('tag/:tag',  {
     name: 'taggedCourses'
 });
 
+Router.route('course/:_id', {
+    name: 'course'
+});
+
 Router.route('/singleresourcepage', {
     name: 'singleResourcePage'
 });
