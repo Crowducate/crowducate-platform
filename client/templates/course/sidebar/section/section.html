@@ -1,0 +1,16 @@
+<template name="courseSidebarSection">
+    <div class="panel panel-default ">
+        <div class="panel-heading">{{ title }}</div>
+        <div class="panel-body single-content-table-block">
+            <ul class="nav nav-pills nav-stacked">
+                {{> item }}
+            </ul>
+        </div>
+        {{# if editMode }}
+        <div class="panel-footer">
+            <p>Edit</p>
+<!--            {{> sectionAddPage }}-->
+        </div>
+        {{/ if }}
+    </div>
+</template>
