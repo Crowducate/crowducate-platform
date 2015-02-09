@@ -16,6 +16,10 @@ Router.route('course/:_id', {
     name: 'course'
 });
 
+Router.route('course/:_id/info', {
+    name: 'courseInfo'
+});
+
 Router.route('/singleresourcepage', {
     name: 'testsingleResourcePage'
 });
