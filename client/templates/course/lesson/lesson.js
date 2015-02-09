@@ -8,6 +8,7 @@ Template.lesson.helpers({
     },
     'contentEditable': function () {
         // Return the value of the edit mode session variable
+        // this will reflect in the editmode HTML tag(s)
         return Session.get('editMode');
     },
     'courseTitleFocus': function () {
@@ -18,9 +19,11 @@ Template.lesson.helpers({
 
 Template.lesson.events({
     'focus #course-title': function (event, template) {
+        // set variable to indicate title has focus
         courseTitleFocusVar.set(true);
     },
     'blur #course-title': function (event, template) {
+        // indicate title has lost focus
         courseTitleFocusVar.set(false);
 
         // Get course ID from template
