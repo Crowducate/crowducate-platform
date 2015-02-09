@@ -17,5 +17,5 @@ Router.route('course/:_id', {
 });
 
 Router.route('/singleresourcepage', {
-    name: 'singleResourcePage'
+    name: 'testsingleResourcePage'
 });

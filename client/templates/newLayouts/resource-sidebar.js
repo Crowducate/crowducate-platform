@@ -1,4 +1,4 @@
-Template.resourceSidebar.helpers({
+Template.testresourceSidebar.helpers({
     'sections': function () {
         // create a reactive variable based on the template data
         sections = new ReactiveVar(this.sections);

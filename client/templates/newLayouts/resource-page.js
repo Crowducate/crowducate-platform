@@ -1,4 +1,4 @@
-Template.singleResourcePage.events({
+Template.testsingleResourcePage.events({
     'click  #edit-resource': function () {
         // in edit mode,
         // add rich text editor
