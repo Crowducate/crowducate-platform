@@ -1,4 +1,4 @@
-var courseTitleFocus = new ReactiveVar(false);
+var courseTitleFocusVar = new ReactiveVar(false);
 
 Template.lesson.helpers({
     editClass: function(){
@@ -13,16 +13,19 @@ Template.lesson.helpers({
         } else {
             return false;
         }
+    },
+    'courseTitleFocus': function () {
+        return courseTitleFocusVar.get();
     }
 });
 
 Template.lesson.events({
     'focus #course-title': function (event, template) {
         console.log("Course title focus.");
-        courseTitleFocus.set(true);
+        courseTitleFocusVar.set(true);
     },
     'blur #course-title': function (event, template) {
         console.log("Course title blur.");
-        courseTitleFocus.set(false);
+        courseTitleFocusVar.set(false);
     }
 });
