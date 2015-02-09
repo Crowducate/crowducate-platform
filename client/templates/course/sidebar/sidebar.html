@@ -3,6 +3,11 @@
         <div class="col-xs-12 col-md-3">
             <p>Sidebar</p>
             {{> courseSidebarIntro }}
+
+            {{# if editMode }}
+            {{> addLesson }}
+            {{/ if }}
+
             {{# each sections }}
             {{> courseSidebarSection }}
             {{/ each }}
