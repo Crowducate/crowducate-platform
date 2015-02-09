@@ -1,17 +1,10 @@
 <template name="lesson">
     <div class="col-xs-12 col-sm-7 col-md-9">
-        <div class="course-page-title page-header">
-            {{# if courseTitleFocus }}
-            {{> saveButton }}
-            {{/ if }}
-            <h1 id="course-title" class="course-title {{editClass}}" contentEditable={{ contentEditable }}>
-                {{ title }}
-            </h1>
-            <span class="course-author">originally by <a href="#">{{ author }}</a></span>
-            <span class="course-added-date">{{ date }}</span>
+        <div class="lesson-title">
+            {{> lessonTitle }}
         </div>
-        <div class="course-page-content {{editClass}}">
-            {{ content }}
+        <div class="lesson-content {{editClass}}">
+            {{ lessonContent }}
             <!--
 {{> componentImage}}
 {{> referencesBlock}}
