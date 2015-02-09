@@ -5,6 +5,10 @@ Template.testresourceToolbar.events({
     'click #cancel-edit-resource':function(){
         Session.set('editMode', false);
     }
+//    ,
+//    'click .toolbar-pages-list > li':function(event, template){
+//       this.event.target.addClass("active");
+//    }
 });
 
 Template.testresourceToolbar.helpers({

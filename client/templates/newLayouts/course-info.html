@@ -2,8 +2,21 @@
     {{>testresourceToolbar}}
     <div class="row courseinfo-whole-page">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <h1>Course information</h1>
+            <h1 class="courseinfo-page-title">Course information</h1>
+            <div class="course-meta">
+                <h2 class="courseinfo-course-meta-title">{{>courseTitle}} <small>{{>courseMeta}}</small></h2>
+            </div>
             {{>testsidebarIntro}}
+            {{>testcourseInfoContent}}
         </div>
     </div>
+</template>
+
+<template name="testcourseInfoContent">
+    <p class="courseinfo-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque libero diam, pretium et congue vitae, sodales sit amet lacus. Integer ipsum nisi, congue vel odio et, iaculis sagittis sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In fermentum a nibh blandit luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam massa mauris, placerat ullamcorper viverra at, vulputate placerat mauris. Etiam a vehicula urna. Nullam mattis vel tortor in consequat. Curabitur viverra eget velit sit amet placerat. Nulla finibus dignissim tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam porta elit ligula. Duis a elit odio. Morbi id est quis ipsum dictum egestas non vitae lorem. Curabitur nec ultricies ipsum. Morbi accumsan orci non metus viverra, non iaculis nisi pharetra.
+    </p>
+    <p class="courseinfo-content">
+        Curabitur viverra eget velit sit amet placerat. Nulla finibus dignissim tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam porta elit ligula. Duis a elit odio. Morbi id est quis ipsum dictum egestas non vitae lorem. Curabitur nec ultricies ipsum. Morbi accumsan orci non metus viverra, non iaculis nisi pharetra.
+    </p>
 </template>
