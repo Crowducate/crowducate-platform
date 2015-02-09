@@ -7,14 +7,12 @@ Template.lesson.helpers({
         }
     },
     'contentEditable': function () {
-        if (Session.get('editMode')) {
-            return true;
-        } else {
-            return false;
-        }
+        // Return the value of the edit mode session variable
+        return Session.get('editMode');
     },
     'courseTitleFocus': function () {
-        return courseTitleFocusVar.get();
+        // Get the value of reactive var
+        return courseTitleFocusVar.get();;
     }
 });
 
@@ -24,5 +22,14 @@ Template.lesson.events({
     },
     'blur #course-title': function (event, template) {
         courseTitleFocusVar.set(false);
+
+        // Get course ID from template
+        var courseId = this._id;
+
+        // Get the course name from the page element
+        var title = $("#course-title").text();
+
+        // Update the course in database
+       Courses.update(courseId, {$set: {title: title}});
     }
 });
