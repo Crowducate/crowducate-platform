@@ -1,4 +1,4 @@
-Template.resourceToolbar.events({
+Template.testresourceToolbar.events({
     'click #edit-resource':function(event, template){
         Session.set('editMode', true);
     },
@@ -7,7 +7,7 @@ Template.resourceToolbar.events({
     }
 });
 
-Template.resourceToolbar.helpers({
+Template.testresourceToolbar.helpers({
     'editMode':function(){
         return Session.get('editMode');
     }

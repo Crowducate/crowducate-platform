@@ -1,4 +1,4 @@
-SingleResourcePageController = AppController.extend({
+TestsingleResourcePageController = AppController.extend({
     data: {
         'title': 'Example content',
         'author': 'Illya Nziyev',

@@ -1,10 +1,10 @@
-Template.sidebarSection.helpers({
+Template.testsidebarSection.helpers({
     'editMode': function () {
         return Session.get('editMode');
     }
 });
 
-Template.sidebarSection.events({
+Template.testsidebarSection.events({
     'click .add-page': function (event, template) {
         // get the value of the input field
         var lessonTitle = template.find('.page-name').value;
