@@ -5,10 +5,14 @@
             <span class="resource-author">originally by <a href="#">{{ author }}</a></span>
             <span class="resource-added-date">{{ date }}</span>
         </div>
-        <div class="resource-page-content {{editClass}}">
-            {{ content }}
-            {{> testcomponentImage}}
-            {{> testreferencesBlock}}
+        <div id="sortable-divs">
+            <div class="resource-page-content {{editClass}}" id="component1">
+                {{ content }}
+            </div>
+            <div class="component-image" id="component2">
+                {{> testcomponentImage}}
+            </div>
         </div>
+        {{> testreferencesBlock}}
     </div>
 </template>
