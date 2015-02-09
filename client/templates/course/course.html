@@ -1,7 +1,15 @@
 <template name="course">
     {{>courseToolbar}}
-    <div class="row course-whole-page">
-        {{> courseSidebar }}
-        {{> lesson }}
+    <div class="row">
+        <div class="panel">
+            <div class="panel-heading">
+                {{> courseTitle }}
+                {{> courseMeta }}
+            </div>
+            <div class="panel-body">
+                {{> courseSidebar }}
+                {{> lesson }}
+            </div>
+        </div>
     </div>
 </template>
