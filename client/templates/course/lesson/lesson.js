@@ -8,7 +8,6 @@ Template.lesson.helpers({
     },
     'contentEditable': function () {
         if (Session.get('editMode')) {
-            console.log("Content editable");
             return true;
         } else {
             return false;
@@ -21,11 +20,9 @@ Template.lesson.helpers({
 
 Template.lesson.events({
     'focus #course-title': function (event, template) {
-        console.log("Course title focus.");
         courseTitleFocusVar.set(true);
     },
     'blur #course-title': function (event, template) {
-        console.log("Course title blur.");
         courseTitleFocusVar.set(false);
     }
 });
