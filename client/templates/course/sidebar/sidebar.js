@@ -5,5 +5,8 @@ Template.courseSidebar.helpers({
 
         // return the reactive variable
         return sections.get();
+    },
+    'editMode': function () {
+        return Session.get('editMode');
     }
 });
