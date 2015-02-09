@@ -1,7 +1,9 @@
 var courseTitleFocusVar = new ReactiveVar(false);
 
 Template.lesson.helpers({
-    editClass: function(){
+    'editClass': function(){
+        // apply a class to the course content
+        // based on the editMode session variable
         if (Session.get('editMode')) {
             return 'course-page-content-edit';
         }
