@@ -1,15 +1,13 @@
 <template name="courseInfo">
     {{>courseToolbar}}
-    <div class="row courseinfo-whole-page">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <h1 class="courseinfo-page-title">Course information</h1>
-            {{> courseSidebarIntro}}
-            {{> courseTitle }}
-            {{> courseMeta }}
-            <br/><br/>
-            <p>ID: {{ _id }}</p>
-            <p>{{ title }}</p>
-            <p class="courseinfo-content">{{ about }}</p>
+        <div class="panel">
+            <div class="panel-heading">
+                {{> courseTitle }}
+                {{> courseMeta }}
+            </div>
+            <div class="panel-body">
+                {{{ about }}}
+            </div>
         </div>
-    </div>
+
 </template>
