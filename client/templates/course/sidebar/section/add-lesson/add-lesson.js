@@ -24,5 +24,8 @@ Template.sectionAddLesson.events({
 
         // Save course.lessonIDs array to database
         Courses.update(courseID, {$set: {"sections": courseSections}});
+
+        // Clear the lesson name field
+        $(".lesson-name").val('');
     }
 });
