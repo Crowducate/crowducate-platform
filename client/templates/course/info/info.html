@@ -1,13 +1,14 @@
 <template name="courseInfo">
     {{>courseToolbar}}
-        <div class="panel">
-            <div class="panel-heading">
-                {{> courseTitle }}
-                {{> courseMeta }}
-            </div>
-            <div class="panel-body">
-                {{{ about }}}
-            </div>
+    <div class="panel">
+        <div class="panel-heading">
+            <div class="pull-right">{{> courseSidebarIntro}}</div>
+            {{> courseTitle }}
+            <div>{{> courseMeta }}</div>
         </div>
+        <div class="panel-body">
+            {{{ about }}}
+        </div>
+    </div>
 
 </template>
