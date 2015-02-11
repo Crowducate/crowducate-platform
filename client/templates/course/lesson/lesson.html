@@ -1,14 +1,16 @@
 <template name="lesson">
+    {{# with activeLesson }}
     <div class="col-xs-12 col-sm-7 col-md-9">
         <div class="lesson-title">
-            {{> lessonTitle }}
+            {{ name }}
         </div>
         <div class="lesson-content {{editClass}}">
-            {{ lessonContent }}
+            {{ text }}
             <!--
 {{> componentImage}}
 {{> referencesBlock}}
 -->
         </div>
     </div>
+    {{/ with }}
 </template>
