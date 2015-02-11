@@ -14,3 +14,29 @@ Template.testsingleResourcePage.events({
         }
     }
 });
+
+
+//drag and drop base
+Template.testresourceDetails.rendered = function(){
+    // if editMode is on
+    var sortablediv = document.getElementById('toolbar-components');
+    var sortable = Sortable.create(sortablediv, {
+        group: {
+            name: 'sortablediv',
+            pull: 'clone'
+        },
+        animation: 100,
+        ghostClass: 'ghost'
+    });
+
+    var sortablediv2 = document.getElementById('sortable-divs');
+    console.log(sortablediv2);
+    var sortable = Sortable.create(sortablediv2, {
+        group: {
+            name: 'sortabledivs',
+            put: ['sortablediv'],
+        },
+        animation: 100,
+        ghostClass: 'ghost'
+    });
+}
