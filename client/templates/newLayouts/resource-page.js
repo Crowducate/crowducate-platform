@@ -19,22 +19,21 @@ Template.testsingleResourcePage.events({
 //drag and drop base
 Template.testresourceDetails.rendered = function(){
     // if editMode is on
-    var sortablediv = document.getElementById('toolbar-components');
-    var sortable = Sortable.create(sortablediv, {
+    var sortabledivs1 = document.getElementById('toolbar-components');
+    var sortable = Sortable.create(sortabledivs1, {
         group: {
-            name: 'sortablediv',
+            name: 'sortabledivs1',
             pull: 'clone'
         },
         animation: 100,
         ghostClass: 'ghost'
     });
 
-    var sortablediv2 = document.getElementById('sortable-divs');
-    console.log(sortablediv2);
-    var sortable = Sortable.create(sortablediv2, {
+    var sortabledivs2 = document.getElementById('sortable-divs');
+    var sortable = Sortable.create(sortabledivs2, {
         group: {
-            name: 'sortabledivs',
-            put: ['sortablediv'],
+            name: 'sortabledivs2',
+            put: ['sortabledivs1'],
         },
         animation: 100,
         ghostClass: 'ghost'
