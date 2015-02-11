@@ -3,6 +3,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <nav class="navbar navbar-default">
                 {{#if editMode}}
+                {{>toolbarComponents}}
                 {{>testcancelEditResource}}
                 {{else}}
                 {{>testresourceToolbarContent}}
