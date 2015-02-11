@@ -2,7 +2,9 @@
     <div class="course-left-nav">
         <div class="col-xs-12 col-md-3">
             {{# if editMode }}
-            {{> addLesson }}
+            <div class="panel">
+                {{> addSection }}
+            </div>
             {{/ if }}
 
             {{# each sections }}
