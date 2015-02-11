@@ -24,5 +24,8 @@ Template.addSection.events({
 
         // Update the course with new section
         Courses.update(this._id, {$set: {'sections': sections}});
+
+        // Reset the value of section title field
+        $("#section-title").val("");
     }
 });
