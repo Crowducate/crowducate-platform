@@ -31,3 +31,23 @@ Now you can clone and run the PYM 2015 registration platform with the following 
 * `meteor` - run the application
 
 You should now be able to visit the running app at [localhost:3000](http://localhost:3000)
+
+Roadmap
+=======
+We have an [open Hackpad discussion](https://hackpad.com/Crowducate-Roadmap-Ideas-ATAX9ZTodoe) where we are planning the future of Crowducate. Come and add your opinion, expertise, and vision!
+
+
+License
+=======
+Crowducate is licensed under the [GNU Affero General Public License (GNU AGPL)](https://github.com/Crowducate/crowducate.me/blob/master/LICENSE.txt "License for Crowducate"). We chose the GNU AGPL as it fosters and protects an open knowledge ecosystem, which is essential for an open education project. You can follow the licensing discussion on the [Crowducate blog](http://blog.crowducate.me/chose-gpl-license-open-source-project/).
+
+Get involved!
+=============
+There are many ways to get involved:
+* View, and contribute to, the [Crowducate Roadmap](https://hackpad.com/Crowducate-Roadmap-Ideas-ATAX9ZTodoe)
+* Add a task to our [Github issue queue](https://github.com/Crowducate/crowducate.me/issues)
+* Send a pull request with your custom code! :-)
+
+Help us grow
+============
+Bear in mind, we are in early alpha. For more info read this [blog post](http://blog.crowducate.me/welcome-to-crowducate/ "Welcome to Crowducate").
