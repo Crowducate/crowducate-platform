@@ -4,10 +4,12 @@ Template.courseToolbar.events({
         $.fn.editable.defaults.mode = 'inline';
         $('.lesson-link').editable();
         $('#section-title').editable();
+        $('#course-title').editable();
     },
     'click #cancel-edit-course': function () {
         Session.set('editMode', false);
         $('#section-title').editable('destroy');
+        $('#course-title').editable('destroy');
     }
 });
 

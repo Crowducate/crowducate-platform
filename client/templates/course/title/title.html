@@ -1,8 +1,13 @@
 <template name="courseTitle">
+<!--
     {{# if courseTitleFocus }}
     {{> saveButton }}
     {{/ if }}
     <h1 id="course-title" class="course-title {{editClass}}" contentEditable={{ contentEditable }}>
+        {{ title }}
+    </h1>
+-->
+    <h1 id="course-title" class="course-title">
         {{ title }}
     </h1>
 </template>
