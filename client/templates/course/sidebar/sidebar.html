@@ -7,9 +7,13 @@
             </div>
             {{/ if }}
 
+            {{# if sections }}
             {{# each sections }}
             {{> courseSidebarSection }}
             {{/ each }}
+            {{ else }}
+            <p>No sections have been defined. Go into edit mode to add one or more sections.</p>
+            {{/ if }}
         </div>
     </div>
 </template>
