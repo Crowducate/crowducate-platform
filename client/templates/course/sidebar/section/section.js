@@ -1,7 +1,4 @@
 Template.courseSidebarSection.helpers({
-    'editMode': function () {
-        return Session.get('editMode');
-    },
     'lessons': function () {
         // Get lesson IDs array
         var lessonIDs = this.lessonIDs;
