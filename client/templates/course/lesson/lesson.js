@@ -12,3 +12,22 @@ Template.lesson.helpers({
         return lesson;
     }
 });
+
+Template.lesson.events({
+    'click .lesson-text': function () {
+        // in edit mode,
+        // add rich text editor
+        // to lesson text
+        if (Session.get('editMode')) {
+            $('.lesson-text').summernote({
+                // TODO: add more config parameters as needed
+                height: 300
+            });
+        } else if (!Session.get('editMode')) {
+            // not in edit mode,
+            // remove rich text editor
+            // from lesson text
+            $('.lesson-text').destroy();
+        }
+    }
+});
