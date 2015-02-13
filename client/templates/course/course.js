@@ -10,7 +10,7 @@ Template.course.events({
             });
         }
     },
-    'click #cancel-edit-course': function () {
+    'click #cancel-course-edit': function () {
         // not in edit mode,
         // remove rich text editor
         // from lesson text
