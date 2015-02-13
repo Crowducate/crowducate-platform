@@ -3,9 +3,11 @@
         <div class="panel-heading" id="section-title">{{ title }}</div>
         <div class="panel-body single-content-table-block">
             <ul class="nav nav-pills nav-stacked">
-                {{# each lessons }}
+                {{# if lessons }} <!-- Make sure there are lessons for looping -->
+                {{# each lessons }} <!-- Loop through lessons -->
                 {{> sectionLesson }}
                 {{/ each }}
+                {{/ if }}
             </ul>
         </div>
         {{# if editMode }}
