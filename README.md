@@ -4,6 +4,7 @@ Rebuilding [Crowducate](http://crowducate.me) platform using Meteor 1.x
 Resources
 ========
 * [Planning](http://crowducate.hackpad.com)
+* [Developer task board](http://libreboard.com/boards/PKpgTd4SCFbsvZNZK/crowducate)
 * [Original project](http://crowducate.me)
 * [Original sourcecode](https://github.com/Crowducate/crowducate.me)
 
