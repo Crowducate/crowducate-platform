@@ -7,9 +7,9 @@ Meteor.publish('publishedCourses', function () {
 });
 
 Meteor.publish('taggedCourses', function (tag) {
-    return Courses.find({'keywords': tag});
+    return Courses.find({"keywords": tag});
 });
 
-Meteor.publish('singleCourse', function (id) {
-    return Courses.find(id);
+Meteor.publish('singleCourse', function (courseID) {
+    return Courses.find({"_id": courseID});
 });
