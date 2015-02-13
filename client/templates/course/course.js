@@ -19,3 +19,8 @@ Template.course.events({
         }
     }
 });
+
+Template.course.rendered = function () {
+    // set default mode for x-editable
+     $.fn.editable.defaults.mode = 'inline';
+}
