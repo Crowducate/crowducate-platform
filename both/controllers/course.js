@@ -1,10 +1,15 @@
 CourseController = AppController.extend({
     waitOn: function() {
-        // TODO: subscribe only to lessons in this course
-        // by selecting all lesson IDs in each section
-        this.subscribe('lessons');
-        // Wait for the course to be available
-        return this.subscribe('singleCourse', this.params._id);
+        // course ID
+        var courseID = this.params._id;
+
+        // Course subscriptions
+        return [
+             // Wait for the course to be available
+            this.subscribe("singleCourse", courseID),
+            // subscribe only to lessons in this course
+            this.subscribe("courseLessons", courseID)
+        ];
     },
     data: function () {
         // Return the course
