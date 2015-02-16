@@ -2,10 +2,11 @@
     <div class="row course-toolbar">
 
             <nav class="navbar navbar-default">
-                {{#if editMode}}
-                {{> editCancel }}
-                {{else}}
                 {{> courseToolbarTabs }}
+                {{#if editMode}}
+                {{> saveOrCancel }}
+                {{else}}
+                {{> courseToolbarTools}}
                 {{/if}}
             </nav>
 

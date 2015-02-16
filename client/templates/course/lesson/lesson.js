@@ -6,8 +6,7 @@ Template.lesson.helpers({
 
         // Get the lesson from DB
         // selecting the zeroth array item
-        // TODO: see if findOne would be better here.
-        var lesson = Lessons.find(lessonID).fetch()[0];
+        var lesson = Lessons.findOne({_id: lessonID});
 
         return lesson;
     }
