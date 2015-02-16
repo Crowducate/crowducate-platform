@@ -4,7 +4,10 @@ Template.courseToolbar.events({
         Session.set('editMode', true);
         //enables inline-editing
         //TODO: think about better place
-        $('.lesson-link').editable();
+        $('.lesson-link').editable({
+            // Make sure text doesn't display twice after saving
+            display: false
+        });
         $('#section-title').editable();
         $('#course-title').editable();
     },
