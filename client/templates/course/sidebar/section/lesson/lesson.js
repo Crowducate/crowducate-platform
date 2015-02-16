@@ -31,5 +31,6 @@ Template.sectionLesson.events({
 });
 
 Template.sectionLesson.rendered = function () {
+    // enable sitebar inline editors
     enableSidebarInlineEditors();
 }
