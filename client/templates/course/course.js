@@ -15,7 +15,7 @@ Template.course.rendered = function () {
 enableSidebarInlineEditors = function () {
     if (Session.get('editMode')) {
         //enables inline-editing
-        $('.lesson-link').editable({
+        $('.sidebar-lesson-title').editable({
             // Make sure text doesn't display twice after saving
             // since title will update reactively from database
             display: false
@@ -36,7 +36,7 @@ enableSidebarInlineEditors = function () {
 */
 disableSidebarInlineEditors = function () {
     //disables inline-editing
-    $('.lesson-link').editable('destroy');
+    $('.sidebar-lesson-title').editable('destroy');
     $('.section-title').editable('destroy');
     $('#course-title').editable('destroy');
 };
