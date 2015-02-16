@@ -22,14 +22,16 @@ Template.course.rendered = function () {
 * such as template rendered, cancel edit, etc
 */
 enableSidebarInlineEditors = function () {
-    //enables inline-editing
-    //TODO: think about better place
-    $('.lesson-link').editable({
-        // Make sure text doesn't display twice after saving
-        display: false
-    });
-    $('.section-title').editable();
-    $('#course-title').editable();
+    if (Session.get('editMode')) {
+        //enables inline-editing
+        $('.lesson-link').editable({
+            // Make sure text doesn't display twice after saving
+            // since title will update reactively from database
+            display: false
+        });
+        $('.section-title').editable();
+        $('#course-title').editable();
+    }
 };
 
 /*
