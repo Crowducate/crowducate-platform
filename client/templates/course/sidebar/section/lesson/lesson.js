@@ -15,7 +15,7 @@ Template.sectionLesson.helpers({
 });
 
 Template.sectionLesson.events({
-    'click .lesson-link': function (event) {
+    'click .sidebar-lesson-title': function (event) {
         event.preventDefault();
 
         // set clicked lesson ID as active
