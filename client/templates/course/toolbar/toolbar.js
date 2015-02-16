@@ -8,7 +8,7 @@ Template.courseToolbar.events({
             // Make sure text doesn't display twice after saving
             display: false
         });
-        $('#section-title').editable();
+        $('.section-title').editable();
         $('#course-title').editable();
     },
     'click #save-course-edit': function () {
