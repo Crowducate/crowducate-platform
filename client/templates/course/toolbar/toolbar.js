@@ -37,21 +37,3 @@ Template.courseToolbar.rendered = function () {
         enableSidebarInlineEditors();
     }
 };
-
-var enableSidebarInlineEditors = function () {
-    //enables inline-editing
-    //TODO: think about better place
-    $('.lesson-link').editable({
-        // Make sure text doesn't display twice after saving
-        display: false
-    });
-    $('.section-title').editable();
-    $('#course-title').editable();
-};
-
-var disableSidebarInlineEditors = function () {
-    //disables inline-editing
-    $('.lesson-link').editable('destroy');
-    $('.section-title').editable('destroy');
-    $('#course-title').editable('destroy');
-};
