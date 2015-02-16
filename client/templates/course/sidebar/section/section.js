@@ -10,3 +10,6 @@ Template.courseSidebarSection.helpers({
     }
 });
 
+Template.courseSidebarSection.rendered = function () {
+    enableSidebarInlineEditors();
+}
