@@ -9,3 +9,13 @@ Template.courseSidebarSection.helpers({
         return lessons;
     }
 });
+
+Template.courseSidebarSection.events({
+    'click .editable-submit': function (event, template) {
+        // Get the value of the inline editor
+        var newName = template.find('input').value;
+
+        // update the lesson in database
+        Lessons.update(this._id, {$set: {'name': newName}});
+    }
+});
