@@ -20,7 +20,11 @@ enableSidebarInlineEditors = function () {
             // since title will update reactively from database
             display: false
         });
-        $('.section-title').editable();
+        $('.section-title').editable({
+            // Make sure text doesn't display twice after saving
+            // since title will update reactively from database
+            display: false
+        });
         $('#course-title').editable();
     }
 };
