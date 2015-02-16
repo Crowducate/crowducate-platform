@@ -1,14 +1,14 @@
 <template name="courseSidebarSection">
-    <div class="panel panel-default ">
-        <div class="panel-heading section-title">{{ title }}</div>
+    <div class="panel panel-default">
+        {{> sectionTitle }}
         <div class="panel-body single-content-table-block">
+            {{# if lessons }} <!-- Make sure there are lessons for looping -->
             <ul class="nav nav-pills nav-stacked">
-                {{# if lessons }} <!-- Make sure there are lessons for looping -->
                 {{# each lessons }} <!-- Loop through lessons -->
                 {{> sectionLesson }}
                 {{/ each }}
-                {{/ if }}
             </ul>
+            {{/ if }}
         </div>
         {{# if editMode }}
         <div class="panel-footer">
