@@ -29,3 +29,7 @@ Template.sectionLesson.events({
         Lessons.update(this._id, {$set: {'name': newName}});
     }
 });
+
+Template.sectionLesson.rendered = function () {
+    enableSidebarInlineEditors();
+}
