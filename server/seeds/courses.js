@@ -14,7 +14,7 @@ Meteor.startup(function() {
 
         // Add default courses
         _.each(defaultCourses, function (course) {
-            console.log("Adding course.");
+            console.log("Adding course:", course.title);
             Courses.insert(course);
         })
     }
