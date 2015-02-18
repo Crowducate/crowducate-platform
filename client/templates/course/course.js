@@ -1,7 +1,4 @@
 Template.course.rendered = function () {
-    // set default mode for x-editable
-    //$.fn.editable.defaults.mode = 'inline';
-
     //modify inline editor buttons style
     $.fn.editableform.buttons =
         '<button type="submit" class="btn btn-success editable-submit btn-mini"><i class="fa fa-check"></i></button>' +
@@ -33,24 +30,25 @@ Template.course.rendered = function () {
 * such as template rendered, cancel edit, etc
 */
 enableSidebarInlineEditors = function () {
-    $.fn.editable.defaults.mode = 'inline';
+    // TODO: see if reactive var editingCourse can be used here (reactive-vars.js)
     if (Session.get('editMode')) {
-        //enables inline-editing
-        $('.sidebar-lesson-title').editable({
-            // Make sure text doesn't display twice after saving
-            // since title will update reactively from database
-            display: false
-        });
-        $('.section-title').editable({
-            // Make sure text doesn't display twice after saving
-            // since title will update reactively from database
-            display: false
-        });
+        //enable inline-editing
+
+        // Course sections
+        $('.section-title').editable(defaultEditableOptions);
+
+        // Lesson titles
+        $('.sidebar-lesson-title').editable(defaultEditableOptions);
+
+        // Course title
         $('#course-title').editable();
+
+        // Course info
         $('.courseinfo-text').editable({
             title: 'Edit course info',
             rows: 10,
-            showbuttons: 'bottom'
+            showbuttons: 'bottom',
+            'mode': 'inline'
         });
     }
 };
@@ -66,4 +64,11 @@ disableSidebarInlineEditors = function () {
     $('.section-title').editable('destroy');
     $('#course-title').editable('destroy');
     $('.courseinfo-text').editable('destroy');
+};
+
+// set default options for x-editable inline editors
+var defaultEditableOptions = {
+    // Make sure text doesn't display twice after saving
+    // since title will update reactively from database
+    display: false
 };
