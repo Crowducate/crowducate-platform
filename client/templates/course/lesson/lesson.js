@@ -13,7 +13,6 @@ Template.lesson.helpers({
     'editingLessonText': function () {
         // return true if editing the lesson text
         // value is set on click event
-        console.log(editingLessonText.get());
         return editingLessonText.get();
     }
 });
@@ -32,11 +31,5 @@ Template.lesson.events({
             // editing lesson text, so set reactive variable
             editingLessonText.set(true);
         }
-//        else if (!Session.get('editMode')) {
-//            // not in edit mode,
-//            // remove rich text editor
-//            // from lesson text
-//            $('.lesson-text').destroy();
-//        }
     }
 });
