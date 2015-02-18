@@ -9,6 +9,12 @@ Template.lesson.helpers({
         var lesson = Lessons.findOne({_id: lessonID});
 
         return lesson;
+    },
+    'editingLessonText': function () {
+        // return true if editing the lesson text
+        // value is set on click event
+        console.log(editingLessonText.get());
+        return editingLessonText.get();
     }
 });
 
@@ -22,11 +28,15 @@ Template.lesson.events({
                 // TODO: add more config parameters as needed
                 height: 300
             });
-        } else if (!Session.get('editMode')) {
-            // not in edit mode,
-            // remove rich text editor
-            // from lesson text
-            $('.lesson-text').destroy();
+
+            // editing lesson text, so set reactive variable
+            editingLessonText.set(true);
         }
+//        else if (!Session.get('editMode')) {
+//            // not in edit mode,
+//            // remove rich text editor
+//            // from lesson text
+//            $('.lesson-text').destroy();
+//        }
     }
 });
