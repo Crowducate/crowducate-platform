@@ -26,7 +26,7 @@ Once Meteor is installed, make sure you [install Git](http://git-scm.com/book/en
 
 Crowducate
 --------
-Now you can clone and run the PYM 2015 registration platform with the following commands:
+Now you can clone and run the application with the following commands:
 * `git clone https://github.com/meteorcrowd/crowducate-next.git` - clone the repository
 * `cd crowducate-next` - change into the sourcecode directory
 * `meteor` - run the application
