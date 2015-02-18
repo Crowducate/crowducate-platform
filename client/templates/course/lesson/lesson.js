@@ -1,8 +1,7 @@
 Template.lesson.helpers({
     'activeLesson': function () {
         // Get the lesson ID from session
-        // TODO: see if this can be done via reactive var
-        var lessonID = Session.get('activeLesson');
+        var lessonID = activeLessonID.get();
 
         // Get the lesson from DB
         // selecting the zeroth array item
@@ -10,7 +9,7 @@ Template.lesson.helpers({
 
         return lesson;
     },
-    'editingLessonText': function () {
+    'editingLessonText': function (template) {
         // return true if editing the lesson text
         // value is set on click event
         return editingLessonText.get();
@@ -19,17 +18,17 @@ Template.lesson.helpers({
 
 Template.lesson.events({
     'click .lesson-text': function () {
+        // editing mode is true if text is clicked
+        editingLessonText.set(true);
+
         // in edit mode,
         // add rich text editor
         // to lesson text
-        if (Session.get('editMode')) {
+        if (editingLessonText.get()) {
             $('.lesson-text').summernote({
                 // TODO: add more config parameters as needed
                 height: 300
             });
-
-            // editing lesson text, so set reactive variable
-            editingLessonText.set(true);
         }
     }
 });
