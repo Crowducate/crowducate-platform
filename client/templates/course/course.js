@@ -6,6 +6,20 @@ Template.course.rendered = function () {
     $.fn.editableform.buttons =
         '<button type="submit" class="btn btn-success editable-submit btn-mini"><i class="fa fa-check"></i></button>' +
         '<button type="button" class="btn btn-danger editable-cancel"><i class="fa fa-times"></i></button>';
+
+    /*
+    Cancel lesson edit mode by
+    setting reactive variable to false
+    and removing rich text editor
+    */
+    cancelLessonEdit = function () {
+        console.log("Cancel lesson edit.");
+        // set the lesson edit mode to false
+        editingLessonText.set(false);
+
+        // Hide the rich text editor
+        $('.lesson-text').destroy();
+    }
 }
 
 /*
