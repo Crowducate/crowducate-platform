@@ -1,7 +1,12 @@
+// keep track of whether user is editing the lesson text
+// Used in child templates such as lesson and sidebar
+editingLessonText = new ReactiveVar(false);
+
 Template.course.rendered = function () {
     // set default mode for x-editable
     //$.fn.editable.defaults.mode = 'inline';
-    //modify buttons style
+
+    //modify inline editor buttons style
     $.fn.editableform.buttons =
         '<button type="submit" class="btn btn-success editable-submit btn-mini"><i class="fa fa-check"></i></button>' +
         '<button type="button" class="btn btn-danger editable-cancel"><i class="fa fa-times"></i></button>';
