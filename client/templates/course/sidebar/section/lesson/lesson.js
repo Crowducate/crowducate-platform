@@ -3,7 +3,7 @@ Template.sectionLesson.helpers({
 });
 
 Template.sectionLesson.events({
-    'click .sidebar-lesson-title': function (event) {
+    'click .sidebar-lesson-link': function (event) {
         event.preventDefault();
 
         // set active lesson ID reactive variable
