@@ -25,10 +25,21 @@ Template.lesson.events({
         // add rich text editor
         // to lesson text
         if (editingLessonText.get()) {
-            $('.lesson-text').summernote({
-                // TODO: add more config parameters as needed
-                height: 300
+            $('#rich-text-editor').summernote({
+                'height': 300,
+                'focus': true,
+                toolbar: [
+                    //[groupname, [button list]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['para', ['ul', 'ol']],
+                    ['insert', ['link','picture','video','hr']],
+                    ['view', ['fullscreen', 'codeview']],
+                    ['help', ['help']]
+                ]
             });
+
+            // Set the rich text editor code to lesson text
+            $('#rich-text-editor').code(this.text);
         }
     }
 });

@@ -1,12 +1,19 @@
 Template.lessonEditToolbar.events({
     'click #save-lesson-edit': function (event, template) {
-        console.log(this);
+        // get the lesson ID
+        var lessonID = this._id;
+
+        // Get the HTML from rich text editor
+        var lessonText = $('#rich-text-editor').code();
+
+        // update the lesson in database
+        Lessons.update(lessonID, {$set: {'text': lessonText}});
+
+        // Clean up rich text editor and reactive variable
+        lessonEditCleanup();
     },
     'click #cancel-lesson-edit': function (event, template) {
-        // Remove the rich text editor
-        $('.lesson-text').destroy();
-
-        // De-activate lesson edit mode
-        editingLessonText.set(false);
+        // Clean up rich text editor and reactive variable
+        lessonEditCleanup();
     }
 });
