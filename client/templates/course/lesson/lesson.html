@@ -8,9 +8,12 @@
             {{# if text }}
             {{ text }}
             {{ else }}
-            <p>There does not appear to be any lesson text.</p>
+            <p>There does not appear to be any lesson text. Click to edit.</p>
             {{/ if }}
         </div>
+        {{# if editingLessonText }}
+        {{> lessonEditToolbar }}
+        {{/ if }}
     </div>
     {{/ with }}
 </template>
