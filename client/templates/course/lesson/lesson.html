@@ -5,14 +5,17 @@
             {{ name }}
         </h2>
         <div class="lesson-text {{editClass}}">
-            {{# if text }}
-            {{ text }}
-            {{ else }}
-            <p>There does not appear to be any lesson text. Click to edit.</p>
-            {{/ if }}
+            {{# unless editingLessonText }}
+                {{# if text }}
+                    {{{ text }}}
+                    {{ else }}
+                    <p>There does not appear to be any lesson text. Click to edit.</p>
+                {{/ if }}
+            {{/ unless }}
         </div>
+        {{> richTextEditor }}
         {{# if editingLessonText }}
-        {{> lessonEditToolbar }}
+            {{> lessonEditToolbar }}
         {{/ if }}
     </div>
     {{/ with }}
