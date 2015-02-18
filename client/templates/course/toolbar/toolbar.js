@@ -3,6 +3,9 @@ Template.courseToolbar.events({
         //Edit Mode is on
         Session.set('editMode', true);
 
+        // Set edit mode reactive var to true
+        editingCourse.set(true);
+
         // enable inline editors
         enableSidebarInlineEditors();
     },
@@ -19,6 +22,9 @@ Template.courseToolbar.events({
         if (confirm('Are you sure you want to cancel, you will loose your last changes?')) {
             //revert changes: editMode is false
             Session.set('editMode', false);
+
+            // set editing course to false
+            editingCourse.set(false);
 
             // disable sidebar inline editors
             disableSidebarInlineEditors();
