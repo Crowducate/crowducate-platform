@@ -6,8 +6,8 @@ Template.sectionLesson.events({
     'click .sidebar-lesson-title': function (event) {
         event.preventDefault();
 
-        // set clicked lesson ID as active
-        Session.set('activeLesson', this._id);
+        // set active lesson ID reactive variable
+        activeLessonID.set(this._id);
     },
     'click .editable-submit': function (event, template) {
         // Get the value of the inline editor
