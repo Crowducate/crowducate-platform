@@ -26,8 +26,15 @@ Template.lesson.events({
         // to lesson text
         if (editingLessonText.get()) {
             $('.lesson-text').summernote({
-                // TODO: add more config parameters as needed
-                height: 300
+                'height': 300,
+                toolbar: [
+                    //[groupname, [button list]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['para', ['ul', 'ol']],
+                    ['insert', ['link','picture','video','hr']],
+                    ['view', ['fullscreen', 'codeview']],
+                    ['help', ['help']]
+                ]
             });
         }
     }
