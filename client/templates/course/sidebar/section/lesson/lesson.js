@@ -1,7 +1,3 @@
-Template.sectionLesson.helpers({
-
-});
-
 Template.sectionLesson.events({
     'click .sidebar-lesson-link': function (event) {
         event.preventDefault();
@@ -11,7 +7,7 @@ Template.sectionLesson.events({
             // if so, alert them that changes might be lost
             if (window.confirm("Changes may be lost! Proceed?")) {
                 // Remove rich text and set edit mode to false
-                cancelLessonEdit();
+                lessonEditCleanup();
 
                 // set active lesson ID reactive variable
                 // to the value of clicked lesson
