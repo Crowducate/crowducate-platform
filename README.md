@@ -1,3 +1,5 @@
+Important Note: Currently, crowducate is rewritten here: https://github.com/meteorcrowd/crowducate-next
+
 # About 
 [Crowducate](http://www.crowducate.me/ "Crowducate Webapp") is an open education platform. 
 The crowd creates courses (any subject is welcome) together which are interactive and fun. 
