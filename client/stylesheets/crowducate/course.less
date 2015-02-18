@@ -138,3 +138,15 @@ span.course-author, span.course-added-date {
     font-size: 1.2rem;
 }
 //////////////////////////////// body content END ////////////////////////////////
+
+
+/* Make inline editables take the full width of their parents */
+.editable-container.editable-inline,
+.editable-container.editable-inline .control-group.form-group,
+.editable-container.editable-inline .control-group.form-group .editable-input,
+.editable-container.editable-inline .control-group.form-group .editable-input textarea,
+.editable-container.editable-inline .control-group.form-group .editable-input select,
+.editable-container.editable-inline .control-group.form-group .editable-input input:not([type=radio]):not([type=checkbox]):not([type=submit])
+{
+    width: 100%!important;
+}

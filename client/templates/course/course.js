@@ -33,6 +33,7 @@ Template.course.rendered = function () {
 * such as template rendered, cancel edit, etc
 */
 enableSidebarInlineEditors = function () {
+    $.fn.editable.defaults.mode = 'inline';
     if (Session.get('editMode')) {
         //enables inline-editing
         $('.sidebar-lesson-title').editable({
@@ -46,6 +47,11 @@ enableSidebarInlineEditors = function () {
             display: false
         });
         $('#course-title').editable();
+        $('.courseinfo-text').editable({
+            title: 'Edit course info',
+            rows: 10,
+            showbuttons: 'bottom'
+        });
     }
 };
 
@@ -59,4 +65,5 @@ disableSidebarInlineEditors = function () {
     $('.sidebar-lesson-title').editable('destroy');
     $('.section-title').editable('destroy');
     $('#course-title').editable('destroy');
+    $('.courseinfo-text').editable('destroy');
 };
