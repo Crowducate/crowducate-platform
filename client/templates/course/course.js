@@ -49,7 +49,8 @@ enableSidebarInlineEditors = function () {
         $('#course-title').editable();
         $('.courseinfo-text').editable({
             title: 'Edit course info',
-            rows: 10
+            rows: 10,
+            showbuttons: 'bottom'
         });
     }
 };
