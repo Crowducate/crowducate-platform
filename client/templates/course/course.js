@@ -1,7 +1,3 @@
-// keep track of whether user is editing the lesson text
-// Used in child templates such as lesson and sidebar
-editingLessonText = new ReactiveVar(false);
-
 Template.course.rendered = function () {
     // set default mode for x-editable
     //$.fn.editable.defaults.mode = 'inline';
