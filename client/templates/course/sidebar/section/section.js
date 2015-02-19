@@ -9,7 +9,3 @@ Template.courseSidebarSection.helpers({
         return lessons;
     }
 });
-
-Template.courseSidebarSection.rendered = function () {
-    enableSidebarInlineEditors();
-}
