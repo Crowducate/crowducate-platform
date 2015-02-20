@@ -1,10 +1,3 @@
-Template.courseSidebar.rendered = function () {
-    var courseID = this._id;
-    if (Session.get('editingCourse') === courseID) {
-        enableSidebarInlineEditors();
-    }
-};
-
 Template.courseSidebar.created = function () {
 
     /*
