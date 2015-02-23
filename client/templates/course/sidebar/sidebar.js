@@ -13,7 +13,11 @@ Template.courseSidebar.rendered = function () {
     */
     this.enableSidebarInlineEditors = function () {
         // Course sections
-        $('.section-title').editable(defaultEditableOptions);
+        $('.section-title').editable({
+            // Don't display updated text
+            // prevents duplicate text
+            display: false
+        });
 
         // Lesson titles
         $('.sidebar-lesson-title').editable({mode: 'inline'});
@@ -23,11 +27,11 @@ Template.courseSidebar.rendered = function () {
     Disable sidebar inline editors
     */
     this.disableSidebarInlineEditors = function () {
-        //disables inline-editing
+        // Lesson title(s)
         $('.sidebar-lesson-title').editable('destroy');
+
+        // Section title(s)
         $('.section-title').editable('destroy');
-        $('#course-title').editable('destroy');
-        $('.courseinfo-text').editable('destroy');
     };
 
     /*
