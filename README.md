@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/meteorcrowd/crowducate-next.png?label=ready&title=Ready)](https://waffle.io/meteorcrowd/crowducate-next)
 # Crowducate
 Rebuilding [Crowducate](http://crowducate.me) platform using Meteor 1.x
 
