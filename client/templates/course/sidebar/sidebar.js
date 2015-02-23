@@ -1,38 +1,15 @@
 Template.courseSidebar.created = function () {
-
-    /*
-    Define inline editor functions
-    used to activate various inline editors
-    TODO: call these from tracker function, or similar
-    */
-
     /*
     Enable sidebar inline editors
     used in various child-template events
     such as template rendered, cancel edit, etc
     */
-    enableSidebarInlineEditors = function () {
-        // TODO: see if reactive var editingCourse can be used here (reactive-vars.js)
-        if (Session.get('editMode')) {
-            //enable inline-editing
+    this.enableSidebarInlineEditors = function () {
+        // Course sections
+        $('.section-title').editable(defaultEditableOptions);
 
-            // Course sections
-            $('.section-title').editable(defaultEditableOptions);
-
-            // Lesson titles
-            $('.sidebar-lesson-title').editable(defaultEditableOptions);
-
-            // Course title
-            $('#course-title').editable();
-
-            // Course info
-            $('.courseinfo-text').editable({
-                title: 'Edit course info',
-                rows: 10,
-                showbuttons: 'bottom',
-                'mode': 'inline'
-            });
-        }
+        // Lesson titles
+        $('.sidebar-lesson-title').editable(defaultEditableOptions);
     };
 
     /*
@@ -40,7 +17,7 @@ Template.courseSidebar.created = function () {
     used in various child-template events
     such as template rendered, cancel edit, etc
     */
-    disableSidebarInlineEditors = function () {
+    this.disableSidebarInlineEditors = function () {
         //disables inline-editing
         $('.sidebar-lesson-title').editable('destroy');
         $('.section-title').editable('destroy');
@@ -48,3 +25,36 @@ Template.courseSidebar.created = function () {
         $('.courseinfo-text').editable('destroy');
     };
 };
+
+Template.courseSidebar.rendered = function () {
+    // Get the template instance
+    var instance = Template.instance();
+
+    // Get the current router object
+    var controller = Router.current();
+
+    // Get course ID from router object
+    var courseID = controller.params._id;
+
+    /*
+    Toggle inline editors when editing course
+    */
+    this.autorun(function () {
+        if (Session.get('editingCourseID') === courseID) {
+            instance.enableSidebarInlineEditors();
+        } else {
+            instance.disableSidebarInlineEditors();
+        }
+    });
+};
+
+Template.courseSidebar.helpers({
+    /*
+    Return true when editing the active course
+    Used to display 'Add section' form
+    */
+    'editingThisCourse': function () {
+        // return true if editing this course
+        return (Session.get('editingCourseID') === this._id);
+    }
+});
