@@ -1,6 +1,6 @@
 <template name="courseToolbarTabs">
     <ul class="nav nav-pills toolbar-pages-list navbar-left">
-        <li><a href="/course/{{ _id }}">Course material</a></li>
-        <li><a href="/course/{{ _id }}/info">Course info</a></li>
+        <li class="{{ isActiveRoute regex='^course$' }}"><a href="{{ pathFor 'course' }}">Course material</a></li>
+        <li class="{{ isActiveRoute regex='^courseInfo$' }}"><a href="{{ pathFor 'courseInfo' }}">Course info</a></li>
     </ul>
 </template>
