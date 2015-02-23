@@ -16,7 +16,7 @@ Template.courseSidebar.rendered = function () {
         $('.section-title').editable(defaultEditableOptions);
 
         // Lesson titles
-        $('.sidebar-lesson-title').editable(defaultEditableOptions);
+        $('.sidebar-lesson-title').editable({mode: 'inline'});
     };
 
     /*
