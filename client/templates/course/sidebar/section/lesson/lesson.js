@@ -20,7 +20,7 @@ Template.sectionLesson.events({
         }
     },
     'click .editable-submit': function (event, template) {
-        // Get the value of the inline editor
+        // Get the new name from the inline editor
         var newName = template.find('input').value;
 
         // update the lesson in database
