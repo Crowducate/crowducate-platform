@@ -10,8 +10,6 @@ Template.courseSidebar.rendered = function () {
 
     /*
     Enable sidebar inline editors
-    used in various child-template events
-    such as template rendered, cancel edit, etc
     */
     this.enableSidebarInlineEditors = function () {
         // Course sections
@@ -23,8 +21,6 @@ Template.courseSidebar.rendered = function () {
 
     /*
     Disable sidebar inline editors
-    used in various child-template events
-    such as template rendered, cancel edit, etc
     */
     this.disableSidebarInlineEditors = function () {
         //disables inline-editing
