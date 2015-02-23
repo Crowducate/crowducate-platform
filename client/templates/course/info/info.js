@@ -28,16 +28,16 @@ Template.courseInfo.created = function () {
 };
 
 Template.courseInfo.rendered = function () {
+    // Get the template instance
+    var instance = Template.instance();
+
+    // Get the current router object
+    var controller = Router.current();
+
+    // Get course ID from router object
+    var courseID = controller.params._id;
+
     this.autorun(function () {
-        // Get the template instance
-        var instance = Template.instance();
-
-        // Get the current router object
-        var controller = Router.current();
-
-        // Get course ID from router object
-        var courseID = controller.params._id;
-
         // If editing course, show inline editors
         // otherwise, make sure inline editors are disabled
         if (Session.get('editingCourseID') === courseID) {
