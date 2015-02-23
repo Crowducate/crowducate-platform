@@ -1,4 +1,7 @@
 Template.sectionTitle.events({
+    /*
+    Update section title when editable is submitted
+    */
     'click .editable-submit': function (event, template) {
         // Get the new section title from template
         var newSectionTitle = template.find('input').value;
@@ -14,5 +17,5 @@ Template.sectionTitle.events({
 
         // Update course sections
         Courses.update(courseID, {$set: {'sections': sections}});
-    }
+    },
 });

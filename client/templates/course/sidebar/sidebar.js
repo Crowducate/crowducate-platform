@@ -1,57 +1,58 @@
 Template.courseSidebar.rendered = function () {
-    var courseID = this._id;
-    if (Session.get('editingCourse') === courseID) {
-        enableSidebarInlineEditors();
-    }
-};
+    // Get the template instance
+    var instance = Template.instance();
 
-Template.courseSidebar.created = function () {
+    // Get the current router object
+    var controller = Router.current();
 
-    /*
-    Define inline editor functions
-    used to activate various inline editors
-    TODO: call these from tracker function, or similar
-    */
+    // Get course ID from router object
+    var courseID = controller.params._id;
 
     /*
     Enable sidebar inline editors
-    used in various child-template events
-    such as template rendered, cancel edit, etc
     */
-    enableSidebarInlineEditors = function () {
-        // TODO: see if reactive var editingCourse can be used here (reactive-vars.js)
-        if (Session.get('editMode')) {
-            //enable inline-editing
+    this.enableSidebarInlineEditors = function () {
+        // Course sections
+        $('.section-title').editable({
+            // Don't display updated text
+            // prevents duplicate text
+            display: false
+        });
 
-            // Course sections
-            $('.section-title').editable(defaultEditableOptions);
-
-            // Lesson titles
-            $('.sidebar-lesson-title').editable(defaultEditableOptions);
-
-            // Course title
-            $('#course-title').editable();
-
-            // Course info
-            $('.courseinfo-text').editable({
-                title: 'Edit course info',
-                rows: 10,
-                showbuttons: 'bottom',
-                'mode': 'inline'
-            });
-        }
+        // Lesson titles
+        $('.sidebar-lesson-title').editable({mode: 'inline'});
     };
 
     /*
     Disable sidebar inline editors
-    used in various child-template events
-    such as template rendered, cancel edit, etc
     */
-    disableSidebarInlineEditors = function () {
-        //disables inline-editing
+    this.disableSidebarInlineEditors = function () {
+        // Lesson title(s)
         $('.sidebar-lesson-title').editable('destroy');
+
+        // Section title(s)
         $('.section-title').editable('destroy');
-        $('#course-title').editable('destroy');
-        $('.courseinfo-text').editable('destroy');
     };
+
+    /*
+    Toggle inline editors when editing course
+    */
+    this.autorun(function () {
+        if (Session.get('editingCourseID') === courseID) {
+            instance.enableSidebarInlineEditors();
+        } else {
+            instance.disableSidebarInlineEditors();
+        }
+    });
 };
+
+Template.courseSidebar.helpers({
+    /*
+    Return true when editing the active course
+    Used to display 'Add section' form
+    */
+    'editingThisCourse': function () {
+        // return true if editing this course
+        return (Session.get('editingCourseID') === this._id);
+    }
+});
