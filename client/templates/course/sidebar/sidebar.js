@@ -1,4 +1,13 @@
-Template.courseSidebar.created = function () {
+Template.courseSidebar.rendered = function () {
+    // Get the template instance
+    var instance = Template.instance();
+
+    // Get the current router object
+    var controller = Router.current();
+
+    // Get course ID from router object
+    var courseID = controller.params._id;
+
     /*
     Enable sidebar inline editors
     used in various child-template events
@@ -24,17 +33,6 @@ Template.courseSidebar.created = function () {
         $('#course-title').editable('destroy');
         $('.courseinfo-text').editable('destroy');
     };
-};
-
-Template.courseSidebar.rendered = function () {
-    // Get the template instance
-    var instance = Template.instance();
-
-    // Get the current router object
-    var controller = Router.current();
-
-    // Get course ID from router object
-    var courseID = controller.params._id;
 
     /*
     Toggle inline editors when editing course
