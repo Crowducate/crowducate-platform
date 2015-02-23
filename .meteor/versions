@@ -86,5 +86,6 @@ useraccounts:core@1.6.1
 webapp@1.1.6
 webapp-hashing@1.0.2
 wizonesolutions:underscore-string@1.0.0
+workman:x-editable-reactive-template@1.0.1
 yasinuslu:blaze-meta@0.2.2
 zimme:iron-router-active@1.0.1
