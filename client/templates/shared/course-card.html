@@ -20,7 +20,8 @@
                     </a>
                     {{/each}}
                 </p>
-
+                <p>Truncated: {{ truncateKeywords keywords 3 }}</p>
+                <p>Remaining: {{ remainingKeywords keywords 3 }} -- Count: {{ remainingCount keywords 3 }}</p>
             </div>
             <!--
 <div class="modal-footer" style="text-align: left">
