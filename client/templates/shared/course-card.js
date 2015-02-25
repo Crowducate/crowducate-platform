@@ -1,20 +1,14 @@
 Template.courseCard.helpers({
     'truncateKeywords': function (keywords, truncate) {
-        console.og("truncateKeywords");
-        console.log("Keywords:", keywords);
-        console.log("Truncate", truncate);
+        // return the first keywords to the truncate limit
         return keywords.slice(0, truncate);
     },
     'remainingKeywords': function (keywords, truncate) {
-        console.og("remainingKeywords");
-        console.log("Keywords:", keywords);
-        console.log("Truncate", truncate);
+        // return the last keywords starting from the truncate point
         return keywords.slice(truncate);
     },
     'remainingCount': function (keywords, truncate) {
-        console.og("remainingCount");
-        console.log("Keywords:", keywords);
-        console.log("Truncate", truncate);
+        // subtract the truncate value from the keywords length
         return keywords.length - truncate;
     }
 });
