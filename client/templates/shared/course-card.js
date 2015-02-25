@@ -1,5 +1,5 @@
 Template.courseCard.helpers({
-    'truncateKeywords': function (keywords, truncate) {
+    'truncateKeywords': function (truncate, keywords) {
         /*
         Truncate keywords to a set limit
         Return an object with three attributes
