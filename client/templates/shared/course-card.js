@@ -1,14 +1,23 @@
 Template.courseCard.helpers({
     'truncateKeywords': function (keywords, truncate) {
-        // return the first keywords to the truncate limit
-        return keywords.slice(0, truncate);
-    },
-    'remainingKeywords': function (keywords, truncate) {
-        // return the last keywords starting from the truncate point
-        return keywords.slice(truncate);
-    },
-    'remainingCount': function (keywords, truncate) {
-        // subtract the truncate value from the keywords length
-        return keywords.length - truncate;
+        /*
+        Truncate keywords to a set limit
+        Return an object with three attributes
+            truncated keywords
+            remaining keywords
+            count of remaining keywords
+        */
+        var truncatedKeywordsObject = {
+            // get the first keywords up to the truncate limit
+            'truncatedKeywords': keywords.slice(0, truncate),
+
+            // get the last keywords starting from the truncate point
+            'remainingKeywords': keywords.slice(truncate),
+
+            // subtract the truncate value from the keywords length
+            'remainingKeywordCount': keywords.length - truncate
+        };
+
+        return truncatedKeywordsObject;
     }
 });
