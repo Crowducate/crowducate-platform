@@ -1,10 +1,9 @@
 Template.lesson.helpers({
     'activeLesson': function () {
-        // Get the lesson ID from session
+        // Get the lesson ID from reactive var
         var lessonID = activeLessonID.get();
 
         // Get the lesson from DB
-        // selecting the zeroth array item
         var lesson = Lessons.findOne({_id: lessonID});
 
         return lesson;
