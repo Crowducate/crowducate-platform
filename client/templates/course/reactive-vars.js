@@ -1,7 +1,4 @@
 Template.course.created = function () {
-    // Determine if course is in edit mode
-    //editingCourse = new ReactiveVar(false);
-
     // keep track of whether user is editing the lesson text
     // Used in child templates such as lesson and sidebar
     editingLessonText = new ReactiveVar(false);
