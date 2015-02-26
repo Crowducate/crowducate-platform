@@ -23,7 +23,7 @@ Template.courseLessonTitle.rendered = function () {
     /*
     Disable lesson title inline editor
     */
-    this.disableLessonTitleInlineEditors = function () {
+    this.disableLessonTitleInlineEditor = function () {
         // Course sections
         $('.lesson-title').editable('destroy');
     };
