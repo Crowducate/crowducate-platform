@@ -13,22 +13,15 @@
                 </h2>
 <!--                <p>by <a href="#">{{ author }}</a></p>-->
                 <p>{{{ truncate about 77 }}}</p>
+                {{# with truncateKeywords 6 keywords }}
                 <p>
-                    {{# each keywords }}
+                    {{# each truncatedKeywords }}
                     <a class="tag-label" href="/tag/{{ this }}" title="Resources page for {{ this }}">
                         <span class="label label-info">{{ this }}</span>
                     </a>
                     {{/each}}
                 </p>
-<!--
-                {{# with truncateKeywords 3 keywords }}
-                <ul>
-                    <li>Truncated: {{ truncatedKeywords }}</li>
-                    <li>Remaining: {{ remainingKeywords }}</li>
-                    <li>Remaining count: {{ remainingKeywordCount  }}</li>
-                </ul>
                 {{/ with }}
--->
             </div>
             <!--
 <div class="modal-footer" style="text-align: left">
