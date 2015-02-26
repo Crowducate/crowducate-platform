@@ -1,3 +1,5 @@
 <template name="courseLessonTitle">
-    <h2 class="lesson-title">{{ name }}</h2>
+    <h2><!-- lesson title must be in a sub-element for template event(s) to work -->
+        <span class="lesson-title">{{ name }}</span>
+    </h2>
 </template>
