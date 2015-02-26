@@ -1,9 +1,8 @@
 <template name="lesson">
     {{# with activeLesson }}
     <div class="col-xs-12 col-sm-7 col-md-9">
-        <h2 class="lesson-title">
-            {{ name }}
-        </h2>
+        {{> courseLessonTitle name=name }}
+
         <div class="lesson-text {{editClass}}">
             {{# unless editingLessonText }}
                 {{# if text }}
