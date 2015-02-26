@@ -1,8 +1,8 @@
 Template.courseLessonTitle.rendered = function () {
     /*
-    Enable sidebar inline editors
+    Enable lesson title inline editor
     */
-    this.enableLessonInlineEditors = function () {
+    this.enableLessonTitleInlineEditor = function () {
         // Get the lesson ID from reactive var
         var lessonID = activeLessonID.get();
 
@@ -13,8 +13,7 @@ Template.courseLessonTitle.rendered = function () {
             // Don't display updated text
             // prevents duplicate text
             display: false,
-            value: lesson.name,
-            success: function(response, newValue) {console.log(newValue)}
+            value: lesson.name
         };
 
         // Course sections
@@ -22,13 +21,12 @@ Template.courseLessonTitle.rendered = function () {
     };
 
     /*
-        Disable lesson inline editor(s)
-        */
-    this.disableLessonInlineEditors = function () {
+    Disable lesson title inline editor
+    */
+    this.disableLessonTitleInlineEditors = function () {
         // Course sections
         $('.lesson-title').editable('destroy');
     };
-
 
     /*
     Auto-toggle inline editors when editing course
@@ -49,15 +47,14 @@ Template.courseLessonTitle.rendered = function () {
         // Make sure editing active course
         // also, lesson should be active
         if (Session.get('editingCourseID') === courseID && lessonID) {
-            // Disable inline editor
-            // to clear previous text (fixes bug)
-            instance.disableLessonInlineEditors();
+            // Disable inline editor to clear previous text (fixes bug)
+            instance.disableLessonTitleInlineEditor();
 
             // Enable inline editor
-            instance.enableLessonInlineEditors();
+            instance.enableLessonTitleInlineEditor();
         } else {
             // Disable inline editor
-            instance.disableLessonInlineEditors();
+            instance.disableLessonTitleInlineEditor();
         }
     });
 };
