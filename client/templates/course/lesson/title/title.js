@@ -58,3 +58,16 @@ Template.courseLessonTitle.rendered = function () {
         }
     });
 };
+
+Template.courseLessonTitle.events({
+    'click button.editable-submit': function (event, template) {
+        // Get active lesson ID
+        var lessonID = activeLessonID.get();
+
+        // Get the new name from the inline editor
+        var newName = template.find('input').value;
+
+        // update the lesson in database
+        Lessons.update(lessonID, {$set: {'name': newName}});
+    }
+});
