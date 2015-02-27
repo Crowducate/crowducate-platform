@@ -1,6 +1,10 @@
 # Crowducate
 Rebuilding [Crowducate](http://crowducate.me) platform using Meteor 1.x
 
+Code analysis
+-------------
+[![bitHound Score](https://www.bithound.io/meteorcrowd/crowducate-next/badges/score.svg?)](https://www.bithound.io/meteorcrowd/crowducate-next) Bithound code quality
+
 Resources
 ========
 * [Planning](http://crowducate.hackpad.com)
