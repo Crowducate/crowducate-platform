@@ -3,7 +3,7 @@ Rebuilding [Crowducate](http://crowducate.me) platform using Meteor 1.x
 
 Automated code analysis
 -------------
-[![bitHound Score](https://www.bithound.io/meteorcrowd/crowducate-next/badges/score.svg?)](https://www.bithound.io/meteorcrowd/crowducate-next) Bithound code quality
+[![bitHound Score](https://www.bithound.io/Crowducate/crowducate-next/badges/score.svg?)](https://www.bithound.io/Crowducate/crowducate-next) Bithound code quality
 
 [![Code Climate](https://codeclimate.com/github/meteorcrowd/crowducate-next/badges/gpa.svg)](https://codeclimate.com/github/meteorcrowd/crowducate-next) Code Climate
 
