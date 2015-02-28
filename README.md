@@ -10,7 +10,7 @@ Automated code analysis
 Resources
 ========
 * [Planning](http://crowducate.hackpad.com)
-* [Developer task board](https://waffle.io/meteorcrowd/crowducate-next) [![Stories in Ready](https://badge.waffle.io/meteorcrowd/crowducate-next.png?label=ready&title=Ready)](https://waffle.io/meteorcrowd/crowducate-next)
+* [Developer task board](https://waffle.io/Crowducate/crowducate-next) [![Stories in Ready](https://badge.waffle.io/Crowducate/crowducate-next.svg?label=ready&title=Ready)](http://waffle.io/Crowducate/crowducate-next) 
 * [Original project](http://crowducate.me)
 * [Original sourcecode](https://github.com/Crowducate/crowducate.me)
 
