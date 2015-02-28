@@ -5,7 +5,7 @@ Automated code analysis
 -------------
 [![bitHound Score](https://www.bithound.io/Crowducate/crowducate-next/badges/score.svg?)](https://www.bithound.io/Crowducate/crowducate-next) Bithound code quality
 
-[![Code Climate](https://codeclimate.com/github/meteorcrowd/crowducate-next/badges/gpa.svg)](https://codeclimate.com/github/meteorcrowd/crowducate-next) Code Climate
+[![Code Climate](https://codeclimate.com/github/Crowducate/crowducate-next/badges/gpa.svg)](https://codeclimate.com/github/Crowducate/crowducate-next) Code Climate
 
 Resources
 ========
