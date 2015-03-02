@@ -10,6 +10,9 @@ blaze@2.0.4
 blaze-tools@1.0.2
 boilerplate-generator@1.0.2
 callback-hook@1.0.2
+cfs:base-package@0.0.27
+cfs:filesystem@0.1.1
+cfs:storage-adapter@0.1.1
 check@1.0.4
 cmather:handlebars-server@0.2.0
 coffeescript@1.0.5
@@ -54,12 +57,14 @@ minimongo@1.0.6
 mizzao:bootstrap-3@3.2.0_1
 mobile-status-bar@1.0.2
 mongo@1.0.11
+mongo-livedata@1.0.7
 mrt:moment@2.8.1
 mrt:underscore-string-latest@2.3.3
 natestrauser:x-editable-bootstrap@1.5.2_1
 npm-bcrypt@0.7.7
 observe-sequence@1.0.4
 ordered-dict@1.0.2
+raix:eventemitter@0.1.1
 random@1.0.2
 reactive-dict@1.0.5
 reactive-var@1.0.4
