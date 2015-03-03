@@ -1,21 +1,40 @@
 Template.teach.events({
+    'change #courseCoverImage': function (event, template) {
+        // Get the first file selected by the user
+        // TODO: only allow the users to select one file
+        // TODO: make sure the file is an image of allowed format (png, jpeg, webp)
+        var image = event.target.files[0];
+
+        // Insert the image into the database
+        // getting the image ID for use in the course object
+        var imageObject = Images.insert(image);
+
+        // The image id is stored in the image object
+        var imageId = imageObject._id;
+
+        // Create a reactive var to be used when the course is added
+        imageIdVar = new ReactiveVar(imageId);
+        console.log(imageIdVar.get());
+    },
     'click #addCourse': function(event, template){
         // prevent default button submit
         event.preventDefault();
 
         // create an empty course container
-        var course = {}
+        var course = {
+            // Get form field values
+            title: template.find('#courseTitle').value, // string
 
-        // Getting form field values
-        // Converting keywords to array
-        // all other values are strings
-        course.title = template.find('#courseTitle').value; // string
-        course.author = template.find('#authorName').value; // string
-        course.keywords = template.find('#courseKeywords').value.split(','); // split keywords to array
-        course.published = template.find('#coursePublished').value; // string
-        //course.description = template.find('#descriptionText').value; // string
-        course.about = $('#aboutText').code(); // Get the HTML code from the Summernote editor
-        //adding course to collection
+            // Cover Image ID comes from reactive var set in #courseCoverImage change event
+            coverImageId: imageIdVar.get(),
+
+            author: template.find('#authorName').value, // string
+            keywords: template.find('#courseKeywords').value.split(','), // split keywords to array
+            published: template.find('#coursePublished').value, // string
+            about: $('#aboutText').code() // Get the HTML code from the Summernote editor
+        };
+
+        // Add course to collection
         Courses.insert(course);
 
         // Redirect to the learn page, for now
