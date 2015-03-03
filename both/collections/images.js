@@ -1,6 +1,5 @@
-
 // Create images filestore
-var imageFilesystemStorage = new FS.Store.FileSystem("images", {path: "images"});
+var imageFilesystemStorage = new FS.Store.FileSystem("images", {path: "public/images"});
 
 // Create images collection
 Images = new FS.Collection("images", {
