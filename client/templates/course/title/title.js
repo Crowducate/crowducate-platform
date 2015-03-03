@@ -54,7 +54,6 @@ Template.courseTitle.events({
 
         // Get course ID from parent template data
         var courseID = Template.parentData()._id;
-        console.log(courseID);
 
         // Update course sections
         Courses.update(courseID, {$set: {'title': newCourseTitle}});
