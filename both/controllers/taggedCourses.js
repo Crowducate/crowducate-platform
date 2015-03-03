@@ -1,7 +1,10 @@
 TaggedCoursesController = AppController.extend({
     waitOn: function() {
         // Wait for the tagged resources to be available for the specific tag
-        return this.subscribe('taggedCourses', this.params.tag);
+        return [
+            this.subscribe('taggedCourses', this.params.tag),
+            this.subscribe('images')
+        ];
     },
     data: function () {
         return Courses.find();
