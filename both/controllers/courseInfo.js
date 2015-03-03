@@ -1,7 +1,10 @@
 CourseInfoController = AppController.extend({
   waitOn: function() {
         // Wait for the course to be available
-        return this.subscribe('singleCourse', this.params._id);
+        return [
+            this.subscribe('singleCourse', this.params._id),
+            this.subscribe('courseCoverImage', this.params._id)
+        ];
     },
     data: function () {
         // Return the course
