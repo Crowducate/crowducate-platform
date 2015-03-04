@@ -9,8 +9,7 @@ Template.courseInfo.rendered = function(){
     // Get course ID from router object
     var courseID = controller.params._id;
 
-
-        /*
+    /*
     Enable course description inline editor
     */
     this.enableCourseInfoInlineEditor = function () {
@@ -26,8 +25,7 @@ Template.courseInfo.rendered = function(){
 
     };
 
-
-        /*
+    /*
     Disable course description inline editor
     */
     this.disableCourseInfoInlineEditor = function () {
@@ -36,7 +34,7 @@ Template.courseInfo.rendered = function(){
 
     };
 
-        /*
+    /*
     Toggle inline editors when editing course
     */
     this.autorun(function () {
