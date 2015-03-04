@@ -1,41 +1,62 @@
-// Show when course title has focus
-// for edit mode
-var courseTitleFocusVar = new ReactiveVar(false);
+Template.courseTitle.rendered = function(){
 
-Template.courseTitle.helpers({
-    'editClass': function(){
-        // apply a class to the course content
-        // based on the editMode session variable
-        if (Session.get('editMode')) {
-            return 'course-page-content-edit';
+    // Get the template instance
+    var instance = Template.instance();
+
+    // Get the current router object
+    var controller = Router.current();
+
+    // Get course ID from router object
+    var courseID = controller.params._id;
+
+    /*
+    Enable course title inline editor
+    */
+    this.enableTitleInlineEditor = function () {
+        // Title
+        $('#course-title').editable({
+            // Don't display updated text
+            // prevents duplicate text
+            display: false,
+            mode: 'inline'
+        });
+
+    };
+
+    /*
+    Disable course title inline editor
+    */
+    this.disableTitleInlineEditor = function () {
+        // Course title
+        $('#course-title').editable('destroy');
+
+    };
+
+        /*
+    Toggle inline editors when editing course
+    */
+    this.autorun(function () {
+        if (Session.get('editingCourseID') === courseID) {
+            instance.enableTitleInlineEditor();
+        } else {
+            instance.disableTitleInlineEditor();
         }
-    },
-    'contentEditable': function () {
-        // Return the value of the edit mode session variable
-        // this will reflect in the editmode HTML tag(s)
-        return Session.get('editMode');
-    },
-    'courseTitleFocus': function () {
-        // Get the value of reactive var
-        return courseTitleFocusVar.get();;
-    }
-});
+    });
+}
+
 Template.courseTitle.events({
-    'focus #course-title': function (event, template) {
-        // set variable to indicate title has focus
-        courseTitleFocusVar.set(true);
+    /*
+    Update section title when editable is submitted
+    */
+    'click .editable-submit': function (event, template) {
+        // Get the new section title from template
+        var newCourseTitle = template.find('input').value;
+
+        // Get course ID from parent template data
+        var courseID = Template.parentData()._id;
+
+        // Update course sections
+        Courses.update(courseID, {$set: {'title': newCourseTitle}});
     },
-    'blur #course-title': function (event, template) {
-        // indicate title has lost focus
-        courseTitleFocusVar.set(false);
-
-        // Get course ID from template
-        var courseId = this._id;
-
-        // Get the course name from the page element
-        var title = $("#course-title").text();
-
-        // Update the course in database
-        Courses.update(courseId, {$set: {title: title}});
-    }
 });
+

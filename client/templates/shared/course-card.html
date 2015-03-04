@@ -1,31 +1,26 @@
 <template name="courseCard">
     <li class="col-md-3">
-        <div class="thumbnail" style="padding: 0">
-            <div style="padding:4px">
+        <div class="thumbnail course-card">
+            <div class="course-image">
                 <a href ="/course/{{ _id }}">
-                    <img alt="Course cover image" style="width: 100%" src="{{ coverImage.url }}" />
+                    <img alt="Course cover image" src="{{ coverImage.url }}" />
                 </a>
             </div>
             <div class="caption">
-                <h3>
+                <a class="course-category" href="#">Mathematics</a>
+                <h2 class="course-card-title">
                     <a href ="/course/{{ _id }}">{{ title }}</a>
-                </h3>
-                <p>by <a href="#">{{ author }}</a></p>
+                </h2>
+<!--                <p>by <a href="#">{{ author }}</a></p>-->
                 <p>{{{ truncate about 77 }}}</p>
+                {{# with truncateKeywords 6 keywords }}
                 <p>
-                    <i class="fa fa-tag"></i> &nbsp;
-                    {{# each keywords }}
+                    {{# each truncatedKeywords }}
                     <a class="tag-label" href="/tag/{{ this }}" title="Resources page for {{ this }}">
-                        <span class="label label-primary">{{ this }}</span>
+                        <span class="label label-info">{{ this }}</span>
                     </a>
                     {{/each}}
                 </p>
-                {{# with truncateKeywords 3 keywords }}
-                <ul>
-                    <li>Truncated: {{ truncatedKeywords }}</li>
-                    <li>Remaining: {{ remainingKeywords }}</li>
-                    <li>Remaining count: {{ remainingKeywordCount  }}</li>
-                </ul>
                 {{/ with }}
             </div>
             <!--
