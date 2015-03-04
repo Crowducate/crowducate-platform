@@ -14,7 +14,6 @@ Template.teach.events({
 
         // Create a reactive var to be used when the course is added
         imageIdVar = new ReactiveVar(imageId);
-        console.log(imageIdVar.get());
     },
     'click #addCourse': function(event, template){
         // prevent default button submit
