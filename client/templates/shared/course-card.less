@@ -1,10 +1,18 @@
-.truncated-keywords {
-    font-size: 75%;
-    color: #777;
-    text-transform: uppercase;
-    font-weight: 700;
+/* keywords hover color */
+a.tag-label span:hover {
+    background-color: #E97F3C;
+    text-decoration: none;
 }
 
+/* fix for keywords */
+a.tag-label:hover,
+a.tag-label:active,
+a.tag-label:focus,
+a.tag-label:visited {
+    text-decoration: none;
+}
+
+/* overwritten bootstrap thumbnails list styles */
 .course-card {
     padding: 0;
     border-radius: 0;
@@ -19,7 +27,7 @@
     width: 100%;
 }
 
-.course-card h2.course-card-title {
+.course-card .course-card-title {
     margin-top: 5px;
     font-size: 1.5em;
     font-weight: 600;
