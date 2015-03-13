@@ -26,3 +26,5 @@ summernote:standalone
 reactive-var
 rubaxa:sortable
 natestrauser:x-editable-bootstrap
+cfs:filesystem
+cfs:standard-packages

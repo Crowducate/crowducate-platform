@@ -1,33 +1,5 @@
-Template.courseInfo.created = function () {
-    /*
-    Add inline editors to course info page elements
-    */
-    this.enableCourseInfoInlineEditors = function () {
-        // Course title
-        $('#course-title').editable();
+Template.courseInfo.rendered = function(){
 
-        // Course info
-        $('.courseinfo-text').editable({
-            title: 'Edit course info',
-            rows: 10,
-            showbuttons: 'bottom',
-            'mode': 'inline'
-        });
-    };
-
-    /*
-    Remove inline editors from course info page elements
-    */
-    this.disableCourseInfoInlineEditors = function () {
-        // Course title
-        $('#course-title').editable('destroy');
-
-        // Course text
-        $('.courseinfo-text').editable('destroy');
-    }
-};
-
-Template.courseInfo.rendered = function () {
     // Get the template instance
     var instance = Template.instance();
 
@@ -37,13 +9,55 @@ Template.courseInfo.rendered = function () {
     // Get course ID from router object
     var courseID = controller.params._id;
 
+    /*
+    Enable course description inline editor
+    */
+    this.enableCourseInfoInlineEditor = function () {
+        // Course description
+        $('.courseinfo-text').editable({
+            // Don't display updated text
+            // prevents duplicate text
+            display: false,
+            mode: 'inline',
+            rows: 10,
+            showbuttons: 'bottom'
+        });
+
+    };
+
+    /*
+    Disable course description inline editor
+    */
+    this.disableCourseInfoInlineEditor = function () {
+        // Course description
+        $('.courseinfo-text').editable('destroy');
+
+    };
+
+    /*
+    Toggle inline editors when editing course
+    */
     this.autorun(function () {
-        // If editing course, show inline editors
-        // otherwise, make sure inline editors are disabled
         if (Session.get('editingCourseID') === courseID) {
-            instance.enableCourseInfoInlineEditors();
+            instance.enableCourseInfoInlineEditor();
         } else {
-            instance.disableCourseInfoInlineEditors();
+            instance.disableCourseInfoInlineEditor();
         }
     });
 };
+
+Template.courseInfo.events({
+    /*
+    Update course description when editable is submitted
+    */
+    'click .editable-submit': function (event, template) {
+        // Get the new course description from template
+        var newCourseInfo = template.find('textarea').value;
+
+        // Get course ID from parent template data
+        var courseID = Template.parentData()._id;
+
+        // Update course description
+        Courses.update(courseID, {$set: {'about': newCourseInfo}});
+    },
+});
