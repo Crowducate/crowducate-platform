@@ -1,26 +1,36 @@
 <template name="teach">
     <div class="panel">
         <div class="panel-heading">
-            <h1 class="teach-main-title">{{mf 'course add new header' 'Add new course'}}</h1>
+            <h1 class="teach-main-title">
+                {{mf 'course add new header' 'Add new course'}}
+            </h1>
         </div>
         <div class="panel-body">
             <div class="form-group">
-                <label for="courseTitle">{{mf 'add new course form course title label' 'Title' }}</label>
+                <label for="courseTitle">
+                    {{mf 'add new course form course title label' 'Title' }}
+                </label>
                 <input type="text" class="form-control" id="courseTitle" placeholder="New Course">
             </div>
             <div class="form-group">
-                <label for="courseCoverImage">{{mf 'add new course form cover photo label' 'Cover Photo'}}</label>
+                <label for="courseCoverImage">
+                    {{mf 'add new course form cover photo label' 'Cover Photo'}}
+                </label>
                 <input type="file" class="btn btn-default" id="courseCoverImage">
             </div>
             <div class="form-group">
-                <label for="authorName">{{mf 'add new course form author label' 'Author'}}</label>
+                <label for="authorName">
+                    {{mf 'add new course form author label' 'Author'}}
+                </label>
                 <input type="text"
                        class="form-control"
                        id="authorName"
                        placeholder="{{mf 'add new course form author placeholder' 'Author Name' }}">
             </div>
             <div class="form-group">
-                <label for="courseKeywords">{{mf 'add new course form keywords label' 'Keywords' }}</label>
+                <label for="courseKeywords">
+                    {{mf 'add new course form keywords label' 'Keywords' }}
+                </label>
                 <input type="select"
                        class=""
                        id="courseKeywords"
@@ -37,12 +47,15 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="aboutText">{{mf 'add new course form about course label' 'About this course' }}</label>
+                <label for="aboutText">
+                    {{mf 'add new course form about course label' 'About this course' }}
+                </label>
                 <textarea class="form-control" rows="3" id="aboutText"></textarea>
                 <p class="help-block">
                     {{mf 'add new course form about course help text' 'Briefly describe the objectives of this course.' }}</p>
             </div>
-            <button type="submit" class="btn btn-success" id="addCourse">{{mf 'add new course form add course button' 'Add Course' }}
+            <button type="submit" class="btn btn-success" id="addCourse">
+                {{mf 'add new course form add course button' 'Add Course' }}
             </button>
         </div>
     </div>
