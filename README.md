@@ -3,7 +3,7 @@ Rebuilding [Crowducate](http://crowducate.me) platform using Meteor 1.x
 
 System Overview
 ---------------
-Our planned system includes a full system model for collaboration on and sharing of Open Educational Resources.
+Our planned system includes a full system model for collaboration on and sharing of [Open Educational Resources](https://en.wikipedia.org/wiki/Open_educational_resources).
 
 ![Crowducate System Overview](https://rawgit.com/Crowducate/crowducate-next/development/docs/design/Crowducate-systemOverview.svg)
 
