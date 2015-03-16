@@ -1,6 +1,14 @@
 # Crowducate
 Rebuilding [Crowducate](http://crowducate.me) platform using Meteor 1.x
 
+System Overview
+---------------
+Our planned system includes a full system model for collaboration on and sharing of Open Educational Resources.
+
+![Crowducate System Overview](https://raw.githubusercontent.com/Crowducate/crowducate-next/development/docs/design/Crowducate-systemOverview.svg)
+
+
+
 Automated code analysis
 -------------
 [![bitHound Score](https://www.bithound.io/Crowducate/crowducate-next/badges/score.svg?)](https://www.bithound.io/Crowducate/crowducate-next) Bithound code quality
