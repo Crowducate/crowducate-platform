@@ -5,8 +5,7 @@ System Overview
 ---------------
 Our planned system includes a full system model for collaboration on and sharing of Open Educational Resources.
 
-![Crowducate System Overview](https://raw.githubusercontent.com/Crowducate/crowducate-next/development/docs/design/Crowducate-systemOverview.svg)
-
+![Crowducate System Overview](https://rawgit.com/Crowducate/crowducate-next/development/docs/design/Crowducate-systemOverview.svg)
 
 
 Automated code analysis
