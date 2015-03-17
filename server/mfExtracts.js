@@ -116,9 +116,144 @@ mfPkg.addNative(
     "template": "teach",
     "ctime": 1426503739075,
     "mtime": 1426503739075
+  },
+  "_header-navbarToggle": {
+    "key": "_header-navbarToggle",
+    "text": "Toggle navigation",
+    "file": "./client/templates/layouts/_header.html",
+    "line": 9,
+    "template": "_header",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "_header-dropdownMenu-signOutText": {
+    "key": "_header-dropdownMenu-signOutText",
+    "text": "Sign Out",
+    "file": "./client/templates/layouts/_header.html",
+    "line": 32,
+    "template": "_header",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "_header-navbar-signInText": {
+    "key": "_header-navbar-signInText",
+    "text": "Sign in",
+    "file": "./client/templates/layouts/_header.html",
+    "line": 41,
+    "template": "_header",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "_header-navbar-registerText": {
+    "key": "_header-navbar-registerText",
+    "text": "Register",
+    "file": "./client/templates/layouts/_header.html",
+    "line": 44,
+    "template": "_header",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "taggedCourses-headerText": {
+    "key": "taggedCourses-headerText",
+    "text": "Courses tagged",
+    "file": "./client/templates/courses/tagged-courses.html",
+    "line": 3,
+    "template": "taggedCourses",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "doneEditingCourse-doneEditingButtonText": {
+    "key": "doneEditingCourse-doneEditingButtonText",
+    "text": "Done editing.",
+    "file": "./client/templates/course/toolbar/done-editing.html",
+    "line": 6,
+    "template": "doneEditingCourse",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "editCourse-editCourseButtonText": {
+    "key": "editCourse-editCourseButtonText",
+    "text": "Edit course",
+    "file": "./client/templates/course/toolbar/edit-course.html",
+    "line": 6,
+    "template": "editCourse",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "courseToolbarTabs-courseMaterialTabText": {
+    "key": "courseToolbarTabs-courseMaterialTabText",
+    "text": "Course material",
+    "file": "./client/templates/course/toolbar/tabs.html",
+    "line": 5,
+    "template": "courseToolbarTabs",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "courseToolbarTabs-courseInfoTabText": {
+    "key": "courseToolbarTabs-courseInfoTabText",
+    "text": "Course info",
+    "file": "./client/templates/course/toolbar/tabs.html",
+    "line": 10,
+    "template": "courseToolbarTabs",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "sectionAddLesson-addLessonButtonText": {
+    "key": "sectionAddLesson-addLessonButtonText",
+    "text": "Add",
+    "file": "./client/templates/course/sidebar/section/add-lesson/add-lesson.html",
+    "line": 9,
+    "template": "sectionAddLesson",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "addSection-addSectionButtonText": {
+    "key": "addSection-addSectionButtonText",
+    "text": "Add",
+    "file": "./client/templates/course/sidebar/add-section/add-section.html",
+    "line": 6,
+    "template": "addSection",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "courseMeta-courseAuthorAttribution": {
+    "key": "courseMeta-courseAuthorAttribution",
+    "text": "originally by",
+    "file": "./client/templates/course/meta/meta.html",
+    "line": 4,
+    "template": "courseMeta",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "lessonEditToolbar-saveLessonEditButtonText": {
+    "key": "lessonEditToolbar-saveLessonEditButtonText",
+    "text": "Save",
+    "file": "./client/templates/course/lesson/edit/edit-toolbar.html",
+    "line": 6,
+    "template": "lessonEditToolbar",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "lessonEditToolbar-cancelLessonEditButtonText": {
+    "key": "lessonEditToolbar-cancelLessonEditButtonText",
+    "text": "Cancel",
+    "file": "./client/templates/course/lesson/edit/edit-toolbar.html",
+    "line": 10,
+    "template": "lessonEditToolbar",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
+  },
+  "save button template save button text": {
+    "key": "save button template save button text",
+    "text": "Save",
+    "file": "./client/templates/components/saveButton.html",
+    "line": 6,
+    "template": "saveButton",
+    "mtime": 1426597721408,
+    "ctime": 1426597721408
   }
 },
 {
-  "extractedAt": 1426577911948,
-  "updatedAt": 1426503739075
+  "extractedAt": 1426597721408,
+  "updatedAt": 1426597721408
 });
