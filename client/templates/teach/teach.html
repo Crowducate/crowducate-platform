@@ -1,39 +1,62 @@
 <template name="teach">
     <div class="panel">
         <div class="panel-heading">
-            <h1 class="teach-main-title">Add new course</h1>
+            <h1 class="teach-main-title">
+                {{ mf 'course add new header' 'Add new course'}}
+            </h1>
         </div>
         <div class="panel-body">
             <div class="form-group">
-                <label for="courseTitle">Title</label>
+                <label for="courseTitle">
+                    {{ mf 'add new course form course title label' 'Title' }}
+                </label>
                 <input type="text" class="form-control" id="courseTitle" placeholder="New Course">
             </div>
             <div class="form-group">
-                <label for="courseCoverImage">Cover Photo</label>
+                <label for="courseCoverImage">
+                    {{ mf 'add new course form cover photo label' 'Cover Photo'}}
+                </label>
                 <input type="file" class="btn btn-default" id="courseCoverImage">
             </div>
             <div class="form-group">
-                <label for="authorName">Author</label>
-                <input type="text" class="form-control" id="authorName" placeholder="Your Name">
+                <label for="authorName">
+                    {{ mf 'add new course form author label' 'Author'}}
+                </label>
+                <input type="text"
+                       class="form-control"
+                       id="authorName"
+                       placeholder="{{ mf 'add new course form author placeholder' 'Author Name' }}">
             </div>
             <div class="form-group">
-                <label for="courseKeywords">Keywords</label>
-                <input type="select" class="" id="courseKeywords" placeholder="Choose some tags (e.g. JavaScript, Math)">
+                <label for="courseKeywords">
+                    {{ mf 'add new course form keywords label' 'Keywords' }}
+                </label>
+                <input type="select"
+                       class=""
+                       id="courseKeywords"
+                       placeholder="{{ mf 'add new course form keywords placeholder' 'Choose some tags (e.g. JavaScript, Math)' }}">
             </div>
 
             <div class="form-group">
-                <label for="coursePublished">Change to 'Published' when course should be viewable to others</label>
+                <label for="coursePublished">
+                    {{ mf 'add new course form published label' 'Change to "Published" when course should be viewable to others.' }}
+                </label>
                 <select class="form-control" id="coursePublished">
-                    <option>Unpublished</option>
-                    <option>Published</option>
+                    <option>{{ mf 'add new course form unpublished option' 'Unpublished' }}</option>
+                    <option>{{ mf 'add new course form published option' 'Published' }}</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="aboutText">About this course</label>
+                <label for="aboutText">
+                    {{ mf 'add new course form about course label' 'About this course' }}
+                </label>
                 <textarea class="form-control" rows="3" id="aboutText"></textarea>
-                <p class="help-block">Briefly describe the objectives of this course.</p>
+                <p class="help-block">
+                    {{ mf 'add new course form about course help text' 'Briefly describe the objectives of this course.' }}</p>
             </div>
-            <button type="submit" class="btn btn-success" id="addCourse">Submit</button>
+            <button type="submit" class="btn btn-success" id="addCourse">
+                {{ mf 'add new course form add course button' 'Add Course' }}
+            </button>
         </div>
     </div>
 </template>
