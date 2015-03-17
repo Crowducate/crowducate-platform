@@ -1,7 +1,8 @@
 <template name="taggedCourses">
     <h1>
-        {{mf 'taggedCourses-headerText' 'Courses tagged' }}&nbsp;
-        <span class="label label-primary">{{ tag }}</span></h1>
+        {{ mf 'taggedCourses-headerText' 'Courses tagged' }}&nbsp;
+        <span class="label label-primary">{{ tag }}</span>
+    </h1>
     <div class="row">
         <ul class="thumbnails list-unstyled tag-search-result">
             {{# each courses }}
