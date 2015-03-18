@@ -59,6 +59,7 @@ Our work is inspired by, and tries to align with, principles described by many t
 * Support [participatory culture](http://www.newmedialiteracies.org/wp-content/uploads/pdfs/NMLWhitePaper.pdf)
 * Knowledge is [constructed](http://ocw.mit.edu/courses/media-arts-and-sciences/mas-962-the-nature-of-constructionist-learning-spring-2003/)
 * Build trust through [open communication and transparency](http://www.sanctuaryweb.com/commitments-communication.php)
+* Respect [freedom](http://freedomdefined.org/Definition), [privacy](https://epic.org/), and [decentralization](http://redecentralize.org/)
 
 License
 =======
