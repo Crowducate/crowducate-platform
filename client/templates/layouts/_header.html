@@ -17,8 +17,17 @@
 
             <div class="collapse navbar-collapse" id="main-nav">
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><i class="fa fa-home"></i> Home</a></li>
-                    <li class="{{ isActivePath regex='learn' }}"><a href="{{ pathFor 'learn' }}"><i class="fa fa-book"></i> Learn</a></li>
+                    <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}">
+                        <i class="fa fa-home"></i>&nbsp;
+                        {{ mf '_header-homeTab-linkText' 'Home' }}
+                        </a>
+                    </li>
+                    <li class="{{ isActivePath regex='learn' }}">
+                        <a href="{{ pathFor 'learn' }}">
+                            <i class="fa fa-book"></i>&nbsp;
+                            {{ mf '_header-learnTab-linkText' 'Learn' }}
+                        </a>
+                    </li>
                     <li class="{{ isActivePath regex='teach' }}"><a href="{{ pathFor 'teach' }}"><i class="fa fa-university"></i> Teach</a></li>
                 </ul>
                 {{#if currentUser}}
