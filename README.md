@@ -16,8 +16,11 @@ Automated code analysis
 
 Resources
 ========
-* [Planning](http://crowducate.hackpad.com)
-* [Developer task board](https://waffle.io/Crowducate/crowducate-next) [![Stories in Ready](https://badge.waffle.io/Crowducate/crowducate-next.svg?label=ready&title=Ready)](http://waffle.io/Crowducate/crowducate-next) 
+### Current development
+* [Planning and design documents](http://crowducate.hackpad.com)
+* [Developer task board](https://waffle.io/Crowducate/crowducate-next) [![Stories in Ready](https://badge.waffle.io/Crowducate/crowducate-next.svg?label=ready&title=Ready)](http://waffle.io/Crowducate/crowducate-next)
+
+### Original prototype
 * [Original project](http://crowducate.me)
 * [Original sourcecode](https://github.com/Crowducate/crowducate.me)
 
