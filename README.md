@@ -60,6 +60,7 @@ Our work is inspired by, and tries to align with, principles described by many t
 * Knowledge is [constructed](http://ocw.mit.edu/courses/media-arts-and-sciences/mas-962-the-nature-of-constructionist-learning-spring-2003/)
 * Build trust through [open communication and transparency](http://www.sanctuaryweb.com/commitments-communication.php)
 * Respect [freedom](http://freedomdefined.org/Definition), [privacy](https://epic.org/), and [decentralization](http://redecentralize.org/)
+* Preserve and improve the [commons](http://www.onthecommons.org)
 * Align with existing [common good](https://en.wikipedia.org/wiki/Common_good) initiatives. 
  
 ### Common good initiatives 
