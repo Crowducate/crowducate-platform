@@ -56,6 +56,7 @@ Our work is inspired by, and tries to align with, principles described by many t
 
 * [Everyone has the right to education. Education shall be free.](http://www.un.org/en/documents/udhr/index.shtml#a26)
 * Work towards [Universal Access to all Knowledge](https://archive.org/details/SDForumBK)
+* Foster [cultural diversity](http://ctb.ku.edu/en/table-of-contents/culture/cultural-competence/culture-and-diversity/main)
 
 License
 =======
