@@ -65,10 +65,10 @@ Our work is inspired by, and tries to align with, principles described by many t
  
 ### Common good initiatives 
 Examples of common good initiatives include:
-* [Knowledge Commons](http://www.knowledgecommons.org)
 * [Creative Commons](http://creativecommons.org)
-* [Free Software](http://fsf.org)
 * [Free Culture](http://freeculture.org)
+* [Free Software](http://fsf.org)
+* [Knowledge Commons](http://www.knowledgecommons.org)
 * [Open Access](http://budapestopenaccessinitiative.org)
 * [Open Data](http://okfn.org/opendata/)
 * [Open Knowledge](http://www.opendefinition.org/okd)
