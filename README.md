@@ -55,6 +55,7 @@ Guiding Principles
 Our work is inspired by, and tries to align with, principles described by many thoughtful, committed people. Following, are some principles of primary importance:
 
 * [Everyone has the right to education. Education shall be free.](http://www.un.org/en/documents/udhr/index.shtml#a26)
+* Work towards [Universal Access to all Knowledge](https://archive.org/details/SDForumBK)
 
 License
 =======
