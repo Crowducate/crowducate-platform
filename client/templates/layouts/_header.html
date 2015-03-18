@@ -28,7 +28,12 @@
                             {{ mf '_header-learnTab-linkText' 'Learn' }}
                         </a>
                     </li>
-                    <li class="{{ isActivePath regex='teach' }}"><a href="{{ pathFor 'teach' }}"><i class="fa fa-university"></i> Teach</a></li>
+                    <li class="{{ isActivePath regex='teach' }}">
+                        <a href="{{ pathFor 'teach' }}">
+                            <i class="fa fa-university"></i>&nbsp;
+                            {{ mf '_header-teachTab-linkText' 'Teach' }}
+                        </a>
+                    </li>
                 </ul>
                 {{#if currentUser}}
                 <ul class="nav navbar-nav navbar-right">
