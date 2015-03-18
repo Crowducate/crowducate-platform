@@ -50,6 +50,11 @@ Roadmap
 =======
 We have an [open Hackpad discussion](https://hackpad.com/Crowducate-Roadmap-Ideas-ATAX9ZTodoe) where we are planning the future of Crowducate. Come and add your opinion, expertise, and vision!
 
+Guiding Principles
+==================
+Our work is inspired by, and tries to align with, principles described by many thoughtful, committed people. Following, are some principles of primary importance:
+
+* [Everyone has the right to education. Education shall be free.](http://www.un.org/en/documents/udhr/index.shtml#a26)
 
 License
 =======
