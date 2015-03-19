@@ -56,7 +56,7 @@ Our work is inspired by, and tries to align with, principles described by many t
 * [Everyone has the right to education. Education shall be free.](http://www.un.org/en/documents/udhr/index.shtml#a26)
 * Work towards [Universal access to all knowledge](https://archive.org/details/SDForumBK)
 * Foster [cultural diversity](http://ctb.ku.edu/en/table-of-contents/culture/cultural-competence/culture-and-diversity/main)
-* Support [participatory culture](http://www.newmedialiteracies.org/wp-content/uploads/pdfs/NMLWhitePaper.pdf) and the right to [remix](http://remix.lessig.org/)
+* Support [participatory culture](http://www.newmedialiteracies.org/wp-content/uploads/pdfs/NMLWhitePaper.pdf) and the rights to [produce](https://www.youtube.com/watch?v=T_5dpw5dRNY&t=2452) and [remix](http://remix.lessig.org/)
 * Knowledge is [constructed](http://ocw.mit.edu/courses/media-arts-and-sciences/mas-962-the-nature-of-constructionist-learning-spring-2003/)
 * Facilitate [peer learning](http://peeragogy.org/peer-learning/)
 * Build trust through [open communication and transparency](http://www.sanctuaryweb.com/commitments-communication.php)
