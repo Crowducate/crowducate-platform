@@ -61,6 +61,7 @@ Our work is inspired by, and tries to align with, principles described by many t
 * Facilitate [peer learning](http://peeragogy.org/peer-learning/)
 * Build trust through [open communication and transparency](http://www.sanctuaryweb.com/commitments-communication.php)
 * Respect [freedom](http://freedomdefined.org/Definition), [privacy](https://epic.org/), and [decentralization](http://redecentralize.org/)
+* Think and communicate in [systems](https://www.youtube.com/watch?v=T_5dpw5dRNY&t=2861)
 * Preserve and improve the [commons](http://www.onthecommons.org)
 * Align with existing [common good](https://en.wikipedia.org/wiki/Common_good) initiatives
  
