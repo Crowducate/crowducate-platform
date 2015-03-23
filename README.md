@@ -5,7 +5,7 @@ Important Note: Currently, crowducate is rewritten here: https://github.com/mete
 The crowd creates courses (any subject is welcome) together which are interactive and fun. 
 Democratize education. Enjoy education.
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Crowducate/crowducate.me?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Crowducate/crowducate.-platform?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # Install
 The Crowducate platform is based on [MeteorJS](https://www.meteor.com/ "MeteorJS"). So, if you want to run it locally: 
