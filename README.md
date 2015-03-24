@@ -3,7 +3,11 @@ Rebuilding [Crowducate](http://crowducate.me) platform using Meteor 1.x
 
 Get involved
 ===========
+There are many ways to get involved:
 * Join our team chatroom: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Crowducate/openchat)
+* Contribute to our [Planning Documents](https://crowducate.hackpad.com)
+* Add a task to our [Github issue queue](https://github.com/Crowducate/crowducate-next/issues)
+* Send a pull request with your custom code! :-)
 
 System Overview
 ==============
@@ -85,13 +89,6 @@ Examples of related common good initiatives include:
 License
 =======
 Crowducate is licensed under the [GNU Affero General Public License (GNU AGPL)](https://github.com/Crowducate/crowducate.me/blob/master/LICENSE.txt "License for Crowducate"). We chose the GNU AGPL as it fosters and protects an open knowledge ecosystem, which is essential for an open education project. You can follow the licensing discussion on the [Crowducate blog](http://blog.crowducate.me/chose-gpl-license-open-source-project/).
-
-Get involved!
-=============
-There are many ways to get involved:
-* View, and contribute to, the [Crowducate Roadmap](https://hackpad.com/Crowducate-Roadmap-Ideas-ATAX9ZTodoe)
-* Add a task to our [Github issue queue](https://github.com/Crowducate/crowducate.me/issues)
-* Send a pull request with your custom code! :-)
 
 Help us grow
 ============
