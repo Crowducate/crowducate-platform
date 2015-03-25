@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="148mm"
+   height="210mm"
+   viewBox="0 0 524.40945 744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r"
+   sodipodi:docname="Crowducate-licenseChoices.svg">
+  <title
+     id="title3336">Crowducate - UI Mockup - CC License Questions</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="261.61338"
+     inkscape:cy="408.79365"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1221"
+     inkscape:window-height="776"
+     inkscape:window-x="59"
+     inkscape:window-y="304"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Crowducate - UI Mockup - CC License Questions</dc:title>
+        <dc:date>2015-03-25</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Brylie Christopher Oxley</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>http://creativecommons.org/licenses/by-sa/4.0/</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:language>English</dc:language>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.26772)">
+    <g
+       id="g3600">
+      <rect
+         y="530.93359"
+         x="70.776154"
+         height="262.85715"
+         width="382.85715"
+         id="rect3338"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3340"
+         y="566.64789"
+         x="149.52113"
+         style="font-style:normal;font-weight:normal;font-size:28px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="566.64789"
+           x="149.52113"
+           id="tspan3342"
+           sodipodi:role="line">License Choices</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3344"
+         y="600.93365"
+         x="92.85714"
+         style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan3594"
+           y="600.93365"
+           x="92.85714"
+           sodipodi:role="line">Allow adaptations of your work to be</tspan><tspan
+           id="tspan3598"
+           y="622.80865"
+           x="92.85714"
+           sodipodi:role="line"> shared?</tspan></text>
+      <g
+         transform="translate(-0.71427917,0)"
+         id="g3475">
+        <circle
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path3350"
+           cx="123.57143"
+           cy="642.18903"
+           r="5.7142859" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="135.71428"
+           y="647.55035"
+           id="text3385"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3387"
+             x="135.71428"
+             y="647.55035"
+             style="font-size:15px">Yes</tspan></text>
+      </g>
+      <g
+         id="g3480">
+        <circle
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path3350-1"
+           cx="214.28572"
+           cy="642.18903"
+           r="5.7142859" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="227.57143"
+           y="648.44391"
+           id="text3389"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3391"
+             x="227.57143"
+             y="648.44391">No</tspan></text>
+      </g>
+      <g
+         id="g3577">
+        <circle
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path3350-3"
+           cx="122.85715"
+           cy="673.84253"
+           r="5.7142859" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="135.85715"
+           y="677.98071"
+           id="text3393"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3395"
+             x="135.85715"
+             y="677.98071">Yes, as long as others share alike</tspan></text>
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3344-0"
+         y="717.66309"
+         x="92.720421"
+         style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           id="tspan3348-2"
+           y="717.66309"
+           x="92.720421"
+           sodipodi:role="line">Allow commercial uses of your work?</tspan></text>
+      <g
+         transform="translate(-8.648468,-21.071429)"
+         id="g3587">
+        <circle
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path3350-8"
+           cx="131.50562"
+           cy="758.07648"
+           r="5.7142859" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="143.64847"
+           y="763.43781"
+           id="text3385-5"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3387-0"
+             x="143.64847"
+             y="763.43781"
+             style="font-size:15px">Yes</tspan></text>
+      </g>
+      <g
+         transform="translate(-47.142868,3.9285714)"
+         id="g3582">
+        <circle
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path3350-17"
+           cx="261.42859"
+           cy="733.07648"
+           r="5.7142859" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="274.54401"
+           y="739.33136"
+           id="text3389-2"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3391-6"
+             x="274.54401"
+             y="739.33136">No</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
