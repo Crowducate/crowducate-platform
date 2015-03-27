@@ -12,3 +12,8 @@ Courses.helpers({
         return image
     }
 });
+
+// During the course creation add user id.
+Courses.before.insert(function (userId, doc) {
+    doc.cratedById = userId;
+});
