@@ -28,7 +28,26 @@
           </label>
 				</div>
 				<div class="panel-footer">
-					License Icons
+          <img src='http://creativecommons.org/wp-content/themes/creativecommons.org/images/chooser_cc.png' />
+					{{# if attribution }}
+          <img src='http://creativecommons.org/wp-content/themes/creativecommons.org/images/chooser_by.png' />
+          Attribution
+          {{/ if }}
+          {{# if shareAlike }}
+          <img src='http://creativecommons.org/wp-content/themes/creativecommons.org/images/chooser_sa.png' />
+          Share Alike
+          {{/ if }}
+          {{# if allowAdaptation }}
+          <img src='http://creativecommons.org/wp-content/themes/creativecommons.org/images/chooser_nd.png' />
+          No Derivative Works
+          {{/ if }}
+          {{# if allowCommercial }}
+          <img src='http://creativecommons.org/wp-content/themes/creativecommons.org/images/chooser_nc.png' />
+          Noncommercial
+          {{/ if }}
+          {{# if freeCulture }}
+          <img src='http://creativecommons.org/wp-content/themes/creativecommons.org/images/fc_approved_tiny.png' />
+          {{/ if }}
 				</div>
 			</div>
 		</div>
