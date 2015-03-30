@@ -35,13 +35,7 @@
                         </a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <select class="form-control lang-picker">
-                        <option class="select-english">English</option>
-                        <option class="select-finnish">Finnish</option>
-                        <option class="select-russian">Russian</option>
-                    </select>
-                </ul>
+                {{> languageSelection}}
                 {{#if currentUser}}
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
