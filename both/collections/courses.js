@@ -13,7 +13,8 @@ Courses.helpers({
     }
 });
 
-// During the course creation add user id.
-Courses.before.insert(function (userId, doc) {
-    doc.cratedById = userId;
+// During the course creation add user id and a date stamp with dateCreated.
+Courses.before.insert(function (userId, document) {
+    document.createdById = userId;
+    document.dateCreated = new Date();
 });
