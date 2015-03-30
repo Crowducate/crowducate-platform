@@ -3,7 +3,7 @@ Meteor.publish('courses', function () {
 });
 
 Meteor.publish('publishedCourses', function () {
-    return Courses.find({"published": "Published"});
+    return Courses.find({"published": "true"});
 });
 
 Meteor.publish('taggedCourses', function (tag) {
