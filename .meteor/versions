@@ -38,6 +38,8 @@ deps@1.0.7-rc.0
 ejson@1.0.6-rc.0
 email@1.0.6-rc.0
 fastclick@1.0.3-rc.0
+gadicohen:headers@0.0.27
+gadicohen:messageformat@0.0.52
 geojson-utils@1.0.3-rc.0
 handlebars@1.0.3-rc.0
 html-tools@1.0.4-rc.0
@@ -64,6 +66,7 @@ logging@1.0.7-rc.0
 matb33:collection-hooks@0.7.9
 meteor@1.1.5-rc.0
 meteor-platform@1.2.2-rc.0
+meteorhacks:inject-initial@1.0.2
 minifiers@1.1.4-win.0
 minimongo@1.0.7-rc.0
 mizzao:bootstrap-3@3.2.0_1
