@@ -50,7 +50,33 @@ Template.licenseQuestions.helpers({
       }
   },
   'freeCulture': function () {
-    return true;
+    // Determine if license choices are Free Cultural Work
+    // http://creativecommons.org/freeworks
+    // http://freedomdefined.org/Definition
+
+    // Get license choices
+    var allowAdaptation = ccAdaptation.get();
+    var allowCommercial = ccCommercial.get();
+
+    // Create Free Cultural Work variables
+    var fcwAdaptation, fcwCommercial;
+
+    // Check adaptation freedom
+    if (allowAdaptation === 'yes' || allowAdaptation === 'share-alike') {
+      // Free Cultural Work adaptation requirement met
+      fcwAdaptation = true;
+    }
+
+    // Check commercial use freedom
+    if (allowCommercial === 'yes') {
+      // Commercial use requirement met
+      fcwCommercial = true;
+    }
+
+    // Check if both Free Cultural Work requirements are met
+    if (fcwAdaptation && fcwCommercial) {
+      return true;
+    }
   }
 });
 
