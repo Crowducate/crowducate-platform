@@ -1,15 +1,24 @@
 Template.licenseQuestions.helpers({
   'attribution': function () {
+    // All Creative Commons licenses require attribution (except CC Zero)
     return true;
   },
   'shareAlike': function () {
-    return true;
+    // Show 'Share Alike' icon if 'share alike' selected
+
+    // Get the value of allow adaptation reactive variable
+    var allowAdaptation = ccAdaptation.get();
+
+    // Check to see if Share Alike is selected
+    if (allowAdaptation === 'share-alike') {
+      return true;
+    }
   },
   'allowAdaptation': function () {
     // Hide the 'no derivative works' icon if adaptations are allow
 
     // get the value of CC Adaptation reactive variable
-    allowAdaptation = ccAdaptation.get();
+    var allowAdaptation = ccAdaptation.get();
 
     // Make sure adaptation is 'yes' or 'share-alike'
     switch (allowAdaptation) {
@@ -25,7 +34,20 @@ Template.licenseQuestions.helpers({
     }
   },
   'allowCommercial': function () {
-    return true;
+    // Show 'Non-Commercial' icon if 'no commercial uses' is selected
+
+    // Get the value of allow adaptation reactive variable
+    var allowCommercial = ccCommercial.get();
+
+    // Determine if commercial uses are allowed
+    switch (allowCommercial) {
+      case 'yes':
+        return true;
+        break;
+      case 'no':
+        return false;
+        break;
+      }
   },
   'freeCulture': function () {
     return true;
