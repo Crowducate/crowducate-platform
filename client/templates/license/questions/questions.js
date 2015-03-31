@@ -15,3 +15,10 @@ Template.licenseQuestions.helpers({
     return true;
   }
 });
+
+Template.licenseQuestions.created = function () {
+  // Creative Commons license reactive variables
+  var ccAdaptation = new ReactiveVar(),
+      ccCommercial = new ReactiveVar();
+
+}
