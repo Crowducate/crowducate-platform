@@ -194,10 +194,10 @@ mfPkg.syncAll({
     "taggedCourses-headerText": {
       "key": "taggedCourses-headerText",
       "lang": "fi",
-      "text": "Kurssit avainsanalla",
+      "text": "Kurssit avainsanoilla",
       "ctime": 1426598472553,
-      "mtime": 1427289721094,
-      "revisionId": "Aruf2gngS6DXtTgfA",
+      "mtime": 1427795577142,
+      "revisionId": "WjG9M69RfE75CudTQ",
       "_id": "AG95F3dGtYigQ7PBQ"
     },
     "_header-navbar-registerText": {
@@ -457,10 +457,10 @@ mfPkg.syncAll({
     "add new course form published option": {
       "key": "add new course form published option",
       "lang": "ru",
-      "text": "Опубликовать",
+      "text": "Опубликован",
       "ctime": 1426598570268,
-      "mtime": 1426598570268,
-      "revisionId": "ZFXbXffKkFYgiLvxa",
+      "mtime": 1427790264586,
+      "revisionId": "ne9jNwgtnnGaDgB4a",
       "_id": "nG4Amb4rYijMKWkZJ"
     },
     "add new course form published label": {
@@ -561,6 +561,51 @@ mfPkg.syncAll({
       "mtime": 1426599037303,
       "revisionId": "9Ht97bJyuY7aFXthX",
       "_id": "8fqxibMjazWrtaf62"
+    },
+    "saveButton-savebuttonText": {
+      "key": "saveButton-savebuttonText",
+      "lang": "ru",
+      "text": "Сохранить",
+      "ctime": 1427788869494,
+      "mtime": 1427788869494,
+      "revisionId": "55SdoejxNCaBWstYq",
+      "_id": "cPTwW8QxxWkYLtQfd"
+    },
+    "teach-courseTitle-placeholderText": {
+      "key": "teach-courseTitle-placeholderText",
+      "lang": "ru",
+      "text": "Заголовок",
+      "ctime": 1427790586381,
+      "mtime": 1427790586381,
+      "revisionId": "rDR6nfWT3ErzmANkZ",
+      "_id": "4ADntEXhmuxEybbFP"
+    },
+    "_header-homeTab-linkText": {
+      "key": "_header-homeTab-linkText",
+      "lang": "ru",
+      "text": "Главная",
+      "ctime": 1427790605372,
+      "mtime": 1427790605372,
+      "revisionId": "RQXCzNm7Fq5QmMJss",
+      "_id": "Q5YAXQKJWbGYnYquN"
+    },
+    "_header-learnTab-linkText": {
+      "key": "_header-learnTab-linkText",
+      "lang": "ru",
+      "text": "Изучать",
+      "ctime": 1427790759780,
+      "mtime": 1427790759780,
+      "revisionId": "QNkCkDHqLshcCJZwY",
+      "_id": "k6NxucSPv4SjKf3jw"
+    },
+    "_header-teachTab-linkText": {
+      "key": "_header-teachTab-linkText",
+      "lang": "ru",
+      "text": "Обучать",
+      "ctime": 1427790817273,
+      "mtime": 1427790817273,
+      "revisionId": "nEEErsEPHBxGHLZQK",
+      "_id": "XaABLo8BkAqtB55bR"
     }
   },
   "en": {
@@ -888,19 +933,6 @@ mfPkg.syncAll({
       "template": "lessonEditToolbar",
       "_id": "8rCufHBtd8AfmqD6w"
     },
-    "save button template save button text": {
-      "key": "save button template save button text",
-      "lang": "en",
-      "text": "Save",
-      "ctime": 1426597721408,
-      "mtime": 1427286106891,
-      "revisionId": "pNhEm69R5j68vzpFY",
-      "file": "./client/templates/components/saveButton.html",
-      "line": 6,
-      "template": "saveButton",
-      "removed": true,
-      "_id": "fjwnAbf35ridwCFM6"
-    },
     "teach-courseTitle-placeholderText": {
       "key": "teach-courseTitle-placeholderText",
       "lang": "en",
@@ -972,9 +1004,22 @@ mfPkg.syncAll({
       "line": 6,
       "template": "saveButton",
       "_id": "YCRxKWwLAsZJuoAyr"
+    },
+    "save button template save button text": {
+      "key": "save button template save button text",
+      "lang": "en",
+      "text": "Save",
+      "ctime": 1426597721408,
+      "mtime": 1427286106891,
+      "revisionId": "pNhEm69R5j68vzpFY",
+      "file": "./client/templates/components/saveButton.html",
+      "line": 6,
+      "template": "saveButton",
+      "removed": true,
+      "_id": "fjwnAbf35ridwCFM6"
     }
   }
 }, {
-  "exportedAt": 1427355697421,
-  "updatedAt": 1427355677177
+  "exportedAt": 1427869307231,
+  "updatedAt": 1427795577142
 });
