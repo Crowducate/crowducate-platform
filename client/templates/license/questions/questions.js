@@ -77,7 +77,29 @@ Template.licenseQuestions.helpers({
     if (fcwAdaptation && fcwCommercial) {
       return true;
     }
-  }
+},
+'fcwFeedbackColor': function () {
+    /*
+    Change the color of bootstrap panel
+    based on freedoms allowed
+      'no adaptations' = 'danger' (not compatible with Crowducate forking)
+      'no commercial use' = 'warning' (Not Free Cultural Work)
+      otherwise 'succcess' (Free Cultural Work)
+    */
+
+    // Get license choices
+    var allowAdaptation = ccAdaptation.get();
+    var allowCommercial = ccCommercial.get();
+
+    // No derivative works? 'danger' status
+    if (allowAdaptation === 'no') {
+        return 'danger';
+    } else if (allowCommercial === 'no') {
+        return 'warning';
+    } else {
+        return 'success';
+    }
+}
 });
 
 Template.licenseQuestions.created = function () {
