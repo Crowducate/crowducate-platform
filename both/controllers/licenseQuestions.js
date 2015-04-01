@@ -1,0 +1,5 @@
+LicenseQuestionsController = AppController.extend({
+  data: {
+
+  }
+});

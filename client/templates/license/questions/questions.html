@@ -1,0 +1,53 @@
+<template name='licenseQuestions'>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="panel panel-{{ fcwFeedbackColor}}">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Freedoms Allowed
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <h3>Allow adaptations of your work to be shared?</h3>
+                        <label class="radio-inline">
+                            <input type="radio" name="cc-adaptation" id="cc-adaptation-yes" value="yes" checked=true> Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="cc-adaptation" id="cc-adaptation-share-alike" value="share-alike"> Yes, as long as others share alike
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="cc-adaptation" id="cc-adaptation-no" value="no"> No
+                        </label>
+                        <h3>Allow commercial uses of your work?</h3>
+                        <label class="radio-inline">
+                            <input type="radio" name="cc-commercial" id="cc-commercial-yes" value="yes" checked=true> Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="cc-commercial" id="cc-commercial-no" value="no"> No
+                        </label>
+                    </div>
+                    <div class="panel-footer">
+                        {{> licenseIcon name='creative-commons'}}
+
+                        {{# if attribution }}
+                            {{> licenseIcon name='attribution'}}
+                        {{/ if }}
+                        {{# if shareAlike }}
+                            {{> licenseIcon name='share-alike'}}
+                        {{/ if }}
+                        {{# unless allowAdaptation }}
+                            {{> licenseIcon name='no-adaptations'}}
+                        {{/ unless }}
+                        {{# unless allowCommercial }}
+                            {{> licenseIcon name='noncommercial'}}
+                        {{/ unless }}
+                        {{# if freeCulture }}
+                            {{> licenseIcon name='free-culture-approved'}}
+                        {{/ if }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
