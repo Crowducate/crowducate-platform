@@ -2,66 +2,65 @@
     <div class="panel">
         <div class="panel-heading">
             <h1 class="teach-main-title">
-                {{ mf 'course add new header' 'Add new course'}}
+                {{ mf 'teach-mainHeading' 'Add new course'}}
             </h1>
         </div>
         <div class="panel-body">
             <div class="form-group">
                 <label for="courseTitle">
-                    {{ mf 'add new course form course title label' 'Title' }}
+                    {{ mf 'teach-addCourseForm-courseTitle-label' 'Title' }}
                 </label>
                 <input
                        type="text"
                        class="form-control"
                        id="courseTitle"
-                       placeholder="{{ mf 'teach-courseTitle-placeholderText' 'Course title' }}">
+                       placeholder="{{ mf 'teach-addCourseForm-courseTitle-placeholderText' 'Course title' }}">
             </div>
             <div class="form-group">
                 <label for="courseCoverImage">
-                    {{ mf 'add new course form cover photo label' 'Cover Photo'}}
+                    {{ mf 'teach-addCourseForm-courseTitle-coverPhotoLabel' 'Cover Photo'}}
                 </label>
                 <input type="file" class="btn btn-default" id="courseCoverImage">
             </div>
             <div class="form-group">
                 <label for="authorName">
-                    {{ mf 'add new course form author label' 'Author'}}
+                    {{ mf 'teach-addCourseForm-courseTitle-author-label' 'Author'}}
                 </label>
                 <input type="text"
                        class="form-control"
                        id="authorName"
-                       placeholder="{{ mf 'add new course form author placeholder' 'Author Name' }}">
+                       placeholder="{{ mf 'teach-addCourseForm-courseTitle-author-placeholder' 'Author Name' }}">
             </div>
             <div class="form-group">
                 <label for="courseKeywords">
-                    {{ mf 'add new course form keywords label' 'Keywords' }}
+                    {{ mf 'teach-addCourseForm-courseTitle-keywords-label' 'Keywords' }}
                 </label>
                 <input type="select"
                        class=""
                        id="courseKeywords"
-                       placeholder="{{ mf 'add new course form keywords placeholder' 'Choose some tags (e.g. JavaScript, Math)' }}">
+                       placeholder="{{ mf 'teach-addCourseForm-courseTitle-keywords-placeholder' 'Choose some tags (e.g. JavaScript, Math)' }}">
             </div>
 
             <div class="form-group">
                 <label for="coursePublished">
-                    {{ mf 'add new course form published label' 'Change to "Published" when course should be viewable to others.' }}
+                    {{ mf 'teach-addCourseForm-courseTitle-published-label' 'Change to "Published" when course should be viewable to others.' }}
                 </label>
                 <select class="form-control" id="coursePublished">
-                    <option value="false">{{ mf 'add new course form unpublished option' 'Unpublished' }}</option>
-                    <option value="true">{{ mf 'add new course form published option' 'Published' }}</option>
+                    <option value="false">{{ mf 'teach-addCourseForm-courseTitle-unpublished-option' 'Unpublished' }}</option>
+                    <option value="true">{{ mf 'teach-addCourseForm-courseTitle-published-option' 'Published' }}</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="aboutText">
-                    {{ mf 'add new course form about course label' 'About this course' }}
+                    {{ mf 'teach-addCourseForm-courseTitle-aboutCourse-label' 'About this course' }}
                 </label>
                 <textarea class="form-control" rows="3" id="aboutText"></textarea>
                 <p class="help-block">
-                    {{ mf 'add new course form about course help text' 'Briefly describe the objectives of this course.' }}</p>
+                    {{ mf 'teach-addCourseForm-courseTitle-aboutCourse-helpText' 'Briefly describe the objectives of this course.' }}</p>
             </div>
             <button type="submit" class="btn btn-success" id="addCourse">
-                {{ mf 'add new course form add course button' 'Add Course' }}
+                {{ mf 'teach-addCourseForm-courseTitle-addCourse-button' 'Add Course' }}
             </button>
         </div>
     </div>
 </template>
-
