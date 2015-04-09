@@ -1,7 +1,7 @@
 mfPkg.addNative(
 {
-  "course add new header": {
-    "key": "course add new header",
+  "teach-mainHeading": {
+    "key": "teach-mainHeading",
     "text": "Add new course",
     "file": "./client/templates/teach/teach.html",
     "line": 5,
@@ -9,8 +9,8 @@ mfPkg.addNative(
     "ctime": 1426503739075,
     "mtime": 1426503739075
   },
-  "add new course form course title label": {
-    "key": "add new course form course title label",
+  "teach-addCourseForm-courseTitle-label": {
+    "key": "teach-addCourseForm-courseTitle-label",
     "text": "Title",
     "file": "./client/templates/teach/teach.html",
     "line": 11,
@@ -27,8 +27,8 @@ mfPkg.addNative(
     "mtime": 1427286106891,
     "ctime": 1427286106891
   },
-  "add new course form cover photo label": {
-    "key": "add new course form cover photo label",
+  "teach-addCourseForm-courseTitle-coverPhotoLabel": {
+    "key": "teach-addCourseForm-courseTitle-coverPhotoLabel",
     "text": "Cover Photo",
     "file": "./client/templates/teach/teach.html",
     "line": 21,
@@ -36,8 +36,8 @@ mfPkg.addNative(
     "ctime": 1426503739075,
     "mtime": 1426503739075
   },
-  "add new course form author label": {
-    "key": "add new course form author label",
+  "teach-addCourseForm-courseTitle-author-label": {
+    "key": "teach-addCourseForm-courseTitle-author-label",
     "text": "Author",
     "file": "./client/templates/teach/teach.html",
     "line": 27,
@@ -45,8 +45,8 @@ mfPkg.addNative(
     "ctime": 1426503739075,
     "mtime": 1426503739075
   },
-  "add new course form author placeholder": {
-    "key": "add new course form author placeholder",
+  "teach-addCourseForm-courseTitle-author-placeholder": {
+    "key": "teach-addCourseForm-courseTitle-author-placeholder",
     "text": "Author Name",
     "file": "./client/templates/teach/teach.html",
     "line": 32,
@@ -54,8 +54,8 @@ mfPkg.addNative(
     "ctime": 1426503739075,
     "mtime": 1426503739075
   },
-  "add new course form keywords label": {
-    "key": "add new course form keywords label",
+  "teach-addCourseForm-courseTitle-keywords-label": {
+    "key": "teach-addCourseForm-courseTitle-keywords-label",
     "text": "Keywords",
     "file": "./client/templates/teach/teach.html",
     "line": 36,
@@ -63,8 +63,8 @@ mfPkg.addNative(
     "ctime": 1426503739075,
     "mtime": 1426503739075
   },
-  "add new course form keywords placeholder": {
-    "key": "add new course form keywords placeholder",
+  "teach-addCourseForm-courseTitle-keywords-placeholder": {
+    "key": "teach-addCourseForm-courseTitle-keywords-placeholder",
     "text": "Choose some tags (e.g. JavaScript, Math)",
     "file": "./client/templates/teach/teach.html",
     "line": 41,
@@ -72,8 +72,8 @@ mfPkg.addNative(
     "ctime": 1426503739075,
     "mtime": 1426503739075
   },
-  "add new course form published label": {
-    "key": "add new course form published label",
+  "teach-addCourseForm-courseTitle-published-label": {
+    "key": "teach-addCourseForm-courseTitle-published-label",
     "text": "Change to \"Published\" when course should be viewable to others.",
     "file": "./client/templates/teach/teach.html",
     "line": 46,
@@ -81,8 +81,8 @@ mfPkg.addNative(
     "ctime": 1426503739075,
     "mtime": 1426503739075
   },
-  "add new course form unpublished option": {
-    "key": "add new course form unpublished option",
+  "teach-addCourseForm-courseTitle-unpublished-option": {
+    "key": "teach-addCourseForm-courseTitle-unpublished-option",
     "text": "Unpublished",
     "file": "./client/templates/teach/teach.html",
     "line": 49,
@@ -90,8 +90,8 @@ mfPkg.addNative(
     "ctime": 1426503739075,
     "mtime": 1426503739075
   },
-  "add new course form published option": {
-    "key": "add new course form published option",
+  "teach-addCourseForm-courseTitle-published-option": {
+    "key": "teach-addCourseForm-courseTitle-published-option",
     "text": "Published",
     "file": "./client/templates/teach/teach.html",
     "line": 50,
@@ -99,8 +99,8 @@ mfPkg.addNative(
     "ctime": 1426503739075,
     "mtime": 1426503739075
   },
-  "add new course form about course label": {
-    "key": "add new course form about course label",
+  "teach-addCourseForm-courseTitle-aboutCourse-label": {
+    "key": "teach-addCourseForm-courseTitle-aboutCourse-label",
     "text": "About this course",
     "file": "./client/templates/teach/teach.html",
     "line": 55,
@@ -108,8 +108,8 @@ mfPkg.addNative(
     "ctime": 1426503739075,
     "mtime": 1426503739075
   },
-  "add new course form about course help text": {
-    "key": "add new course form about course help text",
+  "teach-addCourseForm-courseTitle-aboutCourse-helpText": {
+    "key": "teach-addCourseForm-courseTitle-aboutCourse-helpText",
     "text": "Briefly describe the objectives of this course.",
     "file": "./client/templates/teach/teach.html",
     "line": 59,
@@ -117,8 +117,8 @@ mfPkg.addNative(
     "ctime": 1426503739075,
     "mtime": 1426503739075
   },
-  "add new course form add course button": {
-    "key": "add new course form add course button",
+  "teach-addCourseForm-courseTitle-addCourse-button": {
+    "key": "teach-addCourseForm-courseTitle-addCourse-button",
     "text": "Add Course",
     "file": "./client/templates/teach/teach.html",
     "line": 62,
@@ -296,16 +296,6 @@ mfPkg.addNative(
     "template": "saveButton",
     "mtime": 1427286106891,
     "ctime": 1427286106891
-  },
-  "save button template save button text": {
-    "key": "save button template save button text",
-    "text": "Save",
-    "file": "./client/templates/components/saveButton.html",
-    "line": 6,
-    "template": "saveButton",
-    "mtime": 1427286106891,
-    "ctime": 1426597721408,
-    "removed": true
   }
 },
 {

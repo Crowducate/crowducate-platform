@@ -1,7 +1,7 @@
 mfPkg.syncAll({
   "fi": {
-    "course add new header": {
-      "key": "course add new header",
+    "teach-mainHeading": {
+      "key": "teach-mainHeading",
       "lang": "fi",
       "text": "Lisää uusi kurssi",
       "ctime": 1426598114016,
@@ -9,8 +9,8 @@ mfPkg.syncAll({
       "revisionId": "T9L6Fqv24knPtWEQ5",
       "_id": "dMbGRPoy92k3jn8cJ"
     },
-    "add new course form course title label": {
-      "key": "add new course form course title label",
+    "teach-addCourseForm-courseTitle-label": {
+      "key": "teach-addCourseForm-courseTitle-label",
       "lang": "fi",
       "text": "Otsikko",
       "ctime": 1426598155090,
@@ -18,8 +18,8 @@ mfPkg.syncAll({
       "revisionId": "sxjhQEz6e9NW9u97q",
       "_id": "758rqbLQWMqagrxZK"
     },
-    "add new course form cover photo label": {
-      "key": "add new course form cover photo label",
+    "teach-addCourseForm-courseTitle-coverPhotoLabel": {
+      "key": "teach-addCourseForm-courseTitle-coverPhotoLabel",
       "lang": "fi",
       "text": "Kansikuva",
       "ctime": 1426598192351,
@@ -27,8 +27,8 @@ mfPkg.syncAll({
       "revisionId": "RpdcEbYxKApjMueYC",
       "_id": "CNjYxPwTyHsaekLGk"
     },
-    "add new course form author label": {
-      "key": "add new course form author label",
+    "teach-addCourseForm-courseTitle-author-label": {
+      "key": "teach-addCourseForm-courseTitle-author-label",
       "lang": "fi",
       "text": "Tekijä",
       "ctime": 1426598205752,
@@ -36,8 +36,8 @@ mfPkg.syncAll({
       "revisionId": "puZzP5mMP3FLz8upL",
       "_id": "m2dnb2KK2HaKrL8po"
     },
-    "add new course form author placeholder": {
-      "key": "add new course form author placeholder",
+    "teach-addCourseForm-courseTitle-author-placeholder": {
+      "key": "teach-addCourseForm-courseTitle-author-placeholder",
       "lang": "fi",
       "text": "Tekijän nimi",
       "ctime": 1426598213087,
@@ -45,8 +45,8 @@ mfPkg.syncAll({
       "revisionId": "Fr3sedjnvWySJT63Z",
       "_id": "WzTecTnZACmNwYuw4"
     },
-    "add new course form keywords label": {
-      "key": "add new course form keywords label",
+    "teach-addCourseForm-courseTitle-keywords-label": {
+      "key": "teach-addCourseForm-courseTitle-keywords-label",
       "lang": "fi",
       "text": "Avainsanat",
       "ctime": 1426598217323,
@@ -54,8 +54,8 @@ mfPkg.syncAll({
       "revisionId": "Zubbc9jGBt59aDxst",
       "_id": "FNyK3m8TyX2Dm3X3h"
     },
-    "add new course form keywords placeholder": {
-      "key": "add new course form keywords placeholder",
+    "teach-addCourseForm-courseTitle-keywords-placeholder": {
+      "key": "teach-addCourseForm-courseTitle-keywords-placeholder",
       "lang": "fi",
       "text": "Valitse joitain avainsanoja (esimerkiksi JavaScript, matematiikka)",
       "ctime": 1426598259312,
@@ -63,8 +63,8 @@ mfPkg.syncAll({
       "revisionId": "EPDZS6e5cz48eacAE",
       "_id": "4qrFzToBqfsYhmcYr"
     },
-    "add new course form unpublished option": {
-      "key": "add new course form unpublished option",
+    "teach-addCourseForm-courseTitle-unpublished-option": {
+      "key": "teach-addCourseForm-courseTitle-unpublished-option",
       "lang": "fi",
       "text": "Yksityinen",
       "ctime": 1426598306435,
@@ -72,8 +72,8 @@ mfPkg.syncAll({
       "revisionId": "7FsFpJwt9mX2kuy5W",
       "_id": "5g6LYq2dysBcMPjaA"
     },
-    "add new course form published option": {
-      "key": "add new course form published option",
+    "teach-addCourseForm-courseTitle-published-option": {
+      "key": "teach-addCourseForm-courseTitle-published-option",
       "lang": "fi",
       "text": "Julkinen",
       "ctime": 1426598312025,
@@ -81,8 +81,8 @@ mfPkg.syncAll({
       "revisionId": "z4rPYTehXiZcXRCfs",
       "_id": "mLxJZRA8PgmWJACz6"
     },
-    "add new course form about course label": {
-      "key": "add new course form about course label",
+    "teach-addCourseForm-courseTitle-aboutCourse-label": {
+      "key": "teach-addCourseForm-courseTitle-aboutCourse-label",
       "lang": "fi",
       "text": "Kurssikuvaus",
       "ctime": 1426598316776,
@@ -90,25 +90,14 @@ mfPkg.syncAll({
       "revisionId": "viRMWu6GA5WJv5gLa",
       "_id": "fJ7fAJKCwNkoDSYiY"
     },
-    "add new course form about course help text": {
-      "key": "add new course form about course help text",
+    "teach-addCourseForm-courseTitle-aboutCourse-helpText": {
+      "key": "teach-addCourseForm-courseTitle-aboutCourse-helpText",
       "lang": "fi",
       "text": "Kuvaa kurssin tavoitteet lyhyesti.",
       "ctime": 1426598342121,
       "mtime": 1427286630865,
       "revisionId": "N5gbDps7AbmCYGEoH",
       "_id": "dbbab9yKzxZgY8tm5"
-    },
-    "save button template save button text": {
-      "key": "save button template save button text",
-      "lang": "fi",
-      "text": "Tallenna",
-      "ctime": 1426598349773,
-      "mtime": 1426598349773,
-      "revisionId": "kiCexh3QfMix8qDof",
-      "fuzzy": true,
-      "removed": true,
-      "_id": "t9s7WWoWZtyyhp8Pc"
     },
     "lessonEditToolbar-cancelLessonEditButtonText": {
       "key": "lessonEditToolbar-cancelLessonEditButtonText",
@@ -236,8 +225,8 @@ mfPkg.syncAll({
       "revisionId": "woyH8MSXGzz8Bpm9s",
       "_id": "MeqprW4LGAmty8uC2"
     },
-    "add new course form add course button": {
-      "key": "add new course form add course button",
+    "teach-addCourseForm-courseTitle-addCourse-button": {
+      "key": "teach-addCourseForm-courseTitle-addCourse-button",
       "lang": "fi",
       "text": "Lisää kurssi",
       "ctime": 1426598550913,
@@ -245,8 +234,8 @@ mfPkg.syncAll({
       "revisionId": "85sghYoAHxSbqdwtJ",
       "_id": "MSr8GHFdjaFcHbwpg"
     },
-    "add new course form published label": {
-      "key": "add new course form published label",
+    "teach-addCourseForm-courseTitle-published-label": {
+      "key": "teach-addCourseForm-courseTitle-published-label",
       "lang": "fi",
       "text": "Muuta julkiseksi, kun kurssi on valmis muiden nähtäväksi.",
       "ctime": 1426598581197,
@@ -310,8 +299,8 @@ mfPkg.syncAll({
     }
   },
   "ru": {
-    "course add new header": {
-      "key": "course add new header",
+    "teach-mainHeading": {
+      "key": "teach-mainHeading",
       "lang": "ru",
       "text": "Создать новый курс",
       "ctime": 1426598156232,
@@ -319,8 +308,8 @@ mfPkg.syncAll({
       "revisionId": "4mRkikscJThPwy9Xx",
       "_id": "TdS4WHSpg3ztyGXQ2"
     },
-    "add new course form course title label": {
-      "key": "add new course form course title label",
+    "teach-addCourseForm-courseTitle-label": {
+      "key": "teach-addCourseForm-courseTitle-label",
       "lang": "ru",
       "text": "Заголовок",
       "ctime": 1426598293822,
@@ -328,8 +317,8 @@ mfPkg.syncAll({
       "revisionId": "tzYcatFHW8MyXMfYK",
       "_id": "PGXejjDKwSenndEns"
     },
-    "add new course form author label": {
-      "key": "add new course form author label",
+    "teach-addCourseForm-courseTitle-author-label": {
+      "key": "teach-addCourseForm-courseTitle-author-label",
       "lang": "ru",
       "text": "Автор",
       "ctime": 1426598308316,
@@ -337,8 +326,8 @@ mfPkg.syncAll({
       "revisionId": "E4SXkkcF76KtFwKh7",
       "_id": "6Tu6Aykhg6XN7Yb5p"
     },
-    "add new course form author placeholder": {
-      "key": "add new course form author placeholder",
+    "teach-addCourseForm-courseTitle-author-placeholder": {
+      "key": "teach-addCourseForm-courseTitle-author-placeholder",
       "lang": "ru",
       "text": "Имя автора",
       "ctime": 1426598344218,
@@ -346,8 +335,8 @@ mfPkg.syncAll({
       "revisionId": "zJg6Xmbv9zqmnkWAi",
       "_id": "x9sz4Z2P65i8X9ckr"
     },
-    "add new course form add course button": {
-      "key": "add new course form add course button",
+    "teach-addCourseForm-courseTitle-addCourse-button": {
+      "key": "teach-addCourseForm-courseTitle-addCourse-button",
       "lang": "ru",
       "text": "Добавить курс",
       "ctime": 1426598389042,
@@ -427,17 +416,8 @@ mfPkg.syncAll({
       "revisionId": "zDRvswC7s2wEJoyuD",
       "_id": "KZkM4wB8ms9eAqDtZ"
     },
-    "save button template save button text": {
-      "key": "save button template save button text",
-      "lang": "ru",
-      "text": "Сохранить",
-      "ctime": 1426598455628,
-      "mtime": 1426598455628,
-      "revisionId": "rNh3qCh39xHuvmyuE",
-      "_id": "TvTrKrhymENfLyfBx"
-    },
-    "add new course form keywords placeholder": {
-      "key": "add new course form keywords placeholder",
+    "teach-addCourseForm-courseTitle-keywords-placeholder": {
+      "key": "teach-addCourseForm-courseTitle-keywords-placeholder",
       "lang": "ru",
       "text": "Укажите ключевые слова (например, JavaScript, Математика)",
       "ctime": 1426598533987,
@@ -445,8 +425,8 @@ mfPkg.syncAll({
       "revisionId": "Wh8Lnr8dgkXSYoCra",
       "_id": "FSyS5rh2nuHDpjqH4"
     },
-    "add new course form unpublished option": {
-      "key": "add new course form unpublished option",
+    "teach-addCourseForm-courseTitle-unpublished-option": {
+      "key": "teach-addCourseForm-courseTitle-unpublished-option",
       "lang": "ru",
       "text": "Черновик",
       "ctime": 1426598545555,
@@ -454,8 +434,8 @@ mfPkg.syncAll({
       "revisionId": "T7RrSNoT7PEMTgrzx",
       "_id": "rhiHBHLyRjbHxzqHr"
     },
-    "add new course form published option": {
-      "key": "add new course form published option",
+    "teach-addCourseForm-courseTitle-published-option": {
+      "key": "teach-addCourseForm-courseTitle-published-option",
       "lang": "ru",
       "text": "Опубликован",
       "ctime": 1426598570268,
@@ -463,8 +443,8 @@ mfPkg.syncAll({
       "revisionId": "ne9jNwgtnnGaDgB4a",
       "_id": "nG4Amb4rYijMKWkZJ"
     },
-    "add new course form published label": {
-      "key": "add new course form published label",
+    "teach-addCourseForm-courseTitle-published-label": {
+      "key": "teach-addCourseForm-courseTitle-published-label",
       "lang": "ru",
       "text": "Поменяйте на \"Опубликовано\", когда будете готовы показать материал другим пользователям.",
       "ctime": 1426598653582,
@@ -472,8 +452,8 @@ mfPkg.syncAll({
       "revisionId": "9vbBtTcGGTgkZgFYw",
       "_id": "znTxpENA2QJyBEjhS"
     },
-    "add new course form cover photo label": {
-      "key": "add new course form cover photo label",
+    "teach-addCourseForm-courseTitle-coverPhotoLabel": {
+      "key": "teach-addCourseForm-courseTitle-coverPhotoLabel",
       "lang": "ru",
       "text": "Изображение ",
       "ctime": 1426598763600,
@@ -481,8 +461,8 @@ mfPkg.syncAll({
       "revisionId": "ESxrSPA5X7j5sLBdw",
       "_id": "3SbaG2wNtbb4TMLAC"
     },
-    "add new course form keywords label": {
-      "key": "add new course form keywords label",
+    "teach-addCourseForm-courseTitle-keywords-label": {
+      "key": "teach-addCourseForm-courseTitle-keywords-label",
       "lang": "ru",
       "text": "Ключевые слова",
       "ctime": 1426598497978,
@@ -490,8 +470,8 @@ mfPkg.syncAll({
       "revisionId": "Qaji3zaT5BsMmhJYY",
       "_id": "6Be8wamXqS24SYm6R"
     },
-    "add new course form about course label": {
-      "key": "add new course form about course label",
+    "teach-addCourseForm-courseTitle-aboutCourse-label": {
+      "key": "teach-addCourseForm-courseTitle-aboutCourse-label",
       "lang": "ru",
       "text": "О курсе",
       "ctime": 1426598841867,
@@ -499,8 +479,8 @@ mfPkg.syncAll({
       "revisionId": "Sz39Pzh8kpWFsJpE3",
       "_id": "KkHDWdrMLGiTp7SJt"
     },
-    "add new course form about course help text": {
-      "key": "add new course form about course help text",
+    "teach-addCourseForm-courseTitle-aboutCourse-helpText": {
+      "key": "teach-addCourseForm-courseTitle-aboutCourse-helpText",
       "lang": "ru",
       "text": "Вкратце опишите о чем вам курс",
       "ctime": 1426598927847,
@@ -609,8 +589,8 @@ mfPkg.syncAll({
     }
   },
   "en": {
-    "course add new header": {
-      "key": "course add new header",
+    "teach-mainHeading": {
+      "key": "teach-mainHeading",
       "lang": "en",
       "text": "Add new course",
       "ctime": 1426503739075,
@@ -621,8 +601,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "4K7wasJHM4pCtq5cv"
     },
-    "add new course form course title label": {
-      "key": "add new course form course title label",
+    "teach-addCourseForm-courseTitle-label": {
+      "key": "teach-addCourseForm-courseTitle-label",
       "lang": "en",
       "text": "Title",
       "ctime": 1426503739075,
@@ -633,8 +613,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "kgRTcSXjJKsaegWHG"
     },
-    "add new course form cover photo label": {
-      "key": "add new course form cover photo label",
+    "teach-addCourseForm-courseTitle-coverPhotoLabel": {
+      "key": "teach-addCourseForm-courseTitle-coverPhotoLabel",
       "lang": "en",
       "text": "Cover Photo",
       "ctime": 1426503739075,
@@ -645,8 +625,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "d5pksCGGorL7Qca8y"
     },
-    "add new course form author label": {
-      "key": "add new course form author label",
+    "teach-addCourseForm-courseTitle-author-label": {
+      "key": "teach-addCourseForm-courseTitle-author-label",
       "lang": "en",
       "text": "Author",
       "ctime": 1426503739075,
@@ -657,8 +637,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "9R9D7bYz2eiHYAWWM"
     },
-    "add new course form author placeholder": {
-      "key": "add new course form author placeholder",
+    "teach-addCourseForm-courseTitle-author-placeholder": {
+      "key": "teach-addCourseForm-courseTitle-author-placeholder",
       "lang": "en",
       "text": "Author Name",
       "ctime": 1426503739075,
@@ -669,8 +649,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "6pNu67uhDfSLQsWw2"
     },
-    "add new course form keywords label": {
-      "key": "add new course form keywords label",
+    "teach-addCourseForm-courseTitle-keywords-label": {
+      "key": "teach-addCourseForm-courseTitle-keywords-label",
       "lang": "en",
       "text": "Keywords",
       "ctime": 1426503739075,
@@ -681,8 +661,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "dbDuCZDFHonbZtPxN"
     },
-    "add new course form keywords placeholder": {
-      "key": "add new course form keywords placeholder",
+    "teach-addCourseForm-courseTitle-keywords-placeholder": {
+      "key": "teach-addCourseForm-courseTitle-keywords-placeholder",
       "lang": "en",
       "text": "Choose some tags (e.g. JavaScript, Math)",
       "ctime": 1426503739075,
@@ -693,8 +673,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "r5SuWbnu5cG9sQxJW"
     },
-    "add new course form published label": {
-      "key": "add new course form published label",
+    "teach-addCourseForm-courseTitle-published-label": {
+      "key": "teach-addCourseForm-courseTitle-published-label",
       "lang": "en",
       "text": "Change to \"Published\" when course should be viewable to others.",
       "ctime": 1426503739075,
@@ -705,8 +685,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "KAkuFxuK8Gf2e2LDH"
     },
-    "add new course form unpublished option": {
-      "key": "add new course form unpublished option",
+    "teach-addCourseForm-courseTitle-unpublished-option": {
+      "key": "teach-addCourseForm-courseTitle-unpublished-option",
       "lang": "en",
       "text": "Unpublished",
       "ctime": 1426503739075,
@@ -717,8 +697,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "N8GQ4qmmWBNr7X3si"
     },
-    "add new course form published option": {
-      "key": "add new course form published option",
+    "teach-addCourseForm-courseTitle-published-option": {
+      "key": "teach-addCourseForm-courseTitle-published-option",
       "lang": "en",
       "text": "Published",
       "ctime": 1426503739075,
@@ -729,8 +709,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "gDNBdWo7MoFc6B2YA"
     },
-    "add new course form about course label": {
-      "key": "add new course form about course label",
+    "teach-addCourseForm-courseTitle-aboutCourse-label": {
+      "key": "teach-addCourseForm-courseTitle-aboutCourse-label",
       "lang": "en",
       "text": "About this course",
       "ctime": 1426503739075,
@@ -741,8 +721,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "Lhiu62TNTTBinAZF2"
     },
-    "add new course form about course help text": {
-      "key": "add new course form about course help text",
+    "teach-addCourseForm-courseTitle-aboutCourse-helpText": {
+      "key": "teach-addCourseForm-courseTitle-aboutCourse-helpText",
       "lang": "en",
       "text": "Briefly describe the objectives of this course.",
       "ctime": 1426503739075,
@@ -753,8 +733,8 @@ mfPkg.syncAll({
       "template": "teach",
       "_id": "Gu5LLzLHTGbT2mRKL"
     },
-    "add new course form add course button": {
-      "key": "add new course form add course button",
+    "teach-addCourseForm-courseTitle-addCourse-button": {
+      "key": "teach-addCourseForm-courseTitle-addCourse-button",
       "lang": "en",
       "text": "Add Course",
       "ctime": 1426503739075,
@@ -1004,19 +984,6 @@ mfPkg.syncAll({
       "line": 6,
       "template": "saveButton",
       "_id": "YCRxKWwLAsZJuoAyr"
-    },
-    "save button template save button text": {
-      "key": "save button template save button text",
-      "lang": "en",
-      "text": "Save",
-      "ctime": 1426597721408,
-      "mtime": 1427286106891,
-      "revisionId": "pNhEm69R5j68vzpFY",
-      "file": "./client/templates/components/saveButton.html",
-      "line": 6,
-      "template": "saveButton",
-      "removed": true,
-      "_id": "fjwnAbf35ridwCFM6"
     }
   }
 }, {
