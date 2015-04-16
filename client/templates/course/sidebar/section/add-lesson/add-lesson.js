@@ -1,7 +1,7 @@
-Template.sectionAddLesson.events({
+Template.addLesson.events({
     'click .add-lesson-button': function (event, template) {
         // Get lesson name
-        var lessonName = template.find(".lesson-name").value;
+        var lessonName = template.find("#lesson-name").value;
 
         // Get course ID from parent template
         var courseID = Template.parentData()._id;
@@ -29,6 +29,6 @@ Template.sectionAddLesson.events({
         Courses.update(courseID, {$set: {"sections": courseSections}});
 
         // Clear the lesson name field
-        $(".lesson-name").val('');
+        $("#lesson-name").val('');
     }
 });

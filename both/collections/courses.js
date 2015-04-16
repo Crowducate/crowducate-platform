@@ -12,3 +12,9 @@ Courses.helpers({
         return image
     }
 });
+
+// During the course creation add user id and a date stamp with dateCreated.
+Courses.before.insert(function (userId, document) {
+    document.createdById = userId;
+    document.dateCreated = new Date();
+});
