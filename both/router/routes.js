@@ -8,6 +8,8 @@ Router.route('/teach');
 
 Router.route('/learn');
 
+Router.route('/userProfile');
+
 Router.route('tag/:tag',  {
     name: 'taggedCourses'
 });
