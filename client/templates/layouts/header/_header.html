@@ -34,6 +34,7 @@
                             {{ mf '_header-teachTab-linkText' 'Teach' }}
                         </a>
                     </li>
+                    
                 </ul>
                 {{> languageSelection}}
                 {{#if currentUser}}
@@ -45,8 +46,8 @@
                         <ul class="dropdown-menu" role="menu">
                         <li>    <a href="#">Hello {{usermail}}</a>
                         </li>
-                        <li>
-                                <a href="{{pathFor 'userProfile'}}">
+                        <li class="{{ isActivePath regex='userProfile'}}">
+                                <a href="{{ pathFor 'userProfile' }}">
                                 <i class="fa fa-user"></i>&nbsp;
                                     {{ mf '_header-dropdownMenu-viewEditProfile' 'View/Edit Profile'}}
                                 </a>

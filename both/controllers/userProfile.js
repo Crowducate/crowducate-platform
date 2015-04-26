@@ -1,0 +1,5 @@
+UserProfileController = AppController.extend({
+  data: {
+
+  }
+});
