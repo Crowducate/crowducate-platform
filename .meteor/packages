@@ -30,3 +30,4 @@ cfs:filesystem
 cfs:standard-packages
 gadicohen:messageformat
 browser-policy
+babrahams:editable-text-wysiwyg-bootstrap-3
