@@ -4,18 +4,19 @@
         {{> courseLessonTitle name=name }}
 
         <div class="lesson-text {{editClass}}">
-            {{# unless editingLessonText }}
-                {{# if text }}
-                    {{{ text }}}
-                    {{ else }}
-                    <p>There does not appear to be any lesson text. Click to edit.</p>
-                {{/ if }}
-            {{/ unless }}
+            {{# if editingCourse }}
+            {{> editableText
+                collection="lessons"
+                field="text"
+                textarea= true
+                wysiwyg=true
+                context=activeLesson
+                substitute='<i class="fa fa-pencil"></i>' }}
+
+            {{ else }}
+                {{{ text }}}
+            {{/ if }}
+            </div>
         </div>
-        {{> richTextEditor }}
-        {{# if editingLessonText }}
-            {{> lessonEditToolbar }}
-        {{/ if }}
-    </div>
-    {{/ with }}
-</template>
+        {{/ with }}
+    </template>
