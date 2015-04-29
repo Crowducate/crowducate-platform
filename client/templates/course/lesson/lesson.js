@@ -1,3 +1,29 @@
+Template.lesson.rendered = function () {
+    // Create new reactive variable for course edit state
+    this.editingCourseVar = new ReactiveVar(false);
+
+    // Get the current router
+    controller = Router.current();
+
+    // Get current course from router
+    currentCourse = controller.params._id;
+
+    /*
+    * when user is editing the active course,
+    * set the value of a reactive variable (true/false)
+    * Used to show/hide wysiwyg editor.
+    */
+    this.autorun(function () {
+        var instance = Template.instance();
+
+        // Update course edit variable when editing course
+        if (currentCourse === Session.get('editingCourseID')) {
+            instance.editingCourseVar.set(true);
+        } else {
+            instance.editingCourseVar.set(false);
+        };
+    });
+};
 Template.lesson.helpers({
     'activeLesson': function () {
         // Get the lesson ID from reactive var
@@ -8,37 +34,9 @@ Template.lesson.helpers({
 
         return lesson;
     },
-    'editingLessonText': function (template) {
-        // return true if editing the lesson text
-        // value is set on click event
-        return editingLessonText.get();
-    }
-});
-
-Template.lesson.events({
-    'click .lesson-text': function () {
-        // editing mode is true if text is clicked
-        editingLessonText.set(true);
-
-        // in edit mode,
-        // add rich text editor
-        // to lesson text
-        if (editingLessonText.get()) {
-            $('#rich-text-editor').summernote({
-                'height': 300,
-                'focus': true,
-                toolbar: [
-                    //[groupname, [button list]]
-                    ['style', ['bold', 'italic', 'underline', 'clear']],
-                    ['para', ['ul', 'ol']],
-                    ['insert', ['link','picture','video','hr']],
-                    ['view', ['fullscreen', 'codeview']],
-                    ['help', ['help']]
-                ]
-            });
-
-            // Set the rich text editor code to lesson text
-            $('#rich-text-editor').code(this.text);
-        }
+    'editingCourse': function () {
+        var instance = Template.instance();
+        // Keep track of whether user is editing course
+        return instance.editingCourseVar.get();
     }
 });
