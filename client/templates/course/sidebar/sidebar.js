@@ -18,18 +18,12 @@ Template.courseSidebar.rendered = function () {
             // prevents duplicate text
             display: false
         });
-
-        // Lesson titles
-        $('.sidebar-lesson-title').editable({mode: 'inline'});
     };
 
     /*
     Disable sidebar inline editors
     */
     this.disableSidebarInlineEditors = function () {
-        // Lesson title(s)
-        $('.sidebar-lesson-title').editable('destroy');
-
         // Section title(s)
         $('.section-title').editable('destroy');
     };
