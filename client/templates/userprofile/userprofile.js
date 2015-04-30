@@ -80,6 +80,7 @@ Template.userProfile.events({
 
                 }
                 else {
+                    Session.set("perrors", "");
                     console.log("Password changed!");
                 }
             });
