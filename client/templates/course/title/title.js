@@ -6,7 +6,7 @@ Template.courseTitle.created = function () {
     controller = Router.current();
 
     // Get current course from router
-    currentCourse = controller.params._id;
+    currentCourseId = controller.params._id;
 
     /*
     * when user is editing the active course,
@@ -17,7 +17,7 @@ Template.courseTitle.created = function () {
         var instance = Template.instance();
 
         // Update course edit variable when editing course
-        if (currentCourse === Session.get('editingCourseID')) {
+        if (currentCourseId === Session.get('editingCourseID')) {
             instance.editingCourseVar.set(true);
         } else {
             instance.editingCourseVar.set(false);
