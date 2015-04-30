@@ -1,22 +1,34 @@
 <template name="lesson">
     {{# with activeLesson }}
     <div class="col-xs-12 col-sm-7 col-md-9">
-        {{> courseLessonTitle name=name }}
-
-        <div class="lesson-text {{editClass}}">
-            {{# if editingCourse }}
-            {{> editableText
-                collection="lessons"
-                field="text"
-                textarea= true
-                wysiwyg=true
-                context=activeLesson
-                substitute='<i class="fa fa-pencil"></i>' }}
-
-            {{ else }}
-                {{{ text }}}
-            {{/ if }}
+        <div class="panel panel-default">
+            <p class="panel-heading">
+                {{# if editingCourse }}
+                    {{> editableText
+                        collection="lessons"
+                        field="name"
+                        textarea=false
+                        wysiwyg=false
+                        context=activeLesson
+                        substitute='<i class="fa fa-pencil"></i>' }}
+                {{ else }}
+                    {{ name }}
+                {{/ if }}
+            </p>
+            <div class="panel-body">
+                {{# if editingCourse }}
+                    {{> editableText
+                        collection="lessons"
+                        field="text"
+                        textarea=true
+                        wysiwyg=true
+                        context=activeLesson
+                        substitute='<i class="fa fa-pencil"></i>' }}
+                {{ else }}
+                    {{{ text }}}
+                {{/ if }}
             </div>
         </div>
-        {{/ with }}
-    </template>
+    </div>
+    {{/ with }
+</template>
