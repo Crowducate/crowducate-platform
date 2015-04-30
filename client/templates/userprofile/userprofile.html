@@ -57,28 +57,41 @@
 				{{ mf 'userProfile-subheading-password' 'Password'}}
 		</h2>
 		<p>Creating a password allows you to log in with your Crowducate username and Password</p> 
-		<div class="form-group">
-                <label for="New Password">
-                    {{ mf 'userProfile-newPassword-label' 'New Password' }}
+		<form class="changePassword">
+            <div class="form-group">
+                <label for="Primary Language">
+                    {{ mf 'userProfile-oldpassword-label' 'Old Password' }}
                 </label>
                 <input
-                       type="text"
-                       class="form-control"
-                       id="newPassword"
-                       placeholder="">
-            </div>   
+                        type="password"
+                        class="form-control"
+                        id="oldPassword"
+                        placeholder="">
+            </div>
 
-         <div class="form-group">
-
-                <label for="New Password Check">
-                    {{ mf 'userProfile-reenterNewPassword-label' 'Reenter New Password' }}
+            <div class="form-group">
+                <label for="Primary Language">
+                    {{ mf 'userProfile-newpassword-label' 'New Password' }}
                 </label>
                 <input
-                       type="text"
-                       class="form-control"
-                       id="newPasswordCheck"
-                       placeholder="">
-            </div>      
+                        type="password"
+                        class="form-control"
+                        id="newPassword"
+                        placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="New Password again">
+                    {{ mf 'userProfile-newpasswordagain-label' 'New Password again' }}
+                </label>
+                <input
+                        type="password"
+                        class="form-control"
+                        id="newPasswordCheck"
+                        placeholder="">
+            </div>
+            <input type="submit">
+        </form>
 
 		<hr>
 		<h2 class="userprofile-sub-title">

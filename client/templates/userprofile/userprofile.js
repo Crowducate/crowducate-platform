@@ -3,7 +3,6 @@ Template.userProfile.helpers({
     'usor': function() {
         return Meteor.users.findOne({'id':this._id });
     }
-
 });
 
 Template.userProfile.events({
@@ -36,10 +35,29 @@ Template.userProfile.events({
     'change #languages': function(event, template) {
         event.preventDefault();
         var languages = template.find("#languages").value;
-        if (Meteor.userId())
-        {
-            Meteor.call("User.update", Meteor.userId(),"languages", languages);
+        if (Meteor.userId()) {
+            Meteor.call("User.update", Meteor.userId(), "languages", languages);
         }
+    },
+    'submit .changePassword': function(event,template) {
+        event.preventDefault();
+        var oldpassword = template.find("#oldPassword").value;
+        var password = template.find("#newPassword").value;
+        var passwordagain = template.find("#newPasswordCheck").value;
+        if ((password === passwordagain)) {
+            Accounts.changePassword(oldpassword,password, function(error) {
+                if(error) {
+                    console.log("Something went wrong! " + error);
 
+                }
+                else {
+                    console.log("Password changed!");
+                }
+            });
+        }
     }
+
+
+
+
 });
