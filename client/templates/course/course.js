@@ -1,6 +1,8 @@
-Template.course.rendered = function () {
-    //modify inline editor buttons style
-    $.fn.editableform.buttons =
-        '<button type="submit" class="btn btn-success editable-submit btn-mini"><i class="fa fa-check"></i></button>' +
-        '<button type="button" class="btn btn-danger editable-cancel"><i class="fa fa-times"></i></button>';
+Template.course.created = function () {
+    // keep track of whether user is editing the lesson text
+    // Used in child templates such as lesson and sidebar
+    editingLessonText = new ReactiveVar(false);
+
+    // Set the empty active lesson ID variable
+    activeLessonID = new ReactiveVar();
 };
