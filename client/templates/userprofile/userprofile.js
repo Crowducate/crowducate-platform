@@ -2,7 +2,14 @@ Template.userProfile.helpers({
     //TODO: fetch current profile
     'usor': function() {
         return Meteor.users.findOne({'id':this._id });
+    },
+    'errors': function() {
+        return Session.get("errors");
+    },
+    'perrors': function() {
+        return Session.get("perrors");
     }
+
 });
 
 Template.userProfile.events({
@@ -11,7 +18,15 @@ Template.userProfile.events({
         var realname = template.find("#realName").value;
         if (Meteor.userId())
         {
-            Meteor.call("User.update", Meteor.userId(),"realname", realname);
+            if (realname === '')
+            {
+                Session.set("errors", "Your Realname is empty!");
+            }
+            else {
+                Session.set("errors", "");
+                Meteor.call("User.update", Meteor.userId(),"realname", realname);
+            }
+
         }
     },
     'change #userName': function(event, template) {
@@ -19,7 +34,14 @@ Template.userProfile.events({
         var username = template.find("#userName").value;
         if (Meteor.userId())
         {
-            Meteor.call("User.update", Meteor.userId(), "username", username);
+            if (username === '')
+            {
+                Session.set("errors", "Your Username is empty!");
+            }
+            else {
+                Session.set("errors", "");
+                Meteor.call("User.update", Meteor.userId(), "username", username);
+            }
         }
 
     },
@@ -36,8 +58,14 @@ Template.userProfile.events({
         event.preventDefault();
         var languages = template.find("#languages").value;
         if (Meteor.userId()) {
+            if (languages === '')
+            {
+                Session.set("errors", "You need to enter atleast one Language!");
+            }
+            else {
+            Session.set("errors", "");
             Meteor.call("User.update", Meteor.userId(), "languages", languages);
-        }
+        }}
     },
     'submit .changePassword': function(event,template) {
         event.preventDefault();
@@ -56,6 +84,9 @@ Template.userProfile.events({
                 }
             });
             }
+        }
+        else {
+            Session.set("perrors", "Your passwords do not match.")
         }
     }
 

@@ -9,6 +9,7 @@
 	    <hr>
 	</div>
     <div class="panel-body">
+        <p class="profile_errors">{{errors}}</p>
 		<h2 class="userprofile-sub-title">
 				{{ mf 'userProfile-subheading-basics' 'Basics'}}
 		</h2>
@@ -50,12 +51,13 @@
                        type="text"
                        class="form-control"
                        id="languages"
-                       placeholder="">
+                       value="{{usor.languages}}">
             </div>   
 		<hr>
 		<h2 class="userprofile-sub-title">
 				{{ mf 'userProfile-subheading-password' 'Password'}}
 		</h2>
+        <p class="profile_errors">{{perrors}}</p>
 		<p>Creating a password allows you to log in with your Crowducate username and Password</p> 
 		<form class="changePassword">
             <div class="form-group">
