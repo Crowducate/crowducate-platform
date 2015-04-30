@@ -45,6 +45,7 @@ Template.userProfile.events({
         var password = template.find("#newPassword").value;
         var passwordagain = template.find("#newPasswordCheck").value;
         if ((password === passwordagain)) {
+            if (Meteor.userId()) {
             Accounts.changePassword(oldpassword,password, function(error) {
                 if(error) {
                     console.log("Something went wrong! " + error);
@@ -54,6 +55,7 @@ Template.userProfile.events({
                     console.log("Password changed!");
                 }
             });
+            }
         }
     }
 
