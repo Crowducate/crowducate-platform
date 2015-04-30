@@ -1,7 +1,7 @@
 <template name="sectionLesson">
     <li>
         <a href="#" class="sidebar-lesson-link">
-            {{ if editingCourse }}
+            {{# if editingCourse }}
             {{> editableText
                 collection="lessons"
                 field="name"
