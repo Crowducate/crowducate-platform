@@ -42,19 +42,6 @@ Template.teach.events({
 });
 
 Template.teach.rendered = function() {
-    // Attach the summernote editor to the description field
-    $('#aboutText').summernote({
-        'height': 150,
-        toolbar: [
-            //[groupname, [button list]]
-            ['style', ['bold', 'italic', 'underline', 'clear']],
-            ['font', ['strikethrough']],
-            ['fontsize', ['fontsize']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-        ]
-    });
-
     // Get an array of the existing tags
     var tagOptions = Tags.find().fetch();
 
@@ -64,7 +51,7 @@ Template.teach.rendered = function() {
         valueField: 'name',
         labelField: 'name',
         searchField: 'name',
-        create: true, // TODO: Add entries to Tags collection.
+        create: true,
         highlight: true,
         maxOptions: 5,
         options: tagOptions,
