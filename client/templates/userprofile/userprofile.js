@@ -29,7 +29,7 @@ Template.userProfile.events({
 
         }
     },
-    'change #userName': function(event, template) {
+    'click #changeUser': function(event, template) {
         event.preventDefault();
         var username = template.find("#userName").value;
         if (Meteor.userId())
