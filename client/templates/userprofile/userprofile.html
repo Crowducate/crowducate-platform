@@ -32,28 +32,41 @@
                        class="form-control"
                        id="userName"
                        value="{{usor.username}}">
-             <button id="changeUser" value>Change Username</button>
-            </div>   
+            </div>
+        <div class="form-group">
+            <label for="Email">
+                {{ mf 'tuserProfile-email-label' 'Email' }}
+            </label>
+            <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    value="{{usermail}}">
+        </div>
             <div class="form-group">
                 <label for="Gender">
                     {{ mf 'userProfile-gender-label' 'Gender' }}
                 </label>
-                <select id="gender">
+                <select class="form-control" id="gender">
                     <option value="Female">Female</option>
                     <option value="Male">Male</option>
                     <option value="Other">Other</option>
                 </select>
             </div>
+
          <div class="form-group">
                 <label for="Primary Language">
                     {{ mf 'userProfile-primarylang-label' 'Primary Language' }}
                 </label>
-                <input
-                       type="text"
-                       class="form-control"
-                       id="languages"
-                       value="{{usor.languages}}">
-            </div>   
+                <select class="form-control" id="language">
+                {{#each langs}}
+                    <option value="{{this}}">{{this}}</option>
+                {{/each}}
+                </select>
+         </div>
+        <div class ="form   -group">
+            <button id="saveChanges">Save Changes</button>
+        </div>
 		<hr>
 		<h2 class="userprofile-sub-title">
 				{{ mf 'userProfile-subheading-password' 'Password'}}

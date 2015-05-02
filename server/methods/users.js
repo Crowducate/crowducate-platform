@@ -4,6 +4,7 @@ Meteor.methods({
         {
             console.log(userId + ":" + target + ":" + doc);
             console.log("user okay, target and doc not null");
+            //TODO: simplify
             switch(target) {
                 case "username":
                     console.log("Target is username");
@@ -17,9 +18,13 @@ Meteor.methods({
                     console.log("Target is Gender");
                     Meteor.users.update(userId, {$set: {'gender': doc}});
                     break;
-                case "languages":
-                    console.log("Target is Languages");
-                    Meteor.users.update(userId, {$set: {'languages': doc}});
+                case "language":
+                    console.log("Target is Language");
+                    Meteor.users.update(userId, {$set: {'language': doc}});
+                    break;
+                case "email":
+                    console.log("Target is Email")
+                    Meteor.users.update(userId, {$set: {'emails': [{'address': doc}]}});
                     break;
 
                 default:
