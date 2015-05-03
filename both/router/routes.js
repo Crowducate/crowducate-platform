@@ -8,6 +8,10 @@ Router.route('/teach');
 
 Router.route('/learn');
 
+Router.route('/profileSettings');
+
+Router.route('/settings');
+
 Router.route('tag/:tag',  {
     name: 'taggedCourses'
 });
@@ -30,4 +34,4 @@ Router.route('/singleresourcepage/info', {
 
 Router.route('license', {
   name: 'licenseQuestions'
-})
+});
