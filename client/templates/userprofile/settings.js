@@ -3,12 +3,12 @@ var isEmail = function(email) {
     return re.test(email);
 };
 
-Template.userProfile.rendered = function() {
+Template.profileSettings.rendered = function() {
     $("#language").find("option[value=" + Meteor.user().language + "]").attr("selected", "selected");
     $("#gender").find("option[value=" + Meteor.user().gender + "]").attr("selected", "selected");
 };
 
-Template.userProfile.helpers({
+Template.profileSettings.helpers({
     //TODO: fetch current profile
     'usor': function() {
         return Meteor.users.findOne({'id':this._id });
@@ -16,9 +16,19 @@ Template.userProfile.helpers({
     'usermail': function() {
         return Meteor.user().emails[0].address;
     },
-    'errors': function() {
-        return Session.get("errors");
+    'realerror': function() {
+        return Session.get("realerror");
     },
+    'usererror': function() {
+        return Session.get("usererror");
+    },
+    'emailerror': function() {
+        return Session.get("emailerror");
+    },
+    'basicsuccess': function() {
+        return Session.get("basicsuccess");
+    },
+
     'perrors': function() {
         return Session.get("perrors");
     },
@@ -28,7 +38,7 @@ Template.userProfile.helpers({
     }
 });
 
-Template.userProfile.events({
+Template.profileSettings.events({
     'click #saveChanges': function(event, template) {
         var realname = template.find("#realName").value;
         var username = template.find("#userName").value;
@@ -40,22 +50,27 @@ Template.userProfile.events({
         {
             if (realname === '')
             {
-                Session.set("errors", "Your Realname is empty!");
+                Session.set("realerror", "Your Realname is empty!");
             }
             else if (username === '')
             {
-                Session.set("errors", "Your username is empty!");
+
+                Session.set("usererror", "Your Username is empty!");
             }
             else if (email === '')
             {
-                Session.set("errors", "Your email is empty!");
+                Session.set("emailerror", "Your Email is empty!");
             }
             else if (!(isEmail(email))) {
-                Session.set("errors", "You have not entered a correct Email!");
+                Session.set("emailerror", "You have not entered a correct Email!");
             }
 
             else {
-                Session.set("errors", "");
+                //TODO: simplify
+                Session.set("realerror", "");
+                Session.set("usererror", "");
+                Session.set("emailerror", "");
+                Session.set("basicsuccess", "Data successfully changed!");
                 console.log("success");
 
                 //TODO simplify

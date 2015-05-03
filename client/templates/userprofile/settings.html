@@ -1,19 +1,19 @@
-<template name="userProfile">
+<template name="profileSettings">
 <div class="panel">
 	<div class="panel-heading">
 		<h1 class="userprofile-main-title">
-	          {{ mf 'userProfile-mainHeading' 'Profile'}}
+	          {{ mf 'userProfile-mainHeading' 'Profile Settings'}}
 	    </h1>
 	    <a href="" class="float-right">{{ mf 'userProfile-account' 'Account (to be added)' }} </a>
 	    <a href="" class="float-right">{{ mf 'userProfile-email' 'Email (to be added)' }}</a>
 	    <hr>
 	</div>
     <div class="panel-body">
-        <p class="profile_errors">{{errors}}</p>
 		<h2 class="userprofile-sub-title">
 				{{ mf 'userProfile-subheading-basics' 'Basics'}}
 		</h2>
 		<div class="form-group">
+            <p class="profile_errors">{{realerror}}</p>
                 <label for="Real Name">
                     {{ mf 'userProfile-realname-label' 'Real Name' }}
                     </label>
@@ -24,6 +24,7 @@
                        value="{{usor.realname}}">
             </div>
          <div class="form-group">
+             <p class="profile_errors">{{usererror}}</p>
                 <label for="Username">
                     {{ mf 'tuserProfile-username-label' 'Username' }}
                 </label>
@@ -34,6 +35,7 @@
                        value="{{usor.username}}">
             </div>
         <div class="form-group">
+            <p class="profile_errors">{{emailerror}}</p>
             <label for="Email">
                 {{ mf 'tuserProfile-email-label' 'Email' }}
             </label>
@@ -67,6 +69,7 @@
         <div class ="form   -group">
             <button id="saveChanges">Save Changes</button>
         </div>
+        <p class="profile_success">{{basicsuccess}}</p>
 		<hr>
 		<h2 class="userprofile-sub-title">
 				{{ mf 'userProfile-subheading-password' 'Password'}}

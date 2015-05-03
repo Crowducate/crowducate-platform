@@ -46,14 +46,14 @@
                         <ul class="dropdown-menu" role="menu">
                         <li>    <a href="#">Hello {{usermail}}</a>
                         </li>
-                        <li class="{{ isActivePath regex='userProfile'}}">
-                                <a href="{{ pathFor 'userProfile' }}">
+                        <li >
+                                <a href="#">
                                 <i class="fa fa-user"></i>&nbsp;
                                     {{ mf '_header-dropdownMenu-Profile' 'My Profile'}}
                                 </a>
                             </li>
-                            <li class="{{ isActivePath regex='settings'}}">
-                                <a href="{{ pathFor 'settings' }}">
+                            <li class="{{ isActivePath regex='profileSettings'}}">
+                                <a href="{{ pathFor 'profileSettings' }}">
                                 <i class="fa fa-user"></i>&nbsp;
                                     {{ mf '_header-dropdownMenu-Settings' 'Settings'}}
                                 </a>

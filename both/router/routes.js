@@ -8,7 +8,7 @@ Router.route('/teach');
 
 Router.route('/learn');
 
-Router.route('/userProfile');
+Router.route('/profileSettings');
 
 Router.route('/settings');
 
@@ -34,4 +34,4 @@ Router.route('/singleresourcepage/info', {
 
 Router.route('license', {
   name: 'licenseQuestions'
-})
+});

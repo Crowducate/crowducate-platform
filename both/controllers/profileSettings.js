@@ -1,4 +1,4 @@
-UserProfileController = AppController.extend({
+ProfileSettingsController = AppController.extend({
   data: {
 
   },
