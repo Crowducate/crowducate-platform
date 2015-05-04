@@ -7,6 +7,7 @@ Template.profileSettings.rendered = function() {
     $("#language").find("option[value=" + Meteor.user().language + "]").attr("selected", "selected");
     $("#gender").find("option[value=" + Meteor.user().gender + "]").attr("selected", "selected");
     Session.set("basicsuccess", "");
+    Session.set("passwordsuccess", "");
 };
 
 Template.profileSettings.helpers({
@@ -28,6 +29,9 @@ Template.profileSettings.helpers({
     },
     'basicsuccess': function() {
         return Session.get("basicsuccess");
+    },
+    'passwordsuccess': function() {
+        return Session.get("passwordsuccess");
     },
 
     'perrors': function() {
@@ -129,7 +133,7 @@ Template.profileSettings.events({
                 }
                 else {
                     Session.set("perrors", "");
-                    console.log("Password changed!");
+                    Session.set("passwordsuccess","Password changed!");
                 }
             });
             }
