@@ -6,11 +6,13 @@ var isEmail = function(email) {
 Template.profileSettings.rendered = function() {
     $("#language").find("option[value=" + Meteor.user().language + "]").attr("selected", "selected");
     $("#gender").find("option[value=" + Meteor.user().gender + "]").attr("selected", "selected");
+    Session.set("basicsuccess", "");
+    Session.set("passwordsuccess", "");
 };
 
 Template.profileSettings.helpers({
     //TODO: fetch current profile
-    'usor': function() {
+    'profile': function() {
         return Meteor.users.findOne({'id':this._id });
     },
     'usermail': function() {
@@ -28,6 +30,9 @@ Template.profileSettings.helpers({
     'basicsuccess': function() {
         return Session.get("basicsuccess");
     },
+    'passwordsuccess': function() {
+        return Session.get("passwordsuccess");
+    },
 
     'perrors': function() {
         return Session.get("perrors");
@@ -39,6 +44,47 @@ Template.profileSettings.helpers({
 });
 
 Template.profileSettings.events({
+
+    'change #realName': function(event,template) {
+      if(template.find("#realName").value)
+      {
+          Session.set("realerror", "");
+      }
+        else
+      {
+          Session.set("realerror", "Your Realname is empty!");
+      }
+    },
+    'change #userName': function(event,template) {
+        if(template.find("#userName").value)
+        {
+            Session.set("usererror", "");
+        }
+        else
+        {
+            Session.set("usererror", "Your username is empty!");
+        }
+    },
+    'change #email': function(event,template) {
+        if(template.find("#email").value)
+        {
+            Session.set("emailerror", "");
+            if(!(isEmail(template.find("#email".value))))
+            {
+                Session.set("emailerror", "You have not entered a correct Email!");
+            }
+            else
+            {
+                Session.set("emailerror", "");
+            }
+        }
+        else
+        {
+            Session.set("emailerror", "Your Email is empty!");
+        }
+
+    },
+
     'click #saveChanges': function(event, template) {
         var realname = template.find("#realName").value;
         var username = template.find("#userName").value;
@@ -48,28 +94,8 @@ Template.profileSettings.events({
 
         if (Meteor.userId())
         {
-            if (realname === '')
+            if (realname && username && gender && language && email && isEmail(email))
             {
-                Session.set("realerror", "Your Realname is empty!");
-            }
-            else if (username === '')
-            {
-
-                Session.set("usererror", "Your Username is empty!");
-            }
-            else if (email === '')
-            {
-                Session.set("emailerror", "Your Email is empty!");
-            }
-            else if (!(isEmail(email))) {
-                Session.set("emailerror", "You have not entered a correct Email!");
-            }
-
-            else {
-                //TODO: simplify
-                Session.set("realerror", "");
-                Session.set("usererror", "");
-                Session.set("emailerror", "");
                 Session.set("basicsuccess", "Data successfully changed!");
                 console.log("success");
 
@@ -80,7 +106,10 @@ Template.profileSettings.events({
                 Meteor.call("User.update", Meteor.userId(),"email", email);
                 Meteor.call("User.update", Meteor.userId(),"language", language);
 
-
+            }
+            else
+            {
+                console.log("there has been a problem!");
             }
 
         }
@@ -104,7 +133,7 @@ Template.profileSettings.events({
                 }
                 else {
                     Session.set("perrors", "");
-                    console.log("Password changed!");
+                    Session.set("passwordsuccess","Password changed!");
                 }
             });
             }
