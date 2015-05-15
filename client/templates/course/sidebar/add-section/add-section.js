@@ -7,10 +7,10 @@ Template.addSection.events({
         // Get current sections, before adding new section
         if (this.sections) {
             // If sections exists, use them
-            var sections = this.sections;
+            var sectionIDs = this.sectionIDs;
         } else {
             // otherwise create empty sections array
-            var sections = [];
+            var sectionIDs = [];
         }
 
         // Get the title of new section
@@ -23,10 +23,10 @@ Template.addSection.events({
         var newSectionID = Sections.insert(newSection);
 
         // Add section ID to existing sections
-        sections.push(newSectionID);
+        sectionIDs.push(newSectionID);
 
         // Update the course with new section
-        Courses.update(this._id, {$set: {'sections': sections}});
+        Courses.update(this._id, {$set: {'sectionIDs': sectionIDs}});
 
         // Reset the value of section title field
         $("#section-title").val("");
