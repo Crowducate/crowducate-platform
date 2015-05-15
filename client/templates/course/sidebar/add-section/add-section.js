@@ -19,8 +19,11 @@ Template.addSection.events({
         // Set section title in new section object
         var newSection = {'title': title};
 
-        // Add section to end of existing sections
-        sections.push(newSection);
+        // Insert new section into database
+        var newSectionID = Sections.insert(newSection);
+
+        // Add section ID to existing sections
+        sections.push(newSectionID);
 
         // Update the course with new section
         Courses.update(this._id, {$set: {'sections': sections}});
