@@ -3,25 +3,29 @@ Template.addSection.events({
         /*
         / Add new section to the course
         */
+        var sectionIDs, // list of section IDs in current course
+        sectionTitle, // Title of new section, from template
+        newSection, // Object containing new section
+        newSectionID; // ID of created section, returned from db insert
 
         // Get current sections, before adding new section
         if (this.sectionIDs) {
             // If sections exists, use them
-            var sectionIDs = this.sectionIDs;
+            sectionIDs = this.sectionIDs;
         } else {
             // otherwise create empty sections array
-            var sectionIDs = [];
+            sectionIDs = [];
         }
 
         // Get the title of new section
-        var title = template.find('#section-title').value;
+        sectionTitle = instance.find('#section-title').value;
 
         // Set section title in new section object
-        var newSection = {'title': title};
+        newSection = {'title': sectionTitle};
 
         // Insert new section into database
-        var newSectionID = Sections.insert(newSection);
-
+        newSectionID = Sections.insert(newSection);
+        
         // Add section ID to existing sections
         sectionIDs.push(newSectionID);
 
