@@ -5,7 +5,7 @@ Template.addSection.events({
         */
 
         // Get current sections, before adding new section
-        if (this.sections) {
+        if (this.sectionIDs) {
             // If sections exists, use them
             var sectionIDs = this.sectionIDs;
         } else {
