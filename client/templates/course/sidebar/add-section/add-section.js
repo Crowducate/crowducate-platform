@@ -1,5 +1,5 @@
 Template.addSection.events({
-    'click #add-section-button': function (event, template) {
+    'click #add-section-button': function (event, instance) {
         /*
         / Add new section to the course
         */
