@@ -1,19 +1,30 @@
 <template name="courseSidebarSection">
-    <div class="panel panel-default">
-        {{> sectionTitle }}
-        <div class="panel-body single-content-table-block">
-            {{# if lessons }} <!-- Make sure there are lessons for looping -->
-            <ul class="nav nav-pills nav-stacked">
-                {{# each lessons }} <!-- Loop through lessons -->
-                {{> sectionLesson }}
-                {{/ each }}
-            </ul>
-            {{/ if }}
-        </div>
-        {{# if editingThisCourse }}
-        <div class="panel-footer">
-            {{> addLesson }}
-        </div>
-        {{/ if }}
+  <div class="panel panel-default">
+    {{#if Template.subscriptionsReady }}
+    <div class="panel-heading">
+      <!-- TODO: see if this can be re-written using #with instead of #each -->
+      {{#each section }}
+      {{ title }}
+      {{/each }}
     </div>
+    {{/ if }}
+
+    {{# if lessons }}
+    <div class="panel-body">
+
+        <ul class="nav nav-pills nav-stacked">
+          {{# each lessons }}
+            {{> sectionLesson}}
+          {{/ each }}
+        </ul>
+
+    </div>
+    {{/ if }}
+
+    {{# if editingThisCourse }}
+    <div class="panel-footer">
+      {{> addLesson }}
+    </div>
+    {{/ if }}
+  </div>
 </template>
