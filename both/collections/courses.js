@@ -11,9 +11,7 @@ Courses.helpers({
   },
   'coverImage': function() {
     // Get the cover image from Images collection
-    var image = Images.findOne(this.coverImageId);
-
-    return image
+    return image = Images.findOne(this.coverImageId);
   }
 });
 
