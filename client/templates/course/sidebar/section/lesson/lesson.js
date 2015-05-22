@@ -1,4 +1,4 @@
-Template.sectionLesson.onCreated = function () {
+Template.sectionLesson.created = function () {
     // Create new reactive variable for course edit state
     this.editingCourseVar = new ReactiveVar(false);
 
