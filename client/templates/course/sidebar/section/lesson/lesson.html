@@ -9,7 +9,9 @@
                 wysiwyg=false
                 substitute='<i class="fa fa-pencil"></i>' }}
             {{ else }}
+              {{# with lesson }}
                 {{ name }}
+              {{/ with }}
             {{/ if }}
         </a>
     </li>
