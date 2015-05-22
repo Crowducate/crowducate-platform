@@ -4,5 +4,5 @@ Template.course.created = function () {
     editingLessonText = new ReactiveVar(false);
 
     // Set the empty active lesson ID variable
-    activeLessonID = new ReactiveVar();
+    activeLessonID = new ReactiveVar(undefined);
 };
