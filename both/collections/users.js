@@ -11,7 +11,7 @@ Schema.UserProfile = new SimpleSchema({
 	},
 	language: {
 		type: String
-	
+	}
 
 });
 
