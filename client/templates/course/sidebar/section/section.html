@@ -2,10 +2,9 @@
   <div class="panel panel-default">
     {{#if Template.subscriptionsReady }}
     <div class="panel-heading">
-      <!-- TODO: see if this can be re-written using #with instead of #each -->
-      {{#each section }}
+      {{#with section }}
       {{ title }}
-      {{/each }}
+      {{/with }}
     </div>
     {{/ if }}
 
