@@ -1,10 +1,24 @@
 <template name="courseSidebarSection">
+  {{#if Template.subscriptionsReady}}
   <div class="panel panel-default">
-    {{#with section }}
-      <div class="panel-heading">
-        {{ title }}
-      </div>
+    <div class="panel-heading">
+      {{# if editingThisCourse }}
+        {{> editableText
+          collection="sections"
+          context=section
+          field="title"
+          textarea=false
+          wysiwyg=false
+          substitute='<i class="fa fa-pencil"></i>' }}
+      {{ else }}
+        {{# with section }}
+          {{ title }}
+        {{/ with }}
+      {{/ if }}
+    </div>
 
+    <!-- lessons -->
+    {{#with section }}
       {{# if lessonIDs }}
       <div class="panel-body">
           <ul class="nav nav-pills nav-stacked">
@@ -13,13 +27,14 @@
             {{/ each }}
           </ul>
       </div>
-    {{/ if }}
-
+      {{/ if }}
     {{/with }}
+
     {{# if editingThisCourse }}
     <div class="panel-footer">
       {{> addLesson }}
     </div>
     {{/ if }}
   </div>
+  {{/ if }}
 </template>
