@@ -1,25 +1,21 @@
 <template name="courseSidebarSection">
   <div class="panel panel-default">
-    {{#if Template.subscriptionsReady }}
-    <div class="panel-heading">
-      {{#with section }}
-      {{ title }}
-      {{/with }}
-    </div>
+    {{#with section }}
+      <div class="panel-heading">
+        {{ title }}
+      </div>
+
+      {{# if lessonIDs }}
+      <div class="panel-body">
+          <ul class="nav nav-pills nav-stacked">
+            {{# each lessonIDs }}
+              {{> sectionLesson}}
+            {{/ each }}
+          </ul>
+      </div>
     {{/ if }}
 
-    {{# if lessons }}
-    <div class="panel-body">
-
-        <ul class="nav nav-pills nav-stacked">
-          {{# each lessons }}
-            {{> sectionLesson}}
-          {{/ each }}
-        </ul>
-
-    </div>
-    {{/ if }}
-
+    {{/with }}
     {{# if editingThisCourse }}
     <div class="panel-footer">
       {{> addLesson }}
