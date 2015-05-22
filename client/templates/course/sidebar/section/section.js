@@ -1,13 +1,4 @@
 Template.courseSidebarSection.helpers({
-    'lessons': function () {
-        // Get lesson IDs array
-        //var lessonIDs = this.lessonIDs;
-
-        // Get lessons from database
-        //var lessons = Lessons.find({_id: {$in: lessonIDs}});
-
-        //return lessons;
-    },
     'editingThisCourse': function () {
         // Get the course ID from parent template
         var courseID = Template.parentData()._id;
@@ -34,5 +25,5 @@ Template.courseSidebarSection.onCreated(function () {
   // Define function to return single section for this template
   instance.section = function () {
     return Sections.findOne(sectionID);
-  }
+  };
 });
