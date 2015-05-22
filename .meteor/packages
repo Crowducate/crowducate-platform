@@ -30,3 +30,5 @@ cfs:filesystem
 cfs:standard-packages
 gadicohen:messageformat
 browser-policy
+aldeed:autoform
+aldeed:collection2
