@@ -1,10 +1,6 @@
 Courses = new Mongo.Collection("courses");
 
 Courses.helpers({
-  'sections': function () {
-    // Get all sections related to the current course
-    return Sections.find({ '_id': { $in: this.sectionIDs }});
-  },
   'lessons': function () {
     // return all lessons related to course
     return Lessons.find({'courseIDs': this._id});
