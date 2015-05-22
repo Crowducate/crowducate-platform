@@ -2,6 +2,6 @@ Meteor.publish('lessons', function () {
     return Lessons.find();
 });
 
-Meteor.publish('courseLessons', function (courseID) {
-    return Courses.findOne(courseID).lessons();
+Meteor.publish('singleLesson', function (lessonID) {
+    return Lessons.find({"_id": lessonID});
 });
