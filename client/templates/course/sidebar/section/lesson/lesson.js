@@ -57,6 +57,9 @@ Template.sectionLesson.events({
   'click .sidebar-lesson-link': function (event) {
     event.preventDefault();
 
+    // Get lesson ID variable from data context
+    var lessonID = String(this);
+
     // Check if user is editing lesson text
     if (editingLessonText.get()) {
       // if so, alert them that changes might be lost
@@ -66,12 +69,12 @@ Template.sectionLesson.events({
 
         // set active lesson ID reactive variable
         // to the value of clicked lesson
-        activeLessonID.set(this._id);
+        activeLessonID.set(lessonID);
       }
     } else {
       // set active lesson ID reactive variable
       // to the value of clicked lesson
-      activeLessonID.set(this._id);
+      activeLessonID.set(lessonID);
     }
   }
 });
