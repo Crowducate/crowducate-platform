@@ -1,4 +1,5 @@
 <template name="sectionLesson">
+  {{#if Template.subscriptionsReady}}
     <li>
         <a href="#" class="sidebar-lesson-link">
             {{# if editingCourse }}
@@ -16,4 +17,5 @@
             {{/ if }}
         </a>
     </li>
+  {{/ if }}
 </template>
