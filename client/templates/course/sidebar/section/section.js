@@ -7,8 +7,17 @@ Template.courseSidebarSection.helpers({
         return (Session.get('editingCourseID') === courseID);
     },
     'section': function () {
-      // Get the section from template level subscription
-      return Template.instance().section();
+      // Get the section ID from template data
+      var sectionID = String(this);
+
+      // Make sure template subscription is ready
+      if (Template.instance().subscriptionsReady()) {
+        // Get the section from database
+        var section = Sections.findOne(sectionID);
+;
+        // Get the section from template level subscription
+        return section;
+      }
     }
 });
 
@@ -21,9 +30,4 @@ Template.courseSidebarSection.onCreated(function () {
 
   // Subscribe to a single section (template level subscription)
   instance.subscribe('singleSection', sectionID);
-
-  // Define function to return single section for this template
-  instance.section = function () {
-    return Sections.findOne(sectionID);
-  };
 });
