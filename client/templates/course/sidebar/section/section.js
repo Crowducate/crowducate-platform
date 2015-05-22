@@ -33,6 +33,6 @@ Template.courseSidebarSection.onCreated(function () {
 
   // Define function to return single section for this template
   instance.section = function () {
-    return Sections.find(sectionID);
+    return Sections.findOne(sectionID);
   }
 });
