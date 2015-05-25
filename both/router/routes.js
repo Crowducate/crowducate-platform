@@ -8,6 +8,8 @@ Router.route('/teach');
 
 Router.route('/learn');
 
+Router.route('/profile')
+
 Router.route('/profileSettings');
 
 Router.route('/settings');
