@@ -15,10 +15,8 @@ Template.course.created = function () {
     this.autorun(function () {
       if (Session.get('editingCourseID') === courseID) {
         editingThisCourseVar.set(true);
-        console.log(editingThisCourseVar.get());
       } else {
         editingThisCourseVar.set(false);
-        console.log(editingThisCourseVar.get());
       };
     });
 };
