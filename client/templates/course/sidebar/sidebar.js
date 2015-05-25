@@ -7,37 +7,6 @@ Template.courseSidebar.rendered = function () {
 
     // Get course ID from router object
     var courseID = controller.params._id;
-
-    /*
-    Enable sidebar inline editors
-    */
-    this.enableSidebarInlineEditors = function () {
-        // Course sections
-        $('.section-title').editable({
-            // Don't display updated text
-            // prevents duplicate text
-            display: false
-        });
-    };
-
-    /*
-    Disable sidebar inline editors
-    */
-    this.disableSidebarInlineEditors = function () {
-        // Section title(s)
-        $('.section-title').editable('destroy');
-    };
-
-    /*
-    Toggle inline editors when editing course
-    */
-    this.autorun(function () {
-        if (Session.get('editingCourseID') === courseID) {
-            instance.enableSidebarInlineEditors();
-        } else {
-            instance.disableSidebarInlineEditors();
-        }
-    });
 };
 
 Template.courseSidebar.helpers({
