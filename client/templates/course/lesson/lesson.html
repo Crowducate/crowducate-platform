@@ -2,31 +2,11 @@
     {{# with activeLesson }}
     <div class="col-xs-12 col-sm-7 col-md-9">
         <div class="panel panel-default">
-            <p class="panel-heading">
-                {{# if editingCourse }}
-                    {{> editableText
-                        collection="lessons"
-                        field="name"
-                        textarea=false
-                        wysiwyg=false
-                        context=activeLesson
-                        substitute='<i class="fa fa-pencil"></i>' }}
-                {{ else }}
-                    {{ name }}
-                {{/ if }}
-            </p>
+            <div class="panel-heading">
+              {{> lessonName name=name }}
+            </div>
             <div class="panel-body">
-                {{# if editingCourse }}
-                    {{> editableText
-                        collection="lessons"
-                        field="text"
-                        textarea=true
-                        wysiwyg=true
-                        context=activeLesson
-                        substitute='<i class="fa fa-pencil"></i>' }}
-                {{ else }}
-                    {{{ text }}}
-                {{/ if }}
+              {{> lessonText text=text }}
             </div>
         </div>
     </div>
