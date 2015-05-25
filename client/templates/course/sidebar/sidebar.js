@@ -4,8 +4,8 @@ Template.courseSidebar.helpers({
     Used to display 'Add section' form
     */
     'editingThisCourse': function () {
-        // return true if editing this course
-        return (Session.get('editingCourseID') === this._id);
+      // Return the boolean value of editing this course reactive variable
+      return editingThisCourseVar.get();
     },
     'sections': function () {
       return Courses.findOne().sections();
