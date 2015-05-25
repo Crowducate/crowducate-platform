@@ -1,63 +1,34 @@
-Template.courseInfo.rendered = function(){
+Template.courseInfo.created = function(){
+  // Create new reactive variable for course edit state
+  this.editingCourseVar = new ReactiveVar(false);
 
-    // Get the template instance
-    var instance = Template.instance();
+  // Get the current router
+  controller = Router.current();
 
-    // Get the current router object
-    var controller = Router.current();
+  // Get current course from router
+  currentCourse = controller.params._id;
 
-    // Get course ID from router object
-    var courseID = controller.params._id;
+  /*
+  * when user is editing the active course,
+  * set the value of a reactive variable (true/false)
+  * Used to show/hide wysiwyg editor.
+  */
+  this.autorun(function () {
+      var instance = Template.instance();
 
-    /*
-    Enable course description inline editor
-    */
-    this.enableCourseInfoInlineEditor = function () {
-        // Course description
-        $('.courseinfo-text').editable({
-            // Don't display updated text
-            // prevents duplicate text
-            display: false,
-            mode: 'inline',
-            rows: 10,
-            showbuttons: 'bottom'
-        });
-
-    };
-
-    /*
-    Disable course description inline editor
-    */
-    this.disableCourseInfoInlineEditor = function () {
-        // Course description
-        $('.courseinfo-text').editable('destroy');
-
-    };
-
-    /*
-    Toggle inline editors when editing course
-    */
-    this.autorun(function () {
-        if (Session.get('editingCourseID') === courseID) {
-            instance.enableCourseInfoInlineEditor();
-        } else {
-            instance.disableCourseInfoInlineEditor();
-        }
-    });
+      // Update course edit variable when editing course
+      if (currentCourse === Session.get('editingCourseID')) {
+          instance.editingCourseVar.set(true);
+      } else {
+          instance.editingCourseVar.set(false);
+      };
+  });
 };
 
-Template.courseInfo.events({
-    /*
-    Update course description when editable is submitted
-    */
-    'click .editable-submit': function (event, template) {
-        // Get the new course description from template
-        var newCourseInfo = template.find('textarea').value;
-
-        // Get course ID from parent template data
-        var courseID = Template.parentData()._id;
-
-        // Update course description
-        Courses.update(courseID, {$set: {'about': newCourseInfo}});
-    },
+Template.courseInfo.helpers({
+  'editingThisCourse': function () {
+      var instance = Template.instance();
+      // Keep track of whether user is editing course
+      return instance.editingCourseVar.get();
+  }
 });
