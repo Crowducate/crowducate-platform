@@ -7,7 +7,7 @@ Template.sectionLesson.created = function () {
 };
 
 Template.sectionLesson.helpers({
-  'editingCourse': function () {
+  'editingThisCourse': function () {
     // Return the boolean value of editing this course reactive variable
     return editingThisCourseVar.get();
   },
