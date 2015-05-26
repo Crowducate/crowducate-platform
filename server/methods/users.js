@@ -26,6 +26,10 @@ Meteor.methods({
                     console.log("Target is Email")
                     Meteor.users.update(userId, {$set: {'emails': [{'address': doc}]}});
                     break;
+                case "biography":
+                    console.log("Target is biography");
+                    Meteor.users.update(userId, {$set: {'biography': doc}});
+                    break;
 
                 default:
                     console.log("No target");

@@ -26,7 +26,7 @@
          <div class="form-group {{#if usererror}}has-error{{/if}}">
              <p class="profile_errors">{{usererror}}</p>
                 <label for="Username">
-                    {{ mf 'tuserProfile-username-label' 'Username' }}
+                    {{ mf 'userProfile-username-label' 'Username' }}
                 </label>
                 <input
                        type="text"
@@ -66,6 +66,18 @@
                 {{/each}}
                 </select>
          </div>
+
+        <div class="form-group">
+            <p class="bio_errors">TODO</p>
+            <label for="Email">
+                {{ mf 'userProfile-bio-label' 'Biography' }}
+            </label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="biography"
+                    value="{{profile.biography}}">
+        </div>
         <div class ="form   -group">
             <button id="saveChanges">Save Changes</button>
         </div>

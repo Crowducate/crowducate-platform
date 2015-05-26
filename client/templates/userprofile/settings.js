@@ -90,6 +90,7 @@ Template.profileSettings.events({
         var username = template.find("#userName").value;
         var gender = template.find("#gender option:selected").value;
         var language = template.find("#language option:selected").value;
+        var biography = template.find("#biography").value;
         var email = template.find("#email").value;
 
         if (Meteor.userId())
@@ -105,6 +106,7 @@ Template.profileSettings.events({
                 Meteor.call("User.update", Meteor.userId(),"gender", gender);
                 Meteor.call("User.update", Meteor.userId(),"email", email);
                 Meteor.call("User.update", Meteor.userId(),"language", language);
+                Meteor.call("User.update", Meteor.userId(),"biography", biography);
 
             }
             else
