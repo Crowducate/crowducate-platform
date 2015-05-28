@@ -1,5 +1,6 @@
 Template.addSection.events({
-    'click #add-section-button': function (event, instance) {
+    'submit #add-section-form': function (event, instance) {
+      event.preventDefault(); // prevent page from refreshing
         /*
         / Add new section to the course
         */
@@ -25,7 +26,7 @@ Template.addSection.events({
 
         // Insert new section into database
         newSectionID = Sections.insert(newSection);
-        
+
         // Add section ID to existing sections
         sectionIDs.push(newSectionID);
 
