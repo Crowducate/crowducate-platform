@@ -6,11 +6,11 @@
                 {{> addSection }}
             </div>
             {{/ if }}
-
-            {{# if sections }}
-            {{# each sections }}
-            {{> courseSidebarSection }}
-            {{/ each }}
+            
+            {{# if sectionIDs }}
+              {{# each sectionIDs }}
+                {{> courseSidebarSection }}
+              {{/ each }}
             {{ else }}
             <p>
                 {{ mf

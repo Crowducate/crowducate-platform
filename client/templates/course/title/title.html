@@ -1,7 +1,14 @@
 <template name="courseTitle">
-    <div>
-        <h1 id="course-title" class="course-title-course-page">
+    <h1 class="panel-heading">
+        {{# if editingCourse }}
+            {{> editableText
+                collection="courses"
+                field="title"
+                textarea=false
+                wysiwyg=false
+                substitute='<i class="fa fa-pencil"></i>' }}
+        {{ else }}
             {{ title }}
-        </h1>
-    </div>
+        {{/ if }}
+    </h1>
 </template>

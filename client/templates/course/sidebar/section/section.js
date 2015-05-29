@@ -1,18 +1,30 @@
 Template.courseSidebarSection.helpers({
-    'lessons': function () {
-        // Get lesson IDs array
-        var lessonIDs = this.lessonIDs;
+  'editingThisCourse': function () {
+    // Return the boolean value of editing this course reactive variable
+    return editingThisCourseVar.get();
+  },
+  'section': function () {
+    // Get the section ID from template data
+    var sectionID = String(this);
 
-        // Get lessons from database
-        var lessons = Lessons.find({_id: {$in: lessonIDs}});
-
-        return lessons;
-    },
-    'editingThisCourse': function () {
-        // Get the course ID from parent template
-        var courseID = Template.parentData()._id;
-
-        // return true if editing this course
-        return (Session.get('editingCourseID') === courseID);
+    // Make sure template subscription is ready
+    if (Template.instance().subscriptionsReady()) {
+      // Get the section from database
+      var section = Sections.findOne(sectionID);
+;
+      // Get the section from template level subscription
+      return section;
     }
+  }
+});
+
+Template.courseSidebarSection.onCreated(function () {
+  // Call 'this' 'instance' for consistancy
+  var instance = this;
+
+  // Get section ID from instance data
+  var sectionID = instance.data;
+
+  // Subscribe to a single section (template level subscription)
+  instance.subscribe('singleSection', sectionID);
 });

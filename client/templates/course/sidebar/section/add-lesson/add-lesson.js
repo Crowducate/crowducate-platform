@@ -1,34 +1,26 @@
 Template.addLesson.events({
-    'click .add-lesson-button': function (event, template) {
-        // Get lesson name
-        var lessonName = template.find("#lesson-name").value;
+    'submit #add-lesson-form': function (event, template) {
+      event.preventDefault();
 
-        // Get course ID from parent template
-        var courseID = Template.parentData()._id;
+      // Get lesson name
+      var lessonName = template.find(".lesson-name").value;
 
-        // Create temporary lesson object
-        var lessonObject = {
-            'name': lessonName,
-            'courseIDs': [courseID] // add course ID to lesson object, for collection helper
-        };
+      // Get section ID from current data context
+      var sectionID = String(this);
 
-        // Add lesson to database,
-        // getting lesson ID in return
-        var lessonId = Lessons.insert(lessonObject);
-        if (!this.lessonIDs) {
-            this.lessonIDs = [];
-        }
+      // Create temporary lesson object
+      var lessonObject = {
+        'name': lessonName
+      };
 
-        // Add lesson ID to array
-        this.lessonIDs.push(lessonId);
+      // Add lesson to database,
+      // getting lesson ID in return
+      var lessonId = Lessons.insert(lessonObject);
 
-        // Get course sections array from parent template
-        var courseSections = Template.parentData().sections;
+      // Add lesson ID to section record
+      Sections.update(sectionID, {$push: {'lessonIDs': lessonId}});
 
-        // Save course.lessonIDs array to database
-        Courses.update(courseID, {$set: {"sections": courseSections}});
-
-        // Clear the lesson name field
-        $("#lesson-name").val('');
-    }
+      // Clear the lesson name field
+      $(".lesson-name").val('');
+  }
 });
