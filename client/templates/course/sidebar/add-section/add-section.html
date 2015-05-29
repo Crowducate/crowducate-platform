@@ -1,10 +1,10 @@
 <template name="addSection">
-    <div class="input-group">
+    <form class="input-group" id="add-section-form">
         <input type="text" id="section-title" class="form-control" placeholder="Enter section title...">
         <span class="input-group-btn">
-            <button id="add-section-button" class="btn btn-success" type="button">
+            <button id="add-section-button" class="btn btn-success" type="submit">
                 {{ mf 'addSection-addSectionButtonText' 'Add' }}
             </button>
         </span>
-    </div><!-- /input-group -->
+    </form><!-- /input-group -->
 </template>

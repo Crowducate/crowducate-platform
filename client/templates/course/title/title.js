@@ -1,62 +1,35 @@
-Template.courseTitle.rendered = function(){
+Template.courseTitle.created = function () {
+    // Create new reactive variable for course edit state
+    this.editingCourseVar = new ReactiveVar(false);
 
-    // Get the template instance
-    var instance = Template.instance();
+    // Get the current router
+    controller = Router.current();
 
-    // Get the current router object
-    var controller = Router.current();
-
-    // Get course ID from router object
-    var courseID = controller.params._id;
-
-    /*
-    Enable course title inline editor
-    */
-    this.enableTitleInlineEditor = function () {
-        // Title
-        $('#course-title').editable({
-            // Don't display updated text
-            // prevents duplicate text
-            display: false,
-            mode: 'inline'
-        });
-
-    };
+    // Get current course from router
+    currentCourseId = controller.params._id;
 
     /*
-    Disable course title inline editor
-    */
-    this.disableTitleInlineEditor = function () {
-        // Course title
-        $('#course-title').editable('destroy');
-
-    };
-
-        /*
-    Toggle inline editors when editing course
+    * when user is editing the active course,
+    * set the value of a reactive variable (true/false)
+    * Used to show/hide wysiwyg editor.
     */
     this.autorun(function () {
-        if (Session.get('editingCourseID') === courseID) {
-            instance.enableTitleInlineEditor();
+        var instance = Template.instance();
+
+        // Update course edit variable when editing course
+        if (currentCourseId === Session.get('editingCourseID')) {
+            instance.editingCourseVar.set(true);
         } else {
-            instance.disableTitleInlineEditor();
-        }
+            instance.editingCourseVar.set(false);
+        };
     });
-}
+};
+Template.courseTitle.helpers({
+    'editingCourse': function () {
+        // Get template instance
+        var instance = Template.instance();
 
-Template.courseTitle.events({
-    /*
-    Update section title when editable is submitted
-    */
-    'click .editable-submit': function (event, template) {
-        // Get the new section title from template
-        var newCourseTitle = template.find('input').value;
-
-        // Get course ID from parent template data
-        var courseID = Template.parentData()._id;
-
-        // Update course sections
-        Courses.update(courseID, {$set: {'title': newCourseTitle}});
-    },
+        // Keep track of whether user is editing course
+        return instance.editingCourseVar.get();
+    }
 });
-

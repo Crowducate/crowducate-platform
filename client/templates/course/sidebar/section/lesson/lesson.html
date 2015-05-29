@@ -1,7 +1,21 @@
 <template name="sectionLesson">
+  {{#if Template.subscriptionsReady}}
     <li>
-        <a href="#" class="sidebar-lesson-link">
-            <span class="sidebar-lesson-title">{{ this.name }}</span>
+        <a class="sidebar-lesson-link">
+            {{# if editingThisCourse }}
+            {{> editableText
+                collection="lessons"
+                context=lesson
+                field="name"
+                textarea=false
+                wysiwyg=false
+                substitute='<i class="fa fa-pencil"></i>' }}
+            {{ else }}
+              {{# with lesson }}
+                {{ name }}
+              {{/ with }}
+            {{/ if }}
         </a>
     </li>
+  {{/ if }}
 </template>

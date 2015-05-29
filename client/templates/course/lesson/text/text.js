@@ -1,4 +1,5 @@
-Template.courseInfo.helpers({
+// Inherit 'editingThisCourse' helper from course toolbar template
+Template.lessonText.helpers({
   'editingThisCourse': function (event, template) {
     // return true if user is editing this course
     return editingThisCourseVar.get();

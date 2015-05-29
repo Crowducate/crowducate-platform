@@ -1,21 +1,14 @@
 <template name="lesson">
     {{# with activeLesson }}
     <div class="col-xs-12 col-sm-7 col-md-9">
-        {{> courseLessonTitle name=name }}
-
-        <div class="lesson-text {{editClass}}">
-            {{# unless editingLessonText }}
-                {{# if text }}
-                    {{{ text }}}
-                    {{ else }}
-                    <p>There does not appear to be any lesson text. Click to edit.</p>
-                {{/ if }}
-            {{/ unless }}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              {{> lessonName name=name }}
+            </div>
+            <div class="panel-body">
+              {{> lessonText text=text activeLesson=activeLesson }}
+            </div>
         </div>
-        {{> richTextEditor }}
-        {{# if editingLessonText }}
-            {{> lessonEditToolbar }}
-        {{/ if }}
     </div>
     {{/ with }}
 </template>
