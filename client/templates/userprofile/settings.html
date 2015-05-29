@@ -1,0 +1,134 @@
+<template name="profileSettings">
+<div class="panel">
+	<div class="panel-heading">
+		<h1 class="userprofile-main-title">
+	          {{ mf 'userProfile-mainHeading' 'Profile Settings'}}
+	    </h1>
+	    <a href="" class="float-right">{{ mf 'userProfile-account' 'Account (to be added)' }} </a>
+	    <a href="" class="float-right">{{ mf 'userProfile-email' 'Email (to be added)' }}</a>
+	    <hr>
+	</div>
+    <div class="panel-body">
+		<h2 class="userprofile-sub-title">
+				{{ mf 'userProfile-subheading-basics' 'Basics'}}
+		</h2>
+		<div class="form-group {{#if realerror}}has-error{{/if}}">
+            <p class="profile_errors">{{realerror}}</p>
+                <label for="Real Name">
+                    {{ mf 'userProfile-realname-label' 'Real Name' }}
+                    </label>
+                <input
+                       type="text"
+                       class="form-control"
+                       id="realName"
+                       value="{{profile.realname}}">
+            </div>
+         <div class="form-group {{#if usererror}}has-error{{/if}}">
+             <p class="profile_errors">{{usererror}}</p>
+                <label for="Username">
+                    {{ mf 'userProfile-username-label' 'Username' }}
+                </label>
+                <input
+                       type="text"
+                       class="form-control"
+                       id="userName"
+                       value="{{profile.username}}">
+            </div>
+        <div class="form-group {{#if emailerror}}has-error{{/if}}">
+            <p class="profile_errors">{{emailerror}}</p>
+            <label for="Email">
+                {{ mf 'tuserProfile-email-label' 'Email' }}
+            </label>
+            <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    value="{{usermail}}">
+        </div>
+            <div class="form-group">
+                <label for="Gender">
+                    {{ mf 'userProfile-gender-label' 'Gender' }}
+                </label>
+                <select class="form-control" id="gender">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+         <div class="form-group">
+                <label for="Primary Language">
+                    {{ mf 'userProfile-primarylang-label' 'Primary Language' }}
+                </label>
+                <select class="form-control" id="language">
+                {{#each langs}}
+                    <option value="{{this}}">{{this}}</option>
+                {{/each}}
+                </select>
+         </div>
+
+        <div class="form-group">
+            <p class="bio_errors">TODO</p>
+            <label for="Email">
+                {{ mf 'userProfile-bio-label' 'Biography' }}
+            </label>
+            <textarea
+
+                    class="form-control"
+                    id="biography"
+                    value="{{profile.biography}}"></textarea>
+        </div>
+        <div class ="form   -group">
+            <button id="saveChanges">Save Changes</button>
+        </div>
+        <p class="profile_success">{{basicsuccess}}</p>
+		<hr>
+		<h2 class="userprofile-sub-title">
+				{{ mf 'userProfile-subheading-password' 'Password'}}
+		</h2>
+        <p class="profile_errors">{{perrors}}</p>
+		<p>Creating a password allows you to log in with your Crowducate username and Password</p> 
+		<form class="changePassword">
+            <div class="form-group{{#if perrors}}has-error{{/if}}">
+                <label for="Primary Language">
+                    {{ mf 'userProfile-oldpassword-label' 'Old Password' }}
+                </label>
+                <input
+                        type="password"
+                        class="form-control"
+                        id="oldPassword"
+                        placeholder="">
+            </div>
+
+            <div class="form-group {{#if perrors}}has-error{{/if}}">
+                <label for="Primary Language">
+                    {{ mf 'userProfile-newpassword-label' 'New Password' }}
+                </label>
+                <input
+                        type="password"
+                        class="form-control"
+                        id="newPassword"
+                        placeholder="">
+            </div>
+
+            <div class="form-group {{#if perrors}}has-error{{/if}}">
+                <label for="New Password again">
+                    {{ mf 'userProfile-newpasswordagain-label' 'New Password again' }}
+                </label>
+                <input
+                        type="password"
+                        class="form-control"
+                        id="newPasswordCheck"
+                        placeholder="">
+            </div>
+            <input type="submit">
+        </form>
+        <p class="password_success">{{passwordsuccess}}</p>
+
+		<hr>
+		<h2 class="userprofile-sub-title">
+				{{ mf 'userProfile-subheading-linkedaccounts' 'Linked Accounts (to be added)'}}
+		</h2>
+	</div>
+</div>
+</template>

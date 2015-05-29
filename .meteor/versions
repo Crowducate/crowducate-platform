@@ -1,6 +1,9 @@
 accounts-base@1.2.0
 accounts-password@1.1.1
 alanning:roles@1.2.13
+aldeed:autoform@5.2.0
+aldeed:collection2@2.3.1
+aldeed:simple-schema@1.1.0
 anti:fake@0.4.1
 autoupdate@1.2.1
 babrahams:editable-text@0.7.24
@@ -80,6 +83,7 @@ meteorhacks:inject-initial@1.0.2
 minifiers@1.1.5
 minimongo@1.0.8
 mobile-status-bar@1.0.3
+momentjs:moment@2.8.4
 mongo@1.1.0
 mongo-livedata@1.0.8
 mrt:moment@2.8.1

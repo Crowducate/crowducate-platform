@@ -34,6 +34,7 @@
                             {{ mf '_header-teachTab-linkText' 'Teach' }}
                         </a>
                     </li>
+
                 </ul>
                 {{> languageSelection}}
                 {{#if currentUser}}
@@ -43,6 +44,20 @@
                             <i class="fa fa-user"></i> {{ currentUser.profile.name }} <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
+                        <li>    <a href="#">Hello {{usermail}}</a>
+                        </li>
+                        <li >
+                                <a href="{{ pathFor 'profile' }}">
+                                <i class="fa fa-user"></i>&nbsp;
+                                    {{ mf '_header-dropdownMenu-Profile' 'My Profile'}}
+                                </a>
+                            </li>
+                            <li class="{{ isActivePath regex='profileSettings'}}">
+                                <a href="{{ pathFor 'profileSettings' }}">
+                                <i class="fa fa-user"></i>&nbsp;
+                                    {{ mf '_header-dropdownMenu-Settings' 'Settings'}}
+                                </a>
+                            </li>
                             <li>
                                 <a href="#" data-action="logout"><i class="fa fa-lock"></i>&nbsp;
                                     {{ mf '_header-dropdownMenu-signOutText' 'Sign Out'}}
