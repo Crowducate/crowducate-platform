@@ -1,9 +1,0 @@
-.no-margin-top {
-  margin-top: 0;
-}
-
-.img-max-width-100{
-  img{
-    max-width: 100%;
-  }
-}

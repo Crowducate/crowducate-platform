@@ -1,7 +1,0 @@
-.well-tabnav{
-  border-top: none;
-}
-
-.well{
-  border-color: @gray-lighter;
-}

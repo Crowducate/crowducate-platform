@@ -1,0 +1,14 @@
+<template name="testresourceToolbar">
+    <div class="row resource-toolbar">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <nav class="navbar navbar-default">
+                {{#if editMode}}
+                {{>toolbarComponents}}
+                {{>testcancelEditResource}}
+                {{else}}
+                {{>testresourceToolbarContent}}
+                {{/if}}
+            </nav>
+        </div>
+    </div>
+</template>

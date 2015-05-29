@@ -1,0 +1,14 @@
+<template name="courseToolbarTabs">
+    <ul class="nav nav-pills toolbar-pages-list navbar-left">
+        <li class="{{ isActiveRoute regex='^course$' }}">
+            <a href="{{ pathFor 'course' }}">
+                {{ mf 'courseToolbarTabs-courseMaterialTabText' 'Course material' }}
+            </a>
+        </li>
+        <li class="{{ isActiveRoute regex='^courseInfo$' }}">
+            <a href="{{ pathFor 'courseInfo' }}">
+                {{ mf 'courseToolbarTabs-courseInfoTabText' 'Course info'}}
+            </a>
+        </li>
+    </ul>
+</template>

@@ -1,0 +1,41 @@
+<template name="courseCard">
+    <li class="col-md-3">
+        <div class="thumbnail course-card">
+            <div class="course-image">
+                <a href ="/course/{{ _id }}">
+                  <img alt="Course cover image" src="{{ coverImage.url }}" />
+                </a>
+            </div>
+            <div class="caption">
+                <a class="course-category" href="#">Mathematics</a>
+                <h2 class="course-card-title">
+                    <a href ="/course/{{ _id }}">{{ title }}</a>
+                </h2>
+<!--                <p>by <a href="#">{{ author }}</a></p>-->
+                <p>{{{ truncate about 77 }}}</p>
+                {{# with truncateKeywords 6 keywords }}
+                <p>
+                    {{# each truncatedKeywords }}
+                    <a class="tag-label" href="/tag/{{ this }}" title="Resources page for {{ this }}">
+                        <span class="label label-info">{{ this }}</span>
+                    </a>
+                    {{/each}}
+                </p>
+                {{/ with }}
+            </div>
+            <!--
+<div class="modal-footer" style="text-align: left">
+<div class="progress">
+<div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}};">
+<span class="sr-only">{{progress}} Complete</span>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6"><b>{{progress}}</b><br/><small>COMPLETED</small></div>
+<div class="col-md-6"><b>{{peers}}</b><br/><small>PEERS</small></div>
+</div>
+</div>
+-->
+        </div>
+    </li>
+</template>

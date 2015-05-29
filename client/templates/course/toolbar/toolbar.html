@@ -1,0 +1,12 @@
+<template name="courseToolbar">
+    <div class="row course-toolbar">
+      <nav class="navbar navbar-default">
+        {{> courseToolbarTabs }}
+        {{# if editingThisCourse }}
+        {{> doneEditingCourse }}
+        {{else}}
+        {{> editCourse }}
+        {{/ if }}
+      </nav>
+    </div>
+</template>

@@ -1,0 +1,39 @@
+@components: '../components';
+// Bootstrap
+@import "./lib/bootstrap/bootstrap.import.less";
+
+// Font Awesome
+@import "./lib/font-awesome/font-awesome.import.less";
+
+@import './mixins.import.less';
+@import './variables.import.less';
+
+// Misc Global Styles
+@import './type.import.less';
+
+// Components
+@import '@{components}/loading.import.less';
+@import '@{components}/buttons.import.less';
+
+
+body {
+    background-color: #f2f2f2;
+}
+
+.course-whole-page {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background: none repeat scroll 0% 0% #fff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Make inline editables take the full width of their parents */
+.editable-container.editable-inline,
+.editable-container.editable-inline .control-group.form-group,
+.editable-container.editable-inline .control-group.form-group .editable-input,
+.editable-container.editable-inline .control-group.form-group .editable-input textarea,
+.editable-container.editable-inline .control-group.form-group .editable-input select,
+.editable-container.editable-inline .control-group.form-group .editable-input input:not([type=radio]):not([type=checkbox]):not([type=submit])
+{
+    width: 100% !important;
+}

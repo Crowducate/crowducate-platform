@@ -1,0 +1,5 @@
+SettingsController = AppController.extend({
+  data: {
+
+  }
+});

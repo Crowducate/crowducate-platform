@@ -1,0 +1,5 @@
+TestcourseInfoController = AppController.extend({
+  data: {
+
+  }
+});

@@ -1,0 +1,22 @@
+<template name="courseInfo">
+    {{>courseToolbar}}
+    <div class="row">
+        <div class="panel panel-default">
+            {{> courseTitle }}
+            <div class="panel-body">
+                {{> courseMeta }}
+                {{> courseImage}}
+                {{# if editingThisCourse }}
+                {{> editableText
+                    collection="courses"
+                    field="about"
+                    textarea=true
+                    wysiwyg=true
+                    substitute='<i class="fa fa-pencil"></i>' }}
+                {{ else}}
+                <p class="courseinfo-text" data-type="textarea">{{{ about }}}</p>
+                {{/ if }}
+            </div>
+        </div>
+    </div>
+</template>

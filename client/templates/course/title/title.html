@@ -1,0 +1,14 @@
+<template name="courseTitle">
+    <h1 class="panel-heading">
+        {{# if editingCourse }}
+            {{> editableText
+                collection="courses"
+                field="title"
+                textarea=false
+                wysiwyg=false
+                substitute='<i class="fa fa-pencil"></i>' }}
+        {{ else }}
+            {{ title }}
+        {{/ if }}
+    </h1>
+</template>

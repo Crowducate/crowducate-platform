@@ -1,0 +1,13 @@
+<template name="lessonText">
+  {{# if editingThisCourse }}
+    {{> editableText
+      collection="lessons"
+      field="text"
+      textarea=true
+      wysiwyg=true
+      context=activeLesson
+      substitute='<i class="fa fa-pencil"></i>' }}
+  {{ else }}
+    {{{ text }}}
+  {{/ if }}
+</template>
