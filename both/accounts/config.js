@@ -21,6 +21,7 @@ AccountsTemplates.addFields([
       type: 'text',
       required: true,
       displayName: "Login",
+      placeholder: "Username or Email",
   },
   pwd
 ]);
