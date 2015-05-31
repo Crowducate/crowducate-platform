@@ -121,11 +121,7 @@ Template.profileSettings.events({
             $("#bio-error").text("");
         if (Meteor.userId())
         {
-<<<<<<< HEAD
-            if (username && gender && language && email && isEmail(email))
-=======
-            if (realname && username && gender && language && email && isEmail(email) && Meteor.call('checkUsername', username))
->>>>>>> origin/feature/profile
+            if (username && gender && language && email && isEmail(email) && Meteor.call('checkUsername', username))
             {
                 Session.set("basicsuccess", "Data successfully changed!");
                 console.log("success");
