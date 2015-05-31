@@ -8,6 +8,7 @@ Template.profileSettings.rendered = function() {
     $("#gender").find("option[value=" + Meteor.user().gender + "]").attr("selected", "selected");
     Session.set("basicsuccess", "");
     Session.set("passwordsuccess", "");
+    $("#biography").val(Meteor.user().biography);
 };
 
 Template.profileSettings.helpers({

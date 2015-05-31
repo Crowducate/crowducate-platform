@@ -8,6 +8,8 @@ Meteor.methods({
             switch(target) {
                 case "username":
                     console.log("Target is username");
+                    // TODO, check if username is already taken
+                    
                     Meteor.users.update(userId, {$set: {'username': doc}});
                     break;
                 case "realname":
