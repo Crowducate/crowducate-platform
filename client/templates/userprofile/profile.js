@@ -18,11 +18,11 @@ Template.profile.events({
 		
 	},
 	'change .editable-bio': function(event,template) {
-		console.log("oh your changed smth");
+		console.log("oh you changed smth");
 		var biography = template.find(".editable-bio").value;
 		if (biography.length > 300)
 		{
-			$("#bio-error").text("You may not have more than 300 Characters in your Biography");
+			$("#bio-error").text("You may not have more than 300 characters in your biography");
 		}
 		else
 		{

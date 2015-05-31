@@ -87,7 +87,9 @@ Template.profileSettings.events({
     },
 
     'click #saveChanges': function(event, template) {
+        // realname is for later use
         var realname = template.find("#realName").value;
+        
         var username = template.find("#userName").value;
         var gender = template.find("#gender option:selected").value;
         var language = template.find("#language option:selected").value;
@@ -102,13 +104,13 @@ Template.profileSettings.events({
             $("#bio-error").text("");
         if (Meteor.userId())
         {
-            if (realname && username && gender && language && email && isEmail(email))
+            if (username && gender && language && email && isEmail(email))
             {
                 Session.set("basicsuccess", "Data successfully changed!");
                 console.log("success");
 
                 //TODO simplify
-                Meteor.call("User.update", Meteor.userId(),"realname", realname);
+                // later use: Meteor.call("User.update", Meteor.userId(),"realname", realname);
                 Meteor.call("User.update", Meteor.userId(),"username", username);
                 Meteor.call("User.update", Meteor.userId(),"gender", gender);
                 Meteor.call("User.update", Meteor.userId(),"email", email);
