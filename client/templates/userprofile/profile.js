@@ -10,10 +10,10 @@ Template.profile.helpers({
 
 Template.profile.events({
 	'click .edit-bio': function() {
-		var editableText = $("<textarea style='width:600px;height:75px;' class='editable-bio' />");
+		var editableText = $("<textarea style='width:600px;height:75px;' class='editable-bio' /> <p class='statusbio'></p>");
 		var pHtml = $("#biography").text();
 		editableText.val(pHtml);
-		$("#biography").replaceWith(editableText)
+		$("#biography").replaceWith(editableText);
 		
 		
 	},
@@ -31,8 +31,14 @@ Template.profile.events({
 		var origin = $("<p id='biography'></p>");
 		origin.text(biography);
 		$(".editable-bio").replaceWith(origin);
+		$(".statusbio").remove();
 
 		}
 
+	},
+	'keyup .editable-bio': function() {
+		var postLength = $(".editable-bio").val().length;
+		var charactersLeft = 300 - postLength;
+		$('.statusbio').text(charactersLeft + " characters left");	
 	}
 });

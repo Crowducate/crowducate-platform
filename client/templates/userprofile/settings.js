@@ -105,7 +105,7 @@ Template.profileSettings.events({
 
     'click #saveChanges': function(event, template) {
         // realname is for later use
-        var realname = template.find("#realName").value;
+        //var realname = template.find("#realName").value;
         
         var username = template.find("#userName").value;
         var gender = template.find("#gender option:selected").value;
@@ -121,7 +121,7 @@ Template.profileSettings.events({
             $("#bio-error").text("");
         if (Meteor.userId())
         {
-            if (username && gender && language && email && isEmail(email) && Meteor.call('checkUsername', username))
+            if (username && gender && language && email && isEmail(email) && (Meteor.call('checkUsername', username) || username == Meteor.user().username))
             {
                 Session.set("basicsuccess", "Data successfully changed!");
                 console.log("success");
@@ -144,7 +144,7 @@ Template.profileSettings.events({
         }
 
             //Session.set("errors", "");
-            Meteor.call("User.update", Meteor.userId(),"realname", realname);
+           // Meteor.call("User.update", Meteor.userId(),"realname", realname);
 
 
     },
@@ -170,6 +170,16 @@ Template.profileSettings.events({
         else {
             Session.set("perrors", "Your passwords do not match.")
         }
+    },
+
+    'keyup #biography': function() {
+        var postLength = $("#biography").val().length;
+        var charactersLeft = 300 - postLength;
+        $('.statusbio').text(charactersLeft + " characters left");  
+    },
+
+    'change #biography': function() {
+        $(".statusbio").text("");
     }
 
 
