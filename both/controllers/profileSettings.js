@@ -4,5 +4,8 @@ ProfileSettingsController = AppController.extend({
   },
   waitOn: function() {
       return this.subscribe('userData');
+  },
+    onBeforeAction: function (pause) {
+    AccountsTemplates.ensureSignedIn.call(this, pause);
   }
 });
