@@ -20,10 +20,19 @@ Template.profile.events({
 	'change .editable-bio': function(event,template) {
 		console.log("oh your changed smth");
 		var biography = template.find(".editable-bio").value;
+		if (biography.length > 300)
+		{
+			$("#bio-error").text("You may not have more than 300 Characters in your Biography");
+		}
+		else
+		{
+		$("#bio-error").text("");
 		Meteor.call("User.update", Meteor.userId(),"biography", biography);
 		var origin = $("<p id='biography'></p>");
 		origin.text(biography);
 		$(".editable-bio").replaceWith(origin);
+
+		}
 
 	}
 });

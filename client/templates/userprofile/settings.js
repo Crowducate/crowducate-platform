@@ -93,7 +93,13 @@ Template.profileSettings.events({
         var language = template.find("#language option:selected").value;
         var biography = template.find("#biography").value;
         var email = template.find("#email").value;
-
+        if (biography.length > 300)
+        {
+            $("#bio-error").text("You may not have more than 300 Characters in your Biography");
+        }
+        else
+        {
+            $("#bio-error").text("");
         if (Meteor.userId())
         {
             if (realname && username && gender && language && email && isEmail(email))
@@ -115,6 +121,7 @@ Template.profileSettings.events({
                 console.log("there has been a problem!");
             }
 
+        }
         }
 
             //Session.set("errors", "");
