@@ -38,5 +38,17 @@ Meteor.methods({
                     break;
             }
         }
+    },
+
+    'checkUsername': function (username) {
+        if (Meteor.users.findOne({'username': username}) == "")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
 });
