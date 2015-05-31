@@ -176,10 +176,6 @@ Template.profileSettings.events({
         var postLength = $("#biography").val().length;
         var charactersLeft = 300 - postLength;
         $('.statusbio').text(charactersLeft + " characters left");  
-    },
-
-    'change #biography': function() {
-        $(".statusbio").text("");
     }
 
 
