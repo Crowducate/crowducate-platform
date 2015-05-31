@@ -57,14 +57,31 @@ Template.profileSettings.events({
       }
     },
     'change #userName': function(event,template) {
-        if(template.find("#userName").value)
+        var username = template.find("#userName").value;
+        if(username)
         {
-            Session.set("usererror", "");
+            if(username == Meteor.user().username)
+            {
+                Session.set("usererror", "");
+            }
+            else
+            {
+                if(Meteor.call('checkUsername', username))
+                {
+                    Session.set("usererror", "");
+                }
+                else
+                {
+                    Session.set("usererror", "Username is taken already!");
+                }
+            }
         }
         else
         {
             Session.set("usererror", "Your username is empty!");
         }
+
+
     },
     'change #email': function(event,template) {
         if(template.find("#email").value)
@@ -102,7 +119,7 @@ Template.profileSettings.events({
             $("#bio-error").text("");
         if (Meteor.userId())
         {
-            if (realname && username && gender && language && email && isEmail(email))
+            if (realname && username && gender && language && email && isEmail(email) && Meteor.call('checkUsername', username))
             {
                 Session.set("basicsuccess", "Data successfully changed!");
                 console.log("success");
