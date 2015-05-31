@@ -18,7 +18,7 @@ Template.teach.events({
     'click #addCourse': function(event, template){
         // prevent default button submit
         event.preventDefault();
-
+        var currentUsername = Meteor.user().username;
         // create an empty course container
         var course = {
             // Get form field values
@@ -30,7 +30,8 @@ Template.teach.events({
             author: template.find('#authorName').value, // string
             keywords: template.find('#courseKeywords').value.split(','), // split keywords to array
             published: template.find('#coursePublished').value, // string
-            about: template.find('#aboutText').value // Get the about text
+            about: template.find('#aboutText').value, // Get the about text
+            owner: currentUsername
         };
 
         // Add course to collection
