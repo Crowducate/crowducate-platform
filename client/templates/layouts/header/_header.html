@@ -29,10 +29,18 @@
                         </a>
                     </li>
                     <li class="{{ isActivePath regex='teach' }}">
+                        {{#if currentUser}}
                         <a href="{{ pathFor 'teach' }}">
                             <i class="fa fa-university"></i>&nbsp;
                             {{ mf '_header-teachTab-linkText' 'Teach' }}
                         </a>
+                        {{else}}
+                        <a href="#">
+                        <i class="fa fa-university"></i>&nbsp;
+                            {{ mf '_header-teachTab-login' 'Login to Teach' }}
+                        </a>
+                        {{/if}}
+
                     </li>
 
                 </ul>
