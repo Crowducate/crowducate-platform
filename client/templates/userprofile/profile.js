@@ -10,11 +10,25 @@ Template.profile.helpers({
 
 Template.profile.events({
 	'click .edit-bio': function() {
+		if (Session.get("gearclicked"))
+		{
+			var biography = $(".editable-bio").val();
+			var origin = $("<p id='biography'></p>");
+			origin.text(biography);
+			$(".editable-bio").replaceWith(origin);
+			$(".statusbio").remove();
+			Session.set("gearclicked", false);
+
+		}
+		else
+		{
 		var editableText = $("<textarea style='width:600px;height:75px;' class='editable-bio' /> <p class='statusbio'></p>");
 		var pHtml = $("#biography").text();
 		editableText.val(pHtml);
 		$("#biography").replaceWith(editableText);
-		
+		Session.set("gearclicked", "true");		
+		}
+
 		
 	},
 	'change .editable-bio': function(event,template) {
