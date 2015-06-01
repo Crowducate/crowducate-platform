@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/Crowducate/crowducate-platform.png?label=ready&title=Ready)](https://waffle.io/Crowducate/crowducate-platform)
 Important Note: Currently, crowducate is rewritten here: https://github.com/meteorcrowd/crowducate-next
 
 # About 
