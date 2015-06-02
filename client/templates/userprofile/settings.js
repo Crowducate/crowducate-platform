@@ -60,20 +60,25 @@ Template.profileSettings.events({
         var username = template.find("#userName").value;
         if(username)
         {
-            if(username == Meteor.user().username)
+          
+            if(username === Meteor.user().username)
             {
                 Session.set("usererror", "");
             }
             else
-            {
-                if(Meteor.call('checkUsername', username))
+            { 
+                
+                Meteor.call('checkUsername', username, function(error) 
                 {
-                    Session.set("usererror", "");
-                }
-                else
-                {
-                    Session.set("usererror", "Username is taken already!");
-                }
+                    if(error){
+                        Session.set("usererror", "Username taken already");
+                    }
+                    else
+                    {
+                        Session.set("usererror", "");
+                    }
+                });
+               
             }
         }
         else
@@ -121,9 +126,12 @@ Template.profileSettings.events({
             $("#bio-error").text("");
         if (Meteor.userId())
         {
-            if (username && gender && language && email && isEmail(email) && (Meteor.call('checkUsername', username) || username == Meteor.user().username))
+            var nachricht = Session.get("usererror");
+            if (username && gender && language && email && isEmail(email) && (!(nachricht) || username == Meteor.user().username))
             {
                 Session.set("basicsuccess", "Data successfully changed!");
+               // setTimeout(Session.set("basicsuccess", ""),5000);
+
                 console.log("success");
 
                 //TODO simplify
@@ -157,7 +165,19 @@ Template.profileSettings.events({
             if (Meteor.userId()) {
             Accounts.changePassword(oldpassword,password, function(error) {
                 if(error) {
-                    console.log("Something went wrong! " + error);
+                    if(error.reason === "Match failed")
+                    {
+                        Session.set("perrors", "Your old password is empty!");
+                    }
+                    else if(error.reason === "Incorrect password")
+                    {
+                        Session.set("perrors", "Your old Password is incorrect!");
+                    }
+                    else
+                    {
+                        Session.set("perrors", error.reason);
+                    }
+
 
                 }
                 else {
