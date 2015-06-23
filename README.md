@@ -1,3 +1,6 @@
+# Warning
+We're currently migrating the development on [Crowducate-next](https://github.com/Crowducate/crowducate-next) back to this repo. Please read the READ.me from for more the current status of the project. However, *fork the development-branch* of this repo. The master of this branch is very outdated. For more info read this [issue](https://github.com/Crowducate/crowducate-platform/issues/99#issuecomment-114567430).  Sorry for the temporary inconvenience. 
+
 # About 
 [Crowducate](http://www.crowducate.me/ "Crowducate Webapp") is an open education platform. 
 The crowd creates courses (any subject is welcome) together which are interactive and fun. 
@@ -5,7 +8,9 @@ Democratize education. Enjoy education.
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Crowducate/crowducate-platform?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-# Install
+
+# Install (only relevant for the old master-branch): 
+
 The Crowducate platform is based on [MeteorJS](https://www.meteor.com/ "MeteorJS"). So, if you want to run it locally: 
 
 1.	Install [MeteorJS](https://github.com/meteor/meteor "Install Meteor Guide GitHub")
@@ -13,6 +18,8 @@ The Crowducate platform is based on [MeteorJS](https://www.meteor.com/ "MeteorJS
 3.	Clone Crowducate: `git clone https://github.com/Crowducate/crowducate.me.git`
 4.	Change to Crowducate directory: `cd crowducate.me`
 5.	Run `mrt install`
+
+*Note:* The development branch works with Meteor 1.x.
 
 That’s it!
 
