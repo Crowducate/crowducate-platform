@@ -1,4 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/Crowducate/crowducate-platform.png?label=ready&title=Ready)](https://waffle.io/Crowducate/crowducate-platform)
 # Warning
 We're currently migrating the development on [Crowducate-next](https://github.com/Crowducate/crowducate-next) back to this repo. Please read the READ.me from for more the current status of the project. However, *fork the development-branch* of this repo. The master of this branch is very outdated. For more info read this [issue](https://github.com/Crowducate/crowducate-platform/issues/99#issuecomment-114567430).  Sorry for the temporary inconvenience. 
 
@@ -7,8 +6,9 @@ We're currently migrating the development on [Crowducate-next](https://github.co
 The crowd creates courses (any subject is welcome) together which are interactive and fun. 
 Democratize education. Enjoy education.
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Crowducate/crowducate-platform?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Crowducate/openchat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+[![Stories in Ready](https://badge.waffle.io/Crowducate/crowducate-platform.png?label=ready&title=Ready)](https://waffle.io/Crowducate/crowducate-platform)
 
 # Install (only relevant for the old master-branch): 
 
