@@ -1,5 +1,5 @@
 # Warning
-We're currently migrating the development on [Crowducate-next](https://github.com/Crowducate/crowducate-next) back to this repo. Please read the READ.me from for more the current status of the project. However, *fork the development-branch* of this repo. The master of this branch is very outdated. For more info read this [issue](https://github.com/Crowducate/crowducate-platform/issues/99#issuecomment-114567430).  Sorry for the temporary inconvenience. 
+We're currently migrating the development done on [Crowducate-next](https://github.com/Crowducate/crowducate-next) back to this repo. Please read the READ.me from [Crowducate-next](https://github.com/Crowducate/crowducate-next) for the current status of the project. However, *fork the development-branch* of THIS repo - not the master. The master of this branch is very outdated. For more info read this [issue](https://github.com/Crowducate/crowducate-platform/issues/99#issuecomment-114567430).  Sorry for the temporary inconvenience. 
 
 # About 
 [Crowducate](http://www.crowducate.me/ "Crowducate Webapp") is an open education platform. 
@@ -42,8 +42,3 @@ There are many ways to get involved:
 
 # Help us grow
 Bear in mind, we are in early alpha. For more info read this [blog post](http://blog.crowducate.me/welcome-to-crowducate/ "Welcome to Crowducate").
-
-
-
-
-
