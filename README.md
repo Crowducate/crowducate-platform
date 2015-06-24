@@ -1,5 +1,14 @@
-# Warning
-We're currently migrating the development done on [Crowducate-next](https://github.com/Crowducate/crowducate-next) back to this repo. Please read the READ.me from [Crowducate-next](https://github.com/Crowducate/crowducate-next) for the current status of the project. However, *fork the development-branch* of THIS repo - not the master. The master of this branch is very outdated. For more info read this [issue](https://github.com/Crowducate/crowducate-platform/issues/99#issuecomment-114567430).  Sorry for the temporary inconvenience. 
+# Development Status
+We are currently building the 1.0 version of Crowducate. You can download and try the [1.0 Alpha version](https://github.com/Crowducate/crowducate-platform/releases/tag/1.0.0-a1).
+
+If you would like to contribute to the development efforts, please checkout our [development branch](https://github.com/Crowducate/crowducate-platform/tree/develop).
+
+## Installing 1.x Alpha
+1. Download the most recent [1.x release](https://github.com/Crowducate/crowducate-platform/releases)
+2. Extract the archive file to a location on your computer
+3. Change to the extracted directory in your console
+4. Type `meteor` to start the server
+5. Test and let us know your thoughts :-)
 
 # About 
 [Crowducate](http://www.crowducate.me/ "Crowducate Webapp") is an open education platform. 
