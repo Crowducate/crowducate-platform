@@ -156,7 +156,7 @@ Template.profileSettings.events({
 
 
     },
-    'submit .changePassword': function(event,template) {
+    'click #saveChangesPassword': function(event,template) {
         event.preventDefault();
         var oldpassword = template.find("#oldPassword").value;
         var password = template.find("#newPassword").value;

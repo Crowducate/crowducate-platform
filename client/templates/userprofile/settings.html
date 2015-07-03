@@ -26,7 +26,7 @@
                        value="{{profile.realname}}">
             </div> -->
          <div class="form-group {{#if usererror}}has-error{{/if}}">
-             <p class="profile_errors">{{usererror}}</p>
+             <p class="username_errors errors">{{usererror}}</p>
                 <label for="Username">
                     {{ mf 'userProfile-username-label' 'Username' }}
                 </label>
@@ -37,7 +37,7 @@
                        value="{{profile.username}}">
             </div>
         <div class="form-group {{#if emailerror}}has-error{{/if}}">
-            <p class="profile_errors">{{emailerror}}</p>
+            <p class="email_errors errors">{{emailerror}}</p>
             <label for="Email">
                 {{ mf 'tuserProfile-email-label' 'Email' }}
             </label>
@@ -91,7 +91,7 @@
 		<h2 class="userprofile-sub-title">
 				{{ mf 'userProfile-subheading-password' 'Password'}}
 		</h2>
-        <p class="profile_errors">{{perrors}}</p>
+        <p class="password_errors errors">{{perrors}}</p>
 		<p>Creating a password allows you to log in with your Crowducate username and Password</p> 
 		<form class="changePassword">
             <div class="form-group{{#if perrors}}has-error{{/if}}">
@@ -126,7 +126,7 @@
                         id="newPasswordCheck"
                         placeholder="">
             </div>
-            <input type="submit">
+            <button id="saveChangesPassword">Save Changes</button>
         </form>
         <p class="password_success">{{passwordsuccess}}</p>
 
