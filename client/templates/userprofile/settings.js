@@ -55,6 +55,9 @@ Template.profileSettings.events({
       {
           Session.set("realerror", "Your Realname is empty!");
       }
+      setTimeout(function() {
+         $('.username_errors').text("");
+        }, 5000);
     },
     'change #userName': function(event,template) {
         var username = template.find("#userName").value;
@@ -86,7 +89,9 @@ Template.profileSettings.events({
             Session.set("usererror", "Your username is empty!");
         }
 
-
+        setTimeout(function() {
+         $('.username_errors').text("");
+        }, 5000);
     },
     'change #email': function(event,template) {
         if(template.find("#email").value)
@@ -105,6 +110,9 @@ Template.profileSettings.events({
         {
             Session.set("emailerror", "Your Email is empty!");
         }
+        setTimeout(function() {
+         $('.username_errors').text("");
+        }, 5000);
 
     },
 
@@ -154,6 +162,9 @@ Template.profileSettings.events({
             //Session.set("errors", "");
            // Meteor.call("User.update", Meteor.userId(),"realname", realname);
 
+        setTimeout(function() {
+         $('.username_errors').text("");
+        }, 5000);
 
     },
     'click #saveChangesPassword': function(event,template) {
@@ -180,16 +191,21 @@ Template.profileSettings.events({
 
 
                 }
-                else {
+                else 
+                {
                     Session.set("perrors", "");
                     Session.set("passwordsuccess","Password changed!");
                 }
             });
             }
         }
-        else {
+        else 
+        {
             Session.set("perrors", "Your passwords do not match.")
         }
+        setTimeout(function() {
+         $('.password_errors').text("");
+        }, 5000);
     },
 
     'keyup #biography': function() {
