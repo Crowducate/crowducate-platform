@@ -1,0 +1,13 @@
+<template name="addLesson">
+    <form id="add-lesson-form" class="input-group">
+        <input
+               type="text"
+               class="lesson-name form-control"
+               placeholder="{{ mf 'sectionAddLesson-lessonNamePlaceholderText' 'Lesson name..'}}" />
+        <span class="input-group-btn">
+            <button class="btn btn-success add-lesson-button" type="submit">
+                {{ mf 'sectionAddLesson-addLessonButtonText' 'Add' }}
+            </button>
+        </span>
+    </form><!-- /input-group -->
+</template>
