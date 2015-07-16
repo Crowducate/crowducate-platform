@@ -6,7 +6,7 @@ mfPkg.syncAll({
       "text": "Lisää uusi kurssi",
       "ctime": 1426598114016,
       "mtime": 1427355067874,
-      "revisionId": "55RsxHv4hcCwcWf8T",
+      "revisionId": "qrRwCwuDqtLdmjRHw",
       "_id": "dMbGRPoy92k3jn8cJ"
     },
     "teach-addCourseForm-courseTitle-label": {
@@ -15,7 +15,7 @@ mfPkg.syncAll({
       "text": "Otsikko",
       "ctime": 1426598155090,
       "mtime": 1426598155090,
-      "revisionId": "hm8iYTrtsgNRXpdd5",
+      "revisionId": "X6sz2uvBArz5wSFZK",
       "_id": "758rqbLQWMqagrxZK"
     },
     "teach-addCourseForm-courseTitle-coverPhotoLabel": {
@@ -24,7 +24,7 @@ mfPkg.syncAll({
       "text": "Kansikuva",
       "ctime": 1426598192351,
       "mtime": 1427355677177,
-      "revisionId": "zc4MeuBapGf3pWN7u",
+      "revisionId": "oPDYEgLoXzAv4kpsB",
       "_id": "CNjYxPwTyHsaekLGk"
     },
     "teach-addCourseForm-courseTitle-author-label": {
@@ -33,7 +33,7 @@ mfPkg.syncAll({
       "text": "Tekijä",
       "ctime": 1426598205752,
       "mtime": 1427355578184,
-      "revisionId": "S3inNyTcqcuyNWNWa",
+      "revisionId": "CFSShWS3JYwCiRh6C",
       "_id": "m2dnb2KK2HaKrL8po"
     },
     "teach-addCourseForm-courseTitle-author-placeholder": {
@@ -42,7 +42,7 @@ mfPkg.syncAll({
       "text": "Tekijän nimi",
       "ctime": 1426598213087,
       "mtime": 1426598213087,
-      "revisionId": "7tKYrbgZAvNGnB7mn",
+      "revisionId": "9thcdKHFS2QLCW8wQ",
       "_id": "WzTecTnZACmNwYuw4"
     },
     "teach-addCourseForm-courseTitle-keywords-label": {
@@ -51,7 +51,7 @@ mfPkg.syncAll({
       "text": "Avainsanat",
       "ctime": 1426598217323,
       "mtime": 1426598217323,
-      "revisionId": "o5CB78Z7x8awdkc9G",
+      "revisionId": "sbnFM7zqCMMLZkiWh",
       "_id": "FNyK3m8TyX2Dm3X3h"
     },
     "teach-addCourseForm-courseTitle-keywords-placeholder": {
@@ -60,7 +60,7 @@ mfPkg.syncAll({
       "text": "Valitse joitain avainsanoja (esimerkiksi JavaScript, matematiikka)",
       "ctime": 1426598259312,
       "mtime": 1427289298583,
-      "revisionId": "oju7PdZ6TSaZabdMK",
+      "revisionId": "waDSwBW6XHwuJ5X2F",
       "_id": "4qrFzToBqfsYhmcYr"
     },
     "teach-addCourseForm-courseTitle-unpublished-option": {
@@ -69,7 +69,7 @@ mfPkg.syncAll({
       "text": "Yksityinen",
       "ctime": 1426598306435,
       "mtime": 1427286578630,
-      "revisionId": "gEcPcsYPYGtFYmQ8R",
+      "revisionId": "z3Mda7e5Eb5mZrhtx",
       "_id": "5g6LYq2dysBcMPjaA"
     },
     "teach-addCourseForm-courseTitle-published-option": {
@@ -78,7 +78,7 @@ mfPkg.syncAll({
       "text": "Julkinen",
       "ctime": 1426598312025,
       "mtime": 1427286569090,
-      "revisionId": "BhaFLamdpYeqS2FQo",
+      "revisionId": "XPjZcBHJ6L3qtga76",
       "_id": "mLxJZRA8PgmWJACz6"
     },
     "teach-addCourseForm-courseTitle-aboutCourse-label": {
@@ -87,7 +87,7 @@ mfPkg.syncAll({
       "text": "Kurssikuvaus",
       "ctime": 1426598316776,
       "mtime": 1427288612665,
-      "revisionId": "SHxsRHdDx8oPLHFf5",
+      "revisionId": "bfCD7JwMnfLES8drR",
       "_id": "fJ7fAJKCwNkoDSYiY"
     },
     "teach-addCourseForm-courseTitle-aboutCourse-helpText": {
@@ -96,7 +96,7 @@ mfPkg.syncAll({
       "text": "Kuvaa kurssin tavoitteet lyhyesti.",
       "ctime": 1426598342121,
       "mtime": 1427286630865,
-      "revisionId": "mNNNcN2M3tTgthg4K",
+      "revisionId": "svpXTjoaESHjpia2B",
       "_id": "dbbab9yKzxZgY8tm5"
     },
     "lessonEditToolbar-cancelLessonEditButtonText": {
@@ -105,7 +105,7 @@ mfPkg.syncAll({
       "text": "Peruuta",
       "ctime": 1426598353730,
       "mtime": 1426598353730,
-      "revisionId": "xZGpLjGhHy76LJqZM",
+      "revisionId": "53XRgkY8rcLQb48Qn",
       "_id": "njdP8H8KEuGuTXP9o"
     },
     "lessonEditToolbar-saveLessonEditButtonText": {
@@ -114,7 +114,7 @@ mfPkg.syncAll({
       "text": "Tallenna",
       "ctime": 1426598359554,
       "mtime": 1426598359554,
-      "revisionId": "B3ta6aKCfk5evsttv",
+      "revisionId": "vdqJcDBzR7K44jH6Z",
       "_id": "qFbkaEEZMF2Dpu2BJ"
     },
     "courseMeta-courseAuthorAttribution": {
@@ -123,7 +123,7 @@ mfPkg.syncAll({
       "text": "Alkuperäinen tekijä",
       "ctime": 1426598390763,
       "mtime": 1426598390763,
-      "revisionId": "5dq3wwehNvwwpCHzy",
+      "revisionId": "ufo3cSAZXgZjkwDxm",
       "_id": "cQ85Q3orZQZaiXpRZ"
     },
     "addSection-addSectionButtonText": {
@@ -132,7 +132,7 @@ mfPkg.syncAll({
       "text": "Lisää",
       "ctime": 1426598393173,
       "mtime": 1426598393173,
-      "revisionId": "fNHz6tP6rcroLFcJ5",
+      "revisionId": "KJf6XTNcfGqk4pGLe",
       "_id": "d6qmnD6sP47xTa3CZ"
     },
     "sectionAddLesson-addLessonButtonText": {
@@ -141,7 +141,7 @@ mfPkg.syncAll({
       "text": "Lisää",
       "ctime": 1426598395697,
       "mtime": 1426598395697,
-      "revisionId": "XHGhNuraRfLNceQXE",
+      "revisionId": "trNk4eevcAYK9nX5b",
       "_id": "TvkNdBprDrXSNCdBk"
     },
     "courseToolbarTabs-courseInfoTabText": {
@@ -150,7 +150,7 @@ mfPkg.syncAll({
       "text": "Kurssin tiedot",
       "ctime": 1426598436116,
       "mtime": 1426598436116,
-      "revisionId": "jEqcMY753hG4AvWEY",
+      "revisionId": "xqsMJyBExgp856zk9",
       "_id": "RS9KHvroqc6NNqmhD"
     },
     "courseToolbarTabs-courseMaterialTabText": {
@@ -159,7 +159,7 @@ mfPkg.syncAll({
       "text": "Kurssimateriaali",
       "ctime": 1426598444522,
       "mtime": 1427289752870,
-      "revisionId": "CHhntizuT2QRdD2Qw",
+      "revisionId": "XvKSFr3NdwFo9xSwm",
       "_id": "y2E6XRpQh9S39JzWv"
     },
     "editCourse-editCourseButtonText": {
@@ -168,7 +168,7 @@ mfPkg.syncAll({
       "text": "Muokkaa kurssia",
       "ctime": 1426598450454,
       "mtime": 1426598450454,
-      "revisionId": "73sdfXKSwPpTH6HFc",
+      "revisionId": "3TkPXLYSYzKPgEhpC",
       "_id": "kbdcfhrizfNRtf8tm"
     },
     "doneEditingCourse-doneEditingButtonText": {
@@ -177,7 +177,7 @@ mfPkg.syncAll({
       "text": "Muokkaus valmis.",
       "ctime": 1426598464117,
       "mtime": 1426598464117,
-      "revisionId": "oHF7Gr7cz9sLPhomN",
+      "revisionId": "PsyQZGph2TR9YKg2h",
       "_id": "YAr2LhPuyECaZPCXq"
     },
     "taggedCourses-headerText": {
@@ -186,7 +186,7 @@ mfPkg.syncAll({
       "text": "Kurssit avainsanoilla",
       "ctime": 1426598472553,
       "mtime": 1427795577142,
-      "revisionId": "Lc46r67EmgGw4CPsB",
+      "revisionId": "FZz9XLbp88W6wWdob",
       "_id": "AG95F3dGtYigQ7PBQ"
     },
     "_header-navbar-registerText": {
@@ -195,7 +195,7 @@ mfPkg.syncAll({
       "text": "Rekisteröidy",
       "ctime": 1426598486705,
       "mtime": 1426598486705,
-      "revisionId": "Mw8CmD4tuTPdKQ8T2",
+      "revisionId": "jFaD7ivrLeCHCY4oC",
       "_id": "tSSBanC7zSJg6fiqr"
     },
     "_header-navbar-signInText": {
@@ -204,7 +204,7 @@ mfPkg.syncAll({
       "text": "Kirjaudu",
       "ctime": 1426598493225,
       "mtime": 1426598493225,
-      "revisionId": "pGE4eniMCCfo5zXH2",
+      "revisionId": "2PyTLd6MxsWpiRdbT",
       "_id": "rXmfkz4FzdDCS2pPy"
     },
     "_header-dropdownMenu-signOutText": {
@@ -213,7 +213,7 @@ mfPkg.syncAll({
       "text": "Kirjaudu ulos",
       "ctime": 1426598498974,
       "mtime": 1426598498974,
-      "revisionId": "dwM3A3d6y7k3Hfr7P",
+      "revisionId": "hY8jLEmEMNqWvcrXJ",
       "_id": "efHTPQ8Cq5APcmaRo"
     },
     "_header-navbarToggle": {
@@ -222,7 +222,7 @@ mfPkg.syncAll({
       "text": "Vaihda navigointivalikkoa",
       "ctime": 1426598545104,
       "mtime": 1426598545104,
-      "revisionId": "xNJrsZYaEXQDg8Fcp",
+      "revisionId": "3v9WKHGbK9bHpvsrM",
       "_id": "MeqprW4LGAmty8uC2"
     },
     "teach-addCourseForm-courseTitle-addCourse-button": {
@@ -231,7 +231,7 @@ mfPkg.syncAll({
       "text": "Lisää kurssi",
       "ctime": 1426598550913,
       "mtime": 1426598550913,
-      "revisionId": "wbrwzSwERWB9ykrYz",
+      "revisionId": "r4Xcgx3kQw9PcmSRq",
       "_id": "MSr8GHFdjaFcHbwpg"
     },
     "teach-addCourseForm-courseTitle-published-label": {
@@ -240,7 +240,7 @@ mfPkg.syncAll({
       "text": "Muuta julkiseksi, kun kurssi on valmis muiden nähtäväksi.",
       "ctime": 1426598581197,
       "mtime": 1427288444162,
-      "revisionId": "Q2h8j8sZqGg8vcChs",
+      "revisionId": "WvhZZZ7hC9xjnmu6K",
       "_id": "29JZmR2FyvrCXbQ7z"
     },
     "teach-courseTitle-placeholderText": {
@@ -249,7 +249,7 @@ mfPkg.syncAll({
       "text": "Kurssin nimi",
       "ctime": 1427286638669,
       "mtime": 1427288245186,
-      "revisionId": "5h5sKGxwbrb2mJ8Mg",
+      "revisionId": "shpBitrX2mtFFbYgz",
       "_id": "iicZhPKNZEgfKKkq3"
     },
     "_header-homeTab-linkText": {
@@ -258,7 +258,7 @@ mfPkg.syncAll({
       "text": "Koti",
       "ctime": 1427286641933,
       "mtime": 1427286641933,
-      "revisionId": "5WeKyjtdanC7dpTGE",
+      "revisionId": "iY2dA86ajKfJvzKqw",
       "_id": "pnZkKCJSDFjexMdLj"
     },
     "_header-learnTab-linkText": {
@@ -267,7 +267,7 @@ mfPkg.syncAll({
       "text": "Opi",
       "ctime": 1427286647751,
       "mtime": 1427288759438,
-      "revisionId": "7BbF4rsEvyfDYBJyX",
+      "revisionId": "HFkz6Bd9qp8c53BNu",
       "_id": "t82jde6z8CgWfFJMQ"
     },
     "_header-teachTab-linkText": {
@@ -276,7 +276,7 @@ mfPkg.syncAll({
       "text": "Opeta",
       "ctime": 1427286652439,
       "mtime": 1427288763296,
-      "revisionId": "nsNCECkmyMyEdrDJJ",
+      "revisionId": "avAn4Cp3hWFCHwCgo",
       "_id": "vTcd66uYXP9kr88fW"
     },
     "sectionAddLesson-lessonNamePlaceholderText": {
@@ -285,7 +285,7 @@ mfPkg.syncAll({
       "text": "Oppitunnin nimi",
       "ctime": 1427286667529,
       "mtime": 1427289832584,
-      "revisionId": "CRbj7vid79KTt2zTH",
+      "revisionId": "J984j7LwAzABfeM3z",
       "_id": "pTdzxZkcSWxGHJgHo"
     },
     "saveButton-savebuttonText": {
@@ -294,7 +294,7 @@ mfPkg.syncAll({
       "text": "Tallenna",
       "ctime": 1427286693414,
       "mtime": 1427289839380,
-      "revisionId": "4vCmuo5H2aJkX4toe",
+      "revisionId": "WMvpC7QoCqTbAbDaE",
       "_id": "JSpHfL2YgcGqhXRif"
     }
   },
@@ -305,7 +305,7 @@ mfPkg.syncAll({
       "text": "Создать новый курс",
       "ctime": 1426598156232,
       "mtime": 1426598156232,
-      "revisionId": "mM2n9a3GsdEpRC2MZ",
+      "revisionId": "5tQixjNL3CBingcxv",
       "_id": "TdS4WHSpg3ztyGXQ2"
     },
     "teach-addCourseForm-courseTitle-label": {
@@ -314,7 +314,7 @@ mfPkg.syncAll({
       "text": "Заголовок",
       "ctime": 1426598293822,
       "mtime": 1426598293822,
-      "revisionId": "vyJMNa35neqQNBSaq",
+      "revisionId": "T3CExzTaDamDsCCWv",
       "_id": "PGXejjDKwSenndEns"
     },
     "teach-addCourseForm-courseTitle-author-label": {
@@ -323,7 +323,7 @@ mfPkg.syncAll({
       "text": "Автор",
       "ctime": 1426598308316,
       "mtime": 1426598308316,
-      "revisionId": "FpQdC3RdSe7Ej92zQ",
+      "revisionId": "hoLqpa5MJy7M6rAM3",
       "_id": "6Tu6Aykhg6XN7Yb5p"
     },
     "teach-addCourseForm-courseTitle-author-placeholder": {
@@ -332,7 +332,7 @@ mfPkg.syncAll({
       "text": "Имя автора",
       "ctime": 1426598344218,
       "mtime": 1426598344218,
-      "revisionId": "47AepXBpW5LA3RMfx",
+      "revisionId": "kwrjRn5ixLkXZbQqs",
       "_id": "x9sz4Z2P65i8X9ckr"
     },
     "teach-addCourseForm-courseTitle-addCourse-button": {
@@ -341,7 +341,7 @@ mfPkg.syncAll({
       "text": "Добавить курс",
       "ctime": 1426598389042,
       "mtime": 1426598389042,
-      "revisionId": "g9fP5n2PyaDviQPby",
+      "revisionId": "2Fr58pxCADEhBL6R5",
       "_id": "2CkdgLa6PGsEPhkQt"
     },
     "_header-dropdownMenu-signOutText": {
@@ -350,7 +350,7 @@ mfPkg.syncAll({
       "text": "Выйти",
       "ctime": 1426598396024,
       "mtime": 1426598396024,
-      "revisionId": "GvFxPCAb2KB9SsaWy",
+      "revisionId": "k4CgfjgEcLQY2fWLm",
       "_id": "yd9zEypLb88SvyDRL"
     },
     "_header-navbar-signInText": {
@@ -359,7 +359,7 @@ mfPkg.syncAll({
       "text": "Войти",
       "ctime": 1426598399384,
       "mtime": 1426598399384,
-      "revisionId": "gJuMxNY5KfdpXpxmi",
+      "revisionId": "m5s4DPX2Bi8NgjMW4",
       "_id": "Jmq8oddSfGk2vJ4JP"
     },
     "_header-navbar-registerText": {
@@ -368,7 +368,7 @@ mfPkg.syncAll({
       "text": "Регистрация",
       "ctime": 1426598404746,
       "mtime": 1426598404746,
-      "revisionId": "XCWveXGo7B9vFTPGg",
+      "revisionId": "HbraRGTFzthdDjAqE",
       "_id": "GwDjrRL2YBb3wnXgd"
     },
     "editCourse-editCourseButtonText": {
@@ -377,7 +377,7 @@ mfPkg.syncAll({
       "text": "Редактировать курс",
       "ctime": 1426598423807,
       "mtime": 1426598423807,
-      "revisionId": "Et9HHCNGG4WnHnJeK",
+      "revisionId": "ewERzb5cqtF8WLEs8",
       "_id": "npAXYbrZr53CBxYK7"
     },
     "sectionAddLesson-addLessonButtonText": {
@@ -386,7 +386,7 @@ mfPkg.syncAll({
       "text": "Добавить",
       "ctime": 1426598432754,
       "mtime": 1426598432754,
-      "revisionId": "e8cYCzc2MjQLHuRGe",
+      "revisionId": "LG2YuYx8RgrZJfwdc",
       "_id": "RjjXohgkXZCFeiHKj"
     },
     "addSection-addSectionButtonText": {
@@ -395,7 +395,7 @@ mfPkg.syncAll({
       "text": "Добавить",
       "ctime": 1426598435516,
       "mtime": 1426598435516,
-      "revisionId": "u8x5aNWFA9iSXfm4G",
+      "revisionId": "ERWzq2M5EvJmZh8Wb",
       "_id": "5FePrapy32WbSoLPZ"
     },
     "lessonEditToolbar-saveLessonEditButtonText": {
@@ -404,7 +404,7 @@ mfPkg.syncAll({
       "text": "Сохранить",
       "ctime": 1426598442163,
       "mtime": 1426598442163,
-      "revisionId": "6ehD6doKFvZsNhxHf",
+      "revisionId": "n3ByFNggnTnaQLZyp",
       "_id": "TBnXmyPzqMz5gNT3k"
     },
     "lessonEditToolbar-cancelLessonEditButtonText": {
@@ -413,7 +413,7 @@ mfPkg.syncAll({
       "text": "Отменить",
       "ctime": 1426598448284,
       "mtime": 1426598448284,
-      "revisionId": "aXzmaveXkP9nTp4gc",
+      "revisionId": "bXJLdw6y4KEA2BANw",
       "_id": "KZkM4wB8ms9eAqDtZ"
     },
     "teach-addCourseForm-courseTitle-keywords-placeholder": {
@@ -422,7 +422,7 @@ mfPkg.syncAll({
       "text": "Укажите ключевые слова (например, JavaScript, Математика)",
       "ctime": 1426598533987,
       "mtime": 1426598533987,
-      "revisionId": "MCnzTpH8TGKkHKx89",
+      "revisionId": "aMtmYSBB8vNzuzuu7",
       "_id": "FSyS5rh2nuHDpjqH4"
     },
     "teach-addCourseForm-courseTitle-unpublished-option": {
@@ -431,7 +431,7 @@ mfPkg.syncAll({
       "text": "Черновик",
       "ctime": 1426598545555,
       "mtime": 1426598545555,
-      "revisionId": "wxYdZbA5M388iLiAB",
+      "revisionId": "RfzxYotHdwXiBDw7E",
       "_id": "rhiHBHLyRjbHxzqHr"
     },
     "teach-addCourseForm-courseTitle-published-option": {
@@ -440,7 +440,7 @@ mfPkg.syncAll({
       "text": "Опубликован",
       "ctime": 1426598570268,
       "mtime": 1427790264586,
-      "revisionId": "MH9F6iZNpnyWgdHuQ",
+      "revisionId": "ZkyHfqEMwEGdHh94P",
       "_id": "nG4Amb4rYijMKWkZJ"
     },
     "teach-addCourseForm-courseTitle-published-label": {
@@ -449,7 +449,7 @@ mfPkg.syncAll({
       "text": "Поменяйте на \"Опубликовано\", когда будете готовы показать материал другим пользователям.",
       "ctime": 1426598653582,
       "mtime": 1426598653582,
-      "revisionId": "Enq4ifPG944ySeZCa",
+      "revisionId": "DhoALZYDuJtpjoe4R",
       "_id": "znTxpENA2QJyBEjhS"
     },
     "teach-addCourseForm-courseTitle-coverPhotoLabel": {
@@ -458,7 +458,7 @@ mfPkg.syncAll({
       "text": "Изображение ",
       "ctime": 1426598763600,
       "mtime": 1426598763600,
-      "revisionId": "CcWLAnpxxjA6NZeGQ",
+      "revisionId": "whEPt6JL4Qb7bDhbB",
       "_id": "3SbaG2wNtbb4TMLAC"
     },
     "teach-addCourseForm-courseTitle-keywords-label": {
@@ -467,7 +467,7 @@ mfPkg.syncAll({
       "text": "Ключевые слова",
       "ctime": 1426598497978,
       "mtime": 1426598775266,
-      "revisionId": "bcm6mkBmxmLiRwkg3",
+      "revisionId": "pmP4Gz5epazuJ33mp",
       "_id": "6Be8wamXqS24SYm6R"
     },
     "teach-addCourseForm-courseTitle-aboutCourse-label": {
@@ -476,7 +476,7 @@ mfPkg.syncAll({
       "text": "О курсе",
       "ctime": 1426598841867,
       "mtime": 1426598841867,
-      "revisionId": "3pp6nHsjASA39rTnG",
+      "revisionId": "HuRJgjG58evfxQH4g",
       "_id": "KkHDWdrMLGiTp7SJt"
     },
     "teach-addCourseForm-courseTitle-aboutCourse-helpText": {
@@ -485,7 +485,7 @@ mfPkg.syncAll({
       "text": "Вкратце опишите о чем вам курс",
       "ctime": 1426598927847,
       "mtime": 1426598927847,
-      "revisionId": "JEqBE82fCzpo57wRE",
+      "revisionId": "iRyudSqsFeYR5p8Df",
       "_id": "La6XQoy6hTYhqgXLz"
     },
     "_header-navbarToggle": {
@@ -494,7 +494,7 @@ mfPkg.syncAll({
       "text": "Toggle navigation",
       "ctime": 1426598947477,
       "mtime": 1426598947477,
-      "revisionId": "WwWZfvCb7ggoB5Hp4",
+      "revisionId": "auZ8cNGPodCfhYnji",
       "_id": "nyYSfSRKSrnvuSotT"
     },
     "taggedCourses-headerText": {
@@ -503,7 +503,7 @@ mfPkg.syncAll({
       "text": "Курсы по ключевым словам",
       "ctime": 1426598986541,
       "mtime": 1426598986541,
-      "revisionId": "nTu4kbshHepeumHyw",
+      "revisionId": "rMegG9gqrgKawMaew",
       "_id": "dKT65wvkXbGrNzQKa"
     },
     "doneEditingCourse-doneEditingButtonText": {
@@ -512,7 +512,7 @@ mfPkg.syncAll({
       "text": "Закончить редактирование",
       "ctime": 1426598993874,
       "mtime": 1426598993874,
-      "revisionId": "PxyPZFwXEkNuBsGHt",
+      "revisionId": "auQLN2thadtugvJam",
       "_id": "BykXuipFx75ZJQbDi"
     },
     "courseToolbarTabs-courseMaterialTabText": {
@@ -521,7 +521,7 @@ mfPkg.syncAll({
       "text": "Содержание курса",
       "ctime": 1426599009253,
       "mtime": 1426599009253,
-      "revisionId": "FSLKoyJdLYZdAnisg",
+      "revisionId": "DLxETvEGhQhFuELdg",
       "_id": "FEEmondiuMPgknWGm"
     },
     "courseToolbarTabs-courseInfoTabText": {
@@ -530,7 +530,7 @@ mfPkg.syncAll({
       "text": "О курсе",
       "ctime": 1426599013177,
       "mtime": 1426599013177,
-      "revisionId": "EN4Zc82823D6Sa4AF",
+      "revisionId": "fSRgnygQ38uWyx3kv",
       "_id": "f6GaFpQtYjfSSP3dG"
     },
     "courseMeta-courseAuthorAttribution": {
@@ -539,7 +539,7 @@ mfPkg.syncAll({
       "text": "добавлено",
       "ctime": 1426599037303,
       "mtime": 1426599037303,
-      "revisionId": "heLcqcf8Ep4CXGMdY",
+      "revisionId": "uKRdtxmsaMknYZYvZ",
       "_id": "8fqxibMjazWrtaf62"
     },
     "saveButton-savebuttonText": {
@@ -548,7 +548,7 @@ mfPkg.syncAll({
       "text": "Сохранить",
       "ctime": 1427788869494,
       "mtime": 1427788869494,
-      "revisionId": "WZBMa7RbEtCx2xDw4",
+      "revisionId": "DLMuju9ib2rWCgiED",
       "_id": "cPTwW8QxxWkYLtQfd"
     },
     "teach-courseTitle-placeholderText": {
@@ -557,7 +557,7 @@ mfPkg.syncAll({
       "text": "Заголовок",
       "ctime": 1427790586381,
       "mtime": 1427790586381,
-      "revisionId": "BipSZZ79hsSa2pbvT",
+      "revisionId": "mMYvH3CF2nZy5HGmo",
       "_id": "4ADntEXhmuxEybbFP"
     },
     "_header-homeTab-linkText": {
@@ -566,7 +566,7 @@ mfPkg.syncAll({
       "text": "Главная",
       "ctime": 1427790605372,
       "mtime": 1427790605372,
-      "revisionId": "6LMsWZZnu24HSTk4s",
+      "revisionId": "LRj6AinqZQ6Y2Deo9",
       "_id": "Q5YAXQKJWbGYnYquN"
     },
     "_header-learnTab-linkText": {
@@ -575,7 +575,7 @@ mfPkg.syncAll({
       "text": "Изучать",
       "ctime": 1427790759780,
       "mtime": 1427790759780,
-      "revisionId": "ygJYYy6cvaxRFSbHM",
+      "revisionId": "BW8KLPHWDoyjSWBW4",
       "_id": "k6NxucSPv4SjKf3jw"
     },
     "_header-teachTab-linkText": {
@@ -584,406 +584,8 @@ mfPkg.syncAll({
       "text": "Обучать",
       "ctime": 1427790817273,
       "mtime": 1427790817273,
-      "revisionId": "Y3srP3o4aMjQCxrB4",
+      "revisionId": "XFaQ7gkq95Enhg4cC",
       "_id": "XaABLo8BkAqtB55bR"
-    }
-  },
-  "en": {
-    "teach-mainHeading": {
-      "key": "teach-mainHeading",
-      "lang": "en",
-      "text": "Add new course",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "cNC9c29nXRtkGsJ4P",
-      "file": "./client/templates/teach/teach.html",
-      "line": 5,
-      "template": "teach",
-      "_id": "5kkpP7uKAvg7WDqGr"
-    },
-    "teach-addCourseForm-courseTitle-label": {
-      "key": "teach-addCourseForm-courseTitle-label",
-      "lang": "en",
-      "text": "Title",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "D8S9BgSW2wneE2igJ",
-      "file": "./client/templates/teach/teach.html",
-      "line": 11,
-      "template": "teach",
-      "_id": "C59JXpkrbSDwhDiBn"
-    },
-    "teach-courseTitle-placeholderText": {
-      "key": "teach-courseTitle-placeholderText",
-      "lang": "en",
-      "text": "Course title",
-      "ctime": 1427286106891,
-      "mtime": 1427286106891,
-      "revisionId": "T2M4mgu92EeLoP2cC",
-      "file": "./client/templates/teach/teach.html",
-      "line": 17,
-      "template": "teach",
-      "_id": "KRjYB7wWdEnEXdgLW"
-    },
-    "teach-addCourseForm-courseTitle-coverPhotoLabel": {
-      "key": "teach-addCourseForm-courseTitle-coverPhotoLabel",
-      "lang": "en",
-      "text": "Cover Photo",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "rzkn9p7AYfMRQkGyR",
-      "file": "./client/templates/teach/teach.html",
-      "line": 21,
-      "template": "teach",
-      "_id": "e3TcHgkDEhkCP9G2P"
-    },
-    "teach-addCourseForm-courseTitle-author-label": {
-      "key": "teach-addCourseForm-courseTitle-author-label",
-      "lang": "en",
-      "text": "Author",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "pE5FFbwfqeQKhYomJ",
-      "file": "./client/templates/teach/teach.html",
-      "line": 27,
-      "template": "teach",
-      "_id": "jZKJksbroMRMdvJQJ"
-    },
-    "teach-addCourseForm-courseTitle-author-placeholder": {
-      "key": "teach-addCourseForm-courseTitle-author-placeholder",
-      "lang": "en",
-      "text": "Author Name",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "LMq9va522eMcKdNzd",
-      "file": "./client/templates/teach/teach.html",
-      "line": 32,
-      "template": "teach",
-      "_id": "3zYS9x4PAX8oXmGP9"
-    },
-    "teach-addCourseForm-courseTitle-keywords-label": {
-      "key": "teach-addCourseForm-courseTitle-keywords-label",
-      "lang": "en",
-      "text": "Keywords",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "Ef8nZ6kzMuCkuPAZS",
-      "file": "./client/templates/teach/teach.html",
-      "line": 36,
-      "template": "teach",
-      "_id": "pSjRACwekSgF6Qpdm"
-    },
-    "teach-addCourseForm-courseTitle-keywords-placeholder": {
-      "key": "teach-addCourseForm-courseTitle-keywords-placeholder",
-      "lang": "en",
-      "text": "Choose some tags (e.g. JavaScript, Math)",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "AXin7XGurzaZizACT",
-      "file": "./client/templates/teach/teach.html",
-      "line": 41,
-      "template": "teach",
-      "_id": "JPbDkf8wSSNFgrPzn"
-    },
-    "teach-addCourseForm-courseTitle-published-label": {
-      "key": "teach-addCourseForm-courseTitle-published-label",
-      "lang": "en",
-      "text": "Change to \"Published\" when course should be viewable to others.",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "Y8H2bkEYDp7LqtekZ",
-      "file": "./client/templates/teach/teach.html",
-      "line": 46,
-      "template": "teach",
-      "_id": "p4dN6K7vHd99jiMkS"
-    },
-    "teach-addCourseForm-courseTitle-unpublished-option": {
-      "key": "teach-addCourseForm-courseTitle-unpublished-option",
-      "lang": "en",
-      "text": "Unpublished",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "66pkemRrrDP7xZSDR",
-      "file": "./client/templates/teach/teach.html",
-      "line": 49,
-      "template": "teach",
-      "_id": "ekHqtQhnx2b7rgny6"
-    },
-    "teach-addCourseForm-courseTitle-published-option": {
-      "key": "teach-addCourseForm-courseTitle-published-option",
-      "lang": "en",
-      "text": "Published",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "CPiQgaTzutGoyxo4i",
-      "file": "./client/templates/teach/teach.html",
-      "line": 50,
-      "template": "teach",
-      "_id": "9wqPdxQ8RGCwSsBbe"
-    },
-    "teach-addCourseForm-courseTitle-aboutCourse-label": {
-      "key": "teach-addCourseForm-courseTitle-aboutCourse-label",
-      "lang": "en",
-      "text": "About this course",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "5NSEKdphGB2FiWu8o",
-      "file": "./client/templates/teach/teach.html",
-      "line": 55,
-      "template": "teach",
-      "_id": "KXwzGafdLFY2t26QL"
-    },
-    "teach-addCourseForm-courseTitle-aboutCourse-helpText": {
-      "key": "teach-addCourseForm-courseTitle-aboutCourse-helpText",
-      "lang": "en",
-      "text": "Briefly describe the objectives of this course.",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "okSoJh6NYHEEkr6mc",
-      "file": "./client/templates/teach/teach.html",
-      "line": 59,
-      "template": "teach",
-      "_id": "67pMENXKFA7QDaAY5"
-    },
-    "teach-addCourseForm-courseTitle-addCourse-button": {
-      "key": "teach-addCourseForm-courseTitle-addCourse-button",
-      "lang": "en",
-      "text": "Add Course",
-      "ctime": 1426503739075,
-      "mtime": 1426503739075,
-      "revisionId": "udPaoru8gNDqATmou",
-      "file": "./client/templates/teach/teach.html",
-      "line": 62,
-      "template": "teach",
-      "_id": "DnXwfinBoRSzT2dMF"
-    },
-    "_header-navbarToggle": {
-      "key": "_header-navbarToggle",
-      "lang": "en",
-      "text": "Toggle navigation",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "p6XBocYxZFoSXmuwf",
-      "file": "./client/templates/layouts/_header.html",
-      "line": 9,
-      "template": "_header",
-      "_id": "s75QKoAJ83E4FaJLw"
-    },
-    "_header-homeTab-linkText": {
-      "key": "_header-homeTab-linkText",
-      "lang": "en",
-      "text": "Home",
-      "ctime": 1427286106891,
-      "mtime": 1427286106891,
-      "revisionId": "jBQdusLpDPGAD6okD",
-      "file": "./client/templates/layouts/_header.html",
-      "line": 22,
-      "template": "_header",
-      "_id": "33kNzqNPohqpNCcuD"
-    },
-    "_header-learnTab-linkText": {
-      "key": "_header-learnTab-linkText",
-      "lang": "en",
-      "text": "Learn",
-      "ctime": 1427286106891,
-      "mtime": 1427286106891,
-      "revisionId": "e5GfA7tjZvt7pdbco",
-      "file": "./client/templates/layouts/_header.html",
-      "line": 28,
-      "template": "_header",
-      "_id": "bxfRqxfLsdG3zaXzX"
-    },
-    "_header-teachTab-linkText": {
-      "key": "_header-teachTab-linkText",
-      "lang": "en",
-      "text": "Teach",
-      "ctime": 1427286106891,
-      "mtime": 1427286106891,
-      "revisionId": "JkkdyzEwvkJehusMh",
-      "file": "./client/templates/layouts/_header.html",
-      "line": 34,
-      "template": "_header",
-      "_id": "em35cSpWaaJhc9cNJ"
-    },
-    "_header-dropdownMenu-signOutText": {
-      "key": "_header-dropdownMenu-signOutText",
-      "lang": "en",
-      "text": "Sign Out",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "fzkWjDY8xt2JAy6Ya",
-      "file": "./client/templates/layouts/_header.html",
-      "line": 47,
-      "template": "_header",
-      "_id": "MiZyNtwgJe4t25vPA"
-    },
-    "_header-navbar-signInText": {
-      "key": "_header-navbar-signInText",
-      "lang": "en",
-      "text": "Sign in",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "Lp8QRiYGyej48S2Jc",
-      "file": "./client/templates/layouts/_header.html",
-      "line": 56,
-      "template": "_header",
-      "_id": "pAqA3J7eremDsb3Gw"
-    },
-    "_header-navbar-registerText": {
-      "key": "_header-navbar-registerText",
-      "lang": "en",
-      "text": "Register",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "7S4b8fWhc94pjM6Hm",
-      "file": "./client/templates/layouts/_header.html",
-      "line": 59,
-      "template": "_header",
-      "_id": "ZX8LksqEMMrgbLpCo"
-    },
-    "taggedCourses-headerText": {
-      "key": "taggedCourses-headerText",
-      "lang": "en",
-      "text": "Courses tagged",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "7Np7d9rfFcXDtRgAy",
-      "file": "./client/templates/courses/tagged-courses.html",
-      "line": 3,
-      "template": "taggedCourses",
-      "_id": "RuGg9t8efZYENvXgs"
-    },
-    "doneEditingCourse-doneEditingButtonText": {
-      "key": "doneEditingCourse-doneEditingButtonText",
-      "lang": "en",
-      "text": "Done editing.",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "zaHYAMLdtFW8puXY9",
-      "file": "./client/templates/course/toolbar/done-editing.html",
-      "line": 6,
-      "template": "doneEditingCourse",
-      "_id": "jo8rZB6ANrttXCorX"
-    },
-    "editCourse-editCourseButtonText": {
-      "key": "editCourse-editCourseButtonText",
-      "lang": "en",
-      "text": "Edit course",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "eB5NJhJ77h3vsMZ3i",
-      "file": "./client/templates/course/toolbar/edit-course.html",
-      "line": 6,
-      "template": "editCourse",
-      "_id": "beczH4trxcMtSjjkD"
-    },
-    "courseToolbarTabs-courseMaterialTabText": {
-      "key": "courseToolbarTabs-courseMaterialTabText",
-      "lang": "en",
-      "text": "Course material",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "cpwRDWZjFngqo4vsT",
-      "file": "./client/templates/course/toolbar/tabs.html",
-      "line": 5,
-      "template": "courseToolbarTabs",
-      "_id": "rZwHGP3t6xzbQfg2o"
-    },
-    "courseToolbarTabs-courseInfoTabText": {
-      "key": "courseToolbarTabs-courseInfoTabText",
-      "lang": "en",
-      "text": "Course info",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "9bvhhguEvEtQEJ7sR",
-      "file": "./client/templates/course/toolbar/tabs.html",
-      "line": 10,
-      "template": "courseToolbarTabs",
-      "_id": "Q9ZLWgPb5iCsbAyGL"
-    },
-    "sectionAddLesson-lessonNamePlaceholderText": {
-      "key": "sectionAddLesson-lessonNamePlaceholderText",
-      "lang": "en",
-      "text": "Lesson name..",
-      "ctime": 1427286106891,
-      "mtime": 1427286106891,
-      "revisionId": "qjQGetrFzXzF4NZRY",
-      "file": "./client/templates/course/sidebar/section/add-lesson/add-lesson.html",
-      "line": 6,
-      "template": "sectionAddLesson",
-      "_id": "FYqsHFrJgcA2m2jCw"
-    },
-    "sectionAddLesson-addLessonButtonText": {
-      "key": "sectionAddLesson-addLessonButtonText",
-      "lang": "en",
-      "text": "Add",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "xXf6BGeiWQNvRohSb",
-      "file": "./client/templates/course/sidebar/section/add-lesson/add-lesson.html",
-      "line": 9,
-      "template": "sectionAddLesson",
-      "_id": "CmCi6poimn2dtWJmH"
-    },
-    "addSection-addSectionButtonText": {
-      "key": "addSection-addSectionButtonText",
-      "lang": "en",
-      "text": "Add",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "wd2LBqbk63JW2ZBvZ",
-      "file": "./client/templates/course/sidebar/add-section/add-section.html",
-      "line": 6,
-      "template": "addSection",
-      "_id": "BCDmCjJBvYHeEK4ZR"
-    },
-    "courseMeta-courseAuthorAttribution": {
-      "key": "courseMeta-courseAuthorAttribution",
-      "lang": "en",
-      "text": "originally by",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "qw9NPLWfvx6o4gcHm",
-      "file": "./client/templates/course/meta/meta.html",
-      "line": 4,
-      "template": "courseMeta",
-      "_id": "5KPJSnQ4eSXDW35LS"
-    },
-    "lessonEditToolbar-saveLessonEditButtonText": {
-      "key": "lessonEditToolbar-saveLessonEditButtonText",
-      "lang": "en",
-      "text": "Save",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "kTEGsvAJ8SLqToEAG",
-      "file": "./client/templates/course/lesson/edit/edit-toolbar.html",
-      "line": 6,
-      "template": "lessonEditToolbar",
-      "_id": "9qxDNq2M8uoa6Jyzw"
-    },
-    "lessonEditToolbar-cancelLessonEditButtonText": {
-      "key": "lessonEditToolbar-cancelLessonEditButtonText",
-      "lang": "en",
-      "text": "Cancel",
-      "ctime": 1426597721408,
-      "mtime": 1426597721408,
-      "revisionId": "7vzP5Y4JnaLTakjae",
-      "file": "./client/templates/course/lesson/edit/edit-toolbar.html",
-      "line": 10,
-      "template": "lessonEditToolbar",
-      "_id": "8hzQLWqM6TCojTWHv"
-    },
-    "saveButton-savebuttonText": {
-      "key": "saveButton-savebuttonText",
-      "lang": "en",
-      "text": "Save",
-      "ctime": 1427286106891,
-      "mtime": 1427286106891,
-      "revisionId": "vyqaw4yeSKWobDCdh",
-      "file": "./client/templates/components/saveButton.html",
-      "line": 6,
-      "template": "saveButton",
-      "_id": "9KnaMuuZ3ww8hTWTr"
     }
   },
   "de": {
@@ -993,7 +595,7 @@ mfPkg.syncAll({
       "text": "Title",
       "ctime": 1431871021250,
       "mtime": 1431871021250,
-      "revisionId": "L4fb8wHzTCuKg2cgD",
+      "revisionId": "wiptqWApEccoiojMm",
       "_id": "xKcD7DwdfKafBDfh5"
     },
     "teach-courseTitle-placeholderText": {
@@ -1002,7 +604,7 @@ mfPkg.syncAll({
       "text": "Titelbild",
       "ctime": 1431871025077,
       "mtime": 1431871025077,
-      "revisionId": "5J5pLJYj88iWpyhLp",
+      "revisionId": "wEi5BnJPqMZ7DQHtT",
       "_id": "MqnQ8wRKQWK8ZbNps"
     },
     "teach-addCourseForm-courseTitle-author-placeholder": {
@@ -1011,7 +613,7 @@ mfPkg.syncAll({
       "text": "Name des Autors",
       "ctime": 1431871034428,
       "mtime": 1431871034428,
-      "revisionId": "dYneyMus5Se5tQiT4",
+      "revisionId": "25fQC4T3pmN4MmRqp",
       "_id": "hAXBxL4u7YCFfJzwt"
     },
     "teach-addCourseForm-courseTitle-author-label": {
@@ -1020,7 +622,7 @@ mfPkg.syncAll({
       "text": "Autor",
       "ctime": 1431871067297,
       "mtime": 1431871067297,
-      "revisionId": "ZzoAaLgpW5BCL7wAW",
+      "revisionId": "JJy34RojbMvM7kiZh",
       "_id": "bTEjksjpfBrFczcjY"
     },
     "teach-mainHeading": {
@@ -1029,7 +631,7 @@ mfPkg.syncAll({
       "text": "Neuen Kurs hinzufügen",
       "ctime": 1431871070633,
       "mtime": 1431938370031,
-      "revisionId": "8xGYjn9whzbRGFcjH",
+      "revisionId": "khcHDmH3bQyJkfxXr",
       "_id": "rnq9uQgPoWHqpfhAj"
     },
     "teach-addCourseForm-courseTitle-coverPhotoLabel": {
@@ -1038,7 +640,7 @@ mfPkg.syncAll({
       "text": "Titelbild",
       "ctime": 1431871096420,
       "mtime": 1431871096420,
-      "revisionId": "xbMxPMXWSgHgb9uTD",
+      "revisionId": "4zzKBzT8fEt2DKSpy",
       "_id": "BcgPSaRTN3spSJCTA"
     },
     "teach-addCourseForm-courseTitle-keywords-label": {
@@ -1047,7 +649,7 @@ mfPkg.syncAll({
       "text": "Schlagwörter",
       "ctime": 1431871099734,
       "mtime": 1431871099734,
-      "revisionId": "kcpQkYYAZbMXHgteX",
+      "revisionId": "5RX3Whm6guSDFYPaA",
       "_id": "2sb4X4ZrHYsvBr3hG"
     },
     "teach-addCourseForm-courseTitle-keywords-placeholder": {
@@ -1056,7 +658,7 @@ mfPkg.syncAll({
       "text": "Wähle einige Schlagwörter (z. B. JavaScript, Mathe)",
       "ctime": 1431871112294,
       "mtime": 1431871112294,
-      "revisionId": "PaXYjGu5Rkzujf2Ky",
+      "revisionId": "PtXZWmFTwFRx2RWd3",
       "_id": "djXWSAE5QPbwgRJN5"
     },
     "teach-addCourseForm-courseTitle-published-label": {
@@ -1065,7 +667,7 @@ mfPkg.syncAll({
       "text": "Setz auf \"Veröffentlicht\", sobald der Kurs für andere sichtbar sein soll.",
       "ctime": 1431871121083,
       "mtime": 1431871121083,
-      "revisionId": "x97cLANxoK3PEsGSR",
+      "revisionId": "oeYamhmCBDZ3QJJP6",
       "_id": "7KKg2xwAHC7fykiX3"
     },
     "teach-addCourseForm-courseTitle-unpublished-option": {
@@ -1074,7 +676,7 @@ mfPkg.syncAll({
       "text": "Nicht veröffentlicht",
       "ctime": 1431871127925,
       "mtime": 1431871127925,
-      "revisionId": "49ahdxCfZkRutEJEg",
+      "revisionId": "grMu6wdzzx4JfL8Ex",
       "_id": "cj9mCS3XwgAd2uugB"
     },
     "teach-addCourseForm-courseTitle-published-option": {
@@ -1083,7 +685,7 @@ mfPkg.syncAll({
       "text": "Veröffentlicht",
       "ctime": 1431871152674,
       "mtime": 1431871152674,
-      "revisionId": "7egAJrzww2ST6r3dx",
+      "revisionId": "KqNScMSoSQzw8oZrF",
       "_id": "FKsneTnCpWzbWZgvm"
     },
     "teach-addCourseForm-courseTitle-aboutCourse-label": {
@@ -1092,7 +694,7 @@ mfPkg.syncAll({
       "text": "Über diesen Kurs",
       "ctime": 1431871165297,
       "mtime": 1431871165297,
-      "revisionId": "XgTYajXWv3ig4LQhd",
+      "revisionId": "LvQvWfzo43LTkMtFc",
       "_id": "tnQXNDd4zs77t76FT"
     },
     "teach-addCourseForm-courseTitle-aboutCourse-helpText": {
@@ -1101,7 +703,7 @@ mfPkg.syncAll({
       "text": "Beschreibe kurz die Ziele des Kurses.",
       "ctime": 1431871182358,
       "mtime": 1431871182358,
-      "revisionId": "g9pih4BJrDCGcPCfH",
+      "revisionId": "8pFj7KXzMwKkx6uuj",
       "_id": "4MkdLkCCntzdMqLNL"
     },
     "teach-addCourseForm-courseTitle-addCourse-button": {
@@ -1110,7 +712,7 @@ mfPkg.syncAll({
       "text": "Kurs hinzufügen",
       "ctime": 1431871195951,
       "mtime": 1431938385807,
-      "revisionId": "mbXE4bSaf6hJ6TZXE",
+      "revisionId": "FB2CeDxAcSFkSm5nn",
       "_id": "KZgwEyf39MdwoBect"
     },
     "_header-navbarToggle": {
@@ -1119,7 +721,7 @@ mfPkg.syncAll({
       "text": "Navigation umschalten",
       "ctime": 1431871222114,
       "mtime": 1431871222114,
-      "revisionId": "riMKHyZTJFCyBTqXE",
+      "revisionId": "T7xNgCMCMC7fbhSkn",
       "_id": "ThHctkv8kpdBBt98v"
     },
     "_header-homeTab-linkText": {
@@ -1128,7 +730,7 @@ mfPkg.syncAll({
       "text": "Startseite",
       "ctime": 1431871249958,
       "mtime": 1431871249958,
-      "revisionId": "sW3Y2b8fQtJBHGcpQ",
+      "revisionId": "5fXXE7ymdY7K7a8Hd",
       "_id": "7tpbKA3SbYTwuTfyi"
     },
     "_header-learnTab-linkText": {
@@ -1137,7 +739,7 @@ mfPkg.syncAll({
       "text": "Lernen",
       "ctime": 1431871257696,
       "mtime": 1431871257696,
-      "revisionId": "FscE3jMXQ8okTdjF8",
+      "revisionId": "qHppAxeuBxSreZdpP",
       "_id": "X2HmkaNkCNcrjDa6s"
     },
     "_header-teachTab-linkText": {
@@ -1146,7 +748,7 @@ mfPkg.syncAll({
       "text": "Lehren",
       "ctime": 1431871260822,
       "mtime": 1431871260822,
-      "revisionId": "7N6xosZwAiTo2iN8Q",
+      "revisionId": "ZpAbcbMu8gNh4vKQK",
       "_id": "u9m3NqXh2F6HhnLac"
     },
     "_header-dropdownMenu-signOutText": {
@@ -1155,7 +757,7 @@ mfPkg.syncAll({
       "text": "Abmelden",
       "ctime": 1431871267111,
       "mtime": 1431871267111,
-      "revisionId": "2z7jfugmo4Q2JCXnZ",
+      "revisionId": "EPFRkec9Tmho6hSfn",
       "_id": "TuWsZE4F4SfLLknqM"
     },
     "_header-navbar-signInText": {
@@ -1164,7 +766,7 @@ mfPkg.syncAll({
       "text": "Anmelden",
       "ctime": 1431871270536,
       "mtime": 1431871270536,
-      "revisionId": "A7jmoGw686GuKqyKt",
+      "revisionId": "cnobLB3387yMxhwPb",
       "_id": "XkYJXgR7CiCGcQHs2"
     },
     "_header-navbar-registerText": {
@@ -1173,7 +775,7 @@ mfPkg.syncAll({
       "text": "Registrieren",
       "ctime": 1431871306282,
       "mtime": 1431871306282,
-      "revisionId": "fFpFS2Z9WcZSJrg67",
+      "revisionId": "wrvhZDpiMijGJJbjR",
       "_id": "TQLisfvPRGTPom3Cj"
     },
     "taggedCourses-headerText": {
@@ -1182,7 +784,7 @@ mfPkg.syncAll({
       "text": "Markierte Kurse",
       "ctime": 1431935039764,
       "mtime": 1431935039764,
-      "revisionId": "wxKiauxmiZjjdd4KQ",
+      "revisionId": "kj6GuvbNwFsbtrced",
       "_id": "i56QyoMirBLnsQfey"
     },
     "doneEditingCourse-doneEditingButtonText": {
@@ -1191,7 +793,7 @@ mfPkg.syncAll({
       "text": "Bearbeitung beenden.",
       "ctime": 1431935058772,
       "mtime": 1431935058772,
-      "revisionId": "C6sSsuiCdHAKitfix",
+      "revisionId": "yRBSRhjnQ9gG3y9Ma",
       "_id": "GnHodtF4DsnXdYYJ7"
     },
     "editCourse-editCourseButtonText": {
@@ -1200,7 +802,7 @@ mfPkg.syncAll({
       "text": "Kurs editieren",
       "ctime": 1431935065137,
       "mtime": 1431935065137,
-      "revisionId": "TkAN3Cc36ay7J4NJe",
+      "revisionId": "c6g5KY6aEgZskRABt",
       "_id": "54pYvgJdh98Qp7Qzw"
     },
     "courseToolbarTabs-courseMaterialTabText": {
@@ -1209,7 +811,7 @@ mfPkg.syncAll({
       "text": "Kursmaterial",
       "ctime": 1431935074706,
       "mtime": 1431935074706,
-      "revisionId": "o88Xo45QgucnyAbGA",
+      "revisionId": "YSQkiMWnLZTHqWWzd",
       "_id": "Cxm8rCNqBjANxjTxe"
     },
     "courseToolbarTabs-courseInfoTabText": {
@@ -1218,7 +820,7 @@ mfPkg.syncAll({
       "text": "Kursdetails",
       "ctime": 1431935077068,
       "mtime": 1431935077068,
-      "revisionId": "qvNWYEWRekN8uq2zm",
+      "revisionId": "6x4eWcunnnBuMbTsp",
       "_id": "whxCKLycBSL2YAXCX"
     },
     "sectionAddLesson-addLessonButtonText": {
@@ -1227,7 +829,7 @@ mfPkg.syncAll({
       "text": "Hinzufügen",
       "ctime": 1431935733682,
       "mtime": 1431935733682,
-      "revisionId": "rwKXkfXWiwp8WvvKX",
+      "revisionId": "w6M24BpGoWJv4JKEx",
       "_id": "vfqo4XZ8HSCPiH5uM"
     },
     "addSection-addSectionButtonText": {
@@ -1236,7 +838,7 @@ mfPkg.syncAll({
       "text": "Hinzufügen",
       "ctime": 1431935736126,
       "mtime": 1431935736126,
-      "revisionId": "KjyjJk2sb4fSDXfpR",
+      "revisionId": "yi33eEMCriBc4cPm6",
       "_id": "wKGtkbrhJCdjuBkyS"
     },
     "sectionAddLesson-lessonNamePlaceholderText": {
@@ -1245,7 +847,7 @@ mfPkg.syncAll({
       "text": "Name der Lektion",
       "ctime": 1431935748583,
       "mtime": 1431935748583,
-      "revisionId": "BqDnby2RRrr95zYCN",
+      "revisionId": "2tS6SLHNwe9vjZn96",
       "_id": "toYSAfyu9q9nNarXd"
     },
     "courseMeta-courseAuthorAttribution": {
@@ -1254,7 +856,7 @@ mfPkg.syncAll({
       "text": "ursprünglich von",
       "ctime": 1431935754940,
       "mtime": 1431935754940,
-      "revisionId": "kvciM6QrAcQZrGXob",
+      "revisionId": "fN6Rq5yJbxsB7hLDN",
       "_id": "Ma5XC3YLvpFoyv3iA"
     },
     "lessonEditToolbar-saveLessonEditButtonText": {
@@ -1263,7 +865,7 @@ mfPkg.syncAll({
       "text": "Speichern",
       "ctime": 1431935761306,
       "mtime": 1431935761306,
-      "revisionId": "N9tz8Sqj9axFnXQ7x",
+      "revisionId": "9ShcWvpn8FFTLzBMo",
       "_id": "EbGq6xX66e99X8Z6n"
     },
     "lessonEditToolbar-cancelLessonEditButtonText": {
@@ -1272,7 +874,7 @@ mfPkg.syncAll({
       "text": "Abbrechen",
       "ctime": 1431935768669,
       "mtime": 1431935768669,
-      "revisionId": "BpwZTPPMBXjyAg59A",
+      "revisionId": "Azgptpr3sGZFeodvN",
       "_id": "DvuHWyc3cxPNcp4kQ"
     },
     "saveButton-savebuttonText": {
@@ -1281,11 +883,708 @@ mfPkg.syncAll({
       "text": "Speichern",
       "ctime": 1431935790499,
       "mtime": 1431935790499,
-      "revisionId": "9uKgH44PesQGMLKF5",
+      "revisionId": "HWYY8FC3yoRQr452N",
       "_id": "dYP84ESMSjz9cENaD"
+    }
+  },
+  "en": {
+    "teach-mainHeading": {
+      "key": "teach-mainHeading",
+      "lang": "en",
+      "text": "Add new course",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "c5AhRdAXGgWiBCcfM",
+      "file": "./client/templates/teach/teach.html",
+      "line": 5,
+      "template": "teach",
+      "_id": "37wX3rzyGCM95sCKF"
+    },
+    "teach-addCourseForm-courseTitle-label": {
+      "key": "teach-addCourseForm-courseTitle-label",
+      "lang": "en",
+      "text": "Title",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "fftsyfGn3GHinsbwE",
+      "file": "./client/templates/teach/teach.html",
+      "line": 11,
+      "template": "teach",
+      "_id": "ZdxAJX5BpE79uifnT"
+    },
+    "teach-courseTitle-placeholderText": {
+      "key": "teach-courseTitle-placeholderText",
+      "lang": "en",
+      "text": "Course title",
+      "ctime": 1427286106891,
+      "mtime": 1427286106891,
+      "revisionId": "4twDqfRW3AxX2o4ma",
+      "file": "./client/templates/teach/teach.html",
+      "line": 17,
+      "template": "teach",
+      "_id": "RdyPusHp5PtHNSmHj"
+    },
+    "teach-addCourseForm-courseTitle-coverPhotoLabel": {
+      "key": "teach-addCourseForm-courseTitle-coverPhotoLabel",
+      "lang": "en",
+      "text": "Cover Photo",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "fThPnYjRxyGcA4TjD",
+      "file": "./client/templates/teach/teach.html",
+      "line": 21,
+      "template": "teach",
+      "_id": "3ymaWrednDDAoBbua"
+    },
+    "teach-addCourseForm-courseTitle-author-label": {
+      "key": "teach-addCourseForm-courseTitle-author-label",
+      "lang": "en",
+      "text": "Author",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "DEwm52HDihwTDkWdE",
+      "file": "./client/templates/teach/teach.html",
+      "line": 27,
+      "template": "teach",
+      "_id": "pyRusdHZAZjzCPwJm"
+    },
+    "teach-addCourseForm-courseTitle-author-placeholder": {
+      "key": "teach-addCourseForm-courseTitle-author-placeholder",
+      "lang": "en",
+      "text": "Author Name",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "zCv6QHixnXuBid38j",
+      "file": "./client/templates/teach/teach.html",
+      "line": 32,
+      "template": "teach",
+      "_id": "whdCXxY8JjCMQNcXX"
+    },
+    "teach-addCourseForm-courseTitle-keywords-label": {
+      "key": "teach-addCourseForm-courseTitle-keywords-label",
+      "lang": "en",
+      "text": "Keywords",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "8suMmsYJSuQnJ2taJ",
+      "file": "./client/templates/teach/teach.html",
+      "line": 36,
+      "template": "teach",
+      "_id": "q7WmeGq6fNSrgHAzi"
+    },
+    "teach-addCourseForm-courseTitle-keywords-placeholder": {
+      "key": "teach-addCourseForm-courseTitle-keywords-placeholder",
+      "lang": "en",
+      "text": "Choose some tags (e.g. JavaScript, Math)",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "ZLdRgk8fBhsgRYbMZ",
+      "file": "./client/templates/teach/teach.html",
+      "line": 41,
+      "template": "teach",
+      "_id": "JhMmvLCoZjrL2c5eW"
+    },
+    "teach-addCourseForm-courseTitle-published-label": {
+      "key": "teach-addCourseForm-courseTitle-published-label",
+      "lang": "en",
+      "text": "Change to \"Published\" when course should be viewable to others.",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "fYKXs2oPzRFia6NKj",
+      "file": "./client/templates/teach/teach.html",
+      "line": 46,
+      "template": "teach",
+      "_id": "tNtTfaaePSXkZhNcv"
+    },
+    "teach-addCourseForm-courseTitle-unpublished-option": {
+      "key": "teach-addCourseForm-courseTitle-unpublished-option",
+      "lang": "en",
+      "text": "Unpublished",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "FAnpcR28gkcf3WJ5e",
+      "file": "./client/templates/teach/teach.html",
+      "line": 49,
+      "template": "teach",
+      "_id": "qTDqLbgukSNcYwbLm"
+    },
+    "teach-addCourseForm-courseTitle-published-option": {
+      "key": "teach-addCourseForm-courseTitle-published-option",
+      "lang": "en",
+      "text": "Published",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "YFvxxv6xodWd7J4HT",
+      "file": "./client/templates/teach/teach.html",
+      "line": 50,
+      "template": "teach",
+      "_id": "kiWyGXoAnfaqeKRxR"
+    },
+    "teach-addCourseForm-courseTitle-aboutCourse-label": {
+      "key": "teach-addCourseForm-courseTitle-aboutCourse-label",
+      "lang": "en",
+      "text": "About this course",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "9EeDTSPhJmmji5NS8",
+      "file": "./client/templates/teach/teach.html",
+      "line": 55,
+      "template": "teach",
+      "_id": "XoRe3gjWwj8RDzM78"
+    },
+    "teach-addCourseForm-courseTitle-aboutCourse-helpText": {
+      "key": "teach-addCourseForm-courseTitle-aboutCourse-helpText",
+      "lang": "en",
+      "text": "Briefly describe the objectives of this course.",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "2n4RBTL3fHmMWMNNW",
+      "file": "./client/templates/teach/teach.html",
+      "line": 59,
+      "template": "teach",
+      "_id": "c8n6uaG3bDTfukdaG"
+    },
+    "teach-addCourseForm-courseTitle-addCourse-button": {
+      "key": "teach-addCourseForm-courseTitle-addCourse-button",
+      "lang": "en",
+      "text": "Add Course",
+      "ctime": 1426503739075,
+      "mtime": 1426503739075,
+      "revisionId": "YGbdtgKsBH9yniac5",
+      "file": "./client/templates/teach/teach.html",
+      "line": 62,
+      "template": "teach",
+      "_id": "rKdhshw5Hejb572gt"
+    },
+    "_header-navbarToggle": {
+      "key": "_header-navbarToggle",
+      "lang": "en",
+      "text": "Toggle navigation",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "SRAck6h8byGcL4taC",
+      "file": "./client/templates/layouts/_header.html",
+      "line": 9,
+      "template": "_header",
+      "_id": "kaxaWjHqaEwPjKJDv"
+    },
+    "_header-homeTab-linkText": {
+      "key": "_header-homeTab-linkText",
+      "lang": "en",
+      "text": "Home",
+      "ctime": 1427286106891,
+      "mtime": 1427286106891,
+      "revisionId": "cXt8LmZwjiNio8tZz",
+      "file": "./client/templates/layouts/_header.html",
+      "line": 22,
+      "template": "_header",
+      "_id": "2JToKJ5vx3GffXTzt"
+    },
+    "_header-learnTab-linkText": {
+      "key": "_header-learnTab-linkText",
+      "lang": "en",
+      "text": "Learn",
+      "ctime": 1427286106891,
+      "mtime": 1427286106891,
+      "revisionId": "wNgDTpKKwC69qAfyi",
+      "file": "./client/templates/layouts/_header.html",
+      "line": 28,
+      "template": "_header",
+      "_id": "x76pPcvWJnvr5hfPC"
+    },
+    "_header-teachTab-linkText": {
+      "key": "_header-teachTab-linkText",
+      "lang": "en",
+      "text": "Teach",
+      "ctime": 1427286106891,
+      "mtime": 1427286106891,
+      "revisionId": "jv9m2qn88kRG673gX",
+      "file": "./client/templates/layouts/_header.html",
+      "line": 34,
+      "template": "_header",
+      "_id": "mhQCBD7GgwiXAJfND"
+    },
+    "_header-dropdownMenu-signOutText": {
+      "key": "_header-dropdownMenu-signOutText",
+      "lang": "en",
+      "text": "Sign Out",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "vcNoDbcmHm2Lhu4Zf",
+      "file": "./client/templates/layouts/_header.html",
+      "line": 47,
+      "template": "_header",
+      "_id": "kXTkG3ADbxtvbmiXa"
+    },
+    "_header-navbar-signInText": {
+      "key": "_header-navbar-signInText",
+      "lang": "en",
+      "text": "Sign in",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "Y8e8aiJxuBZkwYSXF",
+      "file": "./client/templates/layouts/_header.html",
+      "line": 56,
+      "template": "_header",
+      "_id": "BgLLE7MmRJdc4DED3"
+    },
+    "_header-navbar-registerText": {
+      "key": "_header-navbar-registerText",
+      "lang": "en",
+      "text": "Register",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "oEDDHrGxLTALkoYGw",
+      "file": "./client/templates/layouts/_header.html",
+      "line": 59,
+      "template": "_header",
+      "_id": "LHpwTH9x7nM2xXwmK"
+    },
+    "taggedCourses-headerText": {
+      "key": "taggedCourses-headerText",
+      "lang": "en",
+      "text": "Courses tagged",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "p7vozxrAZhPhWwpGx",
+      "file": "./client/templates/courses/tagged-courses.html",
+      "line": 3,
+      "template": "taggedCourses",
+      "_id": "SiJMtX7CJqoq8rbMA"
+    },
+    "doneEditingCourse-doneEditingButtonText": {
+      "key": "doneEditingCourse-doneEditingButtonText",
+      "lang": "en",
+      "text": "Done editing.",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "FrGu2L65fJEtCKd8L",
+      "file": "./client/templates/course/toolbar/done-editing.html",
+      "line": 6,
+      "template": "doneEditingCourse",
+      "_id": "Xm2Zy3vCiZasRHnoH"
+    },
+    "editCourse-editCourseButtonText": {
+      "key": "editCourse-editCourseButtonText",
+      "lang": "en",
+      "text": "Edit course",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "zdkWn4d4isrcSiJ2A",
+      "file": "./client/templates/course/toolbar/edit-course.html",
+      "line": 6,
+      "template": "editCourse",
+      "_id": "siRxX5iKYsxATquiM"
+    },
+    "courseToolbarTabs-courseMaterialTabText": {
+      "key": "courseToolbarTabs-courseMaterialTabText",
+      "lang": "en",
+      "text": "Course material",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "JTeCtXQngDLzboT99",
+      "file": "./client/templates/course/toolbar/tabs.html",
+      "line": 5,
+      "template": "courseToolbarTabs",
+      "_id": "LMrR6bQMqq88okQgy"
+    },
+    "courseToolbarTabs-courseInfoTabText": {
+      "key": "courseToolbarTabs-courseInfoTabText",
+      "lang": "en",
+      "text": "Course info",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "XSczRDb2p76nyMJWu",
+      "file": "./client/templates/course/toolbar/tabs.html",
+      "line": 10,
+      "template": "courseToolbarTabs",
+      "_id": "A9TrfmR9aqntcty53"
+    },
+    "sectionAddLesson-lessonNamePlaceholderText": {
+      "key": "sectionAddLesson-lessonNamePlaceholderText",
+      "lang": "en",
+      "text": "Lesson name..",
+      "ctime": 1427286106891,
+      "mtime": 1427286106891,
+      "revisionId": "iJzwnvhnL5ogFv6fq",
+      "file": "./client/templates/course/sidebar/section/add-lesson/add-lesson.html",
+      "line": 6,
+      "template": "sectionAddLesson",
+      "_id": "kgTx33dBgP7mgjyx2"
+    },
+    "sectionAddLesson-addLessonButtonText": {
+      "key": "sectionAddLesson-addLessonButtonText",
+      "lang": "en",
+      "text": "Add",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "fN8XC9aQerPnSztYG",
+      "file": "./client/templates/course/sidebar/section/add-lesson/add-lesson.html",
+      "line": 9,
+      "template": "sectionAddLesson",
+      "_id": "qf3FnCxnEF8xbcySz"
+    },
+    "addSection-addSectionButtonText": {
+      "key": "addSection-addSectionButtonText",
+      "lang": "en",
+      "text": "Add",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "rzcW94pfn84rPzRvx",
+      "file": "./client/templates/course/sidebar/add-section/add-section.html",
+      "line": 6,
+      "template": "addSection",
+      "_id": "xYzTG6FwBFKYTkZX5"
+    },
+    "courseMeta-courseAuthorAttribution": {
+      "key": "courseMeta-courseAuthorAttribution",
+      "lang": "en",
+      "text": "originally by",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "SKk8Mvfv2xNqks6va",
+      "file": "./client/templates/course/meta/meta.html",
+      "line": 4,
+      "template": "courseMeta",
+      "_id": "hCxjYdtEbgjztFnJ3"
+    },
+    "lessonEditToolbar-saveLessonEditButtonText": {
+      "key": "lessonEditToolbar-saveLessonEditButtonText",
+      "lang": "en",
+      "text": "Save",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "qamG2vdJhcEcoPKan",
+      "file": "./client/templates/course/lesson/edit/edit-toolbar.html",
+      "line": 6,
+      "template": "lessonEditToolbar",
+      "_id": "qxuetY6zvzmNA7tZF"
+    },
+    "lessonEditToolbar-cancelLessonEditButtonText": {
+      "key": "lessonEditToolbar-cancelLessonEditButtonText",
+      "lang": "en",
+      "text": "Cancel",
+      "ctime": 1426597721408,
+      "mtime": 1426597721408,
+      "revisionId": "DNR7qyYeF7SoBEgg5",
+      "file": "./client/templates/course/lesson/edit/edit-toolbar.html",
+      "line": 10,
+      "template": "lessonEditToolbar",
+      "_id": "LPAqGrKFF3sooArEM"
+    },
+    "saveButton-savebuttonText": {
+      "key": "saveButton-savebuttonText",
+      "lang": "en",
+      "text": "Save",
+      "ctime": 1427286106891,
+      "mtime": 1427286106891,
+      "revisionId": "Jc6hEfWgAYb468yvY",
+      "file": "./client/templates/components/saveButton.html",
+      "line": 6,
+      "template": "saveButton",
+      "_id": "WYjhim5M2rnuvFzYw"
+    }
+  },
+  "fa": {
+    "teach-addCourseForm-courseTitle-label": {
+      "key": "teach-addCourseForm-courseTitle-label",
+      "lang": "fa",
+      "text": "عنوان",
+      "ctime": 1434057354533,
+      "mtime": 1434057354533,
+      "revisionId": "kZQzRCqot2dX3FRqk",
+      "_id": "GEGgFRR4tWkfzD93o"
+    },
+    "teach-courseTitle-placeholderText": {
+      "key": "teach-courseTitle-placeholderText",
+      "lang": "fa",
+      "text": "عنوان دوره",
+      "ctime": 1434057389667,
+      "mtime": 1434057444289,
+      "revisionId": "nN5oZQ97rMLpinZ29",
+      "_id": "LMN6rdQJtMhTnJZdJ"
+    },
+    "teach-addCourseForm-courseTitle-coverPhotoLabel": {
+      "key": "teach-addCourseForm-courseTitle-coverPhotoLabel",
+      "lang": "fa",
+      "text": "عکس روی جلد",
+      "ctime": 1434057403411,
+      "mtime": 1434057403411,
+      "revisionId": "oJes4ovrf92k8WPKd",
+      "_id": "cNeaSRi4q7gppJHqq"
+    },
+    "teach-addCourseForm-courseTitle-author-label": {
+      "key": "teach-addCourseForm-courseTitle-author-label",
+      "lang": "fa",
+      "text": "نویسنده",
+      "ctime": 1434057463267,
+      "mtime": 1434057463267,
+      "revisionId": "qukYRb87DJj3N5vmB",
+      "_id": "jwCmGkcN3scsQfSog"
+    },
+    "teach-addCourseForm-courseTitle-author-placeholder": {
+      "key": "teach-addCourseForm-courseTitle-author-placeholder",
+      "lang": "fa",
+      "text": "نام نویسنده",
+      "ctime": 1434057475614,
+      "mtime": 1434057475614,
+      "revisionId": "vghF5YcJNhDKSXdR3",
+      "_id": "upBLTB87bPREjDX3s"
+    },
+    "teach-addCourseForm-courseTitle-keywords-label": {
+      "key": "teach-addCourseForm-courseTitle-keywords-label",
+      "lang": "fa",
+      "text": "کلید واژه ها",
+      "ctime": 1434057569101,
+      "mtime": 1434057569101,
+      "revisionId": "W53tg8gMMCAdC8ny6",
+      "_id": "aguCjaJThK3JAysNt"
+    },
+    "_header-homeTab-linkText": {
+      "key": "_header-homeTab-linkText",
+      "lang": "fa",
+      "text": "خانه",
+      "ctime": 1434057618209,
+      "mtime": 1434057618209,
+      "revisionId": "Qfabz2x8JoNNLpqst",
+      "_id": "2t5GXh58fYX6d7xfu"
+    },
+    "_header-learnTab-linkText": {
+      "key": "_header-learnTab-linkText",
+      "lang": "fa",
+      "text": "آموختن",
+      "ctime": 1434057636455,
+      "mtime": 1434057636456,
+      "revisionId": "2aAdfFMy67DyqcmnT",
+      "_id": "9HCfGgz47QxsPvSLt"
+    },
+    "_header-teachTab-linkText": {
+      "key": "_header-teachTab-linkText",
+      "lang": "fa",
+      "text": "آموزش",
+      "ctime": 1434057646064,
+      "mtime": 1434057646064,
+      "revisionId": "nAhRFoid4ydEyJ3sy",
+      "_id": "JqYXA4uPdbBQKzZg2"
+    },
+    "_header-dropdownMenu-signOutText": {
+      "key": "_header-dropdownMenu-signOutText",
+      "lang": "fa",
+      "text": "خروج از سیستم",
+      "ctime": 1434057666819,
+      "mtime": 1434057666819,
+      "revisionId": "BkXnjS9GzGTbESjk5",
+      "_id": "E9ASGoe7QyoHQPPrt"
+    },
+    "_header-navbar-signInText": {
+      "key": "_header-navbar-signInText",
+      "lang": "fa",
+      "text": "ورود به سیستم",
+      "ctime": 1434057674211,
+      "mtime": 1434057674211,
+      "revisionId": "tStPv6KmPp5f3yDGB",
+      "_id": "6ckZDiwHHgZKJKQGs"
+    },
+    "_header-navbar-registerText": {
+      "key": "_header-navbar-registerText",
+      "lang": "fa",
+      "text": "ثبت نام کردن",
+      "ctime": 1434057686954,
+      "mtime": 1434057686954,
+      "revisionId": "G9tfyXSmw9hs2j7tM",
+      "_id": "BTbBum6NJjn9bYveB"
+    },
+    "taggedCourses-headerText": {
+      "key": "taggedCourses-headerText",
+      "lang": "fa",
+      "text": "دوره های برچسب خورده",
+      "ctime": 1434057730365,
+      "mtime": 1434057730365,
+      "revisionId": "nTx33iSPzfqoBtK7s",
+      "_id": "sv9xvZZ8JFuir3W5W"
+    },
+    "doneEditingCourse-doneEditingButtonText": {
+      "key": "doneEditingCourse-doneEditingButtonText",
+      "lang": "fa",
+      "text": "پایان ویرایش",
+      "ctime": 1434057733100,
+      "mtime": 1434057733100,
+      "revisionId": "nhTt4S7p7JviS92Wg",
+      "_id": "cQGmNbc9qdkjer7kw"
+    },
+    "editCourse-editCourseButtonText": {
+      "key": "editCourse-editCourseButtonText",
+      "lang": "fa",
+      "text": "ویرایش دوره",
+      "ctime": 1434057741646,
+      "mtime": 1434057741646,
+      "revisionId": "KqcSAe8FhQ5roXBky",
+      "_id": "ixK8CSSDKyZQw8Jcs"
+    },
+    "courseToolbarTabs-courseMaterialTabText": {
+      "key": "courseToolbarTabs-courseMaterialTabText",
+      "lang": "fa",
+      "text": "مطالب دوره",
+      "ctime": 1434057750769,
+      "mtime": 1434057750769,
+      "revisionId": "uPeTje7cxm2YajqPT",
+      "_id": "RtWZaeoBS7v5BoTWg"
+    },
+    "courseToolbarTabs-courseInfoTabText": {
+      "key": "courseToolbarTabs-courseInfoTabText",
+      "lang": "fa",
+      "text": "اطلاعات دوره",
+      "ctime": 1434057757864,
+      "mtime": 1434057757864,
+      "revisionId": "gTLjm5B9vS5d5i5Bc",
+      "_id": "aczPYKPiai4CNJBMW"
+    },
+    "sectionAddLesson-lessonNamePlaceholderText": {
+      "key": "sectionAddLesson-lessonNamePlaceholderText",
+      "lang": "fa",
+      "text": "نام درس",
+      "ctime": 1434057765189,
+      "mtime": 1434057765189,
+      "revisionId": "4yZv6sGnG9wBbc8ch",
+      "_id": "w5HQr5WgG577HKwJ5"
+    },
+    "sectionAddLesson-addLessonButtonText": {
+      "key": "sectionAddLesson-addLessonButtonText",
+      "lang": "fa",
+      "text": "افزودن",
+      "ctime": 1434057793364,
+      "mtime": 1434057793364,
+      "revisionId": "FAh3f8oCdPY3gxM76",
+      "_id": "yG4q5wkJMBfuFkpc7"
+    },
+    "addSection-addSectionButtonText": {
+      "key": "addSection-addSectionButtonText",
+      "lang": "fa",
+      "text": "افزودن",
+      "ctime": 1434057796205,
+      "mtime": 1434057796205,
+      "revisionId": "DitvFw2XwkBrAcER8",
+      "_id": "X6L2qwnG3sxjwfBxs"
+    },
+    "teach-addCourseForm-courseTitle-addCourse-button": {
+      "key": "teach-addCourseForm-courseTitle-addCourse-button",
+      "lang": "fa",
+      "text": "افزودن دوره",
+      "ctime": 1434057826268,
+      "mtime": 1434057902352,
+      "revisionId": "cdWzDDFseAikfEoxW",
+      "_id": "uaLS7ofDbGbqimjxZ"
+    },
+    "courseMeta-courseAuthorAttribution": {
+      "key": "courseMeta-courseAuthorAttribution",
+      "lang": "fa",
+      "text": "در اصل توسط",
+      "ctime": 1434057921713,
+      "mtime": 1434057921713,
+      "revisionId": "nRnJmFD5aubhcjCKg",
+      "_id": "vab9WLFjQCauTC2s5"
+    },
+    "lessonEditToolbar-saveLessonEditButtonText": {
+      "key": "lessonEditToolbar-saveLessonEditButtonText",
+      "lang": "fa",
+      "text": "ذخیره سازی",
+      "ctime": 1434057931752,
+      "mtime": 1434057931752,
+      "revisionId": "xj2TCPkpTwRdafG2p",
+      "_id": "9xaHEjup3cgRha78B"
+    },
+    "lessonEditToolbar-cancelLessonEditButtonText": {
+      "key": "lessonEditToolbar-cancelLessonEditButtonText",
+      "lang": "fa",
+      "text": "لغو کردن",
+      "ctime": 1434057939003,
+      "mtime": 1434057939003,
+      "revisionId": "F53eMXpMPQAxXCMxq",
+      "_id": "MgoariAwY7agYQ7YC"
+    },
+    "saveButton-savebuttonText": {
+      "key": "saveButton-savebuttonText",
+      "lang": "fa",
+      "text": "ذخیره سازی",
+      "ctime": 1434057946545,
+      "mtime": 1434057946545,
+      "revisionId": "bm6yFSuC27gXJNrey",
+      "_id": "KqbEJMP6mxTTMF5jt"
+    },
+    "_header-navbarToggle": {
+      "key": "_header-navbarToggle",
+      "lang": "fa",
+      "text": "تغییر حالت ناو بری",
+      "ctime": 1434058114210,
+      "mtime": 1434058114210,
+      "revisionId": "sK6bj6v3RMipL3nSs",
+      "_id": "3eKaXX2ywPSPRg776"
+    },
+    "teach-mainHeading": {
+      "key": "teach-mainHeading",
+      "lang": "fa",
+      "text": "افزودن دوره ی نو ",
+      "ctime": 1434058181464,
+      "mtime": 1434058199765,
+      "revisionId": "RpnnKtnuK4h9tWqcX",
+      "_id": "y4NPGJ4vrsTmEuefk"
+    },
+    "teach-addCourseForm-courseTitle-published-label": {
+      "key": "teach-addCourseForm-courseTitle-published-label",
+      "lang": "fa",
+      "text": "هنگامیکه دوره باید برای دیگران قابل مشاهده باشد به \"منتشر شده\" تغییر دهید ",
+      "ctime": 1434058242428,
+      "mtime": 1434058242428,
+      "revisionId": "MgPrpyWE6crgwcavm",
+      "_id": "Z7wYL2E6Ke8LuTjC7"
+    },
+    "teach-addCourseForm-courseTitle-unpublished-option": {
+      "key": "teach-addCourseForm-courseTitle-unpublished-option",
+      "lang": "fa",
+      "text": "منتشر نشده",
+      "ctime": 1434058265103,
+      "mtime": 1434058265103,
+      "revisionId": "f8jHhWf7rfanJZhEv",
+      "_id": "kYCmeCEA8PL5DZHm9"
+    },
+    "teach-addCourseForm-courseTitle-published-option": {
+      "key": "teach-addCourseForm-courseTitle-published-option",
+      "lang": "fa",
+      "text": "منتشر شده",
+      "ctime": 1434058271714,
+      "mtime": 1434058271714,
+      "revisionId": "8bjBynNCdWjpcB2if",
+      "_id": "wJkrT6YPNYNvQvSNT"
+    },
+    "teach-addCourseForm-courseTitle-aboutCourse-label": {
+      "key": "teach-addCourseForm-courseTitle-aboutCourse-label",
+      "lang": "fa",
+      "text": "در باره این دوره ",
+      "ctime": 1434058295691,
+      "mtime": 1434058295691,
+      "revisionId": "EgndrCmJvKWAK4PYC",
+      "_id": "pNeTmfhYgBWasLXeF"
+    },
+    "teach-addCourseForm-courseTitle-aboutCourse-helpText": {
+      "key": "teach-addCourseForm-courseTitle-aboutCourse-helpText",
+      "lang": "fa",
+      "text": "به طور خلاصه اهداف این دوره آموزشی را شرح دهید",
+      "ctime": 1434058315986,
+      "mtime": 1434058315986,
+      "revisionId": "2RTyEnHdL7X9DqXfY",
+      "_id": "J8msMWnKXn37ytLjK"
+    },
+    "teach-addCourseForm-courseTitle-keywords-placeholder": {
+      "key": "teach-addCourseForm-courseTitle-keywords-placeholder",
+      "lang": "fa",
+      "text": "تعدادی برچسب انتخاب نمایید (مانند جاوا اسکریپت، ریاضیات)",
+      "ctime": 1434058347999,
+      "mtime": 1434058347999,
+      "revisionId": "X7cvXtXdKjBh3sbmZ",
+      "_id": "roZLC8srjTadmw8e4"
     }
   }
 }, {
-  "exportedAt": 1431938528410,
-  "updatedAt": 1431938385807
+  "exportedAt": 1434124609074,
+  "updatedAt": 1434058347999
 });
