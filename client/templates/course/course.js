@@ -14,3 +14,15 @@ Template.course.created = function () {
   // Set the empty active lesson ID variable
   activeLessonID = new ReactiveVar(undefined);
 };
+
+Template.course.helpers({
+  'course': function () {
+    // Get reference to Template instance
+    var instance = Template.instance();
+
+    // Get current course
+    var course = Courses.findOne(instance.courseId);
+
+    return course;
+  }
+});
