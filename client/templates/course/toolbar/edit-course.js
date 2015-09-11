@@ -13,7 +13,16 @@ Template.editCourse.events({
 
 Template.editCourse.helpers({
 	'owner': function() {
-		if (Meteor.user().username == this.owner)
+
+		var router = Router.current();
+
+		var courseId = router.params._id;
+
+		//TODO: fine grain 
+		var course = Courses.findOne({_id: courseId});
+
+		//TODO solve exceptions, which are most likely resulting from data not being available early enough.
+		if (Meteor.user().username == course.owner)
 		{
 			return true;	
 		}
