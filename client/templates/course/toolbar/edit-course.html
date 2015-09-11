@@ -1,15 +1,14 @@
 <template name="editCourse">
-    <ul class="nav nav-pills navbar-right" role="tablist">
-        <li>
-        	{{#if owner}}
-            <a id="edit-course" class="btn btn-sm btn-success" href="#">
-                <i class="fa fa-pencil-square-o"></i>
-                {{ mf 'editCourse-editCourseButtonText' 'Edit course' }}
-            </a>
-            {{else}}
-            <p>{{mf 'editCourse-editCourseOwnerAlert' 'Only owners may edit the course' }}</p>
-            {{/if}}
-
-        </li>
-    </ul>
+  <ul class="nav nav-pills navbar-right" role="tablist">
+    <li>
+    {{#if canEditCourse}}
+      <a id="edit-course" class="btn btn-sm btn-success" href="#">
+        <i class="fa fa-pencil-square-o"></i>
+        {{ mf 'editCourse-editCourseButtonText' 'Edit course' }}
+      </a>
+    {{else}}
+    <p>{{mf 'editCourse-editCourseOwnerAlert' 'Only owners may edit the course' }}</p>
+    {{/if}}
+    </li>
+  </ul>
 </template>

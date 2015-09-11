@@ -1,4 +1,8 @@
-var pwd = AccountsTemplates.removeField('password');
+// To rearrange the login field to include User and Email, the password field
+// must be deleted and reattached later.
+// TODO clarify
+var passwordField = AccountsTemplates.removeField('password');
+
 AccountsTemplates.removeField('email');
 AccountsTemplates.addFields([
   {
@@ -23,7 +27,7 @@ AccountsTemplates.addFields([
       displayName: "Login",
       placeholder: "Username or Email",
   },
-  pwd
+  passwordField
 ]);
 
 AccountsTemplates.configureRoute('signIn', {layoutTemplate: 'appLayout'});

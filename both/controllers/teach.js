@@ -7,6 +7,6 @@ TeachController = AppController.extend({
         return this.subscribe('tags');
     },
     onBeforeAction: function (pause) {
-    AccountsTemplates.ensureSignedIn.call(this, pause);
+        AccountsTemplates.ensureSignedIn.call(this, pause);
   	}
 });

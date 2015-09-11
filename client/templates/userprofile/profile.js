@@ -18,18 +18,15 @@ Template.profile.events({
 			$(".editable-bio").replaceWith(origin);
 			$(".statusbio").remove();
 			Session.set("gearclicked", false);
-
 		}
 		else
 		{
-		var editableText = $("<textarea style='width:600px;height:75px;' class='editable-bio' /> <p class='statusbio'></p>");
-		var pHtml = $("#biography").text();
-		editableText.val(pHtml);
-		$("#biography").replaceWith(editableText);
-		Session.set("gearclicked", "true");		
+			var editableText = $("<textarea style='width:600px;height:75px;' class='editable-bio' /> <p class='statusbio'></p>");
+			var pHtml = $("#biography").text();
+			editableText.val(pHtml);
+			$("#biography").replaceWith(editableText);
+			Session.set("gearclicked", "true");
 		}
-
-		
 	},
 	'change .editable-bio': function(event,template) {
 		console.log("oh you changed smth");
@@ -40,19 +37,17 @@ Template.profile.events({
 		}
 		else
 		{
-		$("#bio-error").text("");
-		Meteor.call("User.update", Meteor.userId(),"biography", biography);
-		var origin = $("<p id='biography'></p>");
-		origin.text(biography);
-		$(".editable-bio").replaceWith(origin);
-		$(".statusbio").remove();
-
+			$("#bio-error").text("");
+			Meteor.call("User.update", Meteor.userId(),"biography", biography);
+			var origin = $("#biography");
+			origin.text(biography);
+			$(".editable-bio").replaceWith(origin);
+			$(".statusbio").remove();
 		}
-
 	},
 	'keyup .editable-bio': function() {
 		var postLength = $(".editable-bio").val().length;
 		var charactersLeft = 300 - postLength;
-		$('.statusbio').text(charactersLeft + " characters left");	
+		$('.statusbio').text(charactersLeft + " characters left");
 	}
 });
