@@ -1,12 +1,14 @@
 <template name="course">
-    {{>courseToolbar}}
-    <div class="row">
-        <div class="panel panel-default">
-            {{> courseTitle }}
-            <div class="panel-body">
-                {{> courseSidebar }}
-                {{> lesson }}
-            </div>
-        </div>
+  {{>courseToolbar}}
+  <div class="row">
+    {{# with course }}
+    <div class="panel panel-default">
+      {{> courseTitle }}
+      <div class="panel-body">
+        {{> courseSidebar }}
+        {{> lesson }}
+      </div>
     </div>
+    {{/ with }}
+  </div>
 </template>

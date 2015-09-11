@@ -1,26 +1,18 @@
 Template.courseToolbar.helpers({
   'editingThisCourse': function (event, template) {
+    // Get reference to current router
+    var router = Router.current();
+
+    // Get Course ID from router
+    var currentCourseId = router.params._id;
+
+    // Get value of editing course session variable
+    var editingCourseId = Session.get('editingCourseId')
+
+    // See if user is editing current course
+    var editingCurrentCourse = (editingCourseId === currentCourseId);
+
     // return true if user is editing this course
-    return editingThisCourseVar.get();
+    return editingCurrentCourse;
   }
 });
-
-Template.courseToolbar.created = function () {
-  // keep track of whether user is editing this course
-  // Used in child templates such as lesson and sidebar
-  editingThisCourseVar = new ReactiveVar(false);
-
-  // Get the current router object
-  var controller = Router.current();
-
-  // Get course ID from router object
-  var courseID = controller.params._id;
-
-  this.autorun(function () {
-    if (Session.get('editingCourseID') === courseID) {
-      editingThisCourseVar.set(true);
-    } else {
-      editingThisCourseVar.set(false);
-    };
-  });
-}

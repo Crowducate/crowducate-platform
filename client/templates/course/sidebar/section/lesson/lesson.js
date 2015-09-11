@@ -7,9 +7,21 @@ Template.sectionLesson.created = function () {
 };
 
 Template.sectionLesson.helpers({
-  'editingThisCourse': function () {
-    // Return the boolean value of editing this course reactive variable
-    return editingThisCourseVar.get();
+  'editingThisCourse': function (event, template) {
+    // Get reference to current router
+    var router = Router.current();
+
+    // Get Course ID from router
+    var currentCourseId = router.params._id;
+
+    // Get value of editing course session variable
+    var editingCourseId = Session.get('editingCourseId')
+
+    // See if user is editing current course
+    var editingCurrentCourse = (editingCourseId === currentCourseId);
+
+    // return true if user is editing this course
+    return editingCurrentCourse;
   },
   'lesson': function () {
     // Get template instance as variable
