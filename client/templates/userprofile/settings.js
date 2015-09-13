@@ -205,7 +205,7 @@ Template.profileSettings.events({
   'keyup #biography': function() {
     var postLength = $("#biography").val().length;
     var charactersLeft = 300 - postLength;
-    $('#statusbio').text(charactersLeft + " characters left");
+    $('#bioCharactersLeft').text(charactersLeft + " characters left");
   }
 
 
