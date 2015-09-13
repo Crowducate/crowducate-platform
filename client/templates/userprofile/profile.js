@@ -13,7 +13,7 @@ Template.profile.events({
 		if (Session.get("gearclicked"))
 		{
 			var biography = $(".editable-bio").val();
-			var origin = $("<p id='biography'></p>");
+			var origin = $("#biography");
 			origin.text(biography);
 			$(".editable-bio").replaceWith(origin);
 			$(".statusbio").remove();
