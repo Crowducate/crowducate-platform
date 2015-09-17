@@ -12,6 +12,10 @@ Schema.UserProfile = new SimpleSchema({
     language: {
         type: String,
         optional: true
+    },
+    biography: {
+        type: String,
+        max: 300
     }
 });
 

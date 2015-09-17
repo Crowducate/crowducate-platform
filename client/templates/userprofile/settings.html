@@ -23,6 +23,10 @@
                     {{> afQuickField name="profile.language" options=languageOptions}}
                 </div>
 
+                <div class="formgroup {{#if afFieldIsInvalid name='profile.biography'}} has-error{{/if}}">
+                    {{> afQuickField name="profile.biography" rows=6 }}
+                </div>
+
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
