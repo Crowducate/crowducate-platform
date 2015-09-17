@@ -10,14 +10,14 @@ Template.profile.helpers({
 
 Template.profile.events({
 	'click .edit-bio': function() {
-		if (Session.get("gearclicked"))
+		if (Session.get("bioEditable"))
 		{
 			var biography = $(".editable-bio").val();
 			var origin = $("#biography");
 			origin.text(biography);
 			$(".editable-bio").replaceWith(origin);
 			$(".statusbio").remove();
-			Session.set("gearclicked", false);
+			Session.set("bioEditable", false);
 		}
 		else
 		{
@@ -25,7 +25,7 @@ Template.profile.events({
 			var pHtml = $("#biography").text();
 			editableText.val(pHtml);
 			$("#biography").replaceWith(editableText);
-			Session.set("gearclicked", "true");
+			Session.set("bioEditable", "true");
 		}
 	},
 	'change .editable-bio': function(event,template) {
@@ -38,7 +38,8 @@ Template.profile.events({
 		else
 		{
 			$("#bio-error").text("");
-			Meteor.call("User.update", Meteor.userId(),"biography", biography);
+			// TODO Rewrite with autoform
+			//Meteor.call("User.update", Meteor.userId(),"biography", biography);
 			var origin = $("#biography");
 			origin.text(biography);
 			$(".editable-bio").replaceWith(origin);
