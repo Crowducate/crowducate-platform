@@ -27,9 +27,26 @@
                     {{> afQuickField name="profile.biography" rows=6 }}
                 </div>
 
+
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+            {{/autoForm}}
+                <hr>
+                <h2 class="userprofile-sub-title">
+                    {{ mf 'userProfile-subheading-security' 'Security'}}
+                </h2>
+
+                {{#autoForm id="UserProfileEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="changePassword" validation="keyup"}}
+
+                <div class="formgroup {{#if afFieldIsInvalid name='password'}} has-error{{/if}}">
+                    {{> afQuickField name="password"  }}
+                </div>
+
+                <div class="formgroup {{#if afFieldIsInvalid name='password'}} has-error{{/if}}">
+                    {{> afQuickField name="passwordCheck" label="Confirm Password" }}
+                </div>
+
             {{/autoForm}}
         </div>
     </div>

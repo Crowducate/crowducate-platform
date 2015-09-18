@@ -23,6 +23,21 @@ Schema.User = new SimpleSchema({
     username: {
         type: String
     },
+    password: {
+        type: String,
+        optional: false,
+        min: 8
+    },
+    passwordCheck: {
+        type: String,
+        optional: false,
+        min: 8,
+        custom: function () {
+            if (this.value !== this.field('password').value) {
+                return "passwordMismatch";
+            }
+        }
+    },
     emails: {
         type: Array,
         optional: true
