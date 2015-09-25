@@ -26,19 +26,33 @@ Schema.User = new SimpleSchema({
     oldPassword: {
         type: String,
         optional: true,
-        min: 8
+        min: 8,
+        custom: function () {
+            if (this.value == "") {
+                return 'PasswordMissing'
+            }
+        }  
     },
     newPassword: {
         type: String,
         optional: true,
-        min: 8
+        min: 8,
+        custom: function () {
+            if (this.value == "") {
+                return 'PasswordMissing'
+            }
+        }  
+
     },
     newPasswordCheck: {
         type: String,
         optional: true,
         min: 8,
         custom: function () {
-            if (this.value !== this.field('password').value) {
+            if (this.value == "") {
+                return 'PasswordMissing'
+            }
+            if (this.value !== this.field('newPassword').value) {
                 return "passwordMismatch";
             }
         }
