@@ -25,12 +25,12 @@ Schema.User = new SimpleSchema({
     },
     password: {
         type: String,
-        optional: false,
+        optional: true,
         min: 8
     },
     passwordCheck: {
         type: String,
-        optional: false,
+        optional: true,
         min: 8,
         custom: function () {
             if (this.value !== this.field('password').value) {

@@ -12,7 +12,7 @@
             <h2 class="userprofile-sub-title">
                 {{ mf 'userProfile-subheading-basics' 'Basics'}}
             </h2>
-            {{#autoForm id="UserProfileEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="User.update" validation="keyup"}}
+            {{ #autoForm id="UserProfileEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="User.update" validation="keyup" }}
                 <div class="formgroup {{#if afFieldIsInvalid name='username'}} has-error{{/if}}">
                     {{> afQuickField name="username"}}
                 </div>
@@ -37,7 +37,7 @@
                     {{ mf 'userProfile-subheading-security' 'Security'}}
                 </h2>
 
-                {{#autoForm id="UserProfileEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="changePassword" validation="keyup"}}
+                {{#autoForm id="PasswordEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="changePassword" validation="keyup"}}
 
                 <div class="formgroup {{#if afFieldIsInvalid name='password'}} has-error{{/if}}">
                     {{> afQuickField name="password"  }}
