@@ -3,9 +3,9 @@ Meteor.methods({
         check(modifier,Schema.User);
         Meteor.users.update(documentId, modifier);
     },
-    'changeUserPassword': function(modifier,documentId) {
-        check(modifier,Schema.User);
-        console.log("invoke password change" + modifier.oldPassword + documentId);
+    'changeUserPassword': function(doc) {
+        check(doc,Schema.User);
+        console.log("invoke password change " + doc);
 
     }
 });

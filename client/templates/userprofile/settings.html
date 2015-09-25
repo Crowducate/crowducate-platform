@@ -37,7 +37,7 @@
                     {{ mf 'userProfile-subheading-security' 'Security'}}
                 </h2>
 
-            {{#autoForm id="PasswordEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="changeUserPassword" validation="submit"}}
+            {{#autoForm id="PasswordEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="changeUserPassword" validation="keyup"}}
 
                 <div class="formgroup {{#if afFieldIsInvalid name='oldPassword'}} has-error{{/if}}">
                     {{> afQuickField name="oldPassword"  }}
