@@ -5,6 +5,7 @@ Meteor.methods({
     },
     'changeUserPassword': function(modifier,documentId) {
         check(modifier,Schema.User);
-        console.log("invoke password change");
+        console.log("invoke password change" + modifier.password + documentId);
+
     }
 });

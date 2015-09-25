@@ -23,12 +23,17 @@ Schema.User = new SimpleSchema({
     username: {
         type: String
     },
-    password: {
+    oldPassword: {
         type: String,
         optional: true,
         min: 8
     },
-    passwordCheck: {
+    newPassword: {
+        type: String,
+        optional: true,
+        min: 8
+    },
+    newPasswordCheck: {
         type: String,
         optional: true,
         min: 8,

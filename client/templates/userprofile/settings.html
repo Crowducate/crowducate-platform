@@ -39,12 +39,16 @@
 
             {{#autoForm id="PasswordEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="changeUserPassword" validation="submit"}}
 
-                <div class="formgroup {{#if afFieldIsInvalid name='password'}} has-error{{/if}}">
-                    {{> afQuickField name="password"  }}
+                <div class="formgroup {{#if afFieldIsInvalid name='oldPassword'}} has-error{{/if}}">
+                    {{> afQuickField name="oldPassword"  }}
                 </div>
 
-                <div class="formgroup {{#if afFieldIsInvalid name='password'}} has-error{{/if}}">
-                    {{> afQuickField name="passwordCheck" label="Confirm Password" }}
+                <div class="formgroup {{#if afFieldIsInvalid name='newPassword'}} has-error{{/if}}">
+                    {{> afQuickField name="newPassword"  }}
+                </div>
+
+                <div class="formgroup {{#if afFieldIsInvalid name='newPasswordCheck'}} has-error{{/if}}">
+                    {{> afQuickField name="newPasswordCheck" label="Confirm Password" }}
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>
