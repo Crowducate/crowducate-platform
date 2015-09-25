@@ -27,31 +27,31 @@ Schema.User = new SimpleSchema({
     oldPassword: {
         type: String,
         optional: true,
-        min: 8,
+        min: 6,
         custom: function () {
             if (this.value == "") {
-                return 'PasswordMissing'
+                return 'passwordMissing'
             }
         }  
     },
     newPassword: {
         type: String,
         optional: true,
-        min: 8,
+        min: 6,
         custom: function () {
             if (this.value == "") {
-                return 'PasswordMissing'
+                return 'passwordMissing'
             }
         }  
 
     },
-    newPasswordCheck: {
+    confirmPassword: {
         type: String,
         optional: true,
-        min: 8,
+        min: 6,
         custom: function () {
             if (this.value == "") {
-                return 'PasswordMissing'
+                return 'passwordMissing'
             }
             if (this.value !== this.field('newPassword').value) {
                 return "passwordMismatch";

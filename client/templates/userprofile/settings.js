@@ -31,3 +31,16 @@ Template.profileSettings.helpers({
     }
 
 });
+
+Template.profileSettings.events({
+    "submit #PasswordEdit": function () {
+        //TODO Refactor to use hooks: https://github.com/aldeed/meteor-autoform#callbackshooks
+        oldPassword = AutoForm.getFieldValue('oldPassword', 'PasswordEdit');
+        newPassword = AutoForm.getFieldValue('oldPassword', 'PasswordEdit');
+        //TODO Refactor fine grain error messages
+        Accounts.changePassword(oldPassword, newPassword, function(error) {
+            $("#passwordMessages #passwordErrorMessage").text(error);
+            $("#passwordMessages").show();
+        });
+    }
+});

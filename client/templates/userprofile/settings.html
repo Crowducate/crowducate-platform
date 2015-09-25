@@ -37,8 +37,12 @@
                     {{ mf 'userProfile-subheading-security' 'Security'}}
                 </h2>
 
-            {{#autoForm id="PasswordEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="changeUserPassword" validation="keyup"}}
+            {{#autoForm id="PasswordEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="changeUserPassword" validation="keyup" validation="keyup"}}
 
+                <div id="passwordMessages" class="alert alert-danger" style="display:none;" role="alert">
+                      <span id="passwordErrorMessage" class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                      <span class="sr-only"></span>
+                </div>
                 <div class="formgroup {{#if afFieldIsInvalid name='oldPassword'}} has-error{{/if}}">
                     {{> afQuickField name="oldPassword"  }}
                 </div>
@@ -47,8 +51,8 @@
                     {{> afQuickField name="newPassword"  }}
                 </div>
 
-                <div class="formgroup {{#if afFieldIsInvalid name='newPasswordCheck'}} has-error{{/if}}">
-                    {{> afQuickField name="newPasswordCheck" label="Confirm Password" }}
+                <div class="formgroup {{#if afFieldIsInvalid name='confirmPassword'}} has-error{{/if}}">
+                    {{> afQuickField name="confirmPassword" label="Confirm Password" }}
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>
