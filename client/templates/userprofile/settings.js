@@ -41,7 +41,7 @@ Template.profileSettings.events({
         newPassword = AutoForm.getFieldValue('new', 'passwordEdit');
         Accounts.changePassword(oldPassword, newPassword, function(error) {
             $("#passwordMessages #passwordErrorMessage").text(error);
-           $("#passwordMessages").show();
+           $("#passwordMessages").show(500, function() { $("#passwordMessages").delay(3000).hide(500)});
         });
    }
 });
