@@ -30,7 +30,7 @@ Schema.User = new SimpleSchema({
         min: 6,
         custom: function () {
             if (this.value == "") {
-                return 'passwordMissing'
+                return 'passwordEmpty'
             }
         }  
     },
@@ -40,7 +40,7 @@ Schema.User = new SimpleSchema({
         min: 6,
         custom: function () {
             if (this.value == "") {
-                return 'passwordMissing'
+                return 'passwordEmpty'
             }
         }  
 
@@ -51,7 +51,7 @@ Schema.User = new SimpleSchema({
         min: 6,
         custom: function () {
             if (this.value == "") {
-                return 'passwordMissing'
+                return 'passwordEmpty'
             }
             if (this.value !== this.field('newPassword').value) {
                 return "passwordMismatch";
