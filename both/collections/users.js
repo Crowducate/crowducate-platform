@@ -17,6 +17,8 @@ Schema.passwordEdit = new SimpleSchema({
         min: 6,
         max: 30,
         custom: function () {
+            // This custom function renders an error, if this field is not equal to
+            // the new Password field supplied in the form.
             if (this.value !== this.field('new').value) {
                 return "passwordMismatch";
             }
