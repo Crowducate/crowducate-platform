@@ -6,9 +6,9 @@
         </div>
         <div class="profile-content">
             <i class="stick-right edit-bio fa fa-cog fa-2x"></i>
-            <h1>{{profile.username}} </h1>
+            <h1>{{thisUser.username}} </h1>
             <p id="bio-error"></p>
-            <p id="biography">{{profile.biography}} </p>
+            <p id="biography">{{thisUser.profile.biography}} </p>
 
 
         </div>
@@ -44,7 +44,7 @@
         </div>
         <div class="dropdown stick-right">
             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                {{profile.username}}'s Activities
+                {{thisUser.username}}'s Activities
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">

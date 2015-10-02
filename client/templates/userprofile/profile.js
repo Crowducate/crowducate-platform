@@ -1,5 +1,5 @@
 Template.profile.helpers({
-	'profile': function() {
+	'thisUser': function() {
 		return Meteor.users.findOne({'id':this._id});
 	},
 	'firstname': function() {
