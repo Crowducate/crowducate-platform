@@ -1,4 +1,28 @@
-Schema = {};
+Schema.passwordEdit = new SimpleSchema({
+    old: {
+        type: String,
+        label: "Old Password",
+        min: 6,
+        max: 30
+    },
+    new: {
+        type: String,
+        label: "New Password",
+        min: 6,
+        max: 30
+    },
+    newConfirm: {
+        type: String,
+        label: "Confirm Password",
+        min: 6,
+        max: 30,
+        custom: function () {
+            if (this.value !== this.field('new').value) {
+                return "passwordMismatch";
+            }
+        }
+    }
+});
 
 Schema.UserProfile = new SimpleSchema({
     gender: {
@@ -22,41 +46,10 @@ Schema.UserProfile = new SimpleSchema({
 
 Schema.User = new SimpleSchema({
     username: {
-        type: String
-    },
-    oldPassword: {
         type: String,
         optional: true,
-        min: 6,
-        custom: function () {
-            if (this.value == "") {
-                return 'passwordEmpty'
-            }
-        }  
-    },
-    newPassword: {
-        type: String,
-        optional: true,
-        min: 6,
-        custom: function () {
-            if (this.value == "") {
-                return 'passwordEmpty'
-            }
-        }  
-
-    },
-    confirmPassword: {
-        type: String,
-        optional: true,
-        min: 6,
-        custom: function () {
-            if (this.value == "") {
-                return 'passwordEmpty'
-            }
-            if (this.value !== this.field('newPassword').value) {
-                return "passwordMismatch";
-            }
-        }
+        min:3,
+        max:15
     },
     emails: {
         type: Array,

@@ -1,3 +1,4 @@
+
 Template.profileSettings.helpers({
     profile: function() {
         return Meteor.users.findOne({'id':this._id });
@@ -33,14 +34,14 @@ Template.profileSettings.helpers({
 });
 
 Template.profileSettings.events({
-    "submit #PasswordEdit": function () {
-        //TODO Refactor to use hooks: https://github.com/aldeed/meteor-autoform#callbackshooks
-        oldPassword = AutoForm.getFieldValue('oldPassword', 'PasswordEdit');
-        newPassword = AutoForm.getFieldValue('oldPassword', 'PasswordEdit');
-        //TODO Refactor fine grain error messages
+   "submit #passwordEdit": function (event) {
+        event.preventDefault();
+       //TODO Unshow error message after a while
+        oldPassword = AutoForm.getFieldValue('old', 'passwordEdit');
+        newPassword = AutoForm.getFieldValue('new', 'passwordEdit');
         Accounts.changePassword(oldPassword, newPassword, function(error) {
             $("#passwordMessages #passwordErrorMessage").text(error);
-            $("#passwordMessages").show();
+           $("#passwordMessages").show();
         });
-    }
+   }
 });

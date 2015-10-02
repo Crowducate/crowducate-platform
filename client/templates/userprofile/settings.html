@@ -12,7 +12,7 @@
             <h2 class="userprofile-sub-title">
                 {{ mf 'userProfile-subheading-basics' 'Basics'}}
             </h2>
-            {{ #autoForm id="UserProfileEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="User.update" validation="keyup" }}
+            {{#autoForm id="UserProfileEdit" collection="Meteor.users" doc=currentUser type="method-update" meteormethod="User.update" validation="keyup" }}
                 <div class="formgroup {{#if afFieldIsInvalid name='username'}} has-error{{/if}}">
                     {{> afQuickField name="username"}}
                 </div>
@@ -37,28 +37,29 @@
                     {{ mf 'userProfile-subheading-security' 'Security'}}
                 </h2>
 
-            {{#autoForm id="PasswordEdit" collection="Meteor.users"  doc=currentUser type="method-update" meteormethod="changeUserPassword" validation="keyup" validation="keyup"}}
+            {{#autoForm id="passwordEdit" schema="Schema.passwordEdit" validation="keyup"}}
 
                 <div id="passwordMessages" class="alert alert-danger" style="display:none;" role="alert">
-                      <span id="passwordErrorMessage" class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                      <span class="sr-only"></span>
+                    <span id="passwordErrorMessage" class="has-error" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
                 </div>
-                <div class="formgroup {{#if afFieldIsInvalid name='oldPassword'}} has-error{{/if}}">
-                    {{> afQuickField name="oldPassword"  }}
-                </div>
-
-                <div class="formgroup {{#if afFieldIsInvalid name='newPassword'}} has-error{{/if}}">
-                    {{> afQuickField name="newPassword"  }}
+                <div class="formgroup {{#if afFieldIsInvalid name='old'}} has-error{{/if}}">
+                    {{> afQuickField name="old"  }}
                 </div>
 
-                <div class="formgroup {{#if afFieldIsInvalid name='confirmPassword'}} has-error{{/if}}">
-                    {{> afQuickField name="confirmPassword" label="Confirm Password" }}
+                <div class="formgroup {{#if afFieldIsInvalid name='new'}} has-error{{/if}}">
+                    {{> afQuickField name="new"  }}
+                </div>
+
+                <div class="formgroup {{#if afFieldIsInvalid name='newConfirm'}} has-error{{else}} {{#if afFieldIsInvalid name='new'}} has-error{{/if}}{{/if}}">
+                    {{> afQuickField name="newConfirm" label="Confirm Password" }}
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
 
             {{/autoForm}}
+
         </div>
     </div>
 </template>
