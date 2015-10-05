@@ -47,8 +47,8 @@ Once Meteor is installed, make sure you [install Git](http://git-scm.com/book/en
 Crowducate
 --------
 Now you can clone and run the application with the following commands:
-* `git clone https://github.com/meteorcrowd/crowducate-next.git` - clone the repository
-* `cd crowducate-next` - change into the sourcecode directory
+* `git clone https://github.com/crowducate/crowducate-platform.git` - clone the repository
+* `cd crowducate-platform` - change into the sourcecode directory
 * `meteor` - run the application
 
 You should now be able to visit the running app at [localhost:3000](http://localhost:3000)
