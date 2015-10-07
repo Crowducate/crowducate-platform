@@ -39,20 +39,24 @@
 
             {{#autoForm id="passwordEdit" schema="Schema.passwordEdit" validation="keyup"}}
 
-                <div id="passwordMessages" class="alert alert-danger" style="display:none;" role="alert">
+                <div id="passwordSuccess" class="alert alert-success" style="display:none;" role="alert">
+                    <span id="passwordSuccessMessage" class="has-error" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </div>
+                <div id="passwordError" class="alert alert-danger" style="display:none;" role="alert">
                     <span id="passwordErrorMessage" class="has-error" aria-hidden="true"></span>
                     <span class="sr-only"></span>
                 </div>
                 <div class="formgroup {{#if afFieldIsInvalid name='old'}} has-error{{/if}}">
-                    {{> afQuickField name="old"  }}
+                    {{> afQuickField name="old" type="password" }}
                 </div>
 
-                <div class="formgroup {{#if afFieldIsInvalid name='new'}} has-error{{/if}}">
-                    {{> afQuickField name="new"  }}
+                <div class="formgroup {{#if afFieldIsInvalid name='new'}} has-error{{else}} {{#if afFieldIsInvalid name='newConfirm'}} has-error{{/if}}{{/if}}">
+                    {{> afQuickField name="new" type="password" }}
                 </div>
 
                 <div class="formgroup {{#if afFieldIsInvalid name='newConfirm'}} has-error{{else}} {{#if afFieldIsInvalid name='new'}} has-error{{/if}}{{/if}}">
-                    {{> afQuickField name="newConfirm" label="Confirm Password" }}
+                    {{> afQuickField name="newConfirm" label="Confirm Password" type="password" }}
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Submit</button>

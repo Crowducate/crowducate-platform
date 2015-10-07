@@ -34,14 +34,22 @@ Template.profileSettings.helpers({
 });
 
 Template.profileSettings.events({
-   "submit #passwordEdit": function (event) {
+    "submit #passwordEdit": function (event) {
         event.preventDefault();
-       //TODO Unshow error message after a while
+        //TODO Unshow error message after a while
         oldPassword = AutoForm.getFieldValue('old', 'passwordEdit');
         newPassword = AutoForm.getFieldValue('new', 'passwordEdit');
         Accounts.changePassword(oldPassword, newPassword, function(error) {
-            $("#passwordMessages #passwordErrorMessage").text(error);
-           $("#passwordMessages").show(500, function() { $("#passwordMessages").delay(3000).hide(500)});
+            if(error)
+            {
+                $("#passwordError #passwordErrorMessage").text(error);
+                $("#passwordError").show(500, function() { $("#passwordError").delay(3000).hide(500)});
+            }
+            else{
+                $("#passwordSuccess #passwordSuccessMessage").text("You have successfully changed your password!");
+                $("#passwordSuccess").show(500, function() { $("#passwordSuccess").delay(3000).hide(500)});
+            }
+
         });
-   }
-});
+    }
+}); 
