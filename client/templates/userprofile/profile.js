@@ -7,7 +7,8 @@ Template.profile.helpers({
 		return first[0];
 	}
 });
-
+// Implementation of Biography update via profile is put on Hold.
+/*
 Template.profile.events({
 	'click .edit-bio': function() {
 		if (Session.get("bioEditable"))
@@ -52,3 +53,4 @@ Template.profile.events({
 		$('.statusbio').text(charactersLeft + " characters left");
 	}
 });
+*/
