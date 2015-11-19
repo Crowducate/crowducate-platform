@@ -49,7 +49,7 @@ Schema.UserProfile = new SimpleSchema({
 Schema.User = new SimpleSchema({
     username: {
         type: String,
-        optional: true,
+        optional: false,
         min:3,
         max:15
     },
