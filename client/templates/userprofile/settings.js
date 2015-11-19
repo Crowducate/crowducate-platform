@@ -1,4 +1,3 @@
-
 Template.profileSettings.helpers({
     profile: function() {
         return Meteor.users.findOne({'id':this._id });
@@ -51,5 +50,10 @@ Template.profileSettings.events({
             }
 
         });
+    },
+    "submit #UserProfileEdit": function (event) {
+        event.preventDefault();
+        $("#profileSuccess #profileSuccessMessage").text("You have successfully updated your profile!");
+        $("#profileSuccess").show(500, function() { $("#profileSuccess").delay(3000).hide(500)});
     }
 }); 
