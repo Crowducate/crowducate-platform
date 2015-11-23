@@ -1,18 +1,16 @@
 AutoForm.hooks({
     UserProfileEdit: {
-        onSuccess: function() {
+        onSuccess: function(operation, result, template) {
             $("#profileSuccess #profileSuccessMessage").text("You have successfully updated your profile!");
             $("#profileSuccess").show(500, function() {
                 $("#profileSuccess").delay(3000).hide(500)
             });
-            //TODO Error Message
         },
         onError: function() {
-            console.log("dafoe!");
+            console.log("Error!");
         }
     },
     passwordEdit: {
-        //TODO Clear fields and unlock Submit
         onSubmit: function(insertDoc, updateDoc, currentDoc) {
             this.event.preventDefault();
             Accounts.changePassword(insertDoc.old, insertDoc.new, function(error) {
