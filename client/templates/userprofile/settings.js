@@ -7,7 +7,7 @@ AutoForm.hooks({
                     sAlert.error(error.message);
                     this.done(error.message);
                 } else {
-                    sAlert.success("Password successfully updated.")
+                    sAlert.success("Password successfully updated.");
                     AutoForm.resetForm('passwordEdit');
                     this.done("Password updated.")
                 }
