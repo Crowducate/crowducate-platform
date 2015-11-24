@@ -12,10 +12,6 @@
             <h2 class="userprofile-sub-title">
                 {{ mf 'userProfile-subheading-basics' 'Basics'}}
             </h2> {{#autoForm id="UserProfileEdit" collection="Meteor.users" doc=currentUser type="update" validation="keyup" }}
-            <div id="profileSuccess" class="alert alert-success" style="display:none;" role="alert">
-                <span id="profileSuccessMessage" class="has-error" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-            </div>
             <div class="formgroup {{#if afFieldIsInvalid name='username'}} has-error{{/if}}">
                 {{> afQuickField name="username"}}
             </div>
@@ -36,10 +32,6 @@
             <h2 class="userprofile-sub-title">
                     {{ mf 'userProfile-subheading-security' 'Security'}}
                 </h2> {{#autoForm id="passwordEdit" schema="Schema.passwordEdit" validation="keyup"}}
-            <div id="passwordSuccess" class="alert alert-success" style="display:none;" role="alert">
-                <span id="passwordSuccessMessage" class="has-error" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-            </div>
             <div id="passwordError" class="alert alert-danger" style="display:none;" role="alert">
                 <span id="passwordErrorMessage" class="has-error" aria-hidden="true"></span>
                 <span class="sr-only"></span>
