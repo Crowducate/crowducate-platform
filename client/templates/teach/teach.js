@@ -18,7 +18,7 @@ Template.teach.events({
     'click #addCourse': function(event, template){
         // prevent default button submit
         event.preventDefault();
-
+        var currentUsername = Meteor.user().username;
         // create an empty course container
         var course = {
             // Get form field values
