@@ -20,7 +20,7 @@ Resources
 ========
 ### Current development
 * [Planning and design documents](http://crowducate.hackpad.com)
-* [Developer task board](https://waffle.io/Crowducate/crowducate-next) [![Stories in Ready](https://badge.waffle.io/Crowducate/crowducate-next.svg?label=ready&title=Ready)](http://waffle.io/Crowducate/crowducate-next)
+* [Developer task board](https://waffle.io/Crowducate/crowducate-platform) [![Stories in Ready](https://badge.waffle.io/Crowducate/crowducate-next.svg?label=ready&title=Ready)](http://waffle.io/Crowducate/crowducate-next)
 * Automated code analysis: [![bitHound Score](https://www.bithound.io/Crowducate/crowducate-next/badges/score.svg?)](https://www.bithound.io/Crowducate/crowducate-next)
 [![Code Climate](https://codeclimate.com/github/Crowducate/crowducate-next/badges/gpa.svg)](https://codeclimate.com/github/Crowducate/crowducate-next)
 
