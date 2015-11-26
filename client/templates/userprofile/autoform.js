@@ -14,11 +14,9 @@ var passwordHooks = {
     Accounts.changePassword(insertDoc.old, insertDoc.new, function(error) {
       if (error) {
         sAlert.error(error.message);
-        this.done(error.message);
       } else {
         sAlert.success("Password successfully updated.");
         AutoForm.resetForm('passwordEdit');
-        this.done("Password updated.")
       }
     });
     return false
