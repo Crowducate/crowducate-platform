@@ -19,6 +19,7 @@ var passwordHooks = {
         AutoForm.resetForm('passwordEdit');
       }
     });
+    this.done();
     return false
   }
 }
