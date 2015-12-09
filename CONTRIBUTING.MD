@@ -1,4 +1,4 @@
-# Girflow
+# Gitflow
 Our project follows the Gitflow development process. As such,
 
 * All new features should be made by branching `develop`
