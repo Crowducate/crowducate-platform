@@ -8,3 +8,7 @@ See the [Gitflow Cheatsheet](http://danielkummer.github.io/git-flow-cheatsheet/)
 
 # Work in progress
 Please keep work in progress updated on Github. This helps the team know what tasks are in progress, and gives an opportunity to help with the task.
+
+# Pull requests
+When a feature branch seems ready for review, open a Pull Request by comparing the feature branch with the develop branch.
+
