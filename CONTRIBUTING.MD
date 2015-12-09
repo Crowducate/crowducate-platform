@@ -12,3 +12,5 @@ Please keep work in progress updated on Github. This helps the team know what ta
 # Pull requests
 When a feature branch seems ready for review, open a Pull Request by comparing the feature branch with the develop branch.
 
+# Peer review
+All code, aside from project documentation, should be reviewed by a peer coder before merging into development. This is intended to help reduce bugs and to improve code quality through a feedback process.
