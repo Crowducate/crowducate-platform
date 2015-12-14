@@ -1,0 +1,30 @@
+<template name="multipleChoiceTemplate">
+    <div class="form ">
+
+        {{>editableTitleDescription}}
+
+        {{#if isEditingCurrentCourse }} <!-- global helper -->
+            <div class="form-group-sm">
+                <div class="form-group form-inline">
+                    Number of options:
+                    <select id="numQuestions" class="form-control small">
+                        {{#each opt in selectInputOptions }}
+                            <option value={{opt.value}} disabled={{opt.disabled}} selected={{opt.selected}}>{{opt.text}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+        {{/if}}
+
+        <div>
+            {{#each option in selectedNumberOfOptions }}
+                {{> multipleChoiceInputField
+                    multipleAnswersAllowed=isMultipleAnswers
+                    option=option
+                    question=question
+                    index=@index
+                }}
+            {{/each}}
+        </div>
+   </div>
+</template>

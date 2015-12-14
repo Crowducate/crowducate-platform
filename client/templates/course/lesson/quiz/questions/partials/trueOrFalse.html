@@ -1,0 +1,23 @@
+<template name="trueOrFalseTemplate">
+    <div >
+
+        {{>editableTitleDescription}}
+
+        <div class="form-inline">
+            <input type="radio" id="1-{{question.id}}"
+                   class="js-option-selected"
+                   name="answer" value="true"
+                   checked="{{isTrue}}"
+                    />
+            <label for="1-{{question.id}}" class="form-control-label">True</label>
+        </div>
+        <div class="form-inline">
+            <input type="radio" id="2-{{question.id}}"
+                   class="js-option-selected"
+                   name="answer" value="false"
+                   checked="{{isFalse}}"
+                    />
+            <label for="2-{{question.id}}" class="form-control-label">False</label>
+        </div>
+    </div>
+</template>

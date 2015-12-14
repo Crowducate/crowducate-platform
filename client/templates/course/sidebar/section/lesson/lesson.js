@@ -4,6 +4,7 @@ Template.sectionLesson.created = function () {
 
   // Subscribe to single section lesson
   this.subscribe('singleLesson', this.lessonID);
+  this.subscribe('quizzes');
 };
 
 Template.sectionLesson.helpers({
@@ -34,6 +35,17 @@ Template.sectionLesson.helpers({
     var lessonObject = Lessons.findOne(lessonID);
 
     return lessonObject;
+  },
+
+  'quizzes': function() {
+    var instance = Template.instance();
+
+    var lessonID = instance.lessonID;
+
+    //quizzes for the lesson:
+    var quizzes = Quizzes.find({'lessonID': lessonID}).fetch();
+
+    return quizzes;
   }
 });
 
@@ -47,5 +59,8 @@ Template.sectionLesson.events({
     // set active lesson ID reactive variable
     // to the value of clicked lesson
     activeLessonID.set(lessonID);
+
+    //TODO[EM] temporary code
+    activeQuizID.set(undefined);
   }
 });

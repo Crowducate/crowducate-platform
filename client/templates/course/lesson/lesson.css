@@ -1,9 +1,8 @@
-#addQuizBtn{
+#addQuizBtn {
   margin-left: 12px;
   margin-top: 5px;
 }
-
-.add-quiz-text{
+.add-quiz-text {
   cursor: pointer;
   font-size: 11px;
 }

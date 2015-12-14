@@ -1,14 +1,20 @@
 <template name="lesson">
-    {{# with activeLesson }}
-    <div class="col-xs-12 col-sm-7 col-md-9">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-              {{> lessonName name=name activeLesson=activeLesson }}
-            </div>
-            <div class="panel-body">
-              {{> lessonText text=text activeLesson=activeLesson }}
+    {{# if activeLesson }}
+        {{# with activeLesson }}
+        <div class="col-xs-12 col-sm-7 col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                  {{> lessonName name=name activeLesson=activeLesson }}
+                </div>
+                <div class="panel-body">
+                  {{> lessonText text=text activeLesson=activeLesson }}
+                </div>
             </div>
         </div>
-    </div>
-    {{/ with }}
+        {{/ with }}
+    {{/ if }}
+
+    {{# if activeQuiz }}
+        {{> quizContent activeQuiz=activeQuiz }}
+    {{/ if }}
 </template>

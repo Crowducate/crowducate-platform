@@ -1,0 +1,20 @@
+<template name="multipleChoiceInputField">
+    <div class="form-inline form-group-sm">
+
+        {{> questionInputControl
+            option=option
+            question=question
+            index=index
+        }}
+
+        {{#if isEditingCurrentCourse}}
+            <input type="text"
+                   class="form-control js-option-title-input"
+                   placeholder="Enter an answer"
+                   value="{{option.title}}" />
+        {{else}}
+            <label for="{{index}}-{{question.id}}" class="form-control-label">{{option.title}}</label>
+        {{/if}}
+
+    </div>
+</template>

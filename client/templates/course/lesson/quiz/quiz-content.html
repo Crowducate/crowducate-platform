@@ -1,0 +1,46 @@
+<template name="quizContent">
+    <div class="col-xs-12 col-sm-9">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                {{activeQuiz.title}}
+
+                {{#if isEditingCurrentCourse}}
+                    <button id="saveQuizBtn"
+                            class="btn-xs btn-success save-quiz-btn pull-right"
+                            >
+                        Save Quiz
+                    </button>
+                {{/if}}
+            </div>
+            <div class="panel-body">
+            {{#if isEditingCurrentCourse }}<!-- check the global helper -->
+                <div class="form-group-sm form-inline">
+                    <label for="questionTypesSelector">Select question type</label>
+                    <select id="questionTypesSelector" class="form-control small">
+                        <option disabled selected>Select question type</option>
+                        {{#each questionType in questionTypes }}
+                            <option>{{ questionType }}</option>
+                        {{/each}}
+                    </select>
+                    <button id="addQuestionBtn"
+                            class="btn btn-sm {{#if addQuestionButtonDisabled  }} btn-default {{else}} btn-success {{/if}}"
+                            disabled="{{ addQuestionButtonDisabled }}">Add</button>
+                </div>
+            {{/if}}
+                <div class="question-content  col-sm-12">
+                    {{#each question in questions }}
+                        {{> questionWrapper question=question index=@index }}
+                    {{/each}}
+                </div>
+
+            </div>
+
+            <!-- submit quiz -->
+            <div class="panel-footer">
+                <button class="btn btn-success btn-sm submit-quiz-btn ">{{submitButtonLabel}}</button>
+
+            </div>
+        </div>
+    </div>
+</template>
