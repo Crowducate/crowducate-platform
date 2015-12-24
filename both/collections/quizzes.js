@@ -12,16 +12,55 @@ QuizOptions.QUESTION_TYPES =
     ];
 
 
-//this schema will validate the overall questions collection
-/*QuizzesQuestionsSchema = new SimpleSchema({
-    questions: {
-        type: Array
-    }
-});*/
-
-QuizQuestionOptionSchema = new SimpleSchema({
-
+AnswerOptionSchema = new SimpleSchema({
+    title: {
+        type:String,
+        optional: true,
+        defaultValue: ""
+    },
+    isCorrect: {
+        type: Boolean,
+        defaultValue: false
+    },
 })
+
+//this schema will validate the overall questions collection
+QuestionsSchema = new SimpleSchema({
+    id: {
+        type: String,
+        optional: true
+    },
+    questionType: {
+        type:String,
+        optional: true
+    },
+    quizId: {
+        type:String,
+        optional: true
+    },
+    title: {
+        type:String,
+        optional: true
+    },
+    description : {
+        type:String,
+        optional: true
+    },
+    options : {
+        type: [AnswerOptionSchema],
+        optional: true
+    },
+
+    saved : {
+        type: Boolean,
+        optional: true
+    },
+    answered: {
+        type:Boolean,
+        optional: true
+    },
+});
+
 
 //This schema will validate the initial creation of a quiz
 QuizzesSchema = new SimpleSchema({
@@ -32,51 +71,11 @@ QuizzesSchema = new SimpleSchema({
         max: 140
     },
     questions: {
-        type: [Object],
+        //type: [Object],
+        type: [QuestionsSchema],
         optional: true
     },
 
-    "questions.$.id": {
-        type: String,
-        optional: true
-    },
-    "questions.$.questionType": {
-        type:String,
-        optional: true
-    },
-    "questions.$.quizId": {
-        type:String,
-        optional: true
-    },
-    "questions.$.title": {
-        type:String,
-        optional: true
-    },
-    "questions.$.description" : {
-        type:String,
-        optional: true
-    },
-    "questions.$.options" : {
-        type: [Object],
-        optional: true
-    },
-    "questions.$.options.$.title": {
-        type:String,
-        optional: true,
-        defaultValue: ""
-    },
-    "questions.$.options.$.isCorrect": {
-       type: Boolean,
-       defaultValue: false
-    },
-    "questions.$.saved" : {
-        type: Boolean,
-        optional: true
-    },
-    "questions.$.answered": {
-        type:Boolean,
-        optional: true
-    },
     lessonID: {
         type:String,
     },
