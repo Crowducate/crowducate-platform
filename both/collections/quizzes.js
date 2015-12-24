@@ -60,6 +60,15 @@ QuizzesSchema = new SimpleSchema({
         type: [Object],
         optional: true
     },
+    "questions.$.options.$.title": {
+        type:String,
+        optional: true,
+        defaultValue: ""
+    },
+    "questions.$.options.$.isCorrect": {
+       type: Boolean,
+       defaultValue: false
+    },
     "questions.$.saved" : {
         type: Boolean,
         optional: true
