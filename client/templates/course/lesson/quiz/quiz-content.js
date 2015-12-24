@@ -55,7 +55,7 @@ Template.quizContent.events({
         Template.instance().addQuestionButtonDisabled.set(true);
         $('#questionTypesSelector :first-child').prop('selected', true)
     },
-    'click, .submit-quiz-btn': function(event){
+    'click .submit-quiz-btn': function(event){
 
         var isPreview = Blaze._globalHelpers['isEditingCurrentCourse']() == false;
         var activeQuiz = Template.currentData().activeQuiz;
