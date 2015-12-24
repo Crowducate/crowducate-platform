@@ -56,12 +56,8 @@ QuizzesSchema = new SimpleSchema({
         type:String,
         optional: true
     },
-   /* "questions.$.options" : {
-        type: Array,
-        optional: true
-    },*/
-    "questions.$.numAnswerOptions": {
-        type:String,
+    "questions.$.options" : {
+        type: [Object],
         optional: true
     },
     "questions.$.saved" : {

@@ -24,7 +24,7 @@ Template.multipleChoiceTemplate.helpers({
         optionObj.value = "";
         optionObj.disabled = true;
         var selectedOptionIndex = 0;
-        if (question.options)
+        if (question.options && question.options.length > 0)
         {
             //if the options have been set:
             selectedOptionIndex = question.options.length - 1; //the numbering starts with 2 (min number of options)
@@ -79,7 +79,6 @@ Template.multipleChoiceTemplate.events({
         Template.instance().numQuizOptions.set(numOptions);
 
         var question = Template.currentData().question;
-        question.numAnswerOptions = numOptions;
 
         var options = [];
         for ( var i= 0; i< numOptions; i++){
@@ -88,7 +87,7 @@ Template.multipleChoiceTemplate.events({
             option.isCorrect = false;
             options.push(option);
         }
-        //question.options = options;
+        question.options = options;
     },
 
 

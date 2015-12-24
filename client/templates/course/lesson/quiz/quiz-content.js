@@ -39,12 +39,15 @@ Template.quizContent.events({
     'click #addQuestionBtn': function(event){
         var activeQuiz = Template.currentData().activeQuiz;
 
-        var question = new QuizQuestion();
+        var question = new Object();// new QuizQuestion();
         question.quizId = activeQuiz._id;
         question.id = Random.id(); //assign an id to the question - need this for checking and validating answers
         question.questionType = $('#questionTypesSelector').val();
         question.saved = false;
         question.answered = false;
+        question.description = "";
+        question.title = "";
+        question.options = [];
 
         activeQuiz.addNewQuestion(question);
 
@@ -64,12 +67,17 @@ Template.quizContent.events({
             //mark the questions as saved
             for (var q in questions ){
                 var question = questions[q];
-                question.saved = true;
+                //question.saved = true;
             }
 
-            console.log("updating quiz with questions");
-            console.log(questions);
-            Quizzes.update(activeQuiz._id, {$set: {'questions': questions}})
+            if (questions != undefined){
+                console.log("updating quiz with questions");
+                console.log(questions);
+
+                var quizToUpdate = Quizzes.findOne({_id: activeQuiz._id});
+                Quizzes.update(activeQuiz._id, {$set: {'questions': questions}})
+            }
+
         }
         else{ // preview/exam mode
             for(var question in questions){
