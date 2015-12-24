@@ -88,7 +88,7 @@ Template.multipleChoiceTemplate.events({
             option.isCorrect = false;
             options.push(option);
         }
-        question.options = options;
+        //question.options = options;
     },
 
 

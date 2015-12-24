@@ -22,7 +22,6 @@ Template.addQuiz.events({
         var quizObj = new Quiz();
         quizObj.title = quizTitle;
         quizObj.lessonID = Template.currentData(); //current data is the lesson ID
-        //{'title': quizTitle, 'lessonID': Template.currentData()};
 
         // Insert new quiz into database
         newQuizId = Quizzes.insert(quizObj);

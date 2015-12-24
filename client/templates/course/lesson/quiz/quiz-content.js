@@ -66,6 +66,9 @@ Template.quizContent.events({
                 var question = questions[q];
                 question.saved = true;
             }
+
+            console.log("updating quiz with questions");
+            console.log(questions);
             Quizzes.update(activeQuiz._id, {$set: {'questions': questions}})
         }
         else{ // preview/exam mode
