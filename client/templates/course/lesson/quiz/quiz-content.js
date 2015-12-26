@@ -29,6 +29,26 @@ Template.quizContent.helpers({
 
     submitButtonLabel: function(){
         return Blaze._globalHelpers['isEditingCurrentCourse']() == true ? "Save" : "Submit";
+    },
+
+    isMultipleAnswer: function(){
+
+        console.log(Template.instance().data)
+        var question = Template.instance().data;
+        return question.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS;
+    },
+    isSingleAnswer: function(){
+        var question = Template.instance().data;
+        return question.questionType == QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER;
+    },
+    isTrueOrFalse: function(){
+
+        var question = Template.instance().data;
+        return question.questionType == QuizOptions.TRUE_OR_FALSE;
+    },
+
+    questionIndex: function(){
+        return Template.currentData().index + 1;
     }
 });
 

@@ -1,16 +1,5 @@
 Quizzes = new Mongo.Collection('quizzes');
 
-QuizOptions = {};
-
-QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER = "Multiple Choice - single answer";
-QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS = "Multiple Choice - multiple answers";
-QuizOptions.TRUE_OR_FALSE = "True or False";
-QuizOptions.QUESTION_TYPES =
-    [   QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER,
-        QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS,
-        QuizOptions.TRUE_OR_FALSE
-    ];
-
 
 AnswerOptionSchema = new SimpleSchema({
     title: {

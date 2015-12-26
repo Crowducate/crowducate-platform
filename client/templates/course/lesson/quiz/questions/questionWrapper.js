@@ -1,5 +1,9 @@
 Template.questionWrapper.helpers({
     isMultipleAnswer: function(){
+        console.log("is multiple answer");
+        console.log(Template.currentData());
+        console.log(Template.parentData());
+        console.log(this);
         var question = Template.currentData().question;
         return question.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS;
     },
@@ -8,6 +12,11 @@ Template.questionWrapper.helpers({
         return question.questionType == QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER;
     },
     isTrueOrFalse: function(){
+
+        console.log("isTrueOrFalse");
+        console.log(Template.currentData());
+        console.log(Template.parentData());
+        console.log(this);
         var question = Template.currentData().question;
         return question.questionType == QuizOptions.TRUE_OR_FALSE;
     },

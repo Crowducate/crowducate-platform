@@ -30,7 +30,26 @@
             {{/if}}
                 <div class="question-content  col-sm-12">
                     {{#each question in questions }}
-                        {{> questionWrapper question=question index=@index }}
+
+                        {{#if isEditingCurrentCourse}}
+                            <p><span class="badge">{{ @index }}</span> Question type:   {{#if isTrueOrFalse}}
+                                True or False
+                            {{else}}
+                                {{#if isMultipleAnswer }}
+                                    Multiple answers
+                                {{else}}
+                                    Single answer
+                                {{/if}}
+                            {{/if}}
+                                {{> deleteQuizQuestionButton question=question}} </p>
+
+                        {{/if}}
+
+                        {{#autoForm id="trueFalseQuestion" schema="TrueOrFalseSchema" validation="keyup"}}
+                            {{>editableTitleDescription question=this}}
+
+                            {{> afQuickField radio="true" name="group" options="allowed" }}
+                        {{/autoForm}}
                     {{/each}}
                 </div>
 
