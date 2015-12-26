@@ -1,1 +1,2 @@
 Schema = {};
+QuizzesSchema = {};

@@ -28,7 +28,8 @@ Template.quizContent.helpers({
     },
 
     submitButtonLabel: function(){
-        return Blaze._globalHelpers['isEditingCurrentCourse']() == true ? "Save" : "Submit";
+        //return Blaze._globalHelpers['isEditingCurrentCourse']() == true ? "Save" : "Submit";
+        return "Add to Quiz"
     },
 
     isMultipleAnswer: function(){
@@ -55,8 +56,6 @@ Template.quizContent.helpers({
 Template.quizContent.events({
     'change #questionTypesSelector': function(event){
         Template.instance().addQuestionButtonDisabled.set(false);
-    },
-    'click #addQuestionBtn': function(event){
         var activeQuiz = Template.currentData().activeQuiz;
 
         var question = new Object();// new QuizQuestion();
@@ -75,6 +74,7 @@ Template.quizContent.events({
         Template.instance().addQuestionButtonDisabled.set(true);
         $('#questionTypesSelector :first-child').prop('selected', true)
     },
+
     'click .submit-quiz-btn': function(event){
 
         var isPreview = Blaze._globalHelpers['isEditingCurrentCourse']() == false;

@@ -1,7 +1,7 @@
 Quizzes = new Mongo.Collection('quizzes');
 
 
-AnswerOptionSchema = new SimpleSchema({
+QuizzesSchema.AnswerOptionSchema = new SimpleSchema({
     title: {
         type:String,
         optional: true,
@@ -13,7 +13,20 @@ AnswerOptionSchema = new SimpleSchema({
     },
 });
 
-BooleanAnswerOptionSchema = new SimpleSchema({
+QuizzesSchema.TrueOrFalseSchema = new SimpleSchema({
+
+    group:{
+        label: "",
+        type:String,
+        optional: true,
+        allowedValues: ["True", "False"],
+        autoform: {
+            type: "select-radio"
+        }
+    }
+})
+
+QuizzesSchema.BooleanAnswerOptionSchema = new SimpleSchema({
     label: {
         type:String,
         optional:false,
@@ -26,7 +39,7 @@ BooleanAnswerOptionSchema = new SimpleSchema({
 })
 
 //this schema will validate the overall questions collection
-QuestionsSchema = new SimpleSchema({
+QuizzesSchema.QuestionsSchema = new SimpleSchema({
     id: {
         type: String,
         optional: false
@@ -48,7 +61,7 @@ QuestionsSchema = new SimpleSchema({
         optional: false
     },
     options : {
-        type: [AnswerOptionSchema],
+        type: [QuizzesSchema.TrueOrFalseSchema],
         optional: false
     },
 
@@ -64,7 +77,7 @@ QuestionsSchema = new SimpleSchema({
 
 
 //This schema will validate the initial creation of a quiz
-QuizzesSchema = new SimpleSchema({
+QuizzesSchema.QuizzesSchema = new SimpleSchema({
     title: {
         type:String,
         label: "Quiz Title",
@@ -73,7 +86,7 @@ QuizzesSchema = new SimpleSchema({
     },
     questions: {
         //type: [Object],
-        type: [QuestionsSchema],
+        type: [QuizzesSchema.QuestionsSchema],
         optional: true
     },
 
@@ -82,7 +95,7 @@ QuizzesSchema = new SimpleSchema({
     },
 });
 
-Quizzes.attachSchema(QuizzesSchema);
+Quizzes.attachSchema(QuizzesSchema.QuizzesSchema);
 
 /*
  level: {
@@ -98,17 +111,4 @@ Quizzes.attachSchema(QuizzesSchema);
  */
 
 //schema for validation of specific question types
-TrueOrFalseSchema = new SimpleSchema({
 
-    group:{
-        label: "",
-        type:String,
-        optional: true,
-        allowedValues: ["True", "False"],
-        autoform: {
-            type: "select-radio"
-        }
-    }
-
-
-})

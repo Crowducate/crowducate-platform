@@ -1,27 +1,20 @@
 <template name="questionWrapper">
-    <div class="row col-sm-12 col-md-10 col-lg-9 question-wrapper-row">
-        <div class="question-wrapper">
+    <div class="row question-wrapper-row">
+        <div >
             {{#if isEditingCurrentCourse}}
-                <p><span class="badge">{{ questionIndex }}</span> Question type:   {{#if isTrueOrFalse}}
+                <p><span class="badge">{{ questionIndex }}</span> Question type:
+                    {{#if isTrueOrFalse}}
                                         True or False
-                                    {{else}}
-                                        {{#if isMultipleAnswer }}
-                                            Multiple answers
-                                        {{else}}
-                                            Single answer
-                                        {{/if}}
-                                    {{/if}}
-                    {{> deleteQuizQuestionButton question=question}} </p>
+                    {{else}}
+                        {{#if isMultipleAnswer }}
+                            Multiple answers
+                        {{else}}
+                            Single answer
+                        {{/if}}
+                    {{/if}}
+            {{> deleteQuizQuestionButton question=question}} </p>
             {{/if}}
 
-            {{#if isTrueOrFalse question=question}}
-                {{> trueOrFalseTemplate }}
-
-            {{ else}}
-                
-                {{> multipleChoiceTemplate
-                    question=question}}
-            {{/if}}
         </div>
     </div>
 </template>

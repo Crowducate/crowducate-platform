@@ -13,11 +13,9 @@ Template.questionWrapper.helpers({
     },
     isTrueOrFalse: function(){
 
-        console.log("isTrueOrFalse");
-        console.log(Template.currentData());
-        console.log(Template.parentData());
-        console.log(this);
         var question = Template.currentData().question;
+        console.log(" is true of false");
+        console.log( question );
         return question.questionType == QuizOptions.TRUE_OR_FALSE;
     },
 

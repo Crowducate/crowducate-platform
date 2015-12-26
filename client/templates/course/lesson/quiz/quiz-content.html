@@ -23,32 +23,20 @@
                             <option>{{ questionType }}</option>
                         {{/each}}
                     </select>
-                    <button id="addQuestionBtn"
-                            class="btn btn-sm {{#if addQuestionButtonDisabled  }} btn-default {{else}} btn-success {{/if}}"
-                            disabled="{{ addQuestionButtonDisabled }}">Add</button>
                 </div>
             {{/if}}
-                <div class="question-content  col-sm-12">
+                <div class="question-content  col-sm-12 question-wrapper">
                     {{#each question in questions }}
 
-                        {{#if isEditingCurrentCourse}}
-                            <p><span class="badge">{{ @index }}</span> Question type:   {{#if isTrueOrFalse}}
-                                True or False
-                            {{else}}
-                                {{#if isMultipleAnswer }}
-                                    Multiple answers
-                                {{else}}
-                                    Single answer
-                                {{/if}}
-                            {{/if}}
-                                {{> deleteQuizQuestionButton question=question}} </p>
+                        {{>questionWrapper question=question }}
+                        <br/>
+                        {{#autoForm id="trueFalseQuestion" schema="QuizzesSchema.QuizzesSchema" validation="keyup"}}
 
-                        {{/if}}
+                            {{> afQuickField name="QuizzesSchema.QuestionSchema.title" label="Title"}}
+                            {{> afQuickField name="QuizzesSchema.QuestionSchema.description" label="Description" rows=4 }}
 
-                        {{#autoForm id="trueFalseQuestion" schema="TrueOrFalseSchema" validation="keyup"}}
-                            {{>editableTitleDescription question=this}}
 
-                            {{> afQuickField radio="true" name="group" options="allowed" }}
+                            {{> afQuickField radio="true" schema="TrueOrFalseSchema" name="group" options="allowed" }}
                         {{/autoForm}}
                     {{/each}}
                 </div>
