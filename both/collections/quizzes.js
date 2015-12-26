@@ -1,6 +1,7 @@
 Quizzes = new Mongo.Collection('quizzes');
 
 
+
 QuizzesSchema.AnswerOptionSchema = new SimpleSchema({
     title: {
         type:String,
@@ -62,7 +63,7 @@ QuizzesSchema.QuestionsSchema = new SimpleSchema({
     },
     options : {
         type: [QuizzesSchema.TrueOrFalseSchema],
-        optional: false
+        optional: true
     },
 
     saved : {
@@ -96,6 +97,7 @@ QuizzesSchema.QuizzesSchema = new SimpleSchema({
 });
 
 Quizzes.attachSchema(QuizzesSchema.QuizzesSchema);
+
 
 /*
  level: {

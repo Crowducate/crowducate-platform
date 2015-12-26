@@ -5,6 +5,7 @@ Template.sectionLesson.created = function () {
   // Subscribe to single section lesson
   this.subscribe('singleLesson', this.lessonID);
   this.subscribe('quizzes');
+  this.subscribe('questions');
 };
 
 Template.sectionLesson.helpers({

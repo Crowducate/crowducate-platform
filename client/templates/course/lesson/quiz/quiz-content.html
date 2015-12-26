@@ -30,24 +30,12 @@
 
                         {{>questionWrapper question=question }}
                         <br/>
-                        {{#autoForm id="trueFalseQuestion" schema="QuizzesSchema.QuizzesSchema" validation="keyup"}}
-
-                            {{> afQuickField name="QuizzesSchema.QuestionSchema.title" label="Title"}}
-                            {{> afQuickField name="QuizzesSchema.QuestionSchema.description" label="Description" rows=4 }}
-
-
-                            {{> afQuickField radio="true" schema="TrueOrFalseSchema" name="group" options="allowed" }}
-                        {{/autoForm}}
+                        {{> quickForm collection="Questions" id="insertPostForm" type="insert"}}
                     {{/each}}
                 </div>
 
             </div>
 
-            <!-- submit quiz -->
-            <div class="panel-footer">
-                <button class="btn btn-success btn-sm submit-quiz-btn ">{{submitButtonLabel}}</button>
-
             </div>
         </div>
-    </div>
 </template>
