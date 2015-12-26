@@ -22,33 +22,45 @@ AnswerOptionSchema = new SimpleSchema({
         type: Boolean,
         defaultValue: false
     },
+});
+
+BooleanAnswerOptionSchema = new SimpleSchema({
+    label: {
+        type:String,
+        optional:false,
+        allowedValues: ['True', 'False']
+    },
+    isCorrect:{
+        type:Boolean,
+        defaultValue: false
+    }
 })
 
 //this schema will validate the overall questions collection
 QuestionsSchema = new SimpleSchema({
     id: {
         type: String,
-        optional: true
+        optional: false
     },
     questionType: {
         type:String,
-        optional: true
+        optional: false
     },
     quizId: {
         type:String,
-        optional: true
+        optional: false
     },
     title: {
         type:String,
-        optional: true
+        optional: false
     },
     description : {
         type:String,
-        optional: true
+        optional: false
     },
     options : {
         type: [AnswerOptionSchema],
-        optional: true
+        optional: false
     },
 
     saved : {
@@ -82,3 +94,32 @@ QuizzesSchema = new SimpleSchema({
 });
 
 Quizzes.attachSchema(QuizzesSchema);
+
+/*
+ level: {
+ label: "Level",
+ type: String,
+ optional: false,
+ allowedValues: ['Freshman', 'Sophomore', 'Junior', 'Senior'],
+ autoform: {
+ group: studentData,
+ type: 'select-radio-inline'
+ }
+ },
+ */
+
+//schema for validation of specific question types
+TrueOrFalseSchema = new SimpleSchema({
+
+    group:{
+        label: "",
+        type:String,
+        optional: true,
+        allowedValues: ["True", "False"],
+        autoform: {
+            type: "select-radio"
+        }
+    }
+
+
+})

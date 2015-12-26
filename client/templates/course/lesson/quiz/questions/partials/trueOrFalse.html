@@ -1,7 +1,14 @@
 <template name="trueOrFalseTemplate">
     <div >
 
+
         {{>editableTitleDescription}}
+
+        <!-- TrueOrFalseSchema -->
+
+    {{#autoForm id="trueFalseQuestion" schema="TrueOrFalseSchema" validation="keyup"}}
+        {{> afQuickField radio="true" name="group" options="allowed" }}
+    {{/autoForm}}
 
         <div class="form-inline">
             <input type="radio" id="1-{{question.id}}"
