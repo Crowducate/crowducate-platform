@@ -13,44 +13,71 @@ Template.quizContent.helpers({
         return QuizOptions.QUESTION_TYPES;
     },
 
-    questions: function(){
-
-        //bind to a reactive var updates
-        Template.instance().quizQuestions.get();
-
-        var activeQuiz = Template.currentData().activeQuiz;
-        return activeQuiz.questions;
-    },
-
-    addQuestionButtonDisabled: function(){
-
-        return Template.instance().addQuestionButtonDisabled.get() == true;
-    },
-
-    submitButtonLabel: function(){
-        //return Blaze._globalHelpers['isEditingCurrentCourse']() == true ? "Save" : "Submit";
-        return "Add to Quiz"
+    currentQuestionToBuild:function(){
+        return Session.get("currentQuestionToBuild");
     },
 
     isMultipleAnswer: function(){
 
-        console.log(Template.instance().data)
-        var question = Template.instance().data;
-        return question.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS;
+        var editedQuestion = Session.get("currentQuestionToBuild");
+        console.log(" IS MULTIPLE ANSWERS");
+        console.log(Session.get("currentQuestionToBuild"));
+
+        if (editedQuestion)
+        {
+            return editedQuestion.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS;
+        }
+        return false;
+
     },
     isSingleAnswer: function(){
-        var question = Template.instance().data;
-        return question.questionType == QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER;
+        console.log(" IS SINGLE ANSWER");
+        var editedQuestion = Session.get("currentQuestionToBuild");
+        console.log(Session.get("currentQuestionToBuild"));
+        if (editedQuestion)
+        {
+            return editedQuestion.questionType == QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER;
+        }
+        return false;
     },
     isTrueOrFalse: function(){
 
-        var question = Template.instance().data;
-        return question.questionType == QuizOptions.TRUE_OR_FALSE;
+        var editedQuestion = Session.get("currentQuestionToBuild");
+        console.log(" IS TRUE OR FALSE");
+        console.log(Session.get("currentQuestionToBuild"));
+        if (editedQuestion)
+        {
+            return editedQuestion.questionType == QuizOptions.TRUE_OR_FALSE;;
+        }
+        return false;
     },
 
-    questionIndex: function(){
-        return Template.currentData().index + 1;
+    quizId: function(){
+        var editedQuestion = Session.get("currentQuestionToBuild");
+        if (editedQuestion)
+        {
+            return editedQuestion.quizId
+        }
+        return null;
+    },
+    questionId: function(){
+        var editedQuestion = Session.get("currentQuestionToBuild");
+        if (editedQuestion)
+        {
+            return editedQuestion.id;
+        }
+        return null;
+    },
+
+    qType: function(){
+        var editedQuestion = Session.get("currentQuestionToBuild");
+        if (editedQuestion)
+        {
+            return editedQuestion.questionType;
+        }
+        return null;
     }
+
 });
 
 Template.quizContent.events({
@@ -58,21 +85,23 @@ Template.quizContent.events({
         Template.instance().addQuestionButtonDisabled.set(false);
         var activeQuiz = Template.currentData().activeQuiz;
 
+        console.log("on change, activeQuiz");
+        console.log(activeQuiz);
+
         var question = new Object();// new QuizQuestion();
         question.quizId = activeQuiz._id;
         question.id = Random.id(); //assign an id to the question - need this for checking and validating answers
         question.questionType = $('#questionTypesSelector').val();
-        question.saved = false;
-        question.answered = false;
         question.description = "";
         question.title = "";
         question.options = [];
 
-        activeQuiz.addNewQuestion(question);
+        console.log("new form should contain a question template : ")
+        console.log(question);
 
-        Template.instance().quizQuestions.set(activeQuiz.questions);
-        Template.instance().addQuestionButtonDisabled.set(true);
-        $('#questionTypesSelector :first-child').prop('selected', true)
+        $('#questionTypesSelector :first-child').prop('selected', true);
+
+        Session.set("currentQuestionToBuild", question);
     },
 
     'click .submit-quiz-btn': function(event){

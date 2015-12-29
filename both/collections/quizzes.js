@@ -1,7 +1,5 @@
 Quizzes = new Mongo.Collection('quizzes');
 
-
-
 QuizzesSchema.AnswerOptionSchema = new SimpleSchema({
     title: {
         type:String,

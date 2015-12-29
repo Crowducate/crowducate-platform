@@ -1,11 +1,10 @@
 Questions = new Mongo.Collection('questions');
 
-//this schema will validate the overall questions collection
-//this schema will validate the overall questions collection
 QuestionsSchema = new SimpleSchema({
     id: {
         type: String,
-        optional: false
+        optional: false,
+        unique: true
     },
     questionType: {
         type:String,

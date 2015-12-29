@@ -1,22 +1,21 @@
 Template.questionWrapper.helpers({
     isMultipleAnswer: function(){
         console.log("is multiple answer");
-        console.log(Template.currentData());
-        console.log(Template.parentData());
-        console.log(this);
-        var question = Template.currentData().question;
-        return question.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS;
+        console.log( Session.get("currentQuestionToBuild"));
+
+        var question =  Session.get("currentQuestionToBuild");;
+        return question? question.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS : false;
     },
     isSingleAnswer: function(){
-        var question = Template.currentData().question;
-        return question.questionType == QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER;
+        var question = Session.get("currentQuestionToBuild");;
+        return question? question.questionType == QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER : false;
     },
     isTrueOrFalse: function(){
 
-        var question = Template.currentData().question;
+        var question = Session.get("currentQuestionToBuild");;
         console.log(" is true of false");
         console.log( question );
-        return question.questionType == QuizOptions.TRUE_OR_FALSE;
+        return question ? question.questionType == QuizOptions.TRUE_OR_FALSE : false;
     },
 
     questionIndex: function(){

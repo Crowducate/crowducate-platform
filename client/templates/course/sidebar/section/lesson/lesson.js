@@ -2,6 +2,7 @@ Template.sectionLesson.created = function () {
   // Save lesson ID as instance variable
   this.lessonID = this.data;
 
+  AutoForm.debug();
   // Subscribe to single section lesson
   this.subscribe('singleLesson', this.lessonID);
   this.subscribe('quizzes');

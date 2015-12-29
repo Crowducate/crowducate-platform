@@ -26,12 +26,23 @@
                 </div>
             {{/if}}
                 <div class="question-content  col-sm-12 question-wrapper">
-                    {{#each question in questions }}
 
-                        {{>questionWrapper question=question }}
+                    {{#if currentQuestionToBuild}}
+                        {{>questionWrapper question=currentQeustionToBuild }}
                         <br/>
-                        {{> quickForm collection="Questions" id="insertPostForm" type="insert"}}
-                    {{/each}}
+                        {{#autoForm collection="Questions"
+                            id="insertPostForm" type="method" meteormethod="addQuestion" doc=currentQuestionToBuild  validation="keyup"}}
+                            <fieldset>
+                                {{> afQuickField name='title'}}
+                                {{> afQuickField name='description' rows=3}}
+                                {{> afQuickField name="quizId" value=quizId}}
+                                {{> afQuickField name="questionType" value=qType}}
+                                {{> afQuickField name="id" value=questionId}}
+                            </fieldset>
+                            <button type="submit" class="btn btn-primary">Insert</button>
+                        {{/autoForm}}
+                    {{/if}}
+
                 </div>
 
             </div>
