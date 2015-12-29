@@ -12,31 +12,6 @@ QuizzesSchema.AnswerOptionSchema = new SimpleSchema({
     },
 });
 
-QuizzesSchema.TrueOrFalseSchema = new SimpleSchema({
-
-    group:{
-        label: "",
-        type:String,
-        optional: true,
-        allowedValues: ["True", "False"],
-        autoform: {
-            type: "select-radio"
-        }
-    }
-})
-
-QuizzesSchema.BooleanAnswerOptionSchema = new SimpleSchema({
-    label: {
-        type:String,
-        optional:false,
-        allowedValues: ['True', 'False']
-    },
-    isCorrect:{
-        type:Boolean,
-        defaultValue: false
-    }
-})
-
 //this schema will validate the overall questions collection
 QuizzesSchema.QuestionsSchema = new SimpleSchema({
     id: {
@@ -84,7 +59,6 @@ QuizzesSchema.QuizzesSchema = new SimpleSchema({
         max: 140
     },
     questions: {
-        //type: [Object],
         type: [QuizzesSchema.QuestionsSchema],
         optional: true
     },

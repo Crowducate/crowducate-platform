@@ -32,6 +32,7 @@
                         <br/>
                         {{#autoForm collection="Questions"
                             id="addQuestionForm"
+                            schema=QuestionsSchema
                             type="method" meteormethod="addQuestion"
                             doc=currentQuestionToBuild
                             validation="keyup"
@@ -39,6 +40,7 @@
                             <fieldset>
                                 {{> afQuickField name='title'}}
                                 {{> afQuickField name='description' rows=3}}
+                                {{> afFormGroup name="options" type="select-radio"}}
                                 {{> afQuickField name="quizId" value=quizId}}
                                 {{> afQuickField name="questionType" value=qType}}
                                 {{> afQuickField name="id" value=questionId}}

@@ -23,10 +23,25 @@ QuestionsSchema = new SimpleSchema({
         optional: false
     },
     options : {
-        type: [QuizzesSchema.TrueOrFalseSchema],
-        optional: true
-    },
+        type: String,
+        optional: false,
+        autoform: {
+            type: "select-radio",
+            options: function(){
+                return[
+                    {
+                        label: "True",
+                        value: "true"
+                    },
+                    {
+                        label: "False",
+                        value: "false"
+                    }
 
+                ]
+            }
+        }
+    },
 });
 
 Questions.attachSchema(QuestionsSchema);
