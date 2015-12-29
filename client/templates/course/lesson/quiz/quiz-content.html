@@ -31,7 +31,11 @@
                         {{>questionWrapper question=currentQeustionToBuild }}
                         <br/>
                         {{#autoForm collection="Questions"
-                            id="insertPostForm" type="method" meteormethod="addQuestion" doc=currentQuestionToBuild  validation="keyup"}}
+                            id="addQuestionForm"
+                            type="method" meteormethod="addQuestion"
+                            doc=currentQuestionToBuild
+                            validation="keyup"
+                            resetOnSuccess=true}}
                             <fieldset>
                                 {{> afQuickField name='title'}}
                                 {{> afQuickField name='description' rows=3}}
