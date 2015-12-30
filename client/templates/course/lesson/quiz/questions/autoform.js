@@ -4,6 +4,10 @@ var addQuestionFormHooks = {
         method: function(doc){
             doc.quizId = Template.parentData().activeQuiz._id;
             doc.id = Random.id();
+
+            if (doc.questionType == QuizOptions.TRUE_OR_FALSE){
+                doc.optionTitles = ["True", "False"];
+            }
             return doc;
         }
     },

@@ -78,7 +78,30 @@ Template.quizContent.helpers({
             return editedQuestion.questionType;
         }
         return null;
-    }
+    },
+
+    selectDropdownOptions: function(){
+        return [
+            {label: "2 choices", value: 2},
+            {label: "3 choices", value: 3},
+            {label: "4 choices", value: 4},
+            {label: "5 choices", value: 5},
+            {label: "6 choices", value: 6},
+            {label: "7 choices", value: 7},
+            {label: "8 choices", value: 8}
+        ]
+    },
+    currentSelectionNumberOfChoices: function() {
+        var formId = AutoForm.getFormId();
+        var selection = AutoForm.getFieldValue("numberOfElements", formId);
+        var selectionDropDown = $('.js-number-of-options');
+        var numOfOptions = parseInt(selectionDropDown.val());
+        var optionsArray = [];
+        for (var i=0; i < numOfOptions; i++){
+            optionsArray.push(i);
+        }
+        return optionsArray;
+    },
 
 });
 
@@ -86,10 +109,6 @@ Template.quizContent.events({
     'change #questionTypesSelector': function(event){
         Template.instance().addQuestionButtonDisabled.set(false);
         var activeQuiz = Template.currentData().activeQuiz;
-
-        console.log("on change, activeQuiz");
-        console.log(activeQuiz);
-
         var question = new Object();// new QuizQuestion();
         question.quizId = activeQuiz._id;
         question.id = Random.id(); //assign an id to the question - need this for checking and validating answers
@@ -98,12 +117,13 @@ Template.quizContent.events({
         question.title = "";
         question.options = [];
 
-        console.log("new form should contain a question template : ")
-        console.log(question);
-
         $('#questionTypesSelector :first-child').prop('selected', true);
 
         Session.set("currentQuestionToBuild", question);
+    },
+
+    'change .js-number-of-options': function(event){
+
     },
 
     'click .submit-quiz-btn': function(event){
@@ -122,8 +142,6 @@ Template.quizContent.events({
             }
 
             if (questions != undefined){
-                console.log("updating quiz with questions");
-                console.log(questions);
 
                 var quizToUpdate = Quizzes.findOne({_id: activeQuiz._id});
                 Quizzes.update(activeQuiz._id, {$set: {'questions': questions}})

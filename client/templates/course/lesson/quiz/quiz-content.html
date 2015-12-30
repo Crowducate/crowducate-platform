@@ -30,21 +30,48 @@
                     {{#if currentQuestionToBuild}}
                         {{>questionWrapper question=currentQeustionToBuild }}
                         <br/>
-                        {{#autoForm collection="Questions"
-                            id="addQuestionForm"
-                            schema=TrueFalseQuestionSchema
-                            type="method" meteormethod="addQuestion"
-                            doc=currentQuestionToBuild
-                            validation="keyup"
-                            resetOnSuccess=true}}
-                            <fieldset>
-                                {{> afQuickField name='title'}}
-                                {{> afQuickField name='description' rows=3}}
-                                {{> afFormGroup name="options" type="select-radio"}}
-                                {{> afQuickField name="questionType" value=qType  type="hidden"}}
-                            </fieldset>
-                            <button type="submit" class="btn btn-primary">Insert</button>
-                        {{/autoForm}}
+                        {{#if isTrueOrFalse }}
+                            {{#autoForm collection="Questions"
+                                id="addQuestionForm"
+                                schema=TrueFalseQuestionSchema
+                                type="method" meteormethod="addQuestion"
+                                doc=currentQuestionToBuild
+                                validation="keyup"
+                                resetOnSuccess=true}}
+                                <fieldset>
+                                    {{> afQuickField name='title'}}
+                                    {{> afQuickField name='description' rows=3}}
+                                    {{> afFormGroup name="options" type="select-radio"}}
+                                    {{> afQuickField name="questionType" value=qType  type="hidden"}}
+
+                                </fieldset>
+                                <button type="submit" class="btn btn-primary">Insert</button>
+                            {{/autoForm}}
+                        {{/if}}
+
+                        {{#if isSingleAnswer}}
+                            {{#autoForm collection="Questions"
+                                id="addSingleAnswerQuestionForm"
+                                schema=SingleOptionQuestionSchema
+                                type="method" meteormethod="addSingleAnswerQuestion"
+                                doc=currentQuestionToBuild
+                                resetOnSuccess=true}}
+                                <fieldset>
+                                    {{> afQuickField name='title'}}
+                                    {{> afQuickField name='description' rows=3}}
+                                    {{> afQuickField class="js-number-of-options" name="numberOfElements" type="select"
+                                            options=selectDropdownOptions
+                                            firstOption=" -- Select a number of options to chose from -- "}}
+                                    {{> afQuickField name="questionType" value=qType  type="hidden"}}
+                                    {{#each currentSelectionNumberOfChoices }}
+                                        <div> blah blah blah</div>
+                                    {{/each}}
+                                    <div>{{ currentSelectionNumberOfChoices }}</div>
+                                </fieldset>
+                                <button type="submit" class="btn btn-primary">Insert</button>
+                            {{/autoForm}}
+
+                        {{/if}}
                     {{/if}}
 
                 </div>
