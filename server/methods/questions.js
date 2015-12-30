@@ -1,8 +1,7 @@
 Meteor.methods({
-    'addQuestion': function( question){
+    'addQuestion': function( question, params){
 
         console.log(" METEOR METHODS add question : ");
-        console.log(question);
         Questions.insert(question)
     }
 })

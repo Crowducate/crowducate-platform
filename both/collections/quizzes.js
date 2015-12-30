@@ -13,7 +13,7 @@ QuizzesSchema.AnswerOptionSchema = new SimpleSchema({
 });
 
 //this schema will validate the overall questions collection
-QuizzesSchema.QuestionsSchema = new SimpleSchema({
+QuizzesSchema.TrueFalseQuestionSchema = new SimpleSchema({
     id: {
         type: String,
         optional: false
@@ -59,7 +59,7 @@ QuizzesSchema.QuizzesSchema = new SimpleSchema({
         max: 140
     },
     questions: {
-        type: [QuizzesSchema.QuestionsSchema],
+        type: [QuizzesSchema.TrueFalseQuestionSchema],
         optional: true
     },
 

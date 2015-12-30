@@ -4,6 +4,8 @@ Template.quizContent.created = function(){
     this.quizValidator = new ReactiveVar({});
 };
 
+AutoForm.debug();
+
 Template.quizContent.helpers({
     currentQuiz: function(){
         return Template.currentData().activeQuiz;

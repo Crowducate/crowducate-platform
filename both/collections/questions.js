@@ -1,6 +1,6 @@
 Questions = new Mongo.Collection('questions');
 
-QuestionsSchema = new SimpleSchema({
+TrueFalseQuestionSchema = new SimpleSchema({
     id: {
         type: String,
         optional: false,
@@ -44,4 +44,4 @@ QuestionsSchema = new SimpleSchema({
     },
 });
 
-Questions.attachSchema(QuestionsSchema);
+Questions.attachSchema(TrueFalseQuestionSchema);
