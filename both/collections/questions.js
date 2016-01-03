@@ -33,13 +33,6 @@ SingleOptionQuestionSchema = new SimpleSchema({
         label: "Options",
         type: [Object],
         optional: false,
-        autoform: {
-            type: "radio-with-text-input"
-        },
-        custom: function(){
-            console.log("THIS IS FROM CUSTOM VALIDATION");
-            return "OPTION TITLES field not validated !!!"
-        }
     },
 
     "optionTitles.$.title": {
@@ -48,7 +41,11 @@ SingleOptionQuestionSchema = new SimpleSchema({
     },
 
     "optionTitles.$.isSelected": {
-        type:String,
+        type:Boolean,
+        optional: false
+    },
+    "optionTitles.$.index":{
+        type:Number,
         optional: false
     },
 
@@ -56,9 +53,6 @@ SingleOptionQuestionSchema = new SimpleSchema({
     options:{
         label: "Options",
         type: [Object],
-        autoform: {
-            type: "radio-with-text-input"
-        }
     }
 })
 

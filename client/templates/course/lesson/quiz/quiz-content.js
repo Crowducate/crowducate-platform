@@ -1,3 +1,23 @@
+AutoForm.addInputType("radio-with-text-input", {
+    template: "afFieldRadioWithTextInput",
+    valueOut: function(){
+        console.log("from the custom template this ; ");
+        console.log(this);
+        return "some string";
+    },
+
+    valueIn: function(val){
+
+        return val;
+    },
+    contextAdjust: function(context){
+
+        console.log(" ---- context");
+        console.log(context);
+        return context;
+    }
+});
+
 Template.quizContent.created = function(){
     this.addQuestionButtonDisabled = new ReactiveVar(true);
     this.quizQuestions = new ReactiveVar([]);
@@ -22,9 +42,6 @@ Template.quizContent.helpers({
     isMultipleAnswer: function(){
 
         var editedQuestion = Session.get("currentQuestionToBuild");
-        console.log(" IS MULTIPLE ANSWERS");
-        console.log(Session.get("currentQuestionToBuild"));
-
         if (editedQuestion)
         {
             return editedQuestion.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS;
@@ -33,9 +50,7 @@ Template.quizContent.helpers({
 
     },
     isSingleAnswer: function(){
-        console.log(" IS SINGLE ANSWER");
         var editedQuestion = Session.get("currentQuestionToBuild");
-        console.log(Session.get("currentQuestionToBuild"));
         if (editedQuestion)
         {
             return editedQuestion.questionType == QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER;
@@ -45,8 +60,6 @@ Template.quizContent.helpers({
     isTrueOrFalse: function(){
 
         var editedQuestion = Session.get("currentQuestionToBuild");
-        console.log(" IS TRUE OR FALSE");
-        console.log(Session.get("currentQuestionToBuild"));
         if (editedQuestion)
         {
             return editedQuestion.questionType == QuizOptions.TRUE_OR_FALSE;;
@@ -96,23 +109,44 @@ Template.quizContent.helpers({
         var selection = AutoForm.getFieldValue("numberOfOptions", formId);
         var selectionDropDown = $('.js-number-of-options');
         var numOfOptions = parseInt(selectionDropDown.val());
+
+        var editedQuestion = Session.get("currentQuestionToBuild");
+        var existingOptions = [];
+        if (editedQuestion && editedQuestion.optionTitles){
+            existingOptions = editedQuestion.optionTitles;
+        }
+
+        if(existingOptions && existingOptions.length == numOfOptions){
+            //the number of options hasn't changed
+            return existingOptions;
+        }
+
+        if (existingOptions){
+            numOfOptions = Math.max(numOfOptions, existingOptions.length);
+        }
+
         var optionsArray;
         if (numOfOptions > 0){
             optionsArray = [];
+
             for (var i=0; i < numOfOptions; i++){
-                var obj = {
-                    "title": "some title",
-                    "isSelected": true
+                var option;
+                if(existingOptions && existingOptions.length > i){
+                   option = existingOptions[i];
+                }else{
+                    option = {
+                        "title": "",
+                        "isSelected": false,
+                        "index": i
+                    }
                 }
-                optionsArray.push(obj);
+                optionsArray.push(option);
             }
+
             var editedQuestion = Session.get("currentQuestionToBuild");
             editedQuestion.optionTitles = optionsArray;
             Session.set("currentQuestionToBuild", editedQuestion);
         }
-
-        console.log("optoins array : ");
-        console.log(optionsArray);
 
         return optionsArray;
     },
@@ -130,7 +164,6 @@ Template.quizContent.events({
         question.description = "";
         question.title = "";
         question.options = [];
-
         $('#questionTypesSelector :first-child').prop('selected', true);
 
         Session.set("currentQuestionToBuild", question);

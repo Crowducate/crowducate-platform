@@ -25,13 +25,14 @@ var addQuestionFormHooks = {
 var addSingleAnswerFormHooks = {
     before: {
         method: function(doc, params){
-            doc.quizId = Template.parentData().activeQuiz._id;
-            doc.id = Random.id();
-
             console.log("before hooks");
-            console.log(doc);
-            console.log(Template.currentData());
-            return doc;
+            console.log(doc)
+            console.log(Session.get("currentQuestionToBuild"));
+            var editedQuestion = Session.get("currentQuestionToBuild");
+            editedQuestion.title = doc.title;
+            editedQuestion.description = doc.description;
+
+            return editedQuestion;
         }
     },
     onSuccess: function(operation, result, template) {

@@ -52,7 +52,6 @@
                             {{#autoForm collection="Questions"
                                 id="addSingleAnswerQuestionForm"
                                 type="method" meteormethod="addSingleAnswerQuestion"
-                                doc=currentQuestionToBuild
                                 resetOnSuccess=true}}
                                 <fieldset>
                                     {{> afQuickField name='title'}}
@@ -63,17 +62,27 @@
                                     {{> afQuickField name="questionType" value=qType  type="hidden"}}
 
 
-                                    {{#if currentSelectionNumberOfChoices }}
-                                        {{> afFieldInput
-                                        name="optionTitles"
-                                        type="radio-with-text-input"
-                                        data-schema-key="optionTitles"
-                                        }}
+                                    <!-- layout out all eight input controls, will hide the unused ones -->
+                                    {{>afFieldRadioWithTextInput index="0"
+                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="1"
+                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="2"
+                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="3"
+                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="4"
+                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="5"
+                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="6"
+                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="7"
+                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
 
-                                    {{/if}}
 
                                 </fieldset>
-                                <button type="submit" class="btn btn-primary">Insert</button>
+                                <button type="submit" class="btn btn-primary">Add to quiz</button>
                             {{/autoForm}}
 
                         {{/if}}
