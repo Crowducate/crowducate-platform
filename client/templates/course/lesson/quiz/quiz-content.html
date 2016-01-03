@@ -36,7 +36,6 @@
                                 schema=TrueFalseQuestionSchema
                                 type="method" meteormethod="addQuestion"
                                 doc=currentQuestionToBuild
-                                validation="keyup"
                                 resetOnSuccess=true}}
                                 <fieldset>
                                     {{> afQuickField name='title'}}
@@ -52,21 +51,27 @@
                         {{#if isSingleAnswer}}
                             {{#autoForm collection="Questions"
                                 id="addSingleAnswerQuestionForm"
-                                schema=SingleOptionQuestionSchema
                                 type="method" meteormethod="addSingleAnswerQuestion"
                                 doc=currentQuestionToBuild
                                 resetOnSuccess=true}}
                                 <fieldset>
                                     {{> afQuickField name='title'}}
                                     {{> afQuickField name='description' rows=3}}
-                                    {{> afQuickField class="js-number-of-options" name="numberOfElements" type="select"
+                                    {{> afQuickField class="js-number-of-options" name="numberOfOptions" type="select"
                                             options=selectDropdownOptions
                                             firstOption=" -- Select a number of options to chose from -- "}}
                                     {{> afQuickField name="questionType" value=qType  type="hidden"}}
-                                    {{#each currentSelectionNumberOfChoices }}
-                                        <div> blah blah blah</div>
-                                    {{/each}}
-                                    <div>{{ currentSelectionNumberOfChoices }}</div>
+
+
+                                    {{#if currentSelectionNumberOfChoices }}
+                                        {{> afFieldInput
+                                        name="optionTitles"
+                                        type="radio-with-text-input"
+                                        data-schema-key="optionTitles"
+                                        }}
+
+                                    {{/if}}
+
                                 </fieldset>
                                 <button type="submit" class="btn btn-primary">Insert</button>
                             {{/autoForm}}

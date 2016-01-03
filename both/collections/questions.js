@@ -28,6 +28,37 @@ SingleOptionQuestionSchema = new SimpleSchema({
         optional: true,
         max: 10,
         min: 2
+    },
+    optionTitles: {
+        label: "Options",
+        type: [Object],
+        optional: false,
+        autoform: {
+            type: "radio-with-text-input"
+        },
+        custom: function(){
+            console.log("THIS IS FROM CUSTOM VALIDATION");
+            return "OPTION TITLES field not validated !!!"
+        }
+    },
+
+    "optionTitles.$.title": {
+        type:String,
+        optional: false
+    },
+
+    "optionTitles.$.isSelected": {
+        type:String,
+        optional: false
+    },
+
+
+    options:{
+        label: "Options",
+        type: [Object],
+        autoform: {
+            type: "radio-with-text-input"
+        }
     }
 })
 
@@ -50,6 +81,7 @@ TrueFalseQuestionSchema = new SimpleSchema({
         optional: false
     },
     description : {
+        label: "My Description",
         type:String,
         optional: false
     },
@@ -61,9 +93,10 @@ TrueFalseQuestionSchema = new SimpleSchema({
     },
     optionTitles: {
         type: [String],
-        optional: false
+        optional: false,
     },
     options : {
+        label: "Answer options",
         type: String,
         optional: false,
         autoform: {
@@ -85,4 +118,5 @@ TrueFalseQuestionSchema = new SimpleSchema({
     },
 });
 
-Questions.attachSchema(TrueFalseQuestionSchema);
+//Questions.attachSchema(TrueFalseQuestionSchema);
+Questions.attachSchema(SingleOptionQuestionSchema);

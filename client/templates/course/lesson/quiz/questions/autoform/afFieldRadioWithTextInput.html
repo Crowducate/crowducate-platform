@@ -1,0 +1,11 @@
+<template name="afFieldRadioWithTextInput">
+    <div >
+        {{#each this.value}}
+            <span class="radio-inline">
+                <input type="radio" name="radioGroupName" id="isSelectedRb" checked={{isSelected}}/>
+                <input  type="text" class="form-control" id="title" value={{title}} />
+            </span>
+            <br/>
+        {{/each}}
+    </div>
+</template>

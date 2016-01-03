@@ -93,13 +93,27 @@ Template.quizContent.helpers({
     },
     currentSelectionNumberOfChoices: function() {
         var formId = AutoForm.getFormId();
-        var selection = AutoForm.getFieldValue("numberOfElements", formId);
+        var selection = AutoForm.getFieldValue("numberOfOptions", formId);
         var selectionDropDown = $('.js-number-of-options');
         var numOfOptions = parseInt(selectionDropDown.val());
-        var optionsArray = [];
-        for (var i=0; i < numOfOptions; i++){
-            optionsArray.push(i);
+        var optionsArray;
+        if (numOfOptions > 0){
+            optionsArray = [];
+            for (var i=0; i < numOfOptions; i++){
+                var obj = {
+                    "title": "some title",
+                    "isSelected": true
+                }
+                optionsArray.push(obj);
+            }
+            var editedQuestion = Session.get("currentQuestionToBuild");
+            editedQuestion.optionTitles = optionsArray;
+            Session.set("currentQuestionToBuild", editedQuestion);
         }
+
+        console.log("optoins array : ");
+        console.log(optionsArray);
+
         return optionsArray;
     },
 
