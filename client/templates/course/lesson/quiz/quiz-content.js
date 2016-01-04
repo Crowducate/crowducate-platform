@@ -32,6 +32,7 @@ Template.quizContent.helpers({
     },
 
     questionTypes: function(){
+        console.log("question types : " + QuizOptions.QUESTION_TYPES)
         return QuizOptions.QUESTION_TYPES;
     },
 
@@ -65,6 +66,14 @@ Template.quizContent.helpers({
             return editedQuestion.questionType == QuizOptions.TRUE_OR_FALSE;;
         }
         return false;
+    },
+
+    selectedQuestionType: function(){
+        var editedQuestion = Session.get("currentQuestionToBuild");
+        if (editedQuestion)
+        {
+            return editedQuestion.questionType;
+        }
     },
 
     quizId: function(){
@@ -104,7 +113,7 @@ Template.quizContent.helpers({
             {label: "8 choices", value: 8}
         ]
     },
-    currentSelectionNumberOfChoices: function() {
+    numOfChoices: function() {
         var formId = AutoForm.getFormId();
         var selection = AutoForm.getFieldValue("numberOfOptions", formId);
         var selectionDropDown = $('.js-number-of-options');

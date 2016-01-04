@@ -6,6 +6,14 @@ Template.afFieldRadioWithTextInput.helpers({
             return false;
         }
         return true;
+    },
+
+    isSingleAnswer: function(){
+        return this.questionType == QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER
+    },
+
+    isMultipleAnswer: function(){
+        return this.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS;
     }
 });
 
@@ -30,8 +38,8 @@ Template.afFieldRadioWithTextInput.events({
     'change .js-answer-option-radio': function(event){
         var question = Session.get("currentQuestionToBuild");
         var editedOption = this;
-        //update the questions
 
+        //update the questions
         var options = question.optionTitles;
 
         for (var i= 0; i< options.length; i++){

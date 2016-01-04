@@ -1,10 +1,18 @@
 <template name="afFieldRadioWithTextInput">
     <div style="{{#if isHidden}}display: none{{/if}}" >
-        <span class="radio-inline">
-                <input type="radio"
-                       name="radioGroupName"
-                       class="js-answer-option-radio"
-                       id="isSelectedRb" checked={{isSelected}}/>
+        <span class="radio-inline checkbox-inline">
+                {{#if isSingleAnswer}}
+                    <input type="radio"
+                           name="radioGroupName"
+                           class="js-answer-option-radio"
+                           id="isSelectedRb" checked={{isSelected}}/>
+                {{/if}}
+                {{#if isMultipleAnswer }}
+                    <input type="checkbox"
+                           class="js-answer-option-radio"
+                           checked={{isSelected}}
+                    />
+                {{/if}}
                 <input  type="text"
                         class="form-control js-answer-option-input"
                         id="title" placeholder="Enter answer" />

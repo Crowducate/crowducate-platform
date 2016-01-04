@@ -74,7 +74,7 @@ QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS = "Multiple Choice - multiple answe
 QuizOptions.TRUE_OR_FALSE = "True or False";
 QuizOptions.QUESTION_TYPES =
     [  QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER,
-        /* QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS,*/
+        QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS,
         QuizOptions.TRUE_OR_FALSE
     ];
 

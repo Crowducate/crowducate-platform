@@ -46,39 +46,38 @@
                                 </fieldset>
                                 <button type="submit" class="btn btn-primary">Insert</button>
                             {{/autoForm}}
-                        {{/if}}
 
-                        {{#if isSingleAnswer}}
+                        {{else}}
                             {{#autoForm collection="Questions"
-                                id="addSingleAnswerQuestionForm"
-                                type="method" meteormethod="addSingleAnswerQuestion"
-                                resetOnSuccess=true}}
+                            id="addSingleAnswerQuestionForm"
+                            type="method" meteormethod="addSingleAnswerQuestion"
+                            resetOnSuccess=true}}
                                 <fieldset>
                                     {{> afQuickField name='title'}}
                                     {{> afQuickField name='description' rows=3}}
                                     {{> afQuickField class="js-number-of-options" name="numberOfOptions" type="select"
-                                            options=selectDropdownOptions
-                                            firstOption=" -- Select a number of options to chose from -- "}}
+                                    options=selectDropdownOptions
+                                    firstOption=" -- Select a number of options to chose from -- "}}
                                     {{> afQuickField name="questionType" value=qType  type="hidden"}}
 
 
                                     <!-- layout out all eight input controls, will hide the unused ones -->
-                                    {{>afFieldRadioWithTextInput index="0"
-                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="1"
-                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="2"
-                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="3"
-                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="4"
-                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="5"
-                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="6"
-                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="7"
-                                        totalNumQuestions=currentSelectionNumberOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="0" questionType=selectedQuestionType
+                                    totalNumQuestions=numOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="1" questionType=selectedQuestionType
+                                    totalNumQuestions=numOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="2" questionType=selectedQuestionType
+                                    totalNumQuestions=numOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="3" questionType=selectedQuestionType
+                                    totalNumQuestions=numOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="4" questionType=selectedQuestionType
+                                    totalNumQuestions=numOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="5" questionType=selectedQuestionType
+                                    totalNumQuestions=numOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="6" questionType=selectedQuestionType
+                                    totalNumQuestions=numOfChoices name="optionTitles" }}
+                                    {{>afFieldRadioWithTextInput index="7" questionType=selectedQuestionType
+                                    totalNumQuestions=numOfChoices name="optionTitles" }}
 
 
                                 </fieldset>
@@ -86,6 +85,7 @@
                             {{/autoForm}}
 
                         {{/if}}
+
                     {{/if}}
 
                 </div>
