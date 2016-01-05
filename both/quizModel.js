@@ -28,6 +28,35 @@ Quiz.convertToQuizObject = function(object){
     return quiz;
 };
 
+Quiz.generateQuestion = function(questionType, quizId ){
+    var question = new Object();
+    question.quizId = quizId;
+    question.id = Random.id(); //assign an id to the question - need this for checking and validating answers
+    question.questionType = questionType;
+
+    //if the question type is true-or-false, populate the answer options
+    if (question.questionType == QuizOptions.TRUE_OR_FALSE){
+        question.optionTitles = [];
+        var trueOption = {
+            "title": "True",
+            "isSelected": false,
+            "index": 0
+        };
+        question.optionTitles.push(trueOption);
+        var falseOption = {
+            "title": "False",
+            "isSelected": false,
+            "index": 1
+        };
+        question.optionTitles.push(falseOption);
+    };
+
+    question.description = "";
+    question.title = "";
+    question.options = [];
+    return question;
+};
+
 
 Object.defineProperty(Quiz, "_title", {
     get: function title(){

@@ -30,24 +30,7 @@
                     {{#if currentQuestionToBuild}}
                         {{>questionWrapper question=currentQeustionToBuild }}
                         <br/>
-                        {{#if isTrueOrFalse }}
-                            {{#autoForm collection="Questions"
-                                id="addQuestionForm"
-                                schema=TrueFalseQuestionSchema
-                                type="method" meteormethod="addQuestion"
-                                doc=currentQuestionToBuild
-                                resetOnSuccess=true}}
-                                <fieldset>
-                                    {{> afQuickField name='title'}}
-                                    {{> afQuickField name='description' rows=3}}
-                                    {{> afFormGroup name="options" type="select-radio"}}
-                                    {{> afQuickField name="questionType" value=qType  type="hidden"}}
 
-                                </fieldset>
-                                <button type="submit" class="btn btn-primary">Insert</button>
-                            {{/autoForm}}
-
-                        {{else}}
                             {{#autoForm collection="Questions"
                             id="addSingleAnswerQuestionForm"
                             type="method" meteormethod="addSingleAnswerQuestion"
@@ -55,11 +38,16 @@
                                 <fieldset>
                                     {{> afQuickField name='title'}}
                                     {{> afQuickField name='description' rows=3}}
-                                    {{> afQuickField class="js-number-of-options" name="numberOfOptions" type="select"
-                                    options=selectDropdownOptions
-                                    firstOption=" -- Select a number of options to chose from -- "}}
-                                    {{> afQuickField name="questionType" value=qType  type="hidden"}}
 
+                                    {{#if isTrueOrFalse}}
+                                        <!-- do not display a drop down -->
+                                    {{else}}
+                                        {{> afQuickField class="js-number-of-options" name="numberOfOptions" type="select"
+                                        options=selectDropdownOptions
+                                        firstOption=" -- Select a number of options to chose from -- "}}
+                                    {{/if}}
+
+                                    {{> afQuickField name="questionType" value=qType  type="hidden"}}
 
                                     <!-- layout out all eight input controls, will hide the unused ones -->
                                     {{>afFieldRadioWithTextInput index="0" questionType=selectedQuestionType
@@ -85,8 +73,6 @@
                             {{/autoForm}}
 
                         {{/if}}
-
-                    {{/if}}
 
                 </div>
 

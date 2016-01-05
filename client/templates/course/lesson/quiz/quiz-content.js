@@ -130,10 +130,6 @@ Template.quizContent.helpers({
             return existingOptions;
         }
 
-        if (existingOptions){
-            numOfOptions = Math.max(numOfOptions, existingOptions.length);
-        }
-
         var optionsArray;
         if (numOfOptions > 0){
             optionsArray = [];
@@ -160,26 +156,22 @@ Template.quizContent.helpers({
         return optionsArray;
     },
 
+    selectedQuestionType: function(){
+        var editedQuestion = Session.get("currentQuestionToBuild");
+        $('#questionTypesSelector').val(editedQuestion.questionType);
+        return editedQuestion.questionType;
+    }
+
 });
 
 Template.quizContent.events({
     'change #questionTypesSelector': function(event){
         Template.instance().addQuestionButtonDisabled.set(false);
         var activeQuiz = Template.currentData().activeQuiz;
-        var question = new Object();// new QuizQuestion();
-        question.quizId = activeQuiz._id;
-        question.id = Random.id(); //assign an id to the question - need this for checking and validating answers
-        question.questionType = $('#questionTypesSelector').val();
-        question.description = "";
-        question.title = "";
-        question.options = [];
-        $('#questionTypesSelector :first-child').prop('selected', true);
+        var questionType = $('#questionTypesSelector').val();
+        var question = Quiz.generateQuestion(questionType, activeQuiz._id);
 
         Session.set("currentQuestionToBuild", question);
-    },
-
-    'change .js-number-of-options': function(event){
-
     },
 
     'click .submit-quiz-btn': function(event){
@@ -191,14 +183,8 @@ Template.quizContent.events({
         if (!isPreview){ //edit mode
             var activeQuiz = Template.currentData().activeQuiz;
             var questions = activeQuiz.questions;
-            //mark the questions as saved
-            for (var q in questions ){
-                var question = questions[q];
-                //question.saved = true;
-            }
 
             if (questions != undefined){
-
                 var quizToUpdate = Quizzes.findOne({_id: activeQuiz._id});
                 Quizzes.update(activeQuiz._id, {$set: {'questions': questions}})
             }
@@ -210,7 +196,6 @@ Template.quizContent.events({
             }
             console.log(" should submit the quiz")
         }
-
     },
 
     'deleteQuestion .question-content': function(event){
