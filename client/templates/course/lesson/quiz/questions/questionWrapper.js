@@ -1,8 +1,5 @@
 Template.questionWrapper.helpers({
     isMultipleAnswer: function(){
-        console.log("is multiple answer");
-        console.log( Session.get("currentQuestionToBuild"));
-
         var question =  Session.get("currentQuestionToBuild");;
         return question? question.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS : false;
     },

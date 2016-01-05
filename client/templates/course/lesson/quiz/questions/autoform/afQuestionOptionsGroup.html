@@ -5,13 +5,13 @@
                     {{#if isMultipleAnswer }}
                         <input type="checkbox"
                                class="js-answer-option-checkbox"
-                               checked={{isSelected}}
+
                         />
                     {{else}}
                         <input type="radio"
                                name="radioGroupName"
                                class="js-answer-option-radio"
-                               id="isSelectedRb" checked={{isSelected}}/>
+                               id="isSelectedRb"/>
                     {{/if}}
 
                     {{#if isTrueOrFalse}}
@@ -19,8 +19,8 @@
                     {{else}}
                     <input  type="text"
                             class="form-control js-answer-option-input"
-                            value="{{title}}"
-                            id="title" placeholder="Enter answer" />
+                            value={{this.isSelected}}
+                            id="title" placeholder="Enter answer {{answerIndex}}" />
                     {{/if}}
             </span>
         </div>

@@ -18,8 +18,6 @@ Template.afFieldQuestionOptionsGroup.helpers({
     isHidden: function(){
 
         var question = Session.get("currentQuestionToBuild");
-
-        //var atts = Template.instance().data.atts;
         //the true-or-false questions will always have only two options
         if (question.questionType == QuizOptions.TRUE_OR_FALSE){
             return this.index > 1;
@@ -54,15 +52,26 @@ Template.afFieldQuestionOptionsGroup.helpers({
             return this.index == 0 ? "True" : "False";
         }
         return label;
+    },
+
+    answerIndex: function(){
+        return this.index + 1;
+    },
+    answerSelected: function(){
+        return this.isSelected;
     }
 });
 
+Template.afFieldQuestionOptionsGroup.rendered = function(){
+    $('.js-answer-option-radio').attr("checked", false);
+}
+
+//
+
 Template.afFieldQuestionOptionsGroup.events({
-    'keyup .js-answer-option-input': function(event){
+    'blur .js-answer-option-input': function(event){
         var question = Session.get("currentQuestionToBuild");
         var editedOption = this;
-        //update the questions
-
         var options = question.optionTitles;
 
         for (var i= 0; i< options.length; i++){

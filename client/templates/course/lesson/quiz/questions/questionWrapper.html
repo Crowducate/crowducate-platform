@@ -1,10 +1,10 @@
 <template name="questionWrapper">
-    <div class="row question-wrapper-row">
-        <div >
+    <div class="container">
+        <div class="row question-wrapper-row">
             {{#if isEditingCurrentCourse}}
                 <p>Question type:
                     {{#if isTrueOrFalse}}
-                                        True or False
+                        True or False
                     {{else}}
                         {{#if isMultipleAnswer }}
                             Multiple answers
@@ -12,9 +12,8 @@
                             Single answer
                         {{/if}}
                     {{/if}}
-            {{> deleteQuizQuestionButton question=question}} </p>
+                </p>
             {{/if}}
-
         </div>
     </div>
 </template>

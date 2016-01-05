@@ -45,13 +45,16 @@
 
                                 {{> afQuickField name="optionTitles"
                                     type="selector-with-text-input"
+                                    questionType=selectedQuestionType
                                     totalNumQuestions=numOfChoices
+                                    validation="keyup"
                                 }}
 
 
 
                             </fieldset>
-                            <button type="submit" class="btn btn-primary">Add to quiz</button>
+                            <button type="submit" class="btn btn-success">Add to quiz</button>
+                            <button type="reset" class="btn btn-primary" id="cancelNewQuestionBtn">Cancel</button>
                         {{/autoForm}}
                     </div>
                 {{/if}}

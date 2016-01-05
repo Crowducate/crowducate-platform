@@ -39,10 +39,7 @@ QuestionSchema = new SimpleSchema({
                 var optionsArray = [];
 
                 for ( var i=0; i < 8; i++){
-                    var option = {};
-                    option.title = "";
-                    option.isSelected = false;
-                    option.index = i;
+                    var option = Quiz.generateAnswerOption("", false, i)
                     optionsArray.push(option);
                 }
                 return optionsArray;

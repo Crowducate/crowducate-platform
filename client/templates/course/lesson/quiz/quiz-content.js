@@ -28,12 +28,13 @@ Template.quizContent.helpers({
     },
 
     questionTypes: function(){
-        console.log("question types : " + QuizOptions.QUESTION_TYPES)
         return QuizOptions.QUESTION_TYPES;
     },
 
     currentQuestionToBuild:function(){
-        return Session.get("currentQuestionToBuild");
+        console.log("--- current question to build : ");
+        console.log(Session.get("currentQuestionToBuild"));
+        return Session.get("currentQuestionToBuild") != undefined;
     },
 
     isMultipleAnswer: function(){
@@ -115,42 +116,42 @@ Template.quizContent.helpers({
         var selectionDropDown = $('.js-number-of-options');
         var numOfOptions = parseInt(selectionDropDown.val()) || 0;
 
-        console.log("----- from the selector ");
-        console.log("numOfOptions : " + numOfOptions);
         var editedQuestion = Session.get("currentQuestionToBuild");
         var existingOptions = [];
         console.log(editedQuestion);
-        if (editedQuestion && editedQuestion.optionTitles){
+        if (editedQuestion && editedQuestion.optionTitles && numOfOptions > 0){
             existingOptions = editedQuestion.optionTitles;
         }
 
-        if(existingOptions && existingOptions.length == numOfOptions){
+        var isNewType = Session.get("currentQuestionTypeChanged") || Session.get("currentQuestionTypeChanged") == undefined;
+
+        if(existingOptions && existingOptions.length == numOfOptions && !isNewType){
             //the number of options hasn't changed
             console.log(" number of options hasn't changed- return");
             return existingOptions;
         }
 
+        if (isNewType){
+            Session.set("currentQuestionTypeChanged", false);
+        }
         var optionsArray;
+        console.log("--- is New type : " + isNewType);
+        console.log("number of options : " + numOfOptions);
+        console.log("existing options : " + existingOptions);
         if (numOfOptions > 0){
             optionsArray = [];
-            console.log(" go throug the loop : " + numOfOptions);
             for (var i=0; i < numOfOptions; i++){
                 var option;
                 if(existingOptions && existingOptions.length > i){
                    option = existingOptions[i];
                 }else{
-                    option = {
-                        "title": "",
-                        "isSelected": false,
-                        "index": i
-                    }
+                    option = Quiz.generateAnswerOption("", false, i)
                 }
                 optionsArray.push(option);
             }
-            console.log("options array");
-            console.log(optionsArray)
             var editedQuestion = Session.get("currentQuestionToBuild");
             editedQuestion.optionTitles = optionsArray;
+            console.log("!!! UPDATED EDITED QUESTION");
             Session.set("currentQuestionToBuild", editedQuestion);
         }
 
@@ -172,6 +173,7 @@ Template.quizContent.events({
         var questionType = $('#questionTypesSelector').val();
         var question = Quiz.generateQuestion(questionType, activeQuiz._id);
         Session.set("currentQuestionToBuild", question);
+        Session.set("currentQuestionTypeChanged", true);
     },
 
 
@@ -179,6 +181,13 @@ Template.quizContent.events({
 
         //set the reactive var to update the list of questions
         Template.instance().quizQuestions.set(Template.currentData().activeQuiz.questions);
+    },
+
+    'click #cancelNewQuestionBtn': function(event){
+        Session.set("currentQuestionToBuild", undefined);
+        Session.set("currentQuestionTypeChanged", undefined);
+        delete Session.keys["currentQuestionToBuild"];
+        delete Session.keys["currentQuestionTypeChanged"];
     }
 
 });
