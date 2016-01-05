@@ -7,13 +7,15 @@ AutoForm.addInputType("radio-with-text-input", {
     },
 
     valueIn: function(val){
-
+        console.log("value in");
+        console.log(val);
         return val;
     },
     contextAdjust: function(context){
 
         console.log(" ---- context");
         console.log(context);
+        console.log(this);
         return context;
     }
 });

@@ -1,5 +1,5 @@
 <template name="addQuiz">
-    <form class="input-group add-new-quiz-form">
+    <form class="input-group add-new-quiz-form" style="{width: 100%}">
         {{#if showInput}}
             <input type="text" id="quiz-title"
                    class="form-control input-sm add-new-quiz"
@@ -12,10 +12,10 @@
                 </button>
             </span>
          {{else}}
-            <a class="sidebar-add-quiz-link">
-                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                <span class="add-quiz-text"> Click to add a quiz</span>
-            </a>
+            <div style="{width:100%}">
+                <button id="addQuizButton" class="add-quiz-btn sidebar-add-quiz-link">ADD Quiz</button>
+            </div>
+
         {{/if}}
     </form>
 

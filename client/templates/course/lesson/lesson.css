@@ -1,8 +1,56 @@
-#addQuizBtn {
-  margin-left: 12px;
-  margin-top: 5px;
-}
+
 .add-quiz-text {
   cursor: pointer;
   font-size: 11px;
+}
+
+.add-quiz-btn {
+    color: #FFFFFF;
+    background-color: #5CB85C;
+    border: #bbb 4px solid;
+    border-radius: 4px;
+    margin: 5px;
+    margin-right: 10px;
+    width: 100%;
+    padding: 3px;
+}
+
+.add-quiz-btn:hover,
+.add-quiz-btn:focus,
+.add-quiz-btn:active,
+.add-quiz-btn.active,
+.open .dropdown-toggle.add-quiz-btn {
+  color: #FFFFFF;
+  background-color: #5CB85C;
+  border-color: #aaa;
+}
+
+.add-quiz-btn:active,
+.add-quiz-btn.active,
+.open .dropdown-toggle.add-quiz-btn {
+  background-image: none;
+}
+
+.add-quiz-btn.disabled,
+.add-quiz-btn[disabled],
+fieldset[disabled] .add-quiz-btn,
+.add-quiz-btn.disabled:hover,
+.add-quiz-btn[disabled]:hover,
+fieldset[disabled] .add-quiz-btn:hover,
+.add-quiz-btn.disabled:focus,
+.add-quiz-btn[disabled]:focus,
+fieldset[disabled] .add-quiz-btn:focus,
+.add-quiz-btn.disabled:active,
+.add-quiz-btn[disabled]:active,
+fieldset[disabled] .add-quiz-btn:active,
+.add-quiz-btn.disabled.active,
+.add-quiz-btn[disabled].active,
+fieldset[disabled] .add-quiz-btn.active {
+  background-color: #5CB85C;
+  border-color: #aaa;
+}
+
+.add-quiz-btn .badge {
+  color: #5CB85C;
+  background-color: #FFFFFF;
 }

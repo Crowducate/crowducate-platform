@@ -1,10 +1,8 @@
 <template name="quizContent">
     <div class="col-xs-12 col-sm-9">
         <div class="panel panel-default">
-
             <div class="panel-heading">
                 {{activeQuiz.title}}
-
                 {{#if isEditingCurrentCourse}}
                     <button id="saveQuizBtn"
                             class="btn-xs btn-success save-quiz-btn pull-right"
@@ -25,59 +23,58 @@
                     </select>
                 </div>
             {{/if}}
-                <div class="question-content  col-sm-12 question-wrapper">
 
-                    {{#if currentQuestionToBuild}}
-                        {{>questionWrapper question=currentQeustionToBuild }}
-                        <br/>
+            {{#if currentQuestionToBuild}}
+                <div class="col-sm-12 question-wrapper new-question-wrapper">
 
-                            {{#autoForm collection="Questions"
-                            id="addSingleAnswerQuestionForm"
-                            type="method" meteormethod="addSingleAnswerQuestion"
-                            resetOnSuccess=true}}
-                                <fieldset>
-                                    {{> afQuickField name='title'}}
-                                    {{> afQuickField name='description' rows=3}}
+                    {{>questionWrapper question=currentQeustionToBuild }}
+                    <br/>
 
-                                    {{#if isTrueOrFalse}}
-                                        <!-- do not display a drop down -->
-                                    {{else}}
-                                        {{> afQuickField class="js-number-of-options" name="numberOfOptions" type="select"
-                                        options=selectDropdownOptions
-                                        firstOption=" -- Select a number of options to chose from -- "}}
-                                    {{/if}}
+                        {{#autoForm collection="Questions"
+                        id="addSingleAnswerQuestionForm"
+                        type="method" meteormethod="addSingleAnswerQuestion"
+                        resetOnSuccess=true}}
+                            <fieldset>
+                                {{> afQuickField name='title'}}
+                                {{> afQuickField name='description' rows=3}}
 
-                                    {{> afQuickField name="questionType" value=qType  type="hidden"}}
+                                {{#if isTrueOrFalse}}
+                                    <!-- do not display a drop down -->
+                                {{else}}
+                                    {{> afQuickField class="js-number-of-options" name="numberOfOptions" type="select"
+                                    options=selectDropdownOptions
+                                    firstOption=" -- Select a number of options to chose from -- "}}
+                                {{/if}}
 
-                                    <!-- layout out all eight input controls, will hide the unused ones -->
-                                    {{>afFieldRadioWithTextInput index="0" questionType=selectedQuestionType
+                                {{> afQuickField name="questionType" value=qType  type="hidden"}}
+
+
+                                <!-- layout out all eight input controls, will hide the unused ones -->
+                                {{>afFieldRadioWithTextInput index="0" questionType=selectedQuestionType
                                     totalNumQuestions=numOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="1" questionType=selectedQuestionType
+                                {{>afFieldRadioWithTextInput index="1" questionType=selectedQuestionType
                                     totalNumQuestions=numOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="2" questionType=selectedQuestionType
+                                {{>afFieldRadioWithTextInput index="2" questionType=selectedQuestionType
                                     totalNumQuestions=numOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="3" questionType=selectedQuestionType
+                                {{>afFieldRadioWithTextInput index="3" questionType=selectedQuestionType
                                     totalNumQuestions=numOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="4" questionType=selectedQuestionType
+                                {{>afFieldRadioWithTextInput index="4" questionType=selectedQuestionType
                                     totalNumQuestions=numOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="5" questionType=selectedQuestionType
+                                {{>afFieldRadioWithTextInput index="5" questionType=selectedQuestionType
                                     totalNumQuestions=numOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="6" questionType=selectedQuestionType
+                                {{>afFieldRadioWithTextInput index="6" questionType=selectedQuestionType
                                     totalNumQuestions=numOfChoices name="optionTitles" }}
-                                    {{>afFieldRadioWithTextInput index="7" questionType=selectedQuestionType
+                                {{>afFieldRadioWithTextInput index="7" questionType=selectedQuestionType
                                     totalNumQuestions=numOfChoices name="optionTitles" }}
 
+                            </fieldset>
+                            <button type="submit" class="btn btn-primary">Add to quiz</button>
+                        {{/autoForm}}
+                    </div>
+                {{/if}}
 
-                                </fieldset>
-                                <button type="submit" class="btn btn-primary">Add to quiz</button>
-                            {{/autoForm}}
-
-                        {{/if}}
-
-                </div>
-
-            </div>
-
+            {{>quizQuestions quiz=activeQuiz}}
             </div>
         </div>
+    </div>
 </template>

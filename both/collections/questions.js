@@ -1,6 +1,6 @@
 Questions = new Mongo.Collection('questions');
 
-SingleOptionQuestionSchema = new SimpleSchema({
+QuestionSchema = new SimpleSchema({
     id: {
         type: String,
         optional: false,
@@ -33,6 +33,16 @@ SingleOptionQuestionSchema = new SimpleSchema({
         label: "Options",
         type: [Object],
         optional: false,
+       /* custom: function() {
+            // This custom function renders an error, if this field is not equal to
+            // the new Password field supplied in the form.
+            console.log(" custom validation ");
+            console.log("this.value, this.field ");
+            console.log(this.value);
+            console.log(this.field);
+            console.log(this)
+            return "invalidQuestionSettings"
+        }*/
     },
 
     "optionTitles.$.title": {
@@ -56,61 +66,5 @@ SingleOptionQuestionSchema = new SimpleSchema({
     }
 })
 
-TrueFalseQuestionSchema = new SimpleSchema({
-    id: {
-        type: String,
-        optional: false,
-        unique: true
-    },
-    questionType: {
-        type:String,
-        optional: false
-    },
-    quizId: {
-        type:String,
-        optional: false
-    },
-    title: {
-        type:String,
-        optional: false
-    },
-    description : {
-        label: "My Description",
-        type:String,
-        optional: false
-    },
-    numberOfOptions: {
-        type: Number,
-        optional: true,
-        max: 10,
-        min: 2
-    },
-    optionTitles: {
-        type: [String],
-        optional: false,
-    },
-    options : {
-        label: "Answer options",
-        type: String,
-        optional: false,
-        autoform: {
-            type: "select-radio",
-            options: function(){
-                return[
-                    {
-                        label: "True",
-                        value: "true"
-                    },
-                    {
-                        label: "False",
-                        value: "false"
-                    }
 
-                ]
-            }
-        }
-    },
-});
-
-//Questions.attachSchema(TrueFalseQuestionSchema);
-Questions.attachSchema(SingleOptionQuestionSchema);
+Questions.attachSchema(QuestionSchema);

@@ -1,0 +1,9 @@
+<template name="quizQuestions">
+    {{#each question in questions}}
+        <div class="question-content col-sm-12 question-wrapper">
+            <div>{{question.title}}</div>
+            <div> {{ question.questionType}}</div>
+        </div>
+
+    {{/each}}
+</template>

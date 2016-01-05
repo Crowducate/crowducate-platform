@@ -12,6 +12,10 @@
     margin-top: 7px;
 }
 
+.new-question-wrapper{
+    background-color: #f5f5de;
+}
+
 .form-group-sm {
     margin-bottom: 5px;
 }
