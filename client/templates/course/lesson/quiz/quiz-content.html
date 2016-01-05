@@ -31,7 +31,7 @@
                     <br/>
 
                         {{#autoForm collection="Questions"
-                        id="addSingleAnswerQuestionForm"
+                        id="addQuestionForm"
                         type="method" meteormethod="addSingleAnswerQuestion"
                         resetOnSuccess=true}}
                             <fieldset>
@@ -49,23 +49,11 @@
                                 {{> afQuickField name="questionType" value=qType  type="hidden"}}
 
 
-                                <!-- layout out all eight input controls, will hide the unused ones -->
-                                {{>afFieldRadioWithTextInput index="0" questionType=selectedQuestionType
-                                    totalNumQuestions=numOfChoices name="optionTitles" }}
-                                {{>afFieldRadioWithTextInput index="1" questionType=selectedQuestionType
-                                    totalNumQuestions=numOfChoices name="optionTitles" }}
-                                {{>afFieldRadioWithTextInput index="2" questionType=selectedQuestionType
-                                    totalNumQuestions=numOfChoices name="optionTitles" }}
-                                {{>afFieldRadioWithTextInput index="3" questionType=selectedQuestionType
-                                    totalNumQuestions=numOfChoices name="optionTitles" }}
-                                {{>afFieldRadioWithTextInput index="4" questionType=selectedQuestionType
-                                    totalNumQuestions=numOfChoices name="optionTitles" }}
-                                {{>afFieldRadioWithTextInput index="5" questionType=selectedQuestionType
-                                    totalNumQuestions=numOfChoices name="optionTitles" }}
-                                {{>afFieldRadioWithTextInput index="6" questionType=selectedQuestionType
-                                    totalNumQuestions=numOfChoices name="optionTitles" }}
-                                {{>afFieldRadioWithTextInput index="7" questionType=selectedQuestionType
-                                    totalNumQuestions=numOfChoices name="optionTitles" }}
+                                {{> afQuickField name="optionTitles"
+                                    type="selector-with-text-input"
+                                }}
+
+
 
                             </fieldset>
                             <button type="submit" class="btn btn-primary">Add to quiz</button>

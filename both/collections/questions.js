@@ -33,16 +33,43 @@ QuestionSchema = new SimpleSchema({
         label: "Options",
         type: [Object],
         optional: false,
-       /* custom: function() {
+        autoform: {
+            type: "radio-with-text-input",
+            options: function(){
+                var optionsArray = [];
+
+                for ( var i=0; i < 8; i++){
+                    var option = {};
+                    option.title = "";
+                    option.isSelected = false;
+                    option.index = i;
+                    optionsArray.push(option);
+                }
+                return optionsArray;
+            }
+        },
+        custom: function() {
             // This custom function renders an error, if this field is not equal to
             // the new Password field supplied in the form.
             console.log(" custom validation ");
             console.log("this.value, this.field ");
             console.log(this.value);
-            console.log(this.field);
-            console.log(this)
-            return "invalidQuestionSettings"
-        }*/
+            var titlesValid = true;
+            var selectionFound = false;
+            for (var i = 0; i < this.value.length; i++){
+                var obj = this.value[i];
+                if (!obj.title){
+                    titlesValid = false;
+                    return "invalidQuestionTitles";
+                }
+                if (obj.isSelected){
+                    selectionFound = true;
+                }
+            }
+            if (!selectionFound){
+                return "invalidQuestionSelection";
+            }
+        }
     },
 
     "optionTitles.$.title": {

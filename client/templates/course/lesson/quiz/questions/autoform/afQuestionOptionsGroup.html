@@ -1,0 +1,28 @@
+<template name="afFieldQuestionOptionsGroup">
+    {{#each displayedOptions }}
+        <div style="{{#if isHidden}}display: none{{/if}}" >
+            <span class="radio-inline checkbox-inline">
+                    {{#if isMultipleAnswer }}
+                        <input type="checkbox"
+                               class="js-answer-option-checkbox"
+                               checked={{isSelected}}
+                        />
+                    {{else}}
+                        <input type="radio"
+                               name="radioGroupName"
+                               class="js-answer-option-radio"
+                               id="isSelectedRb" checked={{isSelected}}/>
+                    {{/if}}
+
+                    {{#if isTrueOrFalse}}
+                       <label>{{trueOrFalseLabel }}</label>
+                    {{else}}
+                    <input  type="text"
+                            class="form-control js-answer-option-input"
+                            value="{{title}}"
+                            id="title" placeholder="Enter answer" />
+                    {{/if}}
+            </span>
+        </div>
+    {{/each}}
+</template>

@@ -1,9 +1,30 @@
-Template.afFieldRadioWithTextInput.helpers({
-    isHidden: function(){
+Template.afFieldQuestionOptionsGroup.helpers({
+
+    displayedOptions: function(){
         var question = Session.get("currentQuestionToBuild");
 
+        console.log(question);
+        var displayedOptions = [];
+        var allOptions = Template.instance().data.selectOptions;
+        console.log("all options");
+        console.log(allOptions);
+
+        var totalQuestions = question && question.optionTitles ? question.optionTitles.length : 0;
+
+        for (var i= 0; i< totalQuestions; i++){
+            displayedOptions.push (allOptions[i]);
+        }
+
+        return displayedOptions;
+    },
+
+    isHidden: function(){
+
+        var question = Session.get("currentQuestionToBuild");
+
+        //var atts = Template.instance().data.atts;
         //the true-or-false questions will always have only two options
-        if (this.questionType == QuizOptions.TRUE_OR_FALSE){
+        if (question.questionType == QuizOptions.TRUE_OR_FALSE){
             return this.index > 1;
         }
 
@@ -16,15 +37,18 @@ Template.afFieldRadioWithTextInput.helpers({
     },
 
     isSingleAnswer: function(){
-        return this.questionType == QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER
+        var question = Session.get("currentQuestionToBuild");
+        return question.questionType == QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER
     },
 
     isMultipleAnswer: function(){
-        return this.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS;
+        var question = Session.get("currentQuestionToBuild");
+        return question.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS;
     },
 
     isTrueOrFalse: function(){
-        return this.questionType == QuizOptions.TRUE_OR_FALSE;
+        var question = Session.get("currentQuestionToBuild");
+        return question.questionType == QuizOptions.TRUE_OR_FALSE;
     },
 
     trueOrFalseLabel: function(){
@@ -36,7 +60,7 @@ Template.afFieldRadioWithTextInput.helpers({
     }
 });
 
-Template.afFieldRadioWithTextInput.events({
+Template.afFieldQuestionOptionsGroup.events({
     'keyup .js-answer-option-input': function(event){
         var question = Session.get("currentQuestionToBuild");
         var editedOption = this;
@@ -82,6 +106,9 @@ Template.afFieldRadioWithTextInput.events({
                 options[i].isSelected = $(event.target).val() == "on";
             }
         }
+
+        console.log("")
+
         Session.set("currentQuestionToBuild", question);
     }
 });

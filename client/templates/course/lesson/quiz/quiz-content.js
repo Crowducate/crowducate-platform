@@ -1,5 +1,5 @@
-AutoForm.addInputType("radio-with-text-input", {
-    template: "afFieldRadioWithTextInput",
+AutoForm.addInputType("selector-with-text-input", {
+    template: "afFieldQuestionOptionsGroup",
     valueOut: function(){
         console.log("from the custom template this ; ");
         console.log(this);
@@ -7,15 +7,9 @@ AutoForm.addInputType("radio-with-text-input", {
     },
 
     valueIn: function(val){
-        console.log("value in");
-        console.log(val);
         return val;
     },
     contextAdjust: function(context){
-
-        console.log(" ---- context");
-        console.log(context);
-        console.log(this);
         return context;
     }
 });
@@ -119,23 +113,27 @@ Template.quizContent.helpers({
         var formId = AutoForm.getFormId();
         var selection = AutoForm.getFieldValue("numberOfOptions", formId);
         var selectionDropDown = $('.js-number-of-options');
-        var numOfOptions = parseInt(selectionDropDown.val());
+        var numOfOptions = parseInt(selectionDropDown.val()) || 0;
 
+        console.log("----- from the selector ");
+        console.log("numOfOptions : " + numOfOptions);
         var editedQuestion = Session.get("currentQuestionToBuild");
         var existingOptions = [];
+        console.log(editedQuestion);
         if (editedQuestion && editedQuestion.optionTitles){
             existingOptions = editedQuestion.optionTitles;
         }
 
         if(existingOptions && existingOptions.length == numOfOptions){
             //the number of options hasn't changed
+            console.log(" number of options hasn't changed- return");
             return existingOptions;
         }
 
         var optionsArray;
         if (numOfOptions > 0){
             optionsArray = [];
-
+            console.log(" go throug the loop : " + numOfOptions);
             for (var i=0; i < numOfOptions; i++){
                 var option;
                 if(existingOptions && existingOptions.length > i){
@@ -149,7 +147,8 @@ Template.quizContent.helpers({
                 }
                 optionsArray.push(option);
             }
-
+            console.log("options array");
+            console.log(optionsArray)
             var editedQuestion = Session.get("currentQuestionToBuild");
             editedQuestion.optionTitles = optionsArray;
             Session.set("currentQuestionToBuild", editedQuestion);
@@ -158,11 +157,11 @@ Template.quizContent.helpers({
         return optionsArray;
     },
 
-    selectedQuestionType: function(){
+   /* selectedQuestionType: function(){
         var editedQuestion = Session.get("currentQuestionToBuild");
         $('#questionTypesSelector').val(editedQuestion.questionType);
         return editedQuestion.questionType;
-    }
+    }*/
 
 });
 
@@ -172,7 +171,6 @@ Template.quizContent.events({
         var activeQuiz = Template.currentData().activeQuiz;
         var questionType = $('#questionTypesSelector').val();
         var question = Quiz.generateQuestion(questionType, activeQuiz._id);
-
         Session.set("currentQuestionToBuild", question);
     },
 

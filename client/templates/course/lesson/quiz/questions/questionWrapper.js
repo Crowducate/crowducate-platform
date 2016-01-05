@@ -13,8 +13,6 @@ Template.questionWrapper.helpers({
     isTrueOrFalse: function(){
 
         var question = Session.get("currentQuestionToBuild");;
-        console.log(" is true of false");
-        console.log( question );
         return question ? question.questionType == QuizOptions.TRUE_OR_FALSE : false;
     },
 
