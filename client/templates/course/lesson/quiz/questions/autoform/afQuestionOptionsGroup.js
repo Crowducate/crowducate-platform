@@ -3,11 +3,8 @@ Template.afFieldQuestionOptionsGroup.helpers({
     displayedOptions: function(){
         var question = Session.get("currentQuestionToBuild");
 
-        console.log(question);
         var displayedOptions = [];
         var allOptions = Template.instance().data.selectOptions;
-        console.log("all options");
-        console.log(allOptions);
 
         var totalQuestions = question && question.optionTitles ? question.optionTitles.length : 0;
 
@@ -106,9 +103,6 @@ Template.afFieldQuestionOptionsGroup.events({
                 options[i].isSelected = $(event.target).val() == "on";
             }
         }
-
-        console.log("")
-
         Session.set("currentQuestionToBuild", question);
     }
 });
