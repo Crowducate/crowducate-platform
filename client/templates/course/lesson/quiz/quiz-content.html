@@ -3,13 +3,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 {{activeQuiz.title}}
-                {{#if isEditingCurrentCourse}}
-                    <button id="saveQuizBtn"
-                            class="btn-xs btn-success save-quiz-btn pull-right"
-                            >
-                        Save Quiz
-                    </button>
-                {{/if}}
+
             </div>
             <div class="panel-body">
             {{#if isEditingCurrentCourse }}<!-- check the global helper -->

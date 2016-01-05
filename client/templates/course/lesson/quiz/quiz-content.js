@@ -174,29 +174,6 @@ Template.quizContent.events({
         Session.set("currentQuestionToBuild", question);
     },
 
-    'click .submit-quiz-btn': function(event){
-
-        var isPreview = Blaze._globalHelpers['isEditingCurrentCourse']() == false;
-        var activeQuiz = Template.currentData().activeQuiz;
-        var questions = activeQuiz.questions;
-
-        if (!isPreview){ //edit mode
-            var activeQuiz = Template.currentData().activeQuiz;
-            var questions = activeQuiz.questions;
-
-            if (questions != undefined){
-                var quizToUpdate = Quizzes.findOne({_id: activeQuiz._id});
-                Quizzes.update(activeQuiz._id, {$set: {'questions': questions}})
-            }
-
-        }
-        else{ // preview/exam mode
-            for(var question in questions){
-                //console.log("answered : " + question.answered);
-            }
-            console.log(" should submit the quiz")
-        }
-    },
 
     'deleteQuestion .question-content': function(event){
 
