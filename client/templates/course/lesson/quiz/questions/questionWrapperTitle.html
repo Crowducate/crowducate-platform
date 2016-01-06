@@ -1,0 +1,20 @@
+<template name="questionWrapperTitle">
+    <div style="{padding-left: 15px; padding-right: 15px}">
+        <div class="row question-wrapper-row">
+            <span>Question type:
+                {{#if isTrueOrFalse}}
+                    True or False
+                {{else}}
+                    {{#if isMultipleAnswer }}
+                        Multiple answers
+                    {{else}}
+                        Single answer
+                    {{/if}}
+                {{/if}}
+             {{#if showDeleteButton }}
+                {{> deleteQuizQuestionButton question=question}}
+             {{/if}}
+            </span>
+        </div>
+    </div>
+</template>

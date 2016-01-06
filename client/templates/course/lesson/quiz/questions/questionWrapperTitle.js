@@ -1,15 +1,15 @@
-Template.questionWrapper.helpers({
+Template.questionWrapperTitle.helpers({
     isMultipleAnswer: function(){
-        var question =  Session.get("currentQuestionToBuild");;
+        var question =  this.question;
         return question? question.questionType == QuizOptions.MULTIPLE_CHOICE_MULTIPLE_ANSWERS : false;
     },
     isSingleAnswer: function(){
-        var question = Session.get("currentQuestionToBuild");;
+        var question = this.question;
         return question? question.questionType == QuizOptions.MULTIPLE_CHOICE_SINGLE_ANSWER : false;
     },
     isTrueOrFalse: function(){
 
-        var question = Session.get("currentQuestionToBuild");;
+        var question = this.question;
         return question ? question.questionType == QuizOptions.TRUE_OR_FALSE : false;
     },
 
@@ -18,18 +18,10 @@ Template.questionWrapper.helpers({
     }
 });
 
-Template.questionWrapper.events({
+Template.questionWrapperTitle.events({
     'deleteQuestion .question-wrapper-row': function(event){
-        var quiz = Template.parentData().activeQuiz;
         var question = Template.currentData().question;
-
-        //remove the question
-        var index = quiz.questions.indexOf(question);
-        quiz.questions.splice(index, 1);
-
-        var updateEvent = document.createEvent("Event");
-        updateEvent.initEvent("questionDeleted", true, true);
-        event.target.dispatchEvent(updateEvent);
+        Meteor.call("removeQuestion", question);
     }
 });
 

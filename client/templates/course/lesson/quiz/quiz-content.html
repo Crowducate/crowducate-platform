@@ -21,7 +21,7 @@
             {{#if currentQuestionToBuild}}
                 <div class="col-sm-12 question-wrapper new-question-wrapper">
 
-                    {{>questionWrapper question=currentQeustionToBuild }}
+                    {{>questionWrapperTitle question=currentQeustionToBuild showDeleteButton=false}}
                     <br/>
 
                         {{#autoForm collection="Questions"

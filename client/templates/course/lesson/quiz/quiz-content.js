@@ -176,7 +176,6 @@ Template.quizContent.events({
         Session.set("currentQuestionTypeChanged", true);
     },
 
-
     'deleteQuestion .question-content': function(event){
 
         //set the reactive var to update the list of questions
@@ -188,6 +187,6 @@ Template.quizContent.events({
         Session.set("currentQuestionTypeChanged", undefined);
         delete Session.keys["currentQuestionToBuild"];
         delete Session.keys["currentQuestionTypeChanged"];
+        $('#questionTypesSelector').prop("selectedIndex", 0);
     }
-
 });

@@ -7,5 +7,8 @@ Meteor.methods({
     'addSingleAnswerQuestion': function(question, params){
         console.log(" METEOR METHODS add SINGLE option question : ");
         Questions.insert(question)
+    },
+    'removeQuestion': function(question){
+        Questions.remove({"id": question.id})
     }
 })
