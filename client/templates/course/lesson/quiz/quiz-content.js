@@ -1,11 +1,5 @@
 AutoForm.addInputType("selector-with-text-input", {
     template: "afFieldQuestionOptionsGroup",
-    valueOut: function(){
-        console.log("from the custom template this ; ");
-        console.log(this);
-        return "some string";
-    },
-
     valueIn: function(val){
         return val;
     },
@@ -116,7 +110,6 @@ Template.quizContent.helpers({
 
         var editedQuestion = Session.get("currentQuestionToBuild");
         var existingOptions = [];
-        console.log(editedQuestion);
         if (editedQuestion && editedQuestion.optionTitles && numOfOptions > 0){
             existingOptions = editedQuestion.optionTitles;
         }
@@ -128,13 +121,9 @@ Template.quizContent.helpers({
             return existingOptions;
         }
 
-        if (isNewType){
-            Session.set("currentQuestionTypeChanged", false);
-        }
+
         var optionsArray;
-        console.log("--- is New type : " + isNewType);
-        console.log("number of options : " + numOfOptions);
-        console.log("existing options : " + existingOptions);
+        console.log("is new type : " + isNewType);
         if (numOfOptions > 0){
             optionsArray = [];
             for (var i=0; i < numOfOptions; i++){
@@ -148,10 +137,12 @@ Template.quizContent.helpers({
             }
             var editedQuestion = Session.get("currentQuestionToBuild");
             editedQuestion.optionTitles = optionsArray;
-            console.log("!!! UPDATED EDITED QUESTION");
             Session.set("currentQuestionToBuild", editedQuestion);
         }
 
+        if (isNewType){
+            Session.set("currentQuestionTypeChanged", false);
+        }
         return optionsArray;
     },
 

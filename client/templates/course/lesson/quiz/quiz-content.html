@@ -8,7 +8,7 @@
             <div class="panel-body">
             {{#if isEditingCurrentCourse }}<!-- check the global helper -->
                 <div class="form-group-sm form-inline">
-                    <label for="questionTypesSelector">Select question type</label>
+                    <label for="questionTypesSelector">Question type</label>
                     <select id="questionTypesSelector" class="form-control small">
                         <option disabled selected>Select question type</option>
                         {{#each questionType in questionTypes }}
@@ -27,7 +27,7 @@
                         {{#autoForm
                             collection="Questions"
                             id="addQuestionForm"
-                            type="method" meteormethod="addSingleAnswerQuestion"
+                            type="method" meteormethod="addQuestion"
                             resetOnSuccess=true}}
 
                             <fieldset>

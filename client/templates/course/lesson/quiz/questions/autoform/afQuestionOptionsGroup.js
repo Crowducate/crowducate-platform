@@ -16,7 +16,6 @@ Template.afFieldQuestionOptionsGroup.helpers({
     },
 
     isHidden: function(){
-
         var question = Session.get("currentQuestionToBuild");
         //the true-or-false questions will always have only two options
         if (question.questionType == QuizOptions.TRUE_OR_FALSE){
@@ -24,8 +23,15 @@ Template.afFieldQuestionOptionsGroup.helpers({
         }
 
         //for the multiple choice - check the number of options selected in the GUI
-        var totalQuestions = question.optionTitles;
-        if (totalQuestions &&  parseInt(this.index) < totalQuestions.length ){
+        var totalAnswers = question.optionTitles;
+        if (totalAnswers &&  parseInt(this.index) < totalAnswers.length ){
+            //this is required to make sure that the input field doesn't contain any stale data
+            //seems to be an issue when the onscreen template is rewired
+            var inputField = $('.js-answer-option-input')[this.index]
+            if (inputField) {
+                inputField.value = totalAnswers[this.index].title;
+            }
+
             return false;
         }
         return true;

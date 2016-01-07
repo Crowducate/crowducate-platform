@@ -48,9 +48,6 @@ QuestionSchema = new SimpleSchema({
         custom: function() {
             // This custom function renders an error, if this field is not equal to
             // the new Password field supplied in the form.
-            console.log(" custom validation ");
-            console.log("this.value, this.field ");
-            console.log(this.value);
             var titlesValid = true;
             var selectionFound = false;
             for (var i = 0; i < this.value.length; i++){
