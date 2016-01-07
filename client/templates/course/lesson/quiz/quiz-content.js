@@ -32,8 +32,6 @@ Template.quizContent.helpers({
     },
 
     currentQuestionToBuild:function(){
-        console.log("--- current question to build : ");
-        console.log(Session.get("currentQuestionToBuild"));
         return Session.get("currentQuestionToBuild") != undefined;
     },
 
@@ -127,7 +125,6 @@ Template.quizContent.helpers({
 
         if(existingOptions && existingOptions.length == numOfOptions && !isNewType){
             //the number of options hasn't changed
-            console.log(" number of options hasn't changed- return");
             return existingOptions;
         }
 

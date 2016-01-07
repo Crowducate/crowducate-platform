@@ -1,0 +1,14 @@
+<template name="questionContainer">
+    <div class="question-content col-sm-12 question-wrapper">
+        {{>questionWrapperTitle question=question showDeleteButton=true}}
+        <div><h3>{{question.title}}</h3></div>
+        <div> {{ question.description}}</div>
+        <br/>
+        {{#each options question=question}}
+            <div>
+                <i class="fa fa-check" style="{color: green;  {{#if optionSelected }}{{else}}visibility: hidden ; {{/if}} } "></i>
+                <label>{{ optionTitle }}</label>
+            </div>
+        {{/each}}
+    </div>
+</template>
