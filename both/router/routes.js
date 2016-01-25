@@ -8,13 +8,8 @@ Router.route('/teach');
 
 Router.route('/learn');
 
-Router.route('/learn/:tag', {
-  subscriptions: function() {
-    return Meteor.subscribe('taggedCourses', this.params.tag)
-  },
-  action: function() {
+Router.route('/learn/:tag', function() {
     this.render('taggedCourses')
-  }  
 });
 
 Router.route('/profile')
