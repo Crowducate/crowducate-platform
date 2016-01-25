@@ -8,7 +8,6 @@
             </div>
             <div class="caption">
               <a class="course-category" href="#">Mathematics</a> 
-              <a class="course-tags" href="/learn/{{keywords.[0]}}">{{keywords.[0]}}</a>  
                 <h2 class="course-card-title">
                     <a href ="/course/{{ _id }}">{{ title }}</a>
                 </h2>
@@ -17,7 +16,7 @@
                 {{# with truncateKeywords 6 keywords }}
                 <p>
                     {{# each truncatedKeywords }}
-                    <a class="tag-label" href="/tag/{{ this }}" title="Resources page for {{ this }}">
+                    <a class="tag-label" href="/learn/{{ this }}" title="Resources page for {{ this }}">
                         <span class="label label-info">{{ this }}</span>
                     </a>
                     {{/each}}
