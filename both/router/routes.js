@@ -18,12 +18,6 @@ Router.route('/profileSettings');
 
 Router.route('/settings');
 
-/*
-Router.route('tag/:tag',  {
-    name: 'taggedCourses'
-});
-*/
-
 Router.route('course/:_id', {
     name: 'course'
 });
