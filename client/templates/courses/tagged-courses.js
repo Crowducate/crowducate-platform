@@ -29,3 +29,12 @@ Template.taggedCourses.onCreated(function(){
   // Subscribe to course images
   instance.subscribe('images');
 });
+
+
+Template.taggedCourses.rendered = function () {
+  // Get reference to template instance
+  var instance = this;
+
+  // Set the page site title for SEO
+  Meta.setTitle('Courses tagged "' + instance.tag + '"');
+};
