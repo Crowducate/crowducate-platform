@@ -3,22 +3,28 @@ Template.taggedCourses.helpers({
         return Courses.find().fetch();
     },
     'tag': function () {
-        return Session.get('tag');
+      // Get reference to template instance
+      var instance = this;
+
+      // Get tag from instance
+      var tag = instance.tag;
+
+      return tag;
     }
 });
 
 Template.taggedCourses.onCreated(function(){
   // Get reference to template instance
-  const instance = this;
+  var instance = this;
 
   // Accessing the Iron.controller to invoke getParams method of Iron Router.
   var router = Router.current();
 
   // Getting Params of the URL
-  var courseTag = router.params.tag;
+  instance.tag = router.params.tag;
 
   // Subscribe to courses tagged with the current tag
-  instance.subscribe('taggedCourses', courseTag);
+  instance.subscribe('taggedCourses', instance.tag);
 
   // Subscribe to course images
   instance.subscribe('images');
