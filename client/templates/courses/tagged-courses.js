@@ -1,18 +1,3 @@
-Template.taggedCourses.helpers({
-    'courses': function () {
-        return Courses.find().fetch();
-    },
-    'tag': function () {
-      // Get reference to template instance
-      var instance = this;
-
-      // Get tag from instance
-      var tag = instance.tag;
-
-      return tag;
-    }
-});
-
 Template.taggedCourses.onCreated(function(){
   // Get reference to template instance
   var instance = this;
@@ -38,3 +23,20 @@ Template.taggedCourses.rendered = function () {
   // Set the page site title for SEO
   Meta.setTitle('Courses tagged "' + instance.tag + '"');
 };
+
+Template.taggedCourses.helpers({
+    'courses': function () {
+        return Courses.find().fetch();
+    },
+    'tag': function () {
+      // Get reference to template instance
+      var instance = Template.instance();
+
+      // Get tag from instance
+      var tag = instance.tag;
+
+      console.log(tag);
+
+      return tag;
+    }
+});
