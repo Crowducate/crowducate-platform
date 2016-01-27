@@ -8,10 +8,18 @@ Template.taggedCourses.helpers({
 });
 
 Template.taggedCourses.onCreated(function(){
+  // Get reference to template instance
+  const instance = this;
+
   // Accessing the Iron.controller to invoke getParams method of Iron Router.
-  var controller = Iron.controller();
+  var router = Router.current();
+
   // Getting Params of the URL
-  var params = controller.getParams();
-  // Invoking subscription on the Courses with the :tag params
-  Meteor.subscribe('taggedCourses', params.tag)
+  var courseTag = router.params.tag;
+
+  // Subscribe to courses tagged with the current tag
+  instance.subscribe('taggedCourses', courseTag);
+
+  // Subscribe to course images
+  instance.subscribe('images');
 });
