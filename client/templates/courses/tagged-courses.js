@@ -26,7 +26,16 @@ Template.taggedCourses.rendered = function () {
 
 Template.taggedCourses.helpers({
     'courses': function () {
-        return Courses.find().fetch();
+      // Get reference to template instance
+      var instance = Template.instance();
+
+      // Get tag from template instance
+      var tag = instance.tag;
+
+      // Fetch courses matching current tag
+      var taggedCourses = Courses.find({"keywords": tag}).fetch();
+
+      return taggedCourses;
     },
     'tag': function () {
       // Get reference to template instance
@@ -34,8 +43,6 @@ Template.taggedCourses.helpers({
 
       // Get tag from instance
       var tag = instance.tag;
-
-      console.log(tag);
 
       return tag;
     }
