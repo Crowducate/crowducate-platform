@@ -1,18 +1,22 @@
 Template.taggedCourses.onCreated(function(){
+
   // Get reference to template instance
   var instance = this;
 
-  // Accessing the Iron.controller to invoke getParams method of Iron Router.
-  var router = Router.current();
+  instance.autorun(function() {
 
-  // Getting Params of the URL
-  instance.tag = router.params.tag;
+    // Accessing the Iron.controller to invoke getParams method of Iron Router.
+    var router = Router.current();
 
-  // Subscribe to courses tagged with the current tag
-  instance.subscribe('taggedCourses', instance.tag);
+    // Getting Params of the URL
+    instance.tag = router.params.tag;
 
-  // Subscribe to course images
-  instance.subscribe('images');
+    // Subscribe to courses tagged with the current tag
+    instance.subscribe('taggedCourses', instance.tag);
+
+    // Subscribe to course images
+    instance.subscribe('images');
+  });
 });
 
 
@@ -25,10 +29,10 @@ Template.taggedCourses.rendered = function () {
 };
 
 Template.taggedCourses.helpers({
-    'courses': function () {
-      // Get reference to template instance
-      var instance = Template.instance();
-
+  'courses': function () {
+    // Get reference to template instance
+    var instance = Template.instance();
+    if (instance.subscriptionsReady()) {
       // Get tag from template instance
       var tag = instance.tag;
 
@@ -36,14 +40,17 @@ Template.taggedCourses.helpers({
       var taggedCourses = Courses.find({"keywords": tag}).fetch();
 
       return taggedCourses;
-    },
-    'tag': function () {
-      // Get reference to template instance
-      var instance = Template.instance();
-
-      // Get tag from instance
-      var tag = instance.tag;
-
-      return tag;
     }
+  },
+  'tag': function () {
+    // Get reference to template instance
+    var instance = Template.instance();
+    
+    if (instance.subscriptionsReady()) {
+       // Get tag from instance
+       var tag = instance.tag;
+
+       return tag;
+    }
+  }
 });
