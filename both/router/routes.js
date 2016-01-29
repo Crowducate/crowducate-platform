@@ -8,15 +8,15 @@ Router.route('/teach');
 
 Router.route('/learn');
 
+Router.route('/learn/:tag', function() {
+    this.render('taggedCourses')
+});
+
 Router.route('/profile')
 
 Router.route('/profileSettings');
 
 Router.route('/settings');
-
-Router.route('tag/:tag',  {
-    name: 'taggedCourses'
-});
 
 Router.route('course/:_id', {
     name: 'course'
