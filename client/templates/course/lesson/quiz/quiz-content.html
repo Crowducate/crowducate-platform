@@ -1,0 +1,71 @@
+<template name="quizContent">
+    <div class="col-xs-12 col-sm-9">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{activeQuiz.title}}
+
+            </div>
+            <div class="panel-body">
+            {{#if isEditingCurrentCourse }}<!-- check the global helper -->
+                <div class="form-group-sm form-inline">
+                    <label for="questionTypesSelector">Question type</label>
+                    <select id="questionTypesSelector" class="form-control small">
+                        <option disabled selected>Select question type</option>
+                        {{#each questionType in questionTypes }}
+                            <option>{{ questionType }}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            {{/if}}
+
+            {{#if currentQuestionToBuild}}
+                <div class="col-sm-12 question-wrapper new-question-wrapper">
+
+                    {{>questionWrapperTitle question=currentQeustionToBuild showDeleteButton=false}}
+                    <br/>
+
+                        {{#autoForm
+                            collection="Questions"
+                            id="addQuestionForm"
+                            type="method" meteormethod="addQuestion"
+                            resetOnSuccess=true}}
+
+                            <fieldset>
+
+                                <!-- common fields used in all types of questions -->
+                                {{> afQuickField name='title'}}
+                                {{> afQuickField name='description' rows=3}}
+                                {{> afQuickField name="questionType" value=qType  type="hidden"}}
+
+
+                                <!-- a dropdown selector to chose a number of answers -->
+                                {{#if isTrueOrFalse}}
+                                    <!-- do not display a drop down -->
+                                {{else}}
+                                    {{> afQuickField class="js-number-of-options" name="numberOfOptions" type="select"
+                                    options=selectDropdownOptions
+                                    firstOption=" -- Select a number of options to chose from -- "}}
+                                {{/if}}
+
+                                <!-- This is the part that gave me the most grief -->
+                                <!-- options layout for all three types of questions -->
+                                {{> afQuickField name="optionTitles"
+                                    type="selector-with-text-input"
+                                    questionType=selectedQuestionType
+                                    totalNumQuestions=numOfChoices
+                                    validation="keyup"
+                                }}
+
+                            </fieldset>
+
+                            <button type="submit" class="btn btn-success">Add to quiz</button>
+                            <button type="reset" class="btn btn-primary" id="cancelNewQuestionBtn">Cancel</button>
+                        {{/autoForm}}
+                    </div>
+                {{/if}}
+
+            {{>quizQuestions quiz=activeQuiz}}
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,22 @@
+<template name="lessonQuizTemplate">
+    <li>
+        <a class="sidebar-quiz-link">
+            <span>
+                {{#if isEditingCurrentCourse }}
+                    {{> editableText
+                        collection="quizzes"
+                        context=quiz
+                        field="title"
+                        textarea=false
+                        wysiwyg=false
+                        substitute='<i class="fa fa-pencil"></i>'
+                    }}
+                {{ else }}
+                    {{# with quiz }}
+                        {{ title }}
+                    {{/ with }}
+                {{/if }}
+            </span>
+        </a>
+    </li>
+</template>

@@ -2,8 +2,11 @@ Template.sectionLesson.created = function () {
   // Save lesson ID as instance variable
   this.lessonID = this.data;
 
+  AutoForm.debug();
   // Subscribe to single section lesson
   this.subscribe('singleLesson', this.lessonID);
+  this.subscribe('quizzes');
+  this.subscribe('questions');
 };
 
 Template.sectionLesson.helpers({
@@ -34,6 +37,17 @@ Template.sectionLesson.helpers({
     var lessonObject = Lessons.findOne(lessonID);
 
     return lessonObject;
+  },
+
+  'quizzes': function() {
+    var instance = Template.instance();
+
+    var lessonID = instance.lessonID;
+
+    //quizzes for the lesson:
+    var quizzes = Quizzes.find({'lessonID': lessonID}).fetch();
+
+    return quizzes;
   }
 });
 
@@ -47,5 +61,8 @@ Template.sectionLesson.events({
     // set active lesson ID reactive variable
     // to the value of clicked lesson
     activeLessonID.set(lessonID);
+
+    //TODO[EM] temporary code
+    activeQuizID.set(undefined);
   }
 });

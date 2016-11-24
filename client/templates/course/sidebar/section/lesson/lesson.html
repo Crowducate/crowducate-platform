@@ -16,6 +16,16 @@
               {{/ with }}
             {{/ if }}
         </a>
+
+        <!-- add/view quizzes -->
+        <ul class="nav nav-pills nav-stacked">
+            {{# each quizzes }}
+                {{> lessonQuizTemplate}}
+            {{/ each }}
+            {{# if editingThisCourse }}
+                {{> addQuiz }}
+            {{/if}}
+        </ul>
     </li>
   {{/ if }}
 </template>

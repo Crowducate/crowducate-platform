@@ -1,0 +1,23 @@
+<template name="addQuiz">
+    <form class="input-group add-new-quiz-form" style="{width: 100%}">
+        {{#if showInput}}
+            <input type="text" id="quiz-title"
+                   class="form-control input-sm add-new-quiz"
+                   placeholder="Enter quiz title..."
+                   required >
+
+            <span class="input-group-btn input-group-sm">
+                <button id="add-quiz-button" class="btn btn-default btn-sm" type="submit">
+                    {{ mf 'addSection-addSectionButtonText' 'Add' }}
+                </button>
+            </span>
+         {{else}}
+            <div style="{width:100%}">
+                <button id="addQuizButton" class="add-quiz-btn sidebar-add-quiz-link">ADD Quiz</button>
+            </div>
+
+        {{/if}}
+    </form>
+
+
+</template>

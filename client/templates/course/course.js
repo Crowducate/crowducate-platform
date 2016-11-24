@@ -13,6 +13,10 @@ Template.course.created = function () {
 
   // Set the empty active lesson ID variable
   activeLessonID = new ReactiveVar(undefined);
+
+  //Set an ampty active quiz Id var
+  activeQuizID = new ReactiveVar(undefined);
+
 };
 
 Template.course.helpers({
@@ -24,5 +28,6 @@ Template.course.helpers({
     var course = Courses.findOne(instance.courseId);
 
     return course;
-  }
+  },
+
 });

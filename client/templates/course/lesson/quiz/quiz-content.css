@@ -1,0 +1,29 @@
+.save-quiz-btn{
+    float: right;
+}
+
+.quiz-content{
+}
+.question-wrapper{
+    border: 1px dotted #dc681d;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin-top: 7px;
+}
+
+.new-question-wrapper{
+    background-color: #FBFBF1;
+}
+
+.form-group-sm {
+    margin-bottom: 5px;
+}
+
+.form-control-label{
+    font-weight: normal !important;
+}
+
+.footer-section{
+    padding: 30px;
+}
